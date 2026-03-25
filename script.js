@@ -102,10 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', animateCounters, { passive: true });
     setTimeout(animateCounters, 1600);
 
-    // Contact form
+    // Contact form - EmailJS
     const form = document.getElementById('contactForm');
     const toast = document.getElementById('toast');
-    if (form) {
+    if (form && typeof emailjs !== 'undefined') {
+        emailjs.init('wRB7RcKgCZ0rb8bqx');
         form.addEventListener('submit', e => {
             e.preventDefault();
             const fd = new FormData(form);
@@ -113,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const store = fd.get('storeName')?.trim();
             const phone = fd.get('phone')?.trim();
             const region = fd.get('region')?.trim();
+            const budget = fd.get('budget') || '미정';
             const msg = fd.get('message')?.trim();
             const priv = form.querySelector('#privacy')?.checked;
             if (!company || !store || !phone || !region || !msg) return showToast('모든 필수 항목을 입력해주세요.', 'error');
@@ -122,12 +124,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const orig = btn.innerHTML;
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 전송 중...';
             btn.disabled = true;
-            setTimeout(() => {
+            emailjs.send('service_peqoeen', 'template_v9eprz5', {
+                company: company,
+                store_name: store,
+                phone: phone,
+                region: region,
+                budget: budget,
+                message: msg
+            }).then(() => {
                 showToast('문의가 성공적으로 전송되었습니다. 빠른 시일 내에 연락드리겠습니다.', 'success');
                 form.reset();
                 btn.innerHTML = orig;
                 btn.disabled = false;
-            }, 1500);
+            }).catch((err) => {
+                console.error('EmailJS error:', err);
+                showToast('전송에 실패했습니다. 카카오톡으로 문의해주세요.', 'error');
+                btn.innerHTML = orig;
+                btn.disabled = false;
+            });
         });
     }
     function showToast(msg, type) {
