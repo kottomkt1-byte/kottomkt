@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="고또마케팅 문의 - 안경원 마케팅 무료 상담. 업종 분석부터 맞춤 전략 수립까지.">
+    <meta property="og:image" content="images/og-share.png">
+    <meta property="og:image:width" content="1376">
+    <meta property="og:image:height" content="768">
+    <title>문의 | 고또마케팅</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header" class="scrolled">
+        <nav class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-text">고또마케팅</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">홈</a></li>
+                <li><a href="about.html" class="nav-link">회사소개</a></li>
+                <li class="has-dropdown">
+                    <a href="services.html" class="nav-link">서비스 소개 <i class="fas fa-chevron-down dd-arrow"></i></a>
+                    <div class="mega-dropdown">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                                <h5 class="mega-heading"><i class="fas fa-pen-nib"></i> 콘텐츠 마케팅</h5>
+                                <a href="service-blog.html" class="mega-link"><div class="mega-link-icon blog-icon"><i class="fas fa-blog"></i></div><div><strong>브랜드 블로그 대행</strong><span>심리학 기반 전문 블로그 콘텐츠</span></div></a>
+                                <a href="service-hpblog.html" class="mega-link"><div class="mega-link-icon hpblog-icon"><i class="fas fa-laptop-code"></i></div><div><strong>홈페이지형 블로그</strong><span>3초 만에 사로잡는 블로그 디자인</span></div></a>
+                                <a href="service-instagram.html" class="mega-link"><div class="mega-link-icon insta-icon"><i class="fab fa-instagram"></i></div><div><strong>인스타그램 마케팅</strong><span>감각적인 피드 & 릴스 제작</span></div></a>
+                            </div>
+                            <div class="mega-col">
+                                <h5 class="mega-heading"><i class="fas fa-bullseye"></i> 노출 & 바이럴</h5>
+                                <a href="service-place.html" class="mega-link"><div class="mega-link-icon place-icon"><i class="fas fa-map-marker-alt"></i></div><div><strong>플레이스 관리</strong><span>네이버·카카오·구글 지도 최적화</span></div></a>
+                                <a href="service-daangn.html" class="mega-link"><div class="mega-link-icon daangn-icon"><i class="fas fa-carrot"></i></div><div><strong>당근마켓 마케팅</strong><span>동네 고객 직접 유입</span></div></a>
+                                <a href="service-cafe.html" class="mega-link"><div class="mega-link-icon cafe-icon"><i class="fas fa-comments"></i></div><div><strong>카페 바이럴</strong><span>커뮤니티 입소문 마케팅</span></div></a>
+                            </div>
+                            <div class="mega-col mega-highlight">
+                                <h5 class="mega-heading"><i class="fas fa-globe"></i> 웹사이트</h5>
+                                <a href="service-website.html" class="mega-link"><div class="mega-link-icon web-icon"><i class="fas fa-globe"></i></div><div><strong>홈페이지 제작</strong><span>신뢰를 만드는 안경원 전문 홈페이지</span></div></a>
+                                <div class="mega-cta">
+                                    <p>어떤 서비스가 맞을까요?</p>
+                                    <a href="contact.html" class="mega-cta-btn">무료 상담 받기 <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="location.html" class="nav-link">찾아오시는 길</a></li>
+                <li><a href="contact.html" class="nav-link active">문의</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://open.kakao.com/o/sBj11zAf" target="_blank" class="btn-kakao-nav"><i class="fas fa-comment"></i><span class="label">카카오 문의</span></a>
+                <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </nav>
+    </header>
+    <div class="mob-overlay" id="mobOverlay"></div>
+    <div class="mob-menu" id="mobMenu">
+        <div class="mob-menu-head"><a href="index.html" class="logo"><span class="logo-text">고또마케팅</span></a><button class="mob-close" id="mobClose"><i class="fas fa-times"></i></button></div>
+        <ul class="mob-links"><li><a href="index.html">홈</a></li><li><a href="about.html">회사소개</a></li><li><div class="mob-toggle-sub" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">서비스 소개 <i class="fas fa-chevron-down"></i></div><ul class="mob-sub"><li><a href="services.html">전체 서비스</a></li><li><a href="service-blog.html">브랜드 블로그 대행</a></li><li><a href="service-hpblog.html">홈페이지형 블로그</a></li><li><a href="service-instagram.html">인스타그램 마케팅</a></li><li><a href="service-place.html">플레이스 관리</a></li><li><a href="service-daangn.html">당근마켓 마케팅</a></li><li><a href="service-cafe.html">카페 바이럴</a></li><li><a href="service-website.html">홈페이지 제작</a></li></ul></li><li><a href="location.html">찾아오시는 길</a></li><li><a href="contact.html">문의</a></li></ul>
+        <div class="mob-footer"><a href="https://open.kakao.com/o/sBj11zAf" target="_blank" class="mob-btn-kakao"><i class="fas fa-comment"></i> 카카오톡 문의하기</a><a href="https://m.blog.naver.com/kottorai" target="_blank" class="mob-btn-blog"><i class="fas fa-blog"></i> 블로그 바로가기</a></div>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <span class="page-tag">CONTACT</span>
+            <h1 class="page-title">마케팅 고민,<br><em>지금 바로 상담하세요</em></h1>
+            <p class="page-desc">안경원의 상황과 목표를 알려주시면<br>최적의 마케팅 전략을 무료로 제안해 드립니다.</p>
+        </div>
+    </section>
+
+    <section class="section" style="background:var(--white);">
+        <div class="container">
+            <div class="contact-content">
+                <div data-aos="fade-right">
+                    <div class="contact-info-card">
+                        <h3>상담 안내</h3>
+                        <p>아래 양식을 통해 문의해주시면<br>빠르게 답변 드리겠습니다.</p>
+                        <div class="contact-channels">
+                            <a href="https://open.kakao.com/o/sBj11zAf" target="_blank" class="contact-ch kakao">
+                                <i class="fas fa-comment"></i>
+                                <div><strong>카카오톡 문의</strong><span>빠른 상담을 원하시면</span></div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                            <a href="https://m.blog.naver.com/kottorai" target="_blank" class="contact-ch blog">
+                                <i class="fas fa-blog"></i>
+                                <div><strong>블로그 방문</strong><span>우리의 생각을 담은 블로그</span></div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                            <a href="mailto:communication@kotto.kr" class="contact-ch email">
+                                <i class="fas fa-envelope"></i>
+                                <div><strong>이메일 문의</strong><span>communication@kotto.kr</span></div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group"><label for="company">회사명 <span class="req">*</span></label><input type="text" id="company" name="company" placeholder="회사명을 입력하세요" required></div>
+                            <div class="form-group"><label for="storeName">상호 <span class="req">*</span></label><input type="text" id="storeName" name="storeName" placeholder="안경원 상호를 입력하세요" required></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><label for="phone">연락처 <span class="req">*</span></label><input type="tel" id="phone" name="phone" placeholder="010-0000-0000" required></div>
+                            <div class="form-group"><label for="region">지역 <span class="req">*</span></label><input type="text" id="region" name="region" placeholder="예: 서울 강남구" required></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">월 마케팅 예산</label>
+                            <select id="budget" name="budget">
+                                <option value="">선택하세요</option>
+                                <option value="50~100만원">50~100만원</option>
+                                <option value="100~200만원">100~200만원</option>
+                                <option value="200~300만원">200~300만원</option>
+                                <option value="300만원 이상">300만원 이상</option>
+                                <option value="미정">미정 (상담 후 결정)</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label for="message">문의 내용 <span class="req">*</span></label><textarea id="message" name="message" rows="5" placeholder="문의하실 내용을 자유롭게 작성해주세요" required></textarea></div>
+                        <div class="form-privacy">
+                            <label class="chk-label">
+                                <input type="checkbox" id="privacy" required>
+                                <span class="checkmark"></span>
+                                <span>개인정보 수집 및 이용에 동의합니다</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-submit"><span>문의 보내기</span><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand"><div class="footer-logo"><span class="logo-text">고또마케팅</span></div><p class="footer-tagline">국내 유일 안경원 전문 광고 대행사</p><div class="footer-social"><a href="https://m.blog.naver.com/kottorai" target="_blank"><i class="fas fa-blog"></i></a><a href="https://open.kakao.com/o/sBj11zAf" target="_blank"><i class="fas fa-comment"></i></a><a href="mailto:communication@kotto.kr"><i class="fas fa-envelope"></i></a></div></div>
+                <div class="footer-links">
+                    <div class="footer-col"><h4>메뉴</h4><ul><li><a href="index.html">홈</a></li><li><a href="about.html">회사소개</a></li><li><a href="services.html">서비스 소개</a></li><li><a href="location.html">찾아오시는 길</a></li><li><a href="contact.html">문의</a></li></ul></div>
+                    <div class="footer-col"><h4>서비스</h4><ul><li><a href="service-blog.html">브랜드 블로그 대행</a></li><li><a href="service-hpblog.html">홈페이지형 블로그</a></li><li><a href="service-instagram.html">인스타그램</a></li><li><a href="service-place.html">플레이스 관리</a></li><li><a href="service-daangn.html">당근마켓</a></li><li><a href="service-cafe.html">카페 바이럴</a></li></ul></div>
+                    <div class="footer-col"><h4>연락처</h4><ul class="footer-contact-info"><li><i class="fas fa-map-marker-alt"></i> 경기도 남양주시 순화궁로 249<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;파라곤스퀘어 M동 1528호</li><li><i class="fas fa-envelope"></i> communication@kotto.kr</li></ul></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><div class="footer-biz"><span>상호: 세모기획</span><span class="d">|</span><span>대표: 고강일</span><span class="d">|</span><span>사업자등록번호: 791-07-02592</span></div><p class="footer-cr">&copy; 2025 고또마케팅. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+    <div class="floating"><a href="https://open.kakao.com/o/sBj11zAf" target="_blank" class="float-btn float-kakao"><i class="fas fa-comment"></i></a><a href="#" class="float-btn float-top" id="topBtn"><i class="fas fa-chevron-up"></i></a></div>
+    <div id="toast" class="toast"><div class="toast-inner"><i class="fas fa-check-circle"></i><span></span></div></div>
+    <script src="script.js"></script>
+</body>
+</html>

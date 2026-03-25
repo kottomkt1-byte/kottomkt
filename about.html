@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="고또마케팅 회사소개 - 신뢰와 상생. 소수 정예 전문가 집단이 안경원의 성장을 돕습니다.">
+    <meta property="og:image" content="images/og-share.png">
+    <meta property="og:image:width" content="1376">
+    <meta property="og:image:height" content="768">
+    <title>회사소개 | 고또마케팅</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="scrolled">
+        <nav class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-text">고또마케팅</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">홈</a></li>
+                <li><a href="about.html" class="nav-link active">회사소개</a></li>
+                <li class="has-dropdown">
+                    <a href="services.html" class="nav-link">서비스 소개 <i class="fas fa-chevron-down dd-arrow"></i></a>
+                    <div class="mega-dropdown">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                                <h5 class="mega-heading"><i class="fas fa-pen-nib"></i> 콘텐츠 마케팅</h5>
+                                <a href="service-blog.html" class="mega-link"><div class="mega-link-icon blog-icon"><i class="fas fa-blog"></i></div><div><strong>브랜드 블로그 대행</strong><span>심리학 기반 전문 블로그 콘텐츠</span></div></a>
+                                <a href="service-hpblog.html" class="mega-link"><div class="mega-link-icon hpblog-icon"><i class="fas fa-laptop-code"></i></div><div><strong>홈페이지형 블로그</strong><span>3초 만에 사로잡는 블로그 디자인</span></div></a>
+                                <a href="service-instagram.html" class="mega-link"><div class="mega-link-icon insta-icon"><i class="fab fa-instagram"></i></div><div><strong>인스타그램 마케팅</strong><span>감각적인 피드 & 릴스 제작</span></div></a>
+                            </div>
+                            <div class="mega-col">
+                                <h5 class="mega-heading"><i class="fas fa-bullseye"></i> 노출 & 바이럴</h5>
+                                <a href="service-place.html" class="mega-link"><div class="mega-link-icon place-icon"><i class="fas fa-map-marker-alt"></i></div><div><strong>플레이스 관리</strong><span>네이버·카카오·구글 지도 최적화</span></div></a>
+                                <a href="service-daangn.html" class="mega-link"><div class="mega-link-icon daangn-icon"><i class="fas fa-carrot"></i></div><div><strong>당근마켓 마케팅</strong><span>동네 고객 직접 유입</span></div></a>
+                                <a href="service-cafe.html" class="mega-link"><div class="mega-link-icon cafe-icon"><i class="fas fa-comments"></i></div><div><strong>카페 바이럴</strong><span>커뮤니티 입소문 마케팅</span></div></a>
+                            </div>
+                            <div class="mega-col mega-highlight">
+                                <h5 class="mega-heading"><i class="fas fa-globe"></i> 웹사이트</h5>
+                                <a href="service-website.html" class="mega-link"><div class="mega-link-icon web-icon"><i class="fas fa-globe"></i></div><div><strong>홈페이지 제작</strong><span>신뢰를 만드는 안경원 전문 홈페이지</span></div></a>
+                                <div class="mega-cta">
+                                    <p>어떤 서비스가 맞을까요?</p>
+                                    <a href="contact.html" class="mega-cta-btn">무료 상담 받기 <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="location.html" class="nav-link">찾아오시는 길</a></li>
+                <li><a href="contact.html" class="nav-link">문의</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://open.kakao.com/o/sBj11zAf" target="_blank" rel="noopener" class="btn-kakao-nav"><i class="fas fa-comment"></i><span class="label">카카오 문의</span></a>
+                <button class="hamburger" id="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+            </div>
+        </nav>
+    </header>
+    <div class="mob-overlay" id="mobOverlay"></div>
+    <div class="mob-menu" id="mobMenu">
+        <div class="mob-menu-head"><a href="index.html" class="logo"><span class="logo-text">고또마케팅</span></a><button class="mob-close" id="mobClose"><i class="fas fa-times"></i></button></div>
+        <ul class="mob-links"><li><a href="index.html">홈</a></li><li><a href="about.html">회사소개</a></li><li><div class="mob-toggle-sub" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">서비스 소개 <i class="fas fa-chevron-down"></i></div><ul class="mob-sub"><li><a href="services.html">전체 서비스</a></li><li><a href="service-blog.html">브랜드 블로그 대행</a></li><li><a href="service-hpblog.html">홈페이지형 블로그</a></li><li><a href="service-instagram.html">인스타그램 마케팅</a></li><li><a href="service-place.html">플레이스 관리</a></li><li><a href="service-daangn.html">당근마켓 마케팅</a></li><li><a href="service-cafe.html">카페 바이럴</a></li><li><a href="service-website.html">홈페이지 제작</a></li></ul></li><li><a href="location.html">찾아오시는 길</a></li><li><a href="contact.html">문의</a></li></ul>
+        <div class="mob-footer"><a href="https://open.kakao.com/o/sBj11zAf" target="_blank" class="mob-btn-kakao"><i class="fas fa-comment"></i> 카카오톡 문의하기</a><a href="https://m.blog.naver.com/kottorai" target="_blank" class="mob-btn-blog"><i class="fas fa-blog"></i> 블로그 바로가기</a></div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <span class="page-tag">ABOUT US</span>
+            <h1 class="page-title">안경원과 함께<br><em>성장하는 파트너</em></h1>
+            <p class="page-desc">심리학, 영상, 경영 전문가들이 모인 고또마케팅.<br>단순한 콘텐츠가 아닌 안경원의 가치를 알리는 전략적 마케팅을 만듭니다.</p>
+        </div>
+    </section>
+
+    <!-- Slogan -->
+    <section class="section" style="background:var(--white);">
+        <div class="container">
+            <div style="text-align:center;margin-bottom:80px;" data-aos="fade-up">
+                <div style="display:flex;align-items:flex-start;justify-content:center;gap:12px;margin-bottom:20px;">
+                    <span style="font-family:var(--font-display);font-size:3.5rem;color:var(--accent);line-height:1;font-style:italic;opacity:.4;">&ldquo;</span>
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <span style="font-size:3rem;font-weight:900;color:var(--primary);">신뢰</span>
+                        <span style="font-size:2.5rem;color:var(--gray-300);font-weight:300;">,</span>
+                        <span style="font-size:3rem;font-weight:900;color:var(--primary);">상생</span>
+                    </div>
+                    <span style="font-family:var(--font-display);font-size:3.5rem;color:var(--accent);line-height:1;font-style:italic;opacity:.4;align-self:flex-end;">&rdquo;</span>
+                </div>
+                <p style="font-size:1.05rem;color:var(--gray-500);">안경원과 함께 성장하는 마케팅 파트너</p>
+            </div>
+
+            <!-- Team -->
+            <div data-aos="fade-up">
+                <div style="text-align:center;margin-bottom:44px;">
+                    <h3 style="font-size:1.7rem;font-weight:800;color:var(--primary);margin-bottom:10px;">소수 정예 전문가 집단</h3>
+                    <p style="font-size:.95rem;color:var(--gray-500);line-height:1.8;">비전공자를 마케터로 앉혀놓은 일반적인 대행사와는 다릅니다.<br>각 분야의 전문가가 모여 만든, 안경원만을 위한 대행사.</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card" data-aos="fade-up">
+                        <div class="team-icon"><i class="fas fa-glasses"></i></div>
+                        <h4>에실로 얼티밋<br>전국 2위 안경사</h4>
+                        <p>압도적인 안경 전문 지식으로 진정성 있는 콘텐츠를 제작합니다</p>
+                    </div>
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-icon"><i class="fas fa-brain"></i></div>
+                        <h4>심리학과 출신<br>마케터</h4>
+                        <p>고객의 심리를 움직이는 전략적 기획을 설계합니다</p>
+                    </div>
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-icon"><i class="fas fa-film"></i></div>
+                        <h4>영상학과 출신<br>편집 전문가</h4>
+                        <p>시각적 임팩트를 극대화하는 압도적 편집 능력을 보유합니다</p>
+                    </div>
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="team-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h4>경영 &middot; 행정학<br>석사</h4>
+                        <p>체계적인 비즈니스 전략으로 안경원 경영을 지원합니다</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="section" style="background:var(--gray-50);">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">MISSION</span>
+                <h2 class="section-title">안경계에 이바지하는 <em>3가지 목표</em></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="mission-grid">
+                <div class="mission-card" data-aos="fade-up">
+                    <div class="mission-num">01</div>
+                    <div class="mission-body">
+                        <h4>안경 업계 구조 개선</h4>
+                        <p>저가 경쟁이 아닌 전문성과 가치 중심의 시장을 만들어갑니다.</p>
+                    </div>
+                    <div class="mission-icon"><i class="fas fa-chart-line"></i></div>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-num">02</div>
+                    <div class="mission-body">
+                        <h4>국민 안보건에 기여</h4>
+                        <p>질 낮은 안경 대신, 전문성의 가치를 알리는 브랜딩을 통해 국민이 더 좋은 시야와 눈 건강을 누릴 수 있는 환경을 만들어갑니다.</p>
+                    </div>
+                    <div class="mission-icon"><i class="fas fa-eye"></i></div>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mission-num">03</div>
+                    <div class="mission-body">
+                        <h4>안경원에 도움이 되어 드립니다</h4>
+                        <p>일반 업종에 비해 마케팅이 어려운 안경원도 쉽고 편하게, 효과적으로 시작할 수 있도록 돕습니다.</p>
+                    </div>
+                    <div class="mission-icon"><i class="fas fa-hands-helping"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Banner -->
+    <section class="section" style="background:var(--white);">
+        <div class="container">
+            <div class="dark-banner" data-aos="fade-up">
+                <div class="badge">NO SALES. ONLY RESULTS.</div>
+                <h3>영업을 해본 적 없는 대행사</h3>
+                <p>오직 <strong>안경 전문성</strong>, 고객의 심리를 움직이는 <strong>기획력</strong>, 그리고 <strong>압도적 편집력</strong>.<br>실력만으로 100% 재계약을 이끌어냅니다.</p>
+            </div>
+
+            <!-- Company Info Table -->
+            <div style="margin-top:64px;" data-aos="fade-up">
+                <h3 style="font-size:1.4rem;font-weight:800;color:var(--primary);text-align:center;margin-bottom:32px;">회사 정보</h3>
+                <table class="compare-table" style="max-width:700px;margin:0 auto;">
+                    <tbody>
+                        <tr><td style="font-weight:600;color:var(--primary);width:30%;">상호명</td><td>세모기획</td></tr>
+                        <tr><td style="font-weight:600;color:var(--primary);">대표자</td><td>고강일</td></tr>
+                        <tr><td style="font-weight:600;color:var(--primary);">사업자등록번호</td><td>791-07-02592</td></tr>
+                        <tr><td style="font-weight:600;color:var(--primary);">주소</td><td>경기도 남양주시 순화궁로 249 파라곤스퀘어 M동 1528호</td></tr>
+                        <tr><td style="font-weight:600;color:var(--primary);">이메일</td><td>communication@kotto.kr</td></tr>
+                        <tr><td style="font-weight:600;color:var(--primary);">주요 서비스</td><td>브랜드 블로그, 홈페이지형 블로그, 인스타그램, 당근마켓, 플레이스, 카페 바이럴, 홈페이지 제작</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h3>안경원 마케팅, 고또마케팅과 함께 시작하세요</h3>
+                <p>업종과 목표를 알려주시면 최적의 마케팅 전략을 무료로 제안해 드립니다</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">무료 상담 신청 <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://open.kakao.com/o/sBj11zAf" target="_blank" rel="noopener" class="btn-kakao"><i class="fas fa-comment"></i> 카카오톡 문의</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo"><span class="logo-text">고또마케팅</span></div>
+                    <p class="footer-tagline">국내 유일 안경원 전문 광고 대행사</p>
+                    <div class="footer-social">
+                        <a href="https://m.blog.naver.com/kottorai" target="_blank" rel="noopener"><i class="fas fa-blog"></i></a>
+                        <a href="https://open.kakao.com/o/sBj11zAf" target="_blank" rel="noopener"><i class="fas fa-comment"></i></a>
+                        <a href="mailto:communication@kotto.kr"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col"><h4>메뉴</h4><ul><li><a href="index.html">홈</a></li><li><a href="about.html">회사소개</a></li><li><a href="services.html">서비스 소개</a></li><li><a href="location.html">찾아오시는 길</a></li><li><a href="contact.html">문의</a></li></ul></div>
+                    <div class="footer-col"><h4>서비스</h4><ul><li><a href="service-blog.html">브랜드 블로그 대행</a></li><li><a href="service-hpblog.html">홈페이지형 블로그</a></li><li><a href="service-instagram.html">인스타그램</a></li><li><a href="service-place.html">플레이스 관리</a></li><li><a href="service-daangn.html">당근마켓</a></li><li><a href="service-cafe.html">카페 바이럴</a></li></ul></div>
+                    <div class="footer-col"><h4>연락처</h4><ul class="footer-contact-info"><li><i class="fas fa-map-marker-alt"></i> 경기도 남양주시 순화궁로 249<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;파라곤스퀘어 M동 1528호</li><li><i class="fas fa-envelope"></i> communication@kotto.kr</li></ul></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-biz"><span>상호: 세모기획</span><span class="d">|</span><span>대표: 고강일</span><span class="d">|</span><span>사업자등록번호: 791-07-02592</span></div>
+                <p class="footer-cr">&copy; 2025 고또마케팅. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating">
+        <a href="https://open.kakao.com/o/sBj11zAf" target="_blank" class="float-btn float-kakao"><i class="fas fa-comment"></i></a>
+        <a href="#" class="float-btn float-top" id="topBtn"><i class="fas fa-chevron-up"></i></a>
+    </div>
+    <div id="toast" class="toast"><div class="toast-inner"><i class="fas fa-check-circle"></i><span></span></div></div>
+    <script src="script.js"></script>
+</body>
+</html>
