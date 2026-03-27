@@ -196,11 +196,15 @@ img { max-width:100%; height:auto; display:block; }
 .hero-gradient { position:absolute; inset:0; background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 40%,#163A6B 100%); }
 .hero-pattern { position:absolute; inset:0; background-image:radial-gradient(circle at 20% 50%,rgba(30,86,160,.15) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(43,108,196,.1) 0%,transparent 40%),radial-gradient(circle at 60% 80%,rgba(30,86,160,.08) 0%,transparent 40%); }
 .hero-content { position:relative; z-index:1; text-align:center; padding:0 24px; max-width:900px; }
-.hero-badge { display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); padding:10px 24px; border-radius:50px; font-size:.82rem; font-weight:500; color:rgba(255,255,255,.9); letter-spacing:.04em; margin-bottom:32px; backdrop-filter:blur(10px); animation:badgeFadeIn 1.2s ease-out both; }
-.badge-dot { position:relative; width:8px; height:8px; background:#10B981; border-radius:50%; flex-shrink:0; }
-.badge-dot::after { content:''; position:absolute; inset:-3px; border-radius:50%; border:1.5px solid rgba(16,185,129,.4); animation:dotRing 3s ease-in-out infinite; }
-@keyframes badgeFadeIn { from{opacity:0;transform:translateY(-12px)} to{opacity:1;transform:translateY(0)} }
-@keyframes dotRing { 0%,100%{opacity:.4;transform:scale(1)} 50%{opacity:1;transform:scale(1.5)} }
+.hero-badge { display:inline-flex; align-items:center; gap:10px; position:relative; padding:12px 28px; border-radius:12px; margin-bottom:32px; background:linear-gradient(135deg,rgba(96,165,250,.12),rgba(167,139,250,.12)); border:1px solid transparent; background-clip:padding-box; overflow:hidden; animation:badgeEnter 1s cubic-bezier(.22,1,.36,1) both; }
+.hero-badge::before { content:''; position:absolute; inset:0; border-radius:12px; padding:1px; background:linear-gradient(135deg,rgba(96,165,250,.5),rgba(167,139,250,.4),rgba(96,165,250,.2)); -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none; }
+.hero-badge::after { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:conic-gradient(from 0deg,transparent,rgba(96,165,250,.08),transparent,rgba(167,139,250,.08),transparent); animation:badgeSpin 8s linear infinite; pointer-events:none; }
+.badge-icon { flex-shrink:0; position:relative; z-index:1; filter:drop-shadow(0 0 4px rgba(96,165,250,.5)); animation:iconFloat 4s ease-in-out infinite; }
+.badge-text { position:relative; z-index:1; font-size:.82rem; font-weight:600; letter-spacing:.06em; background:linear-gradient(90deg,#93C5FD,#C4B5FD,#93C5FD,#C4B5FD); background-size:300% 100%; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:textShimmer 6s ease-in-out infinite; }
+@keyframes badgeEnter { from{opacity:0;transform:translateY(-16px) scale(.95)} to{opacity:1;transform:translateY(0) scale(1)} }
+@keyframes badgeSpin { to{transform:rotate(360deg)} }
+@keyframes textShimmer { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+@keyframes iconFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-2px)} }
 .hero h1 { font-size:3.6rem; font-weight:900; line-height:1.2; margin-bottom:24px; letter-spacing:-.03em; }
 .hero-line { display:block; color:var(--white); }
 .hero-line.accent { background:linear-gradient(90deg,#fff,#a8c4e6); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
@@ -714,7 +718,8 @@ img { max-width:100%; height:auto; display:block; }
     .hero-cta { flex-direction:column; gap:10px; }
     .hero-cta .btn-primary, .hero-cta .btn-secondary { width:100%; justify-content:center; max-width:280px; padding:13px 28px; font-size:.9rem; }
     .hero-scroll { display:none; }
-    .hero-badge { font-size:.72rem; padding:8px 16px; margin-bottom:20px; }
+    .hero-badge { padding:10px 20px; margin-bottom:20px; }
+    .badge-text { font-size:.72rem; }
 
     /* Trust bar */
     .trust-items { gap:12px; flex-direction:column; align-items:flex-start; padding:0 8px; }
@@ -837,7 +842,9 @@ img { max-width:100%; height:auto; display:block; }
 
 @media(max-width:480px) {
     .hero h1 { font-size:1.6rem; }
-    .hero-badge { font-size:.68rem; padding:7px 12px; }
+    .hero-badge { padding:8px 14px; gap:6px; }
+    .badge-text { font-size:.68rem; }
+    .badge-icon { width:12px; height:12px; }
     .hero-desc { font-size:.88rem; }
     .section-title { font-size:1.4rem; }
     .page-title { font-size:1.5rem; }
