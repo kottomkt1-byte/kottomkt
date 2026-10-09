@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "mode": "HTML served once, networking then disabled. Managed Chromium blocks file:// navigation, so direct file opening is not claimed as tested.",
+  "results": [
+    {
+      "width": 1440,
+      "concept": "a",
+      "motion": {
+        "concept": "a",
+        "progress": 0.3167,
+        "renderer": "webgl-parametric-ribbon",
+        "frames": 60,
+        "active": false,
+        "renderScale": 0.72,
+        "quality": "reduced-resolution"
+      },
+      "overflow": 0,
+      "images": []
+    },
+    {
+      "width": 1440,
+      "concept": "b",
+      "motion": {
+        "concept": "b",
+        "progress": 0.2375,
+        "service": "place"
+      },
+      "overflow": 0,
+      "images": [
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "concept": "c",
+      "motion": {
+        "concept": "c",
+        "progress": 0.297,
+        "channel": "place"
+      },
+      "overflow": 0,
+      "images": []
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "additionalHttpRequests": []
+    },
+    {
+      "width": 390,
+      "concept": "a",
+      "motion": {
+        "concept": "a",
+        "progress": 0.495,
+        "renderer": "webgl-parametric-ribbon",
+        "frames": 57,
+        "active": false,
+        "renderScale": 0.72,
+        "quality": "reduced-resolution"
+      },
+      "overflow": 0,
+      "images": []
+    },
+    {
+      "width": 390,
+      "concept": "b",
+      "motion": {
+        "concept": "b",
+        "progress": 0.3676,
+        "service": "place"
+      },
+      "overflow": 0,
+      "images": [
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "concept": "c",
+      "motion": {
+        "concept": "c",
+        "progress": 1,
+        "channel": "place"
+      },
+      "overflow": 0,
+      "images": []
+    },
+    {
+      "width": 390,
+      "errors": [],
+      "additionalHttpRequests": []
+    }
+  ]
+}
