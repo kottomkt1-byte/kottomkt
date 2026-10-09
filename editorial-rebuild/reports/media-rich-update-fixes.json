@@ -1,0 +1,32 @@
+[
+  {
+    "fix": "Animate video only; keep playback controls outside transformed element",
+    "assets": [
+      "http://127.0.0.1:4181/assets/main-BiIQEqrS.js",
+      "http://127.0.0.1:4181/assets/main-DH8DEoax.css"
+    ],
+    "controls": [
+      {
+        "class": "brand-video-control",
+        "visible": true,
+        "bounds": [
+          1321.28125,
+          112,
+          1416,
+          156
+        ]
+      },
+      {
+        "class": "brand-video-caption",
+        "visible": true,
+        "bounds": [
+          1304.75,
+          172,
+          1416,
+          198
+        ]
+      }
+    ],
+    "pauseAtHeroEndWorks": true
+  }
+]

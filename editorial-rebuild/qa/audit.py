@@ -255,7 +255,7 @@ async def navigation_and_fallback(browser, base, width):
     try:
         await page.goto(f'{base}/index.html')
         await settle(page,1800)
-        await page.locator('.hero-intro a[href="services.html"]').click()
+        await page.locator('.hero-cta[href="services.html"]').click()
         await page.wait_for_url('**/services.html')
         result['homeToServices']=True
         await settle(page,700)

@@ -10,10 +10,14 @@ await cp(resolve('dist'), resolve(output, 'site'), { recursive: true });
 const assets = {};
 for (const [path, mime] of [
   ['fonts/KottoText.woff2','font/woff2'], ['fonts/KottoDisplay.woff2','font/woff2'],
-  ['art/editorial.webp','image/webp'], ['art/editing-desk.webp','image/webp'],
-  ['art/optical-editorial.webp','image/webp'],
   ['favicon.svg','image/svg+xml'], ['assets/vendor/email.min.js','application/javascript'],
 ]) assets[path] = `data:${mime};base64,${(await readFile(resolve('public',path))).toString('base64')}`;
+for (const directory of ['art','films']) {
+  for (const name of (await readdir(`public/${directory}`)).filter(name => /\.(webp|mp4)$/.test(name)).sort()) {
+    const mime=name.endsWith('.mp4')?'video/mp4':'image/webp';
+    assets[`${directory}/${name}`] = `data:${mime};base64,${(await readFile(resolve('public',directory,name))).toString('base64')}`;
+  }
+}
 for (const name of (await readdir('public/evidence')).filter(name => /^\w+-\d+\.png$/.test(name)).sort()) {
   assets[`evidence/${name}`] = `data:image/png;base64,${(await readFile(resolve('public/evidence',name))).toString('base64')}`;
 }

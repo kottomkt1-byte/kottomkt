@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "width": 1440,
+      "viewerBytes": 8679520,
+      "viewerSha256": "5d79e469631592fb13f9dab34d4e5d3fec26681069e70b0dde86b28633957de3",
+      "testedAt": "2026-10-09T15:51:13.472119+00:00",
+      "transport": "Unmodified file served once by Python static HTTP server, then browser offline",
+      "offlineVideo": {
+        "embedded": true,
+        "exactSource": true,
+        "muted": true,
+        "videoWidth": 1280,
+        "videoHeight": 720,
+        "duration": 15.208333,
+        "source": "films/kotto-studio-desktop.mp4",
+        "playbackAdvancedSeconds": 0.717,
+        "pauseHeldTime": true,
+        "resumedByControl": true
+      },
+      "homePortfolioAbsent": true,
+      "hpblogProjects": 7,
+      "additionalHttpRequests": []
+    },
+    {
+      "width": 390,
+      "viewerBytes": 8679520,
+      "viewerSha256": "5d79e469631592fb13f9dab34d4e5d3fec26681069e70b0dde86b28633957de3",
+      "testedAt": "2026-10-09T15:51:27.364675+00:00",
+      "transport": "Unmodified file served once by Python static HTTP server, then browser offline",
+      "offlineVideo": {
+        "embedded": true,
+        "exactSource": true,
+        "muted": true,
+        "videoWidth": 540,
+        "videoHeight": 676,
+        "duration": 15.208333,
+        "source": "films/kotto-studio-mobile.mp4",
+        "playbackAdvancedSeconds": 0.648,
+        "pauseHeldTime": true,
+        "resumedByControl": true
+      },
+      "homePortfolioAbsent": true,
+      "hpblogProjects": 7,
+      "additionalHttpRequests": []
+    }
+  ]
+}

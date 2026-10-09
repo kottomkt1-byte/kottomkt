@@ -60,7 +60,7 @@ async def record(browser, base, mobile):
     await page.wait_for_timeout(900)
     await section(page,".achievements",2)
     await page.wait_for_timeout(1300)
-    await section(page,".brand-film",3.2)
+    await section(page,".home-stories",3.2)
     await page.wait_for_timeout(1700)
     await section(page,".home-services",3.5)
     await page.wait_for_timeout(1300)

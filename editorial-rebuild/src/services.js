@@ -1,6 +1,7 @@
 import { renderPortfolio, renderVoices } from './evidence.js';
 import { services } from './content.js';
 import { evidencePortfolio, evidenceReviews } from './evidence-data.js';
+import { renderIndexPreview, renderIndexCover, renderServiceScene, renderServiceFeature, initServiceMedia } from './service-media.js';
 
 const escape = (value = '') => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const heading = value => escape(value).replace(/&lt;br\s*\/?&gt;/gi, '<br>');
@@ -49,10 +50,10 @@ export function renderServices() {
     <section class="sv-container sv-index-intro" aria-labelledby="sv-index-title">
       <p class="sv-kicker">고또마케팅이 하는 일</p>
       <h1 id="sv-index-title" class="sv-display" data-split-title>필요한 만큼,<br><span>정확한 곳에.</span></h1>
-      <div class="sv-index-intro-bottom"><p>안경원마다 전할 이야기도,<br>먼저 살펴야 할 채널도 다릅니다.</p><p>블로그의 한 문장부터 홈페이지의 전체 흐름까지.<br>안경원의 상황에 맞춰 필요한 일을 정리합니다.</p><a class="sv-text-link" href="#service-directory">서비스 살펴보기 <span aria-hidden="true">↓</span></a></div>
+      <div class="sv-index-intro-bottom"><p>안경원마다 전할 이야기도,<br>먼저 살펴야 할 채널도 다릅니다.</p><p>블로그의 한 문장부터 홈페이지의 전체 흐름까지.<br>안경원의 상황에 맞춰 필요한 일을 정리합니다.</p><a class="sv-text-link" href="#service-directory">서비스 살펴보기 <span aria-hidden="true">↓</span></a></div>${renderIndexCover()}
     </section>
     <section class="sv-directory sv-container" id="service-directory" aria-labelledby="sv-directory-title">
-      <div class="sv-directory-art"><div class="sv-art-sticky"><p id="sv-directory-title" class="sv-art-caption">전할 내용에 맞는 방법을 고릅니다.</p><div class="sv-object-stack">${services.map((service, index) => typeObject(service.key, { index: true, active: index === 0 })).join('')}</div><p class="sv-directory-footnote">안경원 전문 광고·콘텐츠 마케팅</p></div></div>
+      <div class="sv-directory-art"><div class="sv-art-sticky"><p id="sv-directory-title" class="sv-art-caption">전할 내용에 맞는 방법을 고릅니다.</p><div class="sv-object-stack">${services.map((service, index) => renderIndexPreview(service.key, index === 0)).join('')}</div><p class="sv-directory-footnote">안경원 전문 광고·콘텐츠 마케팅</p></div></div>
       <div class="sv-directory-links">${services.map(serviceRow).join('')}<div class="sv-directory-advice"><p>어디서부터 시작할지 고민이라면.</p><a class="sv-text-link" href="contact.html">현재 상황부터 이야기하기 <span aria-hidden="true">↗</span></a></div></div>
     </section>
     <section class="sv-working"><div class="sv-container sv-working-inner"><div><p class="sv-kicker">채널보다 먼저 살피는 것</p><h2 class="sv-section-title">전할 내용이<br>먼저입니다.</h2></div><div class="sv-working-copy"><p class="sv-working-lead">안경원의 일을 이해한 뒤,<br>그 이야기가 놓일 자리를 고릅니다.</p><p>어떤 상담을 하는지, 어떤 제품을 다루는지, 고객이 방문 전에 무엇을 궁금해하는지. 실제로 확인할 수 있는 자료에서 콘텐츠의 출발점을 찾습니다.</p><p>채널을 늘리는 일보다 지금 필요한 설명을 제대로 갖추는 일부터 함께합니다.</p><a class="sv-text-link" href="about.html">고또마케팅 알아보기 <span aria-hidden="true">↗</span></a></div></div></section>
@@ -67,7 +68,7 @@ export function renderService(key) {
   return `<article class="sv-page sv-detail sv-detail-${key}">
     <section class="sv-container sv-detail-hero" aria-labelledby="sv-detail-title">
       <nav class="sv-breadcrumb" aria-label="현재 위치"><a href="services.html">하는 일</a><span aria-hidden="true">/</span><span>${escape(service.name)}</span></nav>
-      <div class="sv-detail-masthead"><div class="sv-detail-heading"><p class="sv-kicker">${escape(service.name)}</p><h1 id="sv-detail-title" class="sv-display" data-split-title>${heading(service.heading)}</h1><p class="sv-detail-description">${escape(service.description)}</p><a class="sv-text-link" href="contact.html?service=${escape(key)}">${escape(service.name)} 상담하기 <span aria-hidden="true">↗</span></a></div><figure class="sv-detail-art">${['blog', 'hpblog'].includes(key) ? serviceEvidenceArt(key) : typeObject(key)}<figcaption>${escape(key === 'blog' ? '고객이 전한 반응을 원문과 함께 살펴보세요.' : key === 'hpblog' ? '기존 제작 화면입니다. 누르면 원본을 크게 볼 수 있습니다.' : composition.label)}</figcaption></figure></div>
+      <div class="sv-detail-masthead"><div class="sv-detail-heading"><p class="sv-kicker">${escape(service.name)}</p><h1 id="sv-detail-title" class="sv-display" data-split-title>${heading(service.heading)}</h1><p class="sv-detail-description">${escape(service.description)}</p><a class="sv-text-link" href="contact.html?service=${escape(key)}">${escape(service.name)} 상담하기 <span aria-hidden="true">↗</span></a></div><figure class="sv-detail-art">${key === 'hpblog' ? serviceEvidenceArt(key) : renderServiceScene(key)}<figcaption>${escape(key === 'hpblog' ? '기존 제작 화면입니다. 누르면 원본을 크게 볼 수 있습니다.' : ['place','daangn'].includes(key) ? '실제 지도나 고객 사례가 아닌, 업무 설명을 위한 구성입니다.' : key === 'website' ? '화면 크기를 바꿔 정보의 배치를 살펴보세요. 설계 원리 예시입니다.' : '서비스의 기획과 제작 방식을 표현한 브랜드 이미지입니다.')}</figcaption></figure></div>
       <a href="#service-scope" class="sv-reading-link"><span>업무 내용 읽기</span><span aria-hidden="true">↓</span></a>
     </section>
     ${key === 'hpblog' ? renderPortfolio({compact:true}) : ''}
@@ -75,6 +76,7 @@ export function renderService(key) {
       <div class="sv-scope-intro"><div class="sv-scope-sticky"><p class="sv-kicker">함께 살펴볼 업무</p><h2 class="sv-section-title" id="sv-scope-title">어떤 일을<br>하나요.</h2><div class="sv-scope-words" aria-hidden="true">${service.scope.map((scope, index) => `<span class="sv-scope-word${index === 0 ? ' is-current' : ''}" data-sv-word="${index}">${escape(composition.scope[index] || scope.title)}</span>`).join('')}</div><p class="sv-scope-caption">진행할 범위와 일정은<br>안경원의 상황에 맞춰 협의합니다.</p></div></div>
       <div class="sv-scope-content">${service.scope.map((scope, index) => `<section class="sv-scope-item" data-sv-scope="${index}" aria-labelledby="sv-scope-${index}"><span class="sv-scope-dash" aria-hidden="true"></span><h3 id="sv-scope-${index}">${escape(scope.title)}</h3><p>${escape(scope.body)}</p></section>`).join('')}</div>
     </section>
+    ${renderServiceFeature(key)}
     <section class="sv-process" aria-labelledby="sv-process-title"><div class="sv-container"><div class="sv-process-heading"><p class="sv-kicker">${['place', 'cafe'].includes(key) ? '함께 진행하는 일' : '진행 과정'}</p><h2 id="sv-process-title" class="sv-section-title">이렇게<br>함께 만듭니다.</h2><p>필요한 자료를 확인하고,<br>검토할 내용을 함께 공유합니다.</p></div><ol class="sv-process-list">${service.process.map((step, index) => `<li class="sv-process-step"><span class="sv-step-count" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span><div><h3>${escape(step.title)}</h3><p>${escape(step.body)}</p></div></li>`).join('')}</ol></div></section>
     <section class="sv-faq sv-container" aria-labelledby="sv-faq-title"><div><p class="sv-kicker">자주 묻는 내용</p><h2 id="sv-faq-title" class="sv-section-title">시작하기<br>전에.</h2></div><div class="sv-faq-list">${service.faq.map(faq => `<details class="sv-faq-item"><summary><span>${escape(faq.q)}</span><span class="sv-faq-symbol" aria-hidden="true"></span></summary><div class="sv-faq-answer"><p>${escape(faq.a)}</p></div></details>`).join('')}</div></section>
     ${key === 'blog' ? renderVoices({compact:true}) : ''}
@@ -88,6 +90,7 @@ export function initServices({ gsap, ScrollTrigger } = {}) {
   const page = document.querySelector('.sv-page');
   if (!page) return () => {};
   const cleanups = [];
+  if (gsap && ScrollTrigger) cleanups.push(initServiceMedia({ gsap, ScrollTrigger }));
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const previewLinks = page.querySelectorAll('[data-sv-preview]');
   const stack = page.querySelector('.sv-object-stack');
@@ -107,7 +110,8 @@ export function initServices({ gsap, ScrollTrigger } = {}) {
       gsap.set(nextObject, { zIndex: 2 });
       if (oldObject) gsap.set(oldObject, { zIndex: 1 });
       previewAnimation = gsap.fromTo(nextObject, { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: .52, ease: 'power3.inOut', clearProps: 'clipPath,zIndex', onComplete: () => oldObject?.classList.remove('is-leaving') });
-      gsap.fromTo(nextObject.querySelectorAll('.sv-type-leaf span'), { yPercent: 32, rotation: -2 }, { yPercent: 0, rotation: 0, duration: .64, stagger: .055, ease: 'power3.out', overwrite: true });
+      const picture = nextObject.querySelector('img');
+      if (picture) gsap.fromTo(picture, { scale: 1.05 }, { scale: 1, duration: .8, ease: 'power3.out', overwrite: true });
     }
   }
   previewLinks.forEach(link => {

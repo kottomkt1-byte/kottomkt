@@ -13,7 +13,7 @@ failures = []
 class Links(HTMLParser):
     def handle_starttag(self, tag, attributes):
         for key, value in attributes:
-            if key in ('src', 'href') and value:
+            if key in ('src', 'href', 'poster', 'data-video-desktop', 'data-video-mobile', 'data-video-poster-mobile') and value:
                 parsed = urlsplit(value)
                 if parsed.scheme or parsed.netloc or not parsed.path:
                     continue

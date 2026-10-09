@@ -1,0 +1,113 @@
+[
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "file": "output/playwright/media-rich-update/videos/kotto-media-rich-desktop.mp4",
+    "durationSeconds": 44.86,
+    "frames": 985,
+    "routes": [
+      "index",
+      "service-instagram",
+      "service-place",
+      "about"
+    ],
+    "method": "Actual Chromium CDP frames, timestamp-preserving MP4; real navigation, no synthetic still animation",
+    "sharedFile": "share/recordings/kotto-media-rich-desktop.mp4",
+    "sharedSha256Matches": true,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1440,
+          "height": 900
+        }
+      ],
+      "format": {
+        "duration": "44.866667",
+        "size": "7724711"
+      }
+    },
+    "extractedReviewSeconds": [
+      2,
+      11,
+      16,
+      22,
+      27,
+      33,
+      39,
+      43
+    ],
+    "reviewContactSheet": "output/playwright/media-rich-update/desktop-video-review.png",
+    "visuallyReviewedSeconds": [
+      2,
+      11,
+      16,
+      22,
+      27,
+      33,
+      39,
+      43
+    ],
+    "visualReviewComplete": true
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "file": "output/playwright/media-rich-update/videos/kotto-media-rich-mobile.mp4",
+    "durationSeconds": 42.6,
+    "frames": 846,
+    "routes": [
+      "index",
+      "service-instagram",
+      "service-place",
+      "about"
+    ],
+    "method": "Actual Chromium CDP frames, timestamp-preserving MP4; real navigation, no synthetic still animation",
+    "sharedFile": "share/recordings/kotto-media-rich-mobile.mp4",
+    "sharedSha256Matches": true,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "format": {
+        "duration": "42.600000",
+        "size": "2830908"
+      }
+    },
+    "extractedReviewSeconds": [
+      2,
+      11,
+      17,
+      22,
+      27,
+      32,
+      38,
+      41
+    ],
+    "reviewContactSheet": "output/playwright/media-rich-update/mobile-video-review.png",
+    "visuallyReviewedSeconds": [
+      2,
+      11,
+      17,
+      22,
+      27,
+      32,
+      38,
+      41,
+      23
+    ],
+    "visualReviewComplete": true
+  }
+]
