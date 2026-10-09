@@ -1,0 +1,1903 @@
+{
+  "time": "2026-10-09T14:44:03.568231+00:00",
+  "finalHeroes": [
+    {
+      "route": "service-blog",
+      "width": 1440,
+      "errors": [],
+      "layout": {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollY": 0,
+        "documentHeight": 6798,
+        "h1": [
+          "안경을 고르는 이유를,안경원이 쓰는 이야기로."
+        ],
+        "overflowingText": [],
+        "images": [
+          {
+            "src": "evidence/review-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-09.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-01.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-02.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-03.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-04.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-05.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-06.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-07.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-08.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-09.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-10.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-11.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-12.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-13.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-14.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-15.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-01.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-02.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-03.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-04.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-05.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-06.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-07.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-08.png",
+            "loaded": false
+          },
+          {
+            "src": null,
+            "loaded": false
+          }
+        ],
+        "unnamedControls": [],
+        "brokenAnchors": [],
+        "footerHeadingLines": [
+          "안경원 이야기를",
+          "들려주세요."
+        ]
+      },
+      "assets": [
+        "http://127.0.0.1:4181/assets/main-C2hNZOG0.js",
+        "http://127.0.0.1:4181/assets/main-BleVIj2U.css"
+      ],
+      "screenshot": "output/playwright/visual-update/service-blog-1440-final-hero.png"
+    },
+    {
+      "route": "service-blog",
+      "width": 390,
+      "errors": [],
+      "layout": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollY": 0,
+        "documentHeight": 6968,
+        "h1": [
+          "안경을 고르는 이유를,안경원이 쓰는 이야기로."
+        ],
+        "overflowingText": [],
+        "images": [
+          {
+            "src": "evidence/review-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-09.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-01.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-02.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-03.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-04.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-05.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-06.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-07.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-08.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-09.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-10.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-11.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-12.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-13.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-14.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-15.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-01.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-02.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-03.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-04.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-05.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-06.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-07.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-08.png",
+            "loaded": false
+          },
+          {
+            "src": null,
+            "loaded": false
+          }
+        ],
+        "unnamedControls": [],
+        "brokenAnchors": [],
+        "footerHeadingLines": [
+          "안경원 이야기를",
+          "들려주세요."
+        ]
+      },
+      "assets": [
+        "http://127.0.0.1:4181/assets/main-C2hNZOG0.js",
+        "http://127.0.0.1:4181/assets/main-BleVIj2U.css"
+      ],
+      "screenshot": "output/playwright/visual-update/service-blog-390-final-hero.png"
+    },
+    {
+      "route": "service-hpblog",
+      "width": 1440,
+      "errors": [],
+      "layout": {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollY": 0,
+        "documentHeight": 6231,
+        "h1": [
+          "첫 화면에 담는,우리 안경원의 인상."
+        ],
+        "overflowingText": [],
+        "images": [
+          {
+            "src": "evidence/portfolio-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-02.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-04.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-05.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-06.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-07.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-02.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-04.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-05.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-06.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-07.png",
+            "loaded": true
+          },
+          {
+            "src": null,
+            "loaded": false
+          }
+        ],
+        "unnamedControls": [],
+        "brokenAnchors": [],
+        "footerHeadingLines": [
+          "안경원 이야기를",
+          "들려주세요."
+        ]
+      },
+      "assets": [
+        "http://127.0.0.1:4181/assets/main-C2hNZOG0.js",
+        "http://127.0.0.1:4181/assets/main-BleVIj2U.css"
+      ],
+      "screenshot": "output/playwright/visual-update/service-hpblog-1440-final-hero.png"
+    },
+    {
+      "route": "service-hpblog",
+      "width": 390,
+      "errors": [],
+      "layout": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollY": 0,
+        "documentHeight": 6362,
+        "h1": [
+          "첫 화면에 담는,우리 안경원의 인상."
+        ],
+        "overflowingText": [],
+        "images": [
+          {
+            "src": "evidence/portfolio-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-02.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/portfolio-04.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/portfolio-05.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/portfolio-06.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/portfolio-07.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/portfolio-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-02.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-04.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-05.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-06.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-07.png",
+            "loaded": true
+          },
+          {
+            "src": null,
+            "loaded": false
+          }
+        ],
+        "unnamedControls": [],
+        "brokenAnchors": [],
+        "footerHeadingLines": [
+          "안경원 이야기를",
+          "들려주세요."
+        ]
+      },
+      "assets": [
+        "http://127.0.0.1:4181/assets/main-C2hNZOG0.js",
+        "http://127.0.0.1:4181/assets/main-BleVIj2U.css"
+      ],
+      "screenshot": "output/playwright/visual-update/service-hpblog-390-final-hero.png"
+    }
+  ],
+  "noJs": [
+    {
+      "width": 1440,
+      "title": "좋은 안경원을 제대로 알리는 일 — 고또마케팅",
+      "galleries": [
+        {
+          "kind": "portfolio",
+          "allLinks": 7,
+          "visibleLinks": 7,
+          "originalTargets": [
+            "evidence/portfolio-01.png",
+            "evidence/portfolio-02.png",
+            "evidence/portfolio-03.png",
+            "evidence/portfolio-04.png",
+            "evidence/portfolio-05.png",
+            "evidence/portfolio-06.png",
+            "evidence/portfolio-07.png"
+          ]
+        },
+        {
+          "kind": "review",
+          "allLinks": 15,
+          "visibleLinks": 15,
+          "originalTargets": [
+            "evidence/review-01.png",
+            "evidence/review-02.png",
+            "evidence/review-03.png",
+            "evidence/review-04.png",
+            "evidence/review-05.png",
+            "evidence/review-06.png",
+            "evidence/review-07.png",
+            "evidence/review-08.png",
+            "evidence/review-09.png",
+            "evidence/review-10.png",
+            "evidence/review-11.png",
+            "evidence/review-12.png",
+            "evidence/review-13.png",
+            "evidence/review-14.png",
+            "evidence/review-15.png"
+          ]
+        },
+        {
+          "kind": "inquiry",
+          "allLinks": 8,
+          "visibleLinks": 8,
+          "originalTargets": [
+            "evidence/chat-01.png",
+            "evidence/chat-02.png",
+            "evidence/chat-03.png",
+            "evidence/chat-04.png",
+            "evidence/chat-05.png",
+            "evidence/chat-06.png",
+            "evidence/chat-07.png",
+            "evidence/chat-08.png"
+          ]
+        }
+      ],
+      "overflow": 0,
+      "nativeImageNavigation": {
+        "expected": "evidence/review-01.png",
+        "actual": "http://127.0.0.1:4181/evidence/review-01.png",
+        "originalImageVisible": true
+      }
+    },
+    {
+      "width": 390,
+      "title": "좋은 안경원을 제대로 알리는 일 — 고또마케팅",
+      "galleries": [
+        {
+          "kind": "portfolio",
+          "allLinks": 7,
+          "visibleLinks": 7,
+          "originalTargets": [
+            "evidence/portfolio-01.png",
+            "evidence/portfolio-02.png",
+            "evidence/portfolio-03.png",
+            "evidence/portfolio-04.png",
+            "evidence/portfolio-05.png",
+            "evidence/portfolio-06.png",
+            "evidence/portfolio-07.png"
+          ]
+        },
+        {
+          "kind": "review",
+          "allLinks": 15,
+          "visibleLinks": 15,
+          "originalTargets": [
+            "evidence/review-01.png",
+            "evidence/review-02.png",
+            "evidence/review-03.png",
+            "evidence/review-04.png",
+            "evidence/review-05.png",
+            "evidence/review-06.png",
+            "evidence/review-07.png",
+            "evidence/review-08.png",
+            "evidence/review-09.png",
+            "evidence/review-10.png",
+            "evidence/review-11.png",
+            "evidence/review-12.png",
+            "evidence/review-13.png",
+            "evidence/review-14.png",
+            "evidence/review-15.png"
+          ]
+        },
+        {
+          "kind": "inquiry",
+          "allLinks": 8,
+          "visibleLinks": 8,
+          "originalTargets": [
+            "evidence/chat-01.png",
+            "evidence/chat-02.png",
+            "evidence/chat-03.png",
+            "evidence/chat-04.png",
+            "evidence/chat-05.png",
+            "evidence/chat-06.png",
+            "evidence/chat-07.png",
+            "evidence/chat-08.png"
+          ]
+        }
+      ],
+      "overflow": 0,
+      "nativeImageNavigation": {
+        "expected": "evidence/review-01.png",
+        "actual": "http://127.0.0.1:4181/evidence/review-01.png",
+        "originalImageVisible": true
+      }
+    }
+  ],
+  "home": [
+    {
+      "width": 1440,
+      "imageResources": [
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-01.png",
+          "loaded": true,
+          "size": [
+            1024,
+            813
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-02.png",
+          "loaded": true,
+          "size": [
+            1024,
+            648
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-03.png",
+          "loaded": true,
+          "size": [
+            1024,
+            693
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/art/editorial.webp",
+          "loaded": true,
+          "size": [
+            1086,
+            1448
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/art/optical-editorial.webp",
+          "loaded": true,
+          "size": [
+            1448,
+            1086
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-04.png",
+          "loaded": true,
+          "size": [
+            1024,
+            613
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-05.png",
+          "loaded": true,
+          "size": [
+            1024,
+            594
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-06.png",
+          "loaded": true,
+          "size": [
+            1024,
+            725
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-07.png",
+          "loaded": true,
+          "size": [
+            1024,
+            636
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-01.png",
+          "loaded": true,
+          "size": [
+            628,
+            462
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-02.png",
+          "loaded": true,
+          "size": [
+            449,
+            455
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-03.png",
+          "loaded": true,
+          "size": [
+            277,
+            121
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-04.png",
+          "loaded": true,
+          "size": [
+            354,
+            295
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-05.png",
+          "loaded": true,
+          "size": [
+            487,
+            416
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-06.png",
+          "loaded": true,
+          "size": [
+            600,
+            449
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-07.png",
+          "loaded": true,
+          "size": [
+            355,
+            481
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-08.png",
+          "loaded": true,
+          "size": [
+            595,
+            382
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-09.png",
+          "loaded": true,
+          "size": [
+            312,
+            265
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-10.png",
+          "loaded": true,
+          "size": [
+            383,
+            326
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-11.png",
+          "loaded": true,
+          "size": [
+            353,
+            633
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-12.png",
+          "loaded": true,
+          "size": [
+            603,
+            770
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-13.png",
+          "loaded": true,
+          "size": [
+            618,
+            687
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-14.png",
+          "loaded": true,
+          "size": [
+            408,
+            385
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-15.png",
+          "loaded": true,
+          "size": [
+            688,
+            730
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-01.png",
+          "loaded": true,
+          "size": [
+            386,
+            258
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-02.png",
+          "loaded": true,
+          "size": [
+            386,
+            330
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-03.png",
+          "loaded": true,
+          "size": [
+            355,
+            338
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-04.png",
+          "loaded": true,
+          "size": [
+            351,
+            358
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-05.png",
+          "loaded": true,
+          "size": [
+            355,
+            289
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-06.png",
+          "loaded": true,
+          "size": [
+            386,
+            362
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-07.png",
+          "loaded": true,
+          "size": [
+            386,
+            310
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-08.png",
+          "loaded": true,
+          "size": [
+            386,
+            372
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "안경 제작 사례 작성",
+          "value": "5,000건+",
+          "opacity": "1",
+          "clipPath": "none",
+          "withinViewport": true,
+          "dimensions": [
+            380.3125,
+            90
+          ]
+        },
+        {
+          "label": "메인 품목 재계약률",
+          "value": "100%",
+          "opacity": "1",
+          "clipPath": "none",
+          "withinViewport": true,
+          "dimensions": [
+            261.5625,
+            90
+          ]
+        },
+        {
+          "label": "전문성 만족도",
+          "value": "98%",
+          "opacity": "1",
+          "clipPath": "none",
+          "withinViewport": true,
+          "dimensions": [
+            261.5625,
+            90
+          ]
+        },
+        {
+          "label": "에실로 얼티밋 전국 순위",
+          "value": "2위",
+          "opacity": "1",
+          "clipPath": "none",
+          "withinViewport": true,
+          "dimensions": [
+            287.546875,
+            90
+          ]
+        }
+      ],
+      "metricPairsCorrect": true,
+      "metricsScreenshot": "output/playwright/visual-update/index-1440-achievements.png",
+      "motion": [
+        {
+          "selector": "[data-brand-film]",
+          "nativeWheelForward": {
+            "scroll": 2829,
+            "motion": {
+              "progress": 1,
+              "mode": "scroll",
+              "active": true
+            },
+            "selected": null
+          },
+          "nativeWheelReverse": {
+            "scroll": 1749,
+            "motion": {
+              "progress": 0.188,
+              "mode": "scroll",
+              "active": true
+            },
+            "selected": null
+          },
+          "raf": {
+            "frames": 518,
+            "medianMs": 16.69999999999891,
+            "p95Ms": 16.799999999999272,
+            "maxMs": 16.80000000000109,
+            "over34": 0,
+            "over50": 0
+          }
+        },
+        {
+          "selector": "[data-ev-portfolio]",
+          "nativeWheelForward": {
+            "scroll": 4809,
+            "motion": null,
+            "selected": "2"
+          },
+          "nativeWheelReverse": {
+            "scroll": 2919,
+            "motion": null,
+            "selected": "0"
+          },
+          "raf": {
+            "frames": 464,
+            "medianMs": 16.69999999999891,
+            "p95Ms": 16.799999999999272,
+            "maxMs": 33.29999999999927,
+            "over34": 0,
+            "over50": 0
+          }
+        }
+      ],
+      "layout": {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollY": 2919,
+        "documentHeight": 9138,
+        "h1": [
+          "좋은 안경원을제대로 알리는 일."
+        ],
+        "overflowingText": [],
+        "images": [
+          {
+            "src": "evidence/portfolio-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-02.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "art/editorial.webp",
+            "loaded": true
+          },
+          {
+            "src": "art/optical-editorial.webp",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-02.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-04.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-05.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-06.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-07.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-02.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-04.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-05.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-06.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-07.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-02.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-04.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-05.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-06.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-07.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-08.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-09.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-10.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-11.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-12.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-13.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-14.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-15.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-01.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-02.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-03.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-04.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-05.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-06.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-07.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-08.png",
+            "loaded": false
+          },
+          {
+            "src": null,
+            "loaded": false
+          }
+        ],
+        "unnamedControls": [],
+        "brokenAnchors": [],
+        "footerHeadingLines": [
+          "안경원 이야기를",
+          "들려주세요."
+        ]
+      },
+      "cls": 0
+    },
+    {
+      "width": 390,
+      "imageResources": [
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-01.png",
+          "loaded": true,
+          "size": [
+            1024,
+            813
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-02.png",
+          "loaded": true,
+          "size": [
+            1024,
+            648
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-03.png",
+          "loaded": true,
+          "size": [
+            1024,
+            693
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/art/editorial.webp",
+          "loaded": true,
+          "size": [
+            1086,
+            1448
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/art/optical-editorial.webp",
+          "loaded": true,
+          "size": [
+            1448,
+            1086
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-04.png",
+          "loaded": true,
+          "size": [
+            1024,
+            613
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-05.png",
+          "loaded": true,
+          "size": [
+            1024,
+            594
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-06.png",
+          "loaded": true,
+          "size": [
+            1024,
+            725
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/portfolio-07.png",
+          "loaded": true,
+          "size": [
+            1024,
+            636
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-01.png",
+          "loaded": true,
+          "size": [
+            628,
+            462
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-02.png",
+          "loaded": true,
+          "size": [
+            449,
+            455
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-03.png",
+          "loaded": true,
+          "size": [
+            277,
+            121
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-04.png",
+          "loaded": true,
+          "size": [
+            354,
+            295
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-05.png",
+          "loaded": true,
+          "size": [
+            487,
+            416
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-06.png",
+          "loaded": true,
+          "size": [
+            600,
+            449
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-07.png",
+          "loaded": true,
+          "size": [
+            355,
+            481
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-08.png",
+          "loaded": true,
+          "size": [
+            595,
+            382
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-09.png",
+          "loaded": true,
+          "size": [
+            312,
+            265
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-10.png",
+          "loaded": true,
+          "size": [
+            383,
+            326
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-11.png",
+          "loaded": true,
+          "size": [
+            353,
+            633
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-12.png",
+          "loaded": true,
+          "size": [
+            603,
+            770
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-13.png",
+          "loaded": true,
+          "size": [
+            618,
+            687
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-14.png",
+          "loaded": true,
+          "size": [
+            408,
+            385
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/review-15.png",
+          "loaded": true,
+          "size": [
+            688,
+            730
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-01.png",
+          "loaded": true,
+          "size": [
+            386,
+            258
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-02.png",
+          "loaded": true,
+          "size": [
+            386,
+            330
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-03.png",
+          "loaded": true,
+          "size": [
+            355,
+            338
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-04.png",
+          "loaded": true,
+          "size": [
+            351,
+            358
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-05.png",
+          "loaded": true,
+          "size": [
+            355,
+            289
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-06.png",
+          "loaded": true,
+          "size": [
+            386,
+            362
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-07.png",
+          "loaded": true,
+          "size": [
+            386,
+            310
+          ]
+        },
+        {
+          "src": "http://127.0.0.1:4181/evidence/chat-08.png",
+          "loaded": true,
+          "size": [
+            386,
+            372
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "안경 제작 사례 작성",
+          "value": "5,000건+",
+          "opacity": "1",
+          "clipPath": "none",
+          "withinViewport": true,
+          "dimensions": [
+            170,
+            49.921875
+          ]
+        },
+        {
+          "label": "메인 품목 재계약률",
+          "value": "100%",
+          "opacity": "1",
+          "clipPath": "none",
+          "withinViewport": true,
+          "dimensions": [
+            153,
+            49.921875
+          ]
+        },
+        {
+          "label": "전문성 만족도",
+          "value": "98%",
+          "opacity": "1",
+          "clipPath": "none",
+          "withinViewport": true,
+          "dimensions": [
+            170,
+            49.921875
+          ]
+        },
+        {
+          "label": "에실로 얼티밋 전국 순위",
+          "value": "2위",
+          "opacity": "1",
+          "clipPath": "none",
+          "withinViewport": true,
+          "dimensions": [
+            153,
+            49.921875
+          ]
+        }
+      ],
+      "metricPairsCorrect": true,
+      "metricsScreenshot": "output/playwright/visual-update/index-390-achievements.png",
+      "motion": [
+        {
+          "selector": "[data-brand-film]",
+          "nativeWheelForward": {
+            "scroll": 2361,
+            "motion": {
+              "progress": 0,
+              "mode": "static",
+              "active": true
+            },
+            "selected": null
+          },
+          "nativeWheelReverse": {
+            "scroll": 1132,
+            "motion": {
+              "progress": 0,
+              "mode": "static",
+              "active": true
+            },
+            "selected": null
+          },
+          "raf": {
+            "frames": 421,
+            "medianMs": 16.699999999999818,
+            "p95Ms": 16.700000000000728,
+            "maxMs": 16.80000000000109,
+            "over34": 0,
+            "over50": 0
+          }
+        },
+        {
+          "selector": "[data-ev-portfolio]",
+          "nativeWheelForward": {
+            "scroll": 3216,
+            "motion": null,
+            "selected": "0"
+          },
+          "nativeWheelReverse": {
+            "scroll": 2445,
+            "motion": null,
+            "selected": "0"
+          },
+          "raf": {
+            "frames": 420,
+            "medianMs": 16.69999999999891,
+            "p95Ms": 16.799999999999272,
+            "maxMs": 16.80000000000291,
+            "over34": 0,
+            "over50": 0
+          }
+        }
+      ],
+      "layout": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollY": 2445,
+        "documentHeight": 7353,
+        "h1": [
+          "좋은 안경원을제대로 알리는 일."
+        ],
+        "overflowingText": [],
+        "images": [
+          {
+            "src": "evidence/portfolio-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-02.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "art/editorial.webp",
+            "loaded": true
+          },
+          {
+            "src": "art/optical-editorial.webp",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-02.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-04.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/portfolio-05.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/portfolio-06.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/portfolio-07.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/portfolio-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-02.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-04.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-05.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-06.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/portfolio-07.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-01.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-02.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-03.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-04.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-05.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-06.png",
+            "loaded": true
+          },
+          {
+            "src": "evidence/review-07.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-08.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-09.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-10.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-11.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-12.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-13.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-14.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/review-15.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-01.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-02.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-03.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-04.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-05.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-06.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-07.png",
+            "loaded": false
+          },
+          {
+            "src": "evidence/chat-08.png",
+            "loaded": false
+          },
+          {
+            "src": null,
+            "loaded": false
+          }
+        ],
+        "unnamedControls": [],
+        "brokenAnchors": [],
+        "footerHeadingLines": [
+          "안경원 이야기를",
+          "들려주세요."
+        ]
+      },
+      "cls": 0
+    }
+  ],
+  "mobilePortfolioImages": [
+    {
+      "route": "index",
+      "images": [
+        {
+          "src": "evidence/portfolio-01.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            813
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        },
+        {
+          "src": "evidence/portfolio-02.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            648
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        },
+        {
+          "src": "evidence/portfolio-03.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            693
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        },
+        {
+          "src": "evidence/portfolio-04.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            613
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        },
+        {
+          "src": "evidence/portfolio-05.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            594
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        },
+        {
+          "src": "evidence/portfolio-06.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            725
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        },
+        {
+          "src": "evidence/portfolio-07.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            636
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        }
+      ]
+    },
+    {
+      "route": "service-hpblog",
+      "images": [
+        {
+          "src": "evidence/portfolio-01.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            813
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        },
+        {
+          "src": "evidence/portfolio-02.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            648
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        },
+        {
+          "src": "evidence/portfolio-03.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            693
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        },
+        {
+          "src": "evidence/portfolio-04.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            613
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        },
+        {
+          "src": "evidence/portfolio-05.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            594
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        },
+        {
+          "src": "evidence/portfolio-06.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            725
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        },
+        {
+          "src": "evidence/portfolio-07.png",
+          "loaded": true,
+          "natural": [
+            1024,
+            636
+          ],
+          "display": [
+            314,
+            272.296875
+          ],
+          "horizontallyInView": true
+        }
+      ]
+    }
+  ]
+}

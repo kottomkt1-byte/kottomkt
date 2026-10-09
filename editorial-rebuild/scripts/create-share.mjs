@@ -1,5 +1,5 @@
 import { build } from 'esbuild';
-import { readFile, writeFile, mkdir, cp, rm } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, cp, rm, readdir } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
 // Only the reviewed static output is copied, never the repository or environment.
@@ -11,8 +11,12 @@ const assets = {};
 for (const [path, mime] of [
   ['fonts/KottoText.woff2','font/woff2'], ['fonts/KottoDisplay.woff2','font/woff2'],
   ['art/editorial.webp','image/webp'], ['art/editing-desk.webp','image/webp'],
+  ['art/optical-editorial.webp','image/webp'],
   ['favicon.svg','image/svg+xml'], ['assets/vendor/email.min.js','application/javascript'],
 ]) assets[path] = `data:${mime};base64,${(await readFile(resolve('public',path))).toString('base64')}`;
+for (const name of (await readdir('public/evidence')).filter(name => /^\w+-\d+\.png$/.test(name)).sort()) {
+  assets[`evidence/${name}`] = `data:image/png;base64,${(await readFile(resolve('public/evidence',name))).toString('base64')}`;
+}
 
 const result = await build({ entryPoints: ['src/main.js'], bundle: true, write: false, outdir: '/virtual',
   format: 'iife', minify: true, target: 'es2020', external: ['/fonts/*'], legalComments: 'inline' });
@@ -31,7 +35,7 @@ function render(){
  let html=data.pages[name];let css=data.css;
  for(const [path,value]of Object.entries(data.assets)){html=html.split('"/'+path+'"').join('"'+value+'"').split('"'+path+'"').join('"'+value+'"');css=css.split('/'+path).join(value);}
  html=html.replace('</head>',()=>'<style>'+css+'</style></head>');
- const globals='window.__KOTTO_STANDALONE__=true;window.__KOTTO_ROUTE_QUERY__='+JSON.stringify('?'+query)+';window.__KOTTO_EMAILJS_ASSET__='+JSON.stringify(data.assets['assets/vendor/email.min.js'])+';';
+ const globals='window.__KOTTO_STANDALONE__=true;window.__KOTTO_ASSETS__='+JSON.stringify(data.assets)+';window.__KOTTO_ROUTE_QUERY__='+JSON.stringify('?'+query)+';window.__KOTTO_EMAILJS_ASSET__='+JSON.stringify(data.assets['assets/vendor/email.min.js'])+';';
  const navigation='document.addEventListener("click",function(event){const a=event.target.closest("a[href]");if(!a)return;const href=a.getAttribute("href");const allowed='+JSON.stringify(Object.keys(data.pages))+';if(!allowed.includes(href.split("?")[0]))return;event.preventDefault();parent.postMessage({type:"kotto-page",route:href,newTab:event.ctrlKey||event.metaKey},"*");});';
  const code=globals+data.js+';'+navigation;
  html=html.replace('</body>',()=>'<scr'+'ipt>'+code.replace(/<\\/script/gi,'<\\\\/script')+'</scr'+'ipt></body>');

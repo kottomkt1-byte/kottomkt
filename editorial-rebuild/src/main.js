@@ -1,3 +1,10 @@
+import './evidence.css';
+import './brand-film.css';
+import './achievements.css';
+import { initAchievements } from './achievements.js';
+import { initEvidence } from './evidence.js';
+import { initBrandFilm } from './brand-film.js';
+import { Flip } from 'gsap/Flip';
 import './global.css';
 import './home.css';
 import './services.css';
@@ -10,7 +17,7 @@ import { initServices } from './services.js';
 import { initCompany } from './company.js';
 import { createPaperScene } from './paper-scene.js';
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText, Flip);
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
 const cleanups = [];
 window.__kottoMotion = { page: document.body.dataset.page, heroProgress: 0, reduced: reduced.matches };
@@ -61,6 +68,9 @@ document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener(
 
 cleanups.push(initServices({ gsap, ScrollTrigger }));
 cleanups.push(initCompany({ gsap, ScrollTrigger }));
+cleanups.push(initEvidence({ gsap, ScrollTrigger, Flip }));
+cleanups.push(initBrandFilm({ gsap, ScrollTrigger, Flip }));
+cleanups.push(initAchievements({ gsap, ScrollTrigger }));
 
 let paper;
 const paperElement = document.querySelector('[data-paper-scene]');
@@ -111,7 +121,7 @@ document.fonts.ready.then(() => {
       .to('.hero-track span', { scaleX: 1, duration: 1 }, 0)
       .to({}, { duration: .15 });
     const chapter = document.querySelector('.chapter-art');
-    gsap.fromTo(chapter.querySelector('img'), { scale: 1.12, yPercent: -5 }, { scale: 1, yPercent: 5, ease: 'none', scrollTrigger: { trigger: '.home-chapter', start: 'top bottom', end: 'bottom top', scrub: .7 } });
+    if (chapter) gsap.fromTo(chapter.querySelector('img'), { scale: 1.12, yPercent: -5 }, { scale: 1, yPercent: 5, ease: 'none', scrollTrigger: { trigger: '.home-chapter', start: 'top bottom', end: 'bottom top', scrub: .7 } });
   });
   mm.add('(prefers-reduced-motion: no-preference)', () => {
     const statement = document.querySelector('[data-reading]');

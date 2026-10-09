@@ -16,7 +16,8 @@ instructions='''고또마케팅 홈페이지 전체 보기
 파일이나 Preview의 출처가 EmailJS 허용 목록에 없으면 전송이 거절될 수 있으며 오류를 표시합니다.
 일부 휴대폰 파일 미리보기 앱은 HTML을 실행하지 않으므로 모바일에서는 제공한 웹 미리보기를 이용하세요.
 
-브랜드 이미지는 생성형 아트워크이며 실제 고객 작업물이 아닙니다.
+제작 사례 7개, 고객 후기 15개, 상담 문의 8개의 이미지는 기존 공개 원본입니다.
+별도로 '브랜드 이미지'라고 표시한 아트워크는 생성형 이미지이며 고객 작업물이 아닙니다.
 GSAP 3.15.0: Copyright (c) 2008-2026, GreenSock. All rights reserved.
 GSAP license: https://gsap.com/standard-license
 폰트 OFL 및 기존 EmailJS 라이선스는 licenses 폴더에 있습니다.

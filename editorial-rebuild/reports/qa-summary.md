@@ -1,5 +1,7 @@
 # 고또마케팅 B형 — 실제 브라우저 검수
 
+아래는 첫 12페이지 구현의 검수 기록이다. 고객 이미지 복원 이후의 최신 검수는 [visual-update-summary.md](visual-update-summary.md)와 `visual-update-results.json`을 따른다.
+
 검수 대상: 프로덕션 빌드의 내부 QA 서버 `http://127.0.0.1:4181`. 이 주소는 외부 접속용 미리보기가 아닙니다.
 
 ## 검수 결과

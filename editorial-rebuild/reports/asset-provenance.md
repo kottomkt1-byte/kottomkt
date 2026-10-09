@@ -18,3 +18,15 @@
 - `/workspace/kottomkt/.agents/skills/frontend-design/SKILL.md`
 
 The image was generated after visually inspecting the existing `creative-rebuild/public/art/editorial.webp`, to complement its paper-and-ink language without repeating the giant K composition.
+
+## `public/art/optical-editorial.webp`
+
+- Origin: newly generated with the OpenAI image generation tool for KOTTO on 2026-10-09.
+- Original generation: `/workspace/generated_images/exec-f0d3c9c0-c98f-4df6-9800-3e9a88394a87.png`; preserved in the workspace.
+- Delivery: 1448 × 1086 WebP, quality 88. Format compression only; generated from a new textual art brief, not from client artwork.
+- Subject: an oxblood acetate spectacle temple, a precision silver caliper, and a small material sample on warm limestone. Macro framing, material detail, and directional shadows connect the optical trade to KOTTO's attentive editorial brand language.
+- Truthfulness: authored illustrative brand artwork, not documentation of KOTTO's tools, production process, customer's shop, product inventory, or case study. The image makes no claim that KOTTO manufactures or sells eyewear. Do not use it as a measured technical diagram or product specification.
+- Placement: a section describing KOTTO's understanding of the optical industry, company introduction, or editorial content expertise. Avoid product-card treatments, prices, and a shopping CTA.
+- Suggested Korean alternative text when informative: `붉은 안경테 다리의 연결부와 정밀 측정 도구를 가까이 담은 브랜드 이미지.` Purely decorative implementations may use an empty `alt` when adjacent prose conveys the full meaning.
+- Safety/content review: no people, personal data, customer names, fabricated metrics, third-party logos, shop interiors, or copied customer materials. Generated tool details serve illustration and are not presented as technical evidence.
+- Skills applied: the previously read Astra art-direction and frontend-design guidance, particularly subject-specific materials, deliberate composition, and truthful asset provenance.

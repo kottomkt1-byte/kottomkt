@@ -26,18 +26,40 @@ async def run():
                 frame=page.frames[1]
                 await frame.wait_for_function('document.documentElement.dataset.ready === "true"')
                 await page.wait_for_timeout(1350)
-                for image in await frame.locator('img[loading="lazy"]').all():
-                    await image.scroll_into_view_if_needed()
-                    await image.evaluate('image=>image.decode()')
+                # Decode every authored source, including the initially hidden
+                # gallery items. The empty dialog image gets its source on open.
+                await frame.evaluate('''async()=>{await Promise.all([...document.images].filter(i=>i.hasAttribute('src')).map(async i=>{i.loading='eager';await i.decode()}))}''')
                 await frame.evaluate('scrollTo(0,0)')
-                metrics=await frame.evaluate('({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,h1:document.querySelector("h1").textContent,images:[...document.images].map(i=>i.complete&&i.naturalWidth>0)})')
+                metrics=await frame.evaluate('({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,h1:document.querySelector("h1").textContent,images:[...document.images].filter(i=>i.hasAttribute("src")).map(i=>i.complete&&i.naturalWidth>0)})')
                 assert metrics['width']==metrics['scrollWidth'],(name,metrics)
                 assert all(metrics['images']),(name,metrics)
                 report['results'].append({'width':width,'page':name,**metrics})
             await page.evaluate('location.hash="index.html"')
             await page.wait_for_timeout(1400)
             frame=page.frames[1]
-            await frame.locator('.hero-intro a').click()
+            # All thirty full-size originals must also open without networking.
+            await frame.locator('.ev-portfolio .ev-project.is-active [data-evidence-open]').click()
+            for i in range(7):
+                image=frame.locator('.ev-dialog-image')
+                await image.evaluate('image=>image.decode()')
+                assert await image.evaluate('i=>i.src.startsWith("data:image/png;")&&i.naturalWidth>0')
+                await frame.locator('[data-ev-dialog-next]').click()
+            await frame.locator('[data-ev-close]').click()
+            for kind,total in [('review',15),('inquiry',8)]:
+                await frame.locator(f'[data-ev-filter="{kind}"]').click()
+                await frame.locator(f'.ev-voice:not([hidden]) [data-evidence-open="{kind}"]').first.click()
+                for i in range(total):
+                    image=frame.locator('.ev-dialog-image')
+                    await image.evaluate('image=>image.decode()')
+                    assert await image.evaluate('i=>i.src.startsWith("data:image/png;")&&i.naturalWidth>0')
+                    await frame.locator('[data-ev-dialog-next]').click()
+                await frame.locator('[data-ev-zoom]').click()
+                assert await frame.locator('.ev-dialog').evaluate('e=>e.classList.contains("is-zoomed")')
+                await frame.locator('[data-ev-close]').click()
+            report['results'].append({'width':width,'offlineOriginalImages':30,'dialogZoom':True})
+            await frame.evaluate('scrollTo(0,0)')
+            await frame.wait_for_timeout(1300)
+            await frame.locator('.hero-intro a[href="services.html"]').click()
             await page.wait_for_function('location.hash==="#services.html"')
             await page.wait_for_timeout(1300)
             await page.frames[1].locator('.sv-directory-links a').first.click()

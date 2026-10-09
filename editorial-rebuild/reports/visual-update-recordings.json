@@ -1,0 +1,74 @@
+[
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "file": "output/playwright/visual-update/videos/kotto-visual-update-desktop.mp4",
+    "durationSeconds": 40.92,
+    "frames": 710,
+    "method": "Actual Chromium CDP frames, timestamp-preserving MP4; no synthetic interpolation or submitted inquiry",
+    "sharedFile": "share/recordings/kotto-visual-update-desktop.mp4",
+    "sharedSha256Matches": true,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1440,
+          "height": 900
+        }
+      ],
+      "format": {
+        "duration": "40.933333",
+        "size": "3915023"
+      }
+    },
+    "visuallyReviewedSeconds": [
+      2,
+      13,
+      19,
+      25,
+      32,
+      38
+    ],
+    "reviewContactSheet": "output/playwright/visual-update/desktop-video-review.png"
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "file": "output/playwright/visual-update/videos/kotto-visual-update-mobile.mp4",
+    "durationSeconds": 37.04,
+    "frames": 598,
+    "method": "Actual Chromium CDP frames, timestamp-preserving MP4; no synthetic interpolation or submitted inquiry",
+    "sharedFile": "share/recordings/kotto-visual-update-mobile.mp4",
+    "sharedSha256Matches": true,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "format": {
+        "duration": "37.033333",
+        "size": "1082333"
+      }
+    },
+    "visuallyReviewedSeconds": [
+      2,
+      13,
+      19,
+      25,
+      32,
+      36
+    ],
+    "reviewContactSheet": "output/playwright/visual-update/mobile-video-review.png"
+  }
+]

@@ -1,4 +1,6 @@
+import { renderPortfolio, renderVoices } from './evidence.js';
 import { services } from './content.js';
+import { evidencePortfolio, evidenceReviews } from './evidence-data.js';
 
 const escape = (value = '') => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const heading = value => escape(value).replace(/&lt;br\s*\/?&gt;/gi, '<br>');
@@ -33,6 +35,15 @@ function serviceRow(item) {
   </a>`;
 }
 
+function serviceEvidenceArt(key) {
+  const original = (item, index, kind, className) => `<a class="sv-proof-sheet ${className}" href="${escape(item.src)}" data-evidence-open="${kind}" data-evidence-index="${index}" aria-label="${escape(item.title)} 원본 크게 보기"><span class="sv-proof-image"><img src="${escape(item.src)}" width="${item.width}" height="${item.height}" alt="${escape(item.alt)}" decoding="async"></span><span class="sv-proof-label"><span>${escape(kind === 'portfolio' ? item.name : item.caption)}</span><span aria-hidden="true">원본 보기 ↗</span></span></a>`;
+  if (key === 'hpblog') {
+    return `<div class="sv-evidence-art sv-evidence-hpblog"><div class="sv-proof-masthead"><span>실제 제작 화면</span><span>홈페이지형 블로그</span></div><p class="sv-proof-heading">각자의 이야기에,<br>각자의 첫 화면.</p>${original(evidencePortfolio[0], 0, 'portfolio', 'sv-proof-first')}${original(evidencePortfolio[2], 2, 'portfolio', 'sv-proof-second')}<p class="sv-proof-footnote">유럽안경 · 쓰리팩토리 안경원 제작 사례</p></div>`;
+  }
+  const review = evidenceReviews[0];
+  return `<div class="sv-evidence-art sv-evidence-blog"><div class="sv-proof-masthead"><span>고객이 보내주신 말</span><span>기존 공개 후기</span></div><blockquote class="sv-proof-quote"><p>${escape(review.quote)}</p><cite>고객 후기 01 · 원문에서 발췌</cite></blockquote>${original(review, 0, 'review', 'sv-proof-first')}${original(evidenceReviews[8], 8, 'review', 'sv-proof-second')}<p class="sv-proof-footnote">개별 고객의 경험이며, 같은 결과를 약속하지 않습니다.</p></div>`;
+}
+
 export function renderServices() {
   return `<div class="sv-page sv-index">
     <section class="sv-container sv-index-intro" aria-labelledby="sv-index-title">
@@ -56,15 +67,17 @@ export function renderService(key) {
   return `<article class="sv-page sv-detail sv-detail-${key}">
     <section class="sv-container sv-detail-hero" aria-labelledby="sv-detail-title">
       <nav class="sv-breadcrumb" aria-label="현재 위치"><a href="services.html">하는 일</a><span aria-hidden="true">/</span><span>${escape(service.name)}</span></nav>
-      <div class="sv-detail-masthead"><div class="sv-detail-heading"><p class="sv-kicker">${escape(service.name)}</p><h1 id="sv-detail-title" class="sv-display" data-split-title>${heading(service.heading)}</h1><p class="sv-detail-description">${escape(service.description)}</p><a class="sv-text-link" href="contact.html?service=${escape(key)}">${escape(service.name)} 상담하기 <span aria-hidden="true">↗</span></a></div><figure class="sv-detail-art">${typeObject(key)}<figcaption>${escape(composition.label)}</figcaption></figure></div>
+      <div class="sv-detail-masthead"><div class="sv-detail-heading"><p class="sv-kicker">${escape(service.name)}</p><h1 id="sv-detail-title" class="sv-display" data-split-title>${heading(service.heading)}</h1><p class="sv-detail-description">${escape(service.description)}</p><a class="sv-text-link" href="contact.html?service=${escape(key)}">${escape(service.name)} 상담하기 <span aria-hidden="true">↗</span></a></div><figure class="sv-detail-art">${['blog', 'hpblog'].includes(key) ? serviceEvidenceArt(key) : typeObject(key)}<figcaption>${escape(key === 'blog' ? '고객이 전한 반응을 원문과 함께 살펴보세요.' : key === 'hpblog' ? '기존 제작 화면입니다. 누르면 원본을 크게 볼 수 있습니다.' : composition.label)}</figcaption></figure></div>
       <a href="#service-scope" class="sv-reading-link"><span>업무 내용 읽기</span><span aria-hidden="true">↓</span></a>
     </section>
+    ${key === 'hpblog' ? renderPortfolio({compact:true}) : ''}
     <section id="service-scope" class="sv-scope sv-container" aria-labelledby="sv-scope-title">
       <div class="sv-scope-intro"><div class="sv-scope-sticky"><p class="sv-kicker">함께 살펴볼 업무</p><h2 class="sv-section-title" id="sv-scope-title">어떤 일을<br>하나요.</h2><div class="sv-scope-words" aria-hidden="true">${service.scope.map((scope, index) => `<span class="sv-scope-word${index === 0 ? ' is-current' : ''}" data-sv-word="${index}">${escape(composition.scope[index] || scope.title)}</span>`).join('')}</div><p class="sv-scope-caption">진행할 범위와 일정은<br>안경원의 상황에 맞춰 협의합니다.</p></div></div>
       <div class="sv-scope-content">${service.scope.map((scope, index) => `<section class="sv-scope-item" data-sv-scope="${index}" aria-labelledby="sv-scope-${index}"><span class="sv-scope-dash" aria-hidden="true"></span><h3 id="sv-scope-${index}">${escape(scope.title)}</h3><p>${escape(scope.body)}</p></section>`).join('')}</div>
     </section>
     <section class="sv-process" aria-labelledby="sv-process-title"><div class="sv-container"><div class="sv-process-heading"><p class="sv-kicker">${['place', 'cafe'].includes(key) ? '함께 진행하는 일' : '진행 과정'}</p><h2 id="sv-process-title" class="sv-section-title">이렇게<br>함께 만듭니다.</h2><p>필요한 자료를 확인하고,<br>검토할 내용을 함께 공유합니다.</p></div><ol class="sv-process-list">${service.process.map((step, index) => `<li class="sv-process-step"><span class="sv-step-count" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span><div><h3>${escape(step.title)}</h3><p>${escape(step.body)}</p></div></li>`).join('')}</ol></div></section>
     <section class="sv-faq sv-container" aria-labelledby="sv-faq-title"><div><p class="sv-kicker">자주 묻는 내용</p><h2 id="sv-faq-title" class="sv-section-title">시작하기<br>전에.</h2></div><div class="sv-faq-list">${service.faq.map(faq => `<details class="sv-faq-item"><summary><span>${escape(faq.q)}</span><span class="sv-faq-symbol" aria-hidden="true"></span></summary><div class="sv-faq-answer"><p>${escape(faq.a)}</p></div></details>`).join('')}</div></section>
+    ${key === 'blog' ? renderVoices({compact:true}) : ''}
     <section class="sv-related sv-container" aria-labelledby="sv-related-title"><div class="sv-related-heading"><h2 id="sv-related-title">함께 살펴볼 서비스</h2><a class="sv-text-link" href="services.html">전체 서비스 <span aria-hidden="true">↗</span></a></div>${related.map(serviceRow).join('')}</section>
     <div class="sv-inline-service-cta sv-container"><p>${escape(service.name)}에 관해 더 궁금한 내용이 있나요?</p><a class="sv-text-link" href="contact.html?service=${escape(key)}">이 서비스 문의하기 <span aria-hidden="true">↗</span></a></div>
   </article>`;
@@ -117,6 +130,12 @@ export function initServices({ gsap, ScrollTrigger } = {}) {
           .to(leaves[1], { xPercent: 7, rotation: 3, transformOrigin: '100% 0%', duration: 1, ease: 'none' }, 0)
           .to(leaves[2], { xPercent: -3, rotation: -2, duration: 1, ease: 'none' }, 0)
           .to(art.querySelector('.sv-object-rule'), { scaleX: .3, transformOrigin: '0 50%', duration: 1, ease: 'none' }, 0);
+      }
+      const evidenceArt = page.querySelector('.sv-evidence-art');
+      if (evidenceArt) {
+        gsap.timeline({ scrollTrigger: { trigger: evidenceArt, start: 'top 65%', end: 'bottom 20%', scrub: .6 } })
+          .fromTo(evidenceArt.querySelector('.sv-proof-first'), { y: 16 }, { y: 0, duration: 1, ease: 'none' }, 0)
+          .fromTo(evidenceArt.querySelector('.sv-proof-second'), { y: 32, x: 12 }, { y: 0, x: 0, duration: 1, ease: 'none' }, 0);
       }
       const scopeItems = page.querySelectorAll('[data-sv-scope]');
       const scopeWords = page.querySelectorAll('[data-sv-word]');

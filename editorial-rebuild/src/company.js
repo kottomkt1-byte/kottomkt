@@ -1,3 +1,5 @@
+import { renderVoices } from './evidence.js';
+import { renderAchievements } from './achievements.js';
 const EMAIL = 'communication@kotto.kr';
 const KAKAO = 'https://open.kakao.com/o/sBj11zAf';
 const BLOG = 'https://m.blog.naver.com/kottorai';
@@ -26,12 +28,13 @@ export function renderAbout() {
           <div class="co-about-note"><span class="co-rule" aria-hidden="true"></span><p>안경원 전문 광고·마케팅 대행<br>고또마케팅</p></div>
         </div>
         <figure class="co-about-figure">
-          <div class="co-about-image"><img src="art/editorial.webp" alt="겹겹이 접힌 종이로 표현한 고또마케팅의 K" width="1024" height="1536" fetchpriority="high"></div>
-          <figcaption><span>안경원의 이야기를 꺼내는 일.</span><span>고또마케팅</span></figcaption>
+          <div class="co-about-image"><img src="art/optical-editorial.webp" alt="붉은 안경테 소재와 정밀 도구로 표현한 고또마케팅의 업종 전문성 브랜드 이미지" width="1448" height="1086" fetchpriority="high"></div>
+          <figcaption><span>안경원의 일을 이해하는 시선.</span><span>브랜드 이미지</span></figcaption>
         </figure>
       </div>
       <div class="co-about-introduction"><span>우리가 하는 일</span><p>안경원에는 설명할 이야기가 많습니다. 안경을 만드는 과정, 렌즈를 고르는 이유, 고객에게 전하고 싶은 안내까지. 고또마케팅은 그 이야기를 정리하고, 각 채널에 맞는 콘텐츠로 만듭니다.</p><a class="co-text-link" href="services.html">서비스 살펴보기 ${arrow}</a></div>
     </section>
+    ${renderAchievements()}
     <section class="co-manifesto" aria-labelledby="co-manifesto-title">
       <div class="co-manifesto-inner co-wrap">
         <div class="co-manifesto-heading"><p class="co-label">함께 일하는 태도</p><h2 id="co-manifesto-title">신뢰에서<br>시작해,<br><em>상생으로.</em></h2><span class="co-reading-line" aria-hidden="true"><i></i></span></div>
@@ -42,6 +45,7 @@ export function renderAbout() {
         </div>
       </div>
     </section>
+    ${renderVoices({compact:true})}
     <section class="co-company-info co-wrap" aria-labelledby="co-info-title"><div><p class="co-label">고또마케팅</p><h2 id="co-info-title">회사를<br>소개합니다.</h2><a class="co-text-link" href="location.html">오시는 길 ${arrow}</a></div>${companyFacts()}</section>
 
   </div>`;
