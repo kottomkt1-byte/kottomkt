@@ -1,0 +1,74 @@
+[
+  {
+    "width": 1440,
+    "overflow": 0,
+    "recordingLinks": [
+      {
+        "path": "a-desktop.mp4",
+        "status": 200,
+        "type": "video/mp4"
+      },
+      {
+        "path": "a-mobile.mp4",
+        "status": 200,
+        "type": "video/mp4"
+      },
+      {
+        "path": "b-desktop.mp4",
+        "status": 200,
+        "type": "video/mp4"
+      },
+      {
+        "path": "b-mobile.mp4",
+        "status": 200,
+        "type": "video/mp4"
+      },
+      {
+        "path": "c-desktop.mp4",
+        "status": 200,
+        "type": "video/mp4"
+      },
+      {
+        "path": "c-mobile.mp4",
+        "status": 200,
+        "type": "video/mp4"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "overflow": 0,
+    "recordingLinks": [
+      {
+        "path": "a-desktop.mp4",
+        "status": 200,
+        "type": "video/mp4"
+      },
+      {
+        "path": "a-mobile.mp4",
+        "status": 200,
+        "type": "video/mp4"
+      },
+      {
+        "path": "b-desktop.mp4",
+        "status": 200,
+        "type": "video/mp4"
+      },
+      {
+        "path": "b-mobile.mp4",
+        "status": 200,
+        "type": "video/mp4"
+      },
+      {
+        "path": "c-desktop.mp4",
+        "status": 200,
+        "type": "video/mp4"
+      },
+      {
+        "path": "c-mobile.mp4",
+        "status": 200,
+        "type": "video/mp4"
+      }
+    ]
+  }
+]

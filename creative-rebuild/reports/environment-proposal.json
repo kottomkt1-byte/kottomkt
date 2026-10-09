@@ -1,0 +1,24 @@
+{
+  "status": "NOT_SAVED_stale_base",
+  "note": "Reconcile with a current draft before saving; never discard newer settings. Cache flag corrected after actual installation verification.",
+  "config": {
+    "install_script": "#!/usr/bin/env bash\nset -eu\nif [ -f /workspace/kottomkt/creative-rebuild/package-lock.json ]; then\n  cd /workspace/kottomkt/creative-rebuild\n  npm ci --ignore-scripts --cache /tmp/kotto-npm-cache\n  npm run build\nfi\n",
+    "start_skill": "Use the existing /workspace/kottomkt checkout. Cloud tasks are already isolated; do not create a worktree unless explicitly requested. Inspect git status first and preserve pre-existing changes. The original static site remains at the repository root; optional local startup is python3 -m http.server 8000 --bind 127.0.0.1. Never submit real EmailJS messages without explicit authorization.\n\nOn branch codex/kotto-creative-rebuild the independent prototypes are in /workspace/kottomkt/creative-rebuild. Node.js 22.12+ and npm are required. From this folder run npm ci --ignore-scripts --cache /tmp/kotto-npm-cache, npm run build, then npm run preview -- --host 127.0.0.1 --port 4174 in a managed terminal session. Restart processes in new tasks. Verify HTTP 200 and expected content for /index.html, /a.html, /b.html, /c.html and their assets. These addresses are internal checks, never public preview URLs.\n\nPython Playwright, Pillow, /usr/bin/chromium and system FFmpeg were verified in the current image. Run python3 qa/verify.py --base-url http://127.0.0.1:4174 for browser observations. qa/record.py records actual browser frames. Official Playwright instructions are in ../.agents/skills/playwright/SKILL.md; the bash wrapper needs npx and writable npm_config_cache/XDG_CACHE_HOME paths. qa/playwright-cli.json selects system Chromium. Report missing capabilities on a new image rather than claiming they survived. Do not disable TLS or package integrity checks.\n\nAll prototype fonts and image assets are local. No backend/database/secret is required. Public publishing requires a separate hosting project and valid credentials; never deploy to production implicitly. See README.md and reports/ for design decisions, verification limits and deployment instructions. The user must choose a concept before whole-site implementation.\n",
+    "network": {
+      "allowed_domains": [
+        "cdnjs.cloudflare.com",
+        "fonts.googleapis.com",
+        "fonts.gstatic.com",
+        "godly.website",
+        "gsap.com",
+        "www.awwwards.com",
+        "www.google.com",
+        "vgpu.sh",
+        "www.aspensearch.com",
+        "byotone.com",
+        "cdn.playwright.dev",
+        "playwright.download.prss.microsoft.com"
+      ]
+    }
+  }
+}

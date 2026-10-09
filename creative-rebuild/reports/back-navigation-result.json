@@ -1,0 +1,36 @@
+{
+  "galleryTitle": "고또마케팅 — 세 가지 새로운 방향",
+  "returnedUrl": "http://127.0.0.1:4174/a.html",
+  "sameDocumentRestored": true,
+  "pageShows": [
+    {
+      "persisted": false
+    },
+    {
+      "persisted": true
+    }
+  ],
+  "beforePointer": {
+    "concept": "a",
+    "progress": 0,
+    "renderer": "webgl-parametric-ribbon",
+    "frames": 31,
+    "active": false,
+    "frameIntervals": null,
+    "renderScale": 0.72,
+    "quality": "reduced-resolution"
+  },
+  "afterPointer": {
+    "concept": "a",
+    "progress": 0,
+    "renderer": "webgl-parametric-ribbon",
+    "frames": 87,
+    "active": true,
+    "frameIntervals": null,
+    "renderScale": 0.72,
+    "quality": "reduced-resolution"
+  },
+  "contextLost": false,
+  "errors": [],
+  "screenshot": "output/playwright/rebuild-qa/a-after-gallery-back.png"
+}

@@ -1,0 +1,108 @@
+[
+  {
+    "concept": "b",
+    "viewport": [
+      1440,
+      900
+    ],
+    "input": "wheel",
+    "startupCls": 0.00475,
+    "overallCls": 0.94333,
+    "shifts": [
+      {
+        "value": 0.00475143009808492,
+        "startTime": 339.90000000037253,
+        "nodes": [
+          "b-hero-bottom",
+          "H1",
+          "b-nav",
+          "b-compare",
+          "#text"
+        ]
+      },
+      {
+        "value": 0.8534722222222222,
+        "startTime": 4916.200000000186,
+        "nodes": [
+          "b-story-stage"
+        ]
+      },
+      {
+        "value": 0.9433333333333334,
+        "startTime": 8012.299999999814,
+        "nodes": [
+          "b-story-stage"
+        ]
+      }
+    ],
+    "scrollY": 4060,
+    "motion": {
+      "concept": "b",
+      "progress": 1,
+      "service": "blog",
+      "frameIntervals": null
+    }
+  },
+  {
+    "concept": "b",
+    "viewport": [
+      390,
+      844
+    ],
+    "input": "touch",
+    "startupCls": 0,
+    "overallCls": 0,
+    "shifts": [],
+    "scrollY": 3675,
+    "motion": {
+      "concept": "b",
+      "progress": 1,
+      "service": "blog",
+      "frameIntervals": null
+    }
+  },
+  {
+    "concept": "c",
+    "viewport": [
+      1440,
+      900
+    ],
+    "input": "wheel",
+    "startupCls": 0.00964,
+    "overallCls": 0.95111,
+    "shifts": [
+      {
+        "value": 0.009639409722222223,
+        "startTime": 331,
+        "nodes": [
+          "H1",
+          "c-hero-bottom",
+          "c-contact-nav",
+          "c-concept-nav",
+          "P"
+        ]
+      },
+      {
+        "value": 0.6708333333333333,
+        "startTime": 4276.299999999814,
+        "nodes": [
+          "c-story-stage"
+        ]
+      },
+      {
+        "value": 0.9511111111111111,
+        "startTime": 6559.200000000186,
+        "nodes": [
+          "c-story-stage"
+        ]
+      }
+    ],
+    "scrollY": 3064,
+    "motion": {
+      "concept": "c",
+      "progress": 1,
+      "channel": "blog",
+      "frameIntervals": null
+    }
+  }
+]

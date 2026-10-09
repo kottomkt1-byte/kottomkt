@@ -1,0 +1,8 @@
+node_modules/
+dist/
+output/
+.npm-cache/
+.qa-venv/
+__pycache__/
+!package.json
+!package-lock.json

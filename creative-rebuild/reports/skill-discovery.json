@@ -1,0 +1,138 @@
+{
+  "passed": true,
+  "initialize": {
+    "userAgent": "skill-discovery-check/0.159.0-alpha.3 (Debian 13.0.0; x86_64) dumb (skill-discovery-check; 1.0)",
+    "codexHome": "/run/codex-environment/codex-home",
+    "platformFamily": "unix",
+    "platformOs": "linux"
+  },
+  "result": {
+    "data": [
+      {
+        "cwd": "/workspace/kottomkt",
+        "skills": [
+          {
+            "name": "astra-frontend-design",
+            "description": "Design, implement, or visually refine a web interface when the visible experience is a primary deliverable. Use for greenfield UI, redesigns, reference matching, and visual polish; skip backend-only work and behavior-only frontend changes.",
+            "shortDescription": "Astra-native frontend design and visual QA",
+            "interface": {
+              "displayName": "Astra Frontend Design",
+              "shortDescription": "Distinctive frontend design with visual verification",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $astra-frontend-design to design and implement this interface, then verify it visually."
+            },
+            "path": "/workspace/kottomkt/.agents/skills/astra-frontend-design/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "copy-editing",
+            "description": "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean up this text,' 'too wordy,' 'sharpen the messaging,' 'refresh this content,' 'update this page,' 'this content is outdated,' or 'content audit,' 'this sounds like AI,' 'AI slop,' 'de-slop this,' or 'make it sound human.' Use this when the user already has copy and wants it improved or refreshed rather than rewritten from scratch. Every edit removes AI tells such as 'it's not X, it's Y' reveals, 'no X, no Y, no Z' lists, and sentences that trail into extra comma clauses. For writing new copy, see copywriting.",
+            "path": "/workspace/kottomkt/.agents/skills/copy-editing/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "copywriting",
+            "description": "When the user wants to write, rewrite, or improve marketing copy for any page, including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing copy,\" \"headline help,\" \"CTA copy,\" \"value proposition,\" \"tagline,\" \"subheadline,\" \"hero section copy,\" \"above the fold,\" \"this copy is weak,\" \"make this more compelling,\" \"this sounds like AI,\" \"AI slop,\" \"make it sound human,\" or \"help me describe my product.\" Use this whenever someone is working on website text that needs to persuade or convert. Drafts never use AI tells like \"it's not X, it's Y\" reveals, \"no X, no Y, no Z\" lists, or sentences that trail into extra comma clauses. For email copy, see emails. For popup copy, see popups. For editing existing copy, see copy-editing. For the offer underneath the copy (bonuses, guarantees, value framing), see offers.",
+            "path": "/workspace/kottomkt/.agents/skills/copywriting/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "frontend-design",
+            "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.",
+            "path": "/workspace/kottomkt/.agents/skills/frontend-design/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "grammar-checker",
+            "description": "\ud45c\uc900 \ud55c\uad6d\uc5b4 \uaddc\uce59\uc5d0 \uae30\ubc18\ud55c \ubb38\ubc95, \ub9de\ucda4\ubc95, \ub744\uc5b4\uc4f0\uae30, \uad6c\ub450\uc810 \uac80\uc0ac\uae30. \ub9de\ucda4\ubc95 \uc624\ub958(\ub418/\ub3fc, -\u3134\uc9c0/-\ub294\uc9c0), \ub744\uc5b4\uc4f0\uae30 \uc624\ub958(\uc758\uc874\uba85\uc0ac, \ubcf4\uc870\uc6a9\uc5b8), \ubb38\ubc95 \uc624\ub958(\uc870\uc0ac \uc0ac\uc6a9, \uc2dc\uc81c), \uad6c\ub450\uc810 \ubb38\uc81c\ub97c \uac10\uc9c0\ud558\uace0 \uad50\uc815\ud569\ub2c8\ub2e4. \ub2e4\uc74c \uc0c1\ud669\uc5d0 \uc0ac\uc6a9\ud558\uc138\uc694. (1) \ud55c\uad6d\uc5b4 \ubb38\uc11c \uc791\uc131 \ud6c4 \uac80\ud1a0 (2) \uc791\uc131 \uc911 \uc2e4\uc2dc\uac04 \uad50\uc815 (3) \ucf54\ub4dc\uc758 \ud55c\uad6d\uc5b4 \uc8fc\uc11d\uc774\ub098 \ubb38\uc11c \uac80\uc0ac (4) \uc124\uba85\uacfc \ud568\uaed8 \ud55c\uad6d\uc5b4 \ubb38\ubc95 \ud559\uc2b5 (5) \uacf5\uc2dd \ubb38\uc11c \ud488\uc9c8 \ubcf4\uc7a5",
+            "path": "/workspace/kottomkt/.agents/skills/grammar-checker/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "humanizer",
+            "description": "AI\uac00 \uc0dd\uc131\ud55c \ud55c\uad6d\uc5b4 \ud14d\uc2a4\ud2b8\uc758 \ud2b9\uc9d5\uc801\uc778 \ud328\ud134\uc744 \uac10\uc9c0\ud558\uace0 \uc790\uc5f0\uc2a4\ub7ec\uc6b4 \uc778\uac04\uc758 \uae00\uc4f0\uae30\ub85c \ubcc0\ud658\ud569\ub2c8\ub2e4. \uacfc\ud559\uc801 \uc5b8\uc5b4\ud559 \uc5f0\uad6c(KatFishNet \ub17c\ubb38, 94.88% AUC \uc815\ud655\ub3c4)\uc5d0 \uae30\ubc18\ud569\ub2c8\ub2e4. \uc27c\ud45c \uacfc\ub2e4, \ub744\uc5b4\uc4f0\uae30 \uacbd\uc9c1\uc131, \ud488\uc0ac \ub2e4\uc591\uc131, AI \uc5b4\ud718 \uacfc\uc6a9, \ubc88\uc5ed\ud22c(\uc5d0 \ub300\ud574/\ud1b5\ud574/\ub418\uc5b4\uc9c4\ub2e4), \ub300\uba85\uc0ac \uacfc\ub2e4, \ubcf5\uc218\ud615 \uacfc\ub2e4, \uad6c\uc870\uc801 \ub2e8\uc870\ub85c\uc6c0 \ub4f1 40\uac00\uc9c0 \ud328\ud134\uc744 S1/S2/S3 \uc2ec\uac01\ub3c4\ub85c \ubd84\uc11d\ud569\ub2c8\ub2e4. ChatGPT/Claude/Gemini\uac00 \uc0dd\uc131\ud55c \ud55c\uad6d\uc5b4 \ud14d\uc2a4\ud2b8\ub97c \uc790\uc5f0\uc2a4\ub7fd\uac8c \ub9cc\ub4e4\uac70\ub098 LLM \ucd9c\ub825\uc5d0\uc11c AI \ud754\uc801\uc744 \uc81c\uac70\ud560 \ub54c \uc0ac\uc6a9\ud558\uc138\uc694.",
+            "path": "/workspace/kottomkt/.agents/skills/humanizer/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "kotto-korean-copywriter",
+            "description": "\uace0\ub610\ub9c8\ucf00\ud305\uc758 \uc548\uacbd\uc6d0 \uc6d0\uc7a5\ub2d8\u00b7\uc6b4\uc601\uc790 \ub300\uc0c1 \ud55c\uad6d\uc5b4 \ub9c8\ucf00\ud305 \uce74\ud53c\ub97c \uc791\uc131\u00b7\uad50\uc815\ud55c\ub2e4. \uc11c\ube44\uc2a4 \uc124\uba85, \uc0c1\ub2f4 CTA, \ube0c\ub79c\ub4dc \uc18c\uac1c\uc640 \uace0\uac1d \uc0ac\ub840\uc5d0\uc11c \uc0ac\uc2e4 \uadfc\uac70, \ub2f4\ubc31\ud55c \ubb38\uccb4, \uc548\uacbd \uc5c5\uc885 \uc6a9\uc5b4\ub97c \uc9c0\ud0a8\ub2e4. \ud648\ud398\uc774\uc9c0 \uad6c\ud604\uc774\ub098 \uc77c\ubc18 \ud55c\uad6d\uc5b4 \ubb38\uc11c \uad50\uc815\ub9cc \ud558\ub294 \uc791\uc5c5\uc5d0\ub294 \uc801\uc6a9\ud558\uc9c0 \uc54a\ub294\ub2e4.",
+            "interface": {
+              "displayName": "\uace0\ub610\ub9c8\ucf00\ud305 \ud55c\uad6d\uc5b4 \uce74\ud53c\ub77c\uc774\ud130",
+              "shortDescription": "\uc548\uacbd\uc6d0 \uc6d0\uc7a5\ub2d8\uc744 \uc704\ud55c \ub2f4\ubc31\ud55c \ud55c\uad6d\uc5b4 \uce74\ud53c\uc640 \uace0\uac1d \uc0ac\ub840 \uadfc\uac70 \uac80\ud1a0",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "$kotto-korean-copywriter\ub97c \uc0ac\uc6a9\ud574 \ud655\uc778\ub41c \uc0ac\uc5c5 \uc815\ubcf4\ub85c \ud55c\uad6d\uc5b4 \uce74\ud53c\ub97c \uc791\uc131\ud558\uac70\ub098 \uac80\ud1a0\ud558\uc138\uc694. \ud30c\uc77c \uc218\uc815 \uc5ec\ubd80\ub294 \uc81c \uc694\uccad \ubc94\uc704\ub97c \ub530\ub974\uc138\uc694."
+            },
+            "path": "/workspace/kottomkt/.agents/skills/kotto-korean-copywriter/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "playwright",
+            "description": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script.",
+            "interface": {
+              "displayName": "Playwright CLI Skill",
+              "shortDescription": "Automate real browsers from the terminal",
+              "iconSmall": "/workspace/kottomkt/.agents/skills/playwright/assets/playwright-small.svg",
+              "iconLarge": "/workspace/kottomkt/.agents/skills/playwright/assets/playwright.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Automate this browser workflow with Playwright and produce a reliable script with run steps."
+            },
+            "path": "/workspace/kottomkt/.agents/skills/playwright/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "product-marketing",
+            "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills \u2014 it creates `.agents/product-marketing.md` that all other skills reference for product, audience, and positioning context.",
+            "path": "/workspace/kottomkt/.agents/skills/product-marketing/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "style-guide",
+            "description": "\ubb38\uc11c \ub0b4\ubd80 \ub610\ub294 \ud504\ub85c\uc81d\ud2b8 \uc804\uccb4\uc5d0\uc11c \uc77c\uad00\ub41c \uc791\uc131 \uc2a4\ud0c0\uc77c\uc744 \uc720\uc9c0\ud558\ub3c4\ub85d \ub3d5\ub294 \uac80\uc0ac\uae30. \uc5b4\uc870(\uacbd\uc5b4\uccb4/\ubc18\ub9d0), \uc6a9\uc5b4(\uc0ac\uc6a9\uc790/\uc720\uc800), \uc22b\uc790 \ud615\uc2dd, \ubaa9\ub85d \uc2a4\ud0c0\uc77c, \ub530\uc634\ud45c, \ub0a0\uc9dc/\uc2dc\uac04 \ud615\uc2dd\uc758 \ubd88\uc77c\uce58\ub97c \uac10\uc9c0\ud569\ub2c8\ub2e4. \ub2e4\uc911 \uc791\uc131\uc790 \ubb38\uc11c \uac80\ud1a0 \uc2dc, \ud504\ub85c\uc81d\ud2b8 \uc804\uccb4 \uc6a9\uc5b4 \ud45c\uc900 \uc720\uc9c0 \uc2dc, \uacf5\uc2dd \ubb38\uc11c \uc900\ube44 \uc2dc, \ube0c\ub79c\ub4dc \uc77c\uad00\uc131\uc744 \uc704\ud55c \ubb38\uc11c \uc791\uc5c5 \uc2dc \uc0ac\uc6a9\ud558\uc138\uc694.",
+            "path": "/workspace/kottomkt/.agents/skills/style-guide/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "ui-ux-pro-max",
+            "description": "UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, color, charts, and stack-specific UI implementation. Searchable local data: 79 searchable styles (50 active), 192 product palettes and reasoning profiles, 74 font pairings, 119 UX guidelines, 105 icons, 17 GSAP presets, 25 chart types, and 22 stacks.",
+            "path": "/workspace/kottomkt/.agents/skills/ui-ux-pro-max/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          }
+        ],
+        "errors": []
+      }
+    ]
+  }
+}

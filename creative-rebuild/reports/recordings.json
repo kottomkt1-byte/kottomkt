@@ -1,0 +1,68 @@
+[
+  {
+    "concept": "a",
+    "viewport": [
+      1440,
+      900
+    ],
+    "frames": 322,
+    "durationSeconds": 17.69,
+    "file": "public/recordings/a-desktop.mp4",
+    "method": "Chromium Page.startScreencast actual JPEG frames + FFmpeg timestamp-preserving encode"
+  },
+  {
+    "concept": "a",
+    "viewport": [
+      390,
+      844
+    ],
+    "frames": 270,
+    "durationSeconds": 16.45,
+    "file": "public/recordings/a-mobile.mp4",
+    "method": "Chromium Page.startScreencast actual JPEG frames + FFmpeg timestamp-preserving encode"
+  },
+  {
+    "concept": "b",
+    "viewport": [
+      1440,
+      900
+    ],
+    "frames": 377,
+    "durationSeconds": 19.56,
+    "file": "public/recordings/b-desktop.mp4",
+    "method": "Chromium Page.startScreencast actual JPEG frames + FFmpeg timestamp-preserving encode"
+  },
+  {
+    "concept": "b",
+    "viewport": [
+      390,
+      844
+    ],
+    "frames": 380,
+    "durationSeconds": 18.5,
+    "file": "public/recordings/b-mobile.mp4",
+    "method": "Chromium Page.startScreencast actual JPEG frames + FFmpeg timestamp-preserving encode"
+  },
+  {
+    "concept": "c",
+    "viewport": [
+      1440,
+      900
+    ],
+    "frames": 361,
+    "durationSeconds": 20.96,
+    "file": "public/recordings/c-desktop.mp4",
+    "method": "Chromium Page.startScreencast actual JPEG frames + FFmpeg timestamp-preserving encode"
+  },
+  {
+    "concept": "c",
+    "viewport": [
+      390,
+      844
+    ],
+    "frames": 209,
+    "durationSeconds": 19.82,
+    "file": "public/recordings/c-mobile.mp4",
+    "method": "Chromium Page.startScreencast actual JPEG frames + FFmpeg timestamp-preserving encode"
+  }
+]

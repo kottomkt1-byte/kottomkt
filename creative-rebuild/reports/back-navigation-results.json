@@ -1,0 +1,72 @@
+[
+  {
+    "concept": "b",
+    "galleryTitle": "고또마케팅 — 세 가지 새로운 방향",
+    "returnedUrl": "http://127.0.0.1:4174/b.html",
+    "sameDocumentRestored": true,
+    "pageShows": [
+      {
+        "persisted": false
+      },
+      {
+        "persisted": true
+      }
+    ],
+    "selectionBeforeNavigation": {
+      "concept": "b",
+      "progress": 1,
+      "service": "place",
+      "frameIntervals": null
+    },
+    "beforeInteraction": {
+      "concept": "b",
+      "progress": 0,
+      "service": "place",
+      "frameIntervals": null
+    },
+    "afterInteraction": {
+      "concept": "b",
+      "progress": 0.52,
+      "service": "social",
+      "frameIntervals": null
+    },
+    "contextLost": null,
+    "errors": [],
+    "screenshot": "output/playwright/rebuild-qa/b-after-gallery-back.png"
+  },
+  {
+    "concept": "c",
+    "galleryTitle": "고또마케팅 — 세 가지 새로운 방향",
+    "returnedUrl": "http://127.0.0.1:4174/c.html",
+    "sameDocumentRestored": true,
+    "pageShows": [
+      {
+        "persisted": false
+      },
+      {
+        "persisted": true
+      }
+    ],
+    "selectionBeforeNavigation": {
+      "concept": "c",
+      "progress": 0,
+      "channel": "instagram",
+      "frameIntervals": null
+    },
+    "beforeInteraction": {
+      "concept": "c",
+      "progress": 0,
+      "channel": "instagram",
+      "frameIntervals": null
+    },
+    "afterInteraction": {
+      "concept": "c",
+      "progress": 0.5201,
+      "channel": "place",
+      "frameIntervals": null
+    },
+    "contextLost": null,
+    "errors": [],
+    "screenshot": "output/playwright/rebuild-qa/c-after-gallery-back.png"
+  }
+]

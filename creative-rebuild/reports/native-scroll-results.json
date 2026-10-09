@@ -1,0 +1,91 @@
+[
+  {
+    "concept": "b",
+    "viewport": [
+      1440,
+      900
+    ],
+    "input": "wheel",
+    "startupCls": 0.00475,
+    "overallCls": 0.00475,
+    "shifts": [
+      {
+        "value": 0.00475143009808492,
+        "startTime": 437.59999999962747,
+        "nodes": [
+          "b-hero-bottom",
+          "H1",
+          "b-nav",
+          "b-compare",
+          "#text"
+        ]
+      }
+    ],
+    "scrollY": 4060,
+    "motion": {
+      "concept": "b",
+      "progress": 1,
+      "service": "blog",
+      "frameIntervals": null
+    }
+  },
+  {
+    "concept": "b",
+    "viewport": [
+      390,
+      844
+    ],
+    "input": "touch",
+    "startupCls": 0,
+    "overallCls": 0,
+    "shifts": [],
+    "scrollY": 3675,
+    "motion": {
+      "concept": "b",
+      "progress": 1,
+      "service": "blog",
+      "frameIntervals": null
+    }
+  },
+  {
+    "concept": "c",
+    "viewport": [
+      1440,
+      900
+    ],
+    "input": "wheel",
+    "startupCls": 0.00964,
+    "overallCls": 0.00964,
+    "shifts": [
+      {
+        "value": 0.009639409722222223,
+        "startTime": 354.90000000037253,
+        "nodes": [
+          "H1",
+          "c-hero-bottom",
+          "c-contact-nav",
+          "c-concept-nav",
+          "P"
+        ]
+      },
+      {
+        "value": 0.0008903452932098766,
+        "startTime": 6808.0999999996275,
+        "nodes": [
+          "#text",
+          "#text",
+          "#text",
+          "#text",
+          "#text"
+        ]
+      }
+    ],
+    "scrollY": 3064,
+    "motion": {
+      "concept": "c",
+      "progress": 1,
+      "channel": "blog",
+      "frameIntervals": null
+    }
+  }
+]

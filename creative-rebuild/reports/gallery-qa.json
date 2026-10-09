@@ -1,0 +1,40 @@
+[
+  {
+    "width": 1440,
+    "errors": [],
+    "overflow": 0,
+    "images": [
+      {
+        "src": "./previews/a.webp",
+        "loaded": true
+      },
+      {
+        "src": "./previews/b.webp",
+        "loaded": true
+      },
+      {
+        "src": "./previews/c.webp",
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "errors": [],
+    "overflow": 0,
+    "images": [
+      {
+        "src": "./previews/a.webp",
+        "loaded": true
+      },
+      {
+        "src": "./previews/b.webp",
+        "loaded": true
+      },
+      {
+        "src": "./previews/c.webp",
+        "loaded": true
+      }
+    ]
+  }
+]

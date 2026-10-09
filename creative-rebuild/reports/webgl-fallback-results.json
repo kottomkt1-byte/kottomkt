@@ -1,0 +1,56 @@
+[
+  {
+    "mode": "unavailable",
+    "viewport": [
+      1440,
+      900
+    ],
+    "motion": {
+      "concept": "a",
+      "progress": 0,
+      "renderer": "authored-ribbon-poster",
+      "frames": 19,
+      "active": false,
+      "frameIntervals": null,
+      "fallbackReason": "WebGL unavailable"
+    },
+    "errors": [],
+    "h1Visible": true,
+    "fallbackImages": [
+      {
+        "source": "http://127.0.0.1:4174/art/ribbon-poster.png",
+        "loaded": true,
+        "naturalWidth": 1152
+      }
+    ],
+    "screenshot": "output/playwright/rebuild-qa/webgl-unavailable.png"
+  },
+  {
+    "mode": "context-lost",
+    "viewport": [
+      390,
+      844
+    ],
+    "motion": {
+      "concept": "a",
+      "progress": 0,
+      "renderer": "authored-ribbon-poster",
+      "frames": 45,
+      "active": false,
+      "frameIntervals": null,
+      "renderScale": 1,
+      "fallbackReason": "context-lost",
+      "quality": "reduced-resolution"
+    },
+    "errors": [],
+    "h1Visible": true,
+    "fallbackImages": [
+      {
+        "source": "http://127.0.0.1:4174/art/ribbon-poster.png",
+        "loaded": true,
+        "naturalWidth": 1152
+      }
+    ],
+    "screenshot": "output/playwright/rebuild-qa/webgl-context-lost.png"
+  }
+]

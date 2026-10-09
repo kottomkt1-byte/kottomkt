@@ -1,0 +1,38 @@
+[
+  {
+    "site": "vgpu",
+    "width": 1440,
+    "url": "https://vgpu.sh/",
+    "error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://vgpu.sh/\nCall log:\n  - navigating to \"https://vgpu.sh/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "site": "vgpu",
+    "width": 390,
+    "url": "https://vgpu.sh/",
+    "error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://vgpu.sh/\nCall log:\n  - navigating to \"https://vgpu.sh/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "site": "aspen",
+    "width": 1440,
+    "url": "https://www.aspensearch.com/",
+    "error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.aspensearch.com/\nCall log:\n  - navigating to \"https://www.aspensearch.com/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "site": "aspen",
+    "width": 390,
+    "url": "https://www.aspensearch.com/",
+    "error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.aspensearch.com/\nCall log:\n  - navigating to \"https://www.aspensearch.com/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "site": "byotone",
+    "width": 1440,
+    "url": "https://byotone.com/",
+    "error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://byotone.com/\nCall log:\n  - navigating to \"https://byotone.com/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "site": "byotone",
+    "width": 390,
+    "url": "https://byotone.com/",
+    "error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://byotone.com/\nCall log:\n  - navigating to \"https://byotone.com/\", waiting until \"domcontentloaded\"\n"
+  }
+]
