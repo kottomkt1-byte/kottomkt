@@ -1,0 +1,30 @@
+{
+  "htmlPages": 12,
+  "files": 23,
+  "failures": [],
+  "manifest": {
+    "service-instagram.html": "7feb0dc8732e0b733f074d81382723a7a9ae92ffb4caf769719e22a13b8e8d2c",
+    "about.html": "e67d9419ff0ec600508bfe7a060fd6027d63f647e45f68f2a0ed3f0b176c8108",
+    "index.html": "7fc7fab91b4e27c188a2a71a37a0f233f90b2e8244b79fe4f6531ac23c131228",
+    "service-website.html": "ab38be24d8b475d198c22b999de9ee822a320a728272213aab62c10958a6689a",
+    "favicon.svg": "d1afc40181efe49591b294067e401cefbba4bc94f5aeb9d51335d6f2fd839cde",
+    "location.html": "7aeaf48bd4875767c2a61f2553e6abaf1129e8894ab0207e9a3c5126b92a62aa",
+    "service-blog.html": "aa001157ba3b64c24bbbbee1a96658ffa4e71051a9f9343cf785c314de828953",
+    "service-daangn.html": "1c93a3c544264e1921a72a3614beb2719e2db1f82386c4083cf88aaf06cb30c4",
+    "service-hpblog.html": "544abd520a6dd404eae8d710b83ba6a2b1a1373c3a80cd83c53ca01c26bb084b",
+    "service-cafe.html": "dd5897ff7dd987e2a2055b6dfda268c1f770e058aa1139a99498e6f43d1cb5f1",
+    "services.html": "21d8308dea3e8068627a1fc03ffcfddef1d5875e7cd207add9ef95321a924301",
+    "contact.html": "99a853924aadad1f9c211155886525b1ccf91f35f15f321934ada1c13a54857b",
+    "service-place.html": "e80115bff8ea46c75e02dee61db2316365e27fc4b8700a51da7ed5f25612a7b2",
+    "fonts/KottoDisplay.woff2": "ff7f49437d1628522c190a212d76dc754628eeb6b632b2ff9dd8e0b723407e6a",
+    "fonts/NotoSerif-LICENSE": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3",
+    "fonts/KottoText.woff2": "033c96c983cc5f5b9c0bfe6763429404191d6e738b9b9fc3c2349fb97f187184",
+    "fonts/Pretendard-LICENSE": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04",
+    "art/editing-desk.webp": "583d87b63debdd1bc563c8134e3f860514922e454446a5901a5815a27ac1c5a7",
+    "art/editorial.webp": "5a63296c8a46b82512599fc6820badf0fae8d8f31d9c10ab9e27ee841a05679f",
+    "assets/main-DenWbDIB.css": "b5523585d3ed12e490c23dacaa86269859610ec4ab807982aa1da85721d90bfd",
+    "assets/main-Cz2YAoXI.js": "06f271918094e29847cfb1c45cf7d7ece2e2d05e78571be886501d9150004770",
+    "assets/vendor/EMAILJS-LICENSE": "3f0dcbd22780472a1d95a6da958ff15f8dafc78b61e4fe6222bc7fb17e5501c5",
+    "assets/vendor/email.min.js": "052f6916a21ba5be140366439e81b84ad11363c84dfba2a06f208c7b4a6f6d5f"
+  }
+}

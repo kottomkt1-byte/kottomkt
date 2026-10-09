@@ -1,0 +1,15 @@
+{
+  "browser": {
+    "browserName": "chromium",
+    "launchOptions": {
+      "executablePath": "/usr/bin/chromium",
+      "args": ["--no-sandbox"],
+      "headless": true
+    },
+    "contextOptions": {
+      "viewport": { "width": 1440, "height": 900 },
+      "locale": "ko-KR"
+    }
+  },
+  "outputDir": "output/playwright/cli"
+}

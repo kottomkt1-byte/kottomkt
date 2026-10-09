@@ -1,0 +1,22 @@
+[
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "file": "output/playwright/videos/kotto-editorial-desktop.mp4",
+    "durationSeconds": 37.43,
+    "frames": 746,
+    "method": "Chromium CDP actual JPEG frames with timestamp-preserving FFmpeg encode; no submitted form"
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "file": "output/playwright/videos/kotto-editorial-mobile.mp4",
+    "durationSeconds": 36.01,
+    "frames": 588,
+    "method": "Chromium CDP actual JPEG frames with timestamp-preserving FFmpeg encode; no submitted form"
+  }
+]

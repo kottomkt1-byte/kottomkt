@@ -1,0 +1,198 @@
+{
+  "mode": "HTTP load once, then browser offline; file:// is blocked by managed Chromium and is not claimed as tested",
+  "results": [
+    {
+      "width": 1440,
+      "page": "index",
+      "scrollWidth": 1440,
+      "h1": "좋은 안경원을제대로 알리는 일.",
+      "images": [
+        true,
+        true
+      ]
+    },
+    {
+      "width": 1440,
+      "page": "about",
+      "scrollWidth": 1440,
+      "h1": "안경원을이해하고,고객의 언어로.",
+      "images": [
+        true
+      ]
+    },
+    {
+      "width": 1440,
+      "page": "services",
+      "scrollWidth": 1440,
+      "h1": "필요한 만큼,정확한 곳에.",
+      "images": []
+    },
+    {
+      "width": 1440,
+      "page": "service-blog",
+      "scrollWidth": 1440,
+      "h1": "안경을 고르는 이유를,안경원이 쓰는 이야기로.",
+      "images": []
+    },
+    {
+      "width": 1440,
+      "page": "service-hpblog",
+      "scrollWidth": 1440,
+      "h1": "첫 화면에 담는,우리 안경원의 인상.",
+      "images": []
+    },
+    {
+      "width": 1440,
+      "page": "service-instagram",
+      "scrollWidth": 1440,
+      "h1": "한 장의 사진에도,안경원의 성격이.",
+      "images": []
+    },
+    {
+      "width": 1440,
+      "page": "service-place",
+      "scrollWidth": 1440,
+      "h1": "찾아오기 전,정보부터 정확하게.",
+      "images": []
+    },
+    {
+      "width": 1440,
+      "page": "service-daangn",
+      "scrollWidth": 1440,
+      "h1": "우리 동네에,우리 안경원의 소식.",
+      "images": []
+    },
+    {
+      "width": 1440,
+      "page": "service-cafe",
+      "scrollWidth": 1440,
+      "h1": "동네의 관심사에,안경원의 이야기를.",
+      "images": []
+    },
+    {
+      "width": 1440,
+      "page": "service-website",
+      "scrollWidth": 1440,
+      "h1": "안경원을 설명하는,하나의 분명한 공간.",
+      "images": []
+    },
+    {
+      "width": 1440,
+      "page": "contact",
+      "scrollWidth": 1440,
+      "h1": "안경원이야기부터들려주세요.",
+      "images": []
+    },
+    {
+      "width": 1440,
+      "page": "location",
+      "scrollWidth": 1440,
+      "h1": "직접 만나이야기할 곳.",
+      "images": []
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "additionalHttpRequests": [],
+      "navigationAndBack": true,
+      "queryPrefill": true
+    },
+    {
+      "width": 390,
+      "page": "index",
+      "scrollWidth": 390,
+      "h1": "좋은 안경원을제대로 알리는 일.",
+      "images": [
+        true,
+        true
+      ]
+    },
+    {
+      "width": 390,
+      "page": "about",
+      "scrollWidth": 390,
+      "h1": "안경원을이해하고,고객의 언어로.",
+      "images": [
+        true
+      ]
+    },
+    {
+      "width": 390,
+      "page": "services",
+      "scrollWidth": 390,
+      "h1": "필요한 만큼,정확한 곳에.",
+      "images": []
+    },
+    {
+      "width": 390,
+      "page": "service-blog",
+      "scrollWidth": 390,
+      "h1": "안경을 고르는 이유를,안경원이 쓰는 이야기로.",
+      "images": []
+    },
+    {
+      "width": 390,
+      "page": "service-hpblog",
+      "scrollWidth": 390,
+      "h1": "첫 화면에 담는,우리 안경원의 인상.",
+      "images": []
+    },
+    {
+      "width": 390,
+      "page": "service-instagram",
+      "scrollWidth": 390,
+      "h1": "한 장의 사진에도,안경원의 성격이.",
+      "images": []
+    },
+    {
+      "width": 390,
+      "page": "service-place",
+      "scrollWidth": 390,
+      "h1": "찾아오기 전,정보부터 정확하게.",
+      "images": []
+    },
+    {
+      "width": 390,
+      "page": "service-daangn",
+      "scrollWidth": 390,
+      "h1": "우리 동네에,우리 안경원의 소식.",
+      "images": []
+    },
+    {
+      "width": 390,
+      "page": "service-cafe",
+      "scrollWidth": 390,
+      "h1": "동네의 관심사에,안경원의 이야기를.",
+      "images": []
+    },
+    {
+      "width": 390,
+      "page": "service-website",
+      "scrollWidth": 390,
+      "h1": "안경원을 설명하는,하나의 분명한 공간.",
+      "images": []
+    },
+    {
+      "width": 390,
+      "page": "contact",
+      "scrollWidth": 390,
+      "h1": "안경원이야기부터들려주세요.",
+      "images": []
+    },
+    {
+      "width": 390,
+      "page": "location",
+      "scrollWidth": 390,
+      "h1": "직접 만나이야기할 곳.",
+      "images": []
+    },
+    {
+      "width": 390,
+      "errors": [],
+      "additionalHttpRequests": [],
+      "navigationAndBack": true,
+      "queryPrefill": true
+    }
+  ],
+  "passed": true
+}
