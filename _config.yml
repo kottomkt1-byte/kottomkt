@@ -1,0 +1,12 @@
+# GitHub Pages serves the reviewed root files; authoring and QA stay in Git.
+exclude:
+  - editorial-rebuild
+  - creative-rebuild
+  - .agents
+  - docs
+  - tests
+  - output
+  - node_modules
+  - README.md
+  - package.json
+  - package-lock.json

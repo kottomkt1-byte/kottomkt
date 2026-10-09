@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /editorial-rebuild/
+Disallow: /creative-rebuild/
+Disallow: /.agents/
+Disallow: /docs/
+Disallow: /tests/
+Disallow: /output/
 Sitemap: https://www.kotto.kr/sitemap.xml

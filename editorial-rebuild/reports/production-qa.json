@@ -1,0 +1,502 @@
+{
+  "base": "http://127.0.0.1:4190",
+  "origin": "https://www.kotto.kr",
+  "files": [
+    "CNAME",
+    "_config.yml",
+    "about.html",
+    "art/content-atelier.webp",
+    "art/conversation-atelier.webp",
+    "art/editing-desk.webp",
+    "art/editorial.webp",
+    "art/neighborhood-atlas.webp",
+    "art/optical-editorial.webp",
+    "art/social-studio.webp",
+    "assets/main-FDtTForv.css",
+    "assets/main-eJp9jETE.js",
+    "assets/vendor/EMAILJS-LICENSE",
+    "assets/vendor/email.min.js",
+    "contact.html",
+    "evidence/chat-01.png",
+    "evidence/chat-02.png",
+    "evidence/chat-03.png",
+    "evidence/chat-04.png",
+    "evidence/chat-05.png",
+    "evidence/chat-06.png",
+    "evidence/chat-07.png",
+    "evidence/chat-08.png",
+    "evidence/portfolio-01.png",
+    "evidence/portfolio-02.png",
+    "evidence/portfolio-03.png",
+    "evidence/portfolio-04.png",
+    "evidence/portfolio-05.png",
+    "evidence/portfolio-06.png",
+    "evidence/portfolio-07.png",
+    "evidence/review-01.png",
+    "evidence/review-02.png",
+    "evidence/review-03.png",
+    "evidence/review-04.png",
+    "evidence/review-05.png",
+    "evidence/review-06.png",
+    "evidence/review-07.png",
+    "evidence/review-08.png",
+    "evidence/review-09.png",
+    "evidence/review-10.png",
+    "evidence/review-11.png",
+    "evidence/review-12.png",
+    "evidence/review-13.png",
+    "evidence/review-14.png",
+    "evidence/review-15.png",
+    "favicon.svg",
+    "films/kotto-studio-desktop.mp4",
+    "films/kotto-studio-mobile.mp4",
+    "films/kotto-studio-poster-mobile.webp",
+    "films/kotto-studio-poster.webp",
+    "fonts/KottoDisplay.woff2",
+    "fonts/KottoText.woff2",
+    "fonts/NotoSerif-LICENSE",
+    "fonts/Pretendard-LICENSE",
+    "images/og-share.png",
+    "index.html",
+    "location.html",
+    "robots.txt",
+    "service-blog.html",
+    "service-cafe.html",
+    "service-daangn.html",
+    "service-hpblog.html",
+    "service-instagram.html",
+    "service-place.html",
+    "service-website.html",
+    "services.html",
+    "sitemap.xml"
+  ],
+  "cases": [
+    {
+      "page": "about.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "안경원을이해하고,고객의 언어로."
+      ]
+    },
+    {
+      "page": "contact.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "안경원이야기를들려주세요."
+      ],
+      "contact": {
+        "emptyBlocked": true,
+        "emptySendCalls": 0,
+        "consentBlocked": true,
+        "badPhoneBlocked": true,
+        "pending": {
+          "disabled": true,
+          "busy": "true",
+          "calls": [
+            {
+              "service": "service_peqoeen",
+              "template": "template_v9eprz5",
+              "payload": {
+                "company": "QA 검수 담당자",
+                "store_name": "테스트 안경원",
+                "phone": "010-1234-5678",
+                "region": "서울",
+                "budget": "미정",
+                "message": "자동화 검수용 가상 문의입니다. 실제로 발송되지 않습니다."
+              }
+            }
+          ]
+        },
+        "duplicateCalls": 1,
+        "success": {
+          "reset": true,
+          "status": "문의가 전송되었습니다. 남겨주신 연락처로 상담을 이어가겠습니다.",
+          "disabled": false,
+          "statusVisible": true
+        },
+        "failure": {
+          "preserved": true,
+          "status": "전송하지 못했습니다. 입력 내용은 유지됩니다. 다시 시도하거나 카카오톡 또는 이메일로 문의해 주세요.",
+          "disabled": false,
+          "statusVisible": true
+        },
+        "screenshot": "output/playwright/production/contact-failure-1440.png"
+      }
+    },
+    {
+      "page": "index.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "좋은 안경원을제대로 알리는 일."
+      ],
+      "screenshot": "output/playwright/production/home-1440.png",
+      "video": {
+        "time": 2.66382,
+        "width": 1280,
+        "height": 720
+      },
+      "menu": {
+        "open": true,
+        "expanded": "true",
+        "screenshot": "output/playwright/production/menu-1440.png",
+        "links": [
+          "index.html",
+          "index.html",
+          "about.html",
+          "services.html",
+          "contact.html",
+          "location.html",
+          "service-blog.html",
+          "service-hpblog.html",
+          "service-instagram.html",
+          "service-place.html",
+          "service-daangn.html",
+          "service-cafe.html",
+          "service-website.html",
+          "mailto:communication@kotto.kr"
+        ],
+        "focusInside": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "closedOnEscape": true,
+        "focusRestored": true,
+        "expandedAfter": "false",
+        "closeVisibleAtMenuBottom": true,
+        "closeButtonWorks": true
+      }
+    },
+    {
+      "page": "location.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "다음 이야기는,만나서."
+      ]
+    },
+    {
+      "page": "service-blog.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "안경을 고르는 이유를,안경원이 쓰는 이야기로."
+      ]
+    },
+    {
+      "page": "service-cafe.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "동네의 관심사에,안경원의 이야기를."
+      ]
+    },
+    {
+      "page": "service-daangn.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "우리 동네에,우리 안경원의 소식."
+      ]
+    },
+    {
+      "page": "service-hpblog.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "첫 화면에 담는,우리 안경원의 인상."
+      ]
+    },
+    {
+      "page": "service-instagram.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "한 장의 사진에도,안경원의 성격이."
+      ]
+    },
+    {
+      "page": "service-place.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "찾아오기 전,정보부터 정확하게."
+      ]
+    },
+    {
+      "page": "service-website.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "안경원을 설명하는,하나의 분명한 공간."
+      ]
+    },
+    {
+      "page": "services.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "필요한 만큼,정확한 곳에."
+      ]
+    },
+    {
+      "page": "about.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "안경원을이해하고,고객의 언어로."
+      ]
+    },
+    {
+      "page": "contact.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "안경원이야기를들려주세요."
+      ],
+      "contact": {
+        "emptyBlocked": true,
+        "emptySendCalls": 0,
+        "consentBlocked": true,
+        "badPhoneBlocked": true,
+        "pending": {
+          "disabled": true,
+          "busy": "true",
+          "calls": [
+            {
+              "service": "service_peqoeen",
+              "template": "template_v9eprz5",
+              "payload": {
+                "company": "QA 검수 담당자",
+                "store_name": "테스트 안경원",
+                "phone": "010-1234-5678",
+                "region": "서울",
+                "budget": "미정",
+                "message": "자동화 검수용 가상 문의입니다. 실제로 발송되지 않습니다."
+              }
+            }
+          ]
+        },
+        "duplicateCalls": 1,
+        "success": {
+          "reset": true,
+          "status": "문의가 전송되었습니다. 남겨주신 연락처로 상담을 이어가겠습니다.",
+          "disabled": false,
+          "statusVisible": true
+        },
+        "failure": {
+          "preserved": true,
+          "status": "전송하지 못했습니다. 입력 내용은 유지됩니다. 다시 시도하거나 카카오톡 또는 이메일로 문의해 주세요.",
+          "disabled": false,
+          "statusVisible": true
+        },
+        "screenshot": "output/playwright/production/contact-failure-390.png"
+      }
+    },
+    {
+      "page": "index.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "좋은 안경원을제대로 알리는 일."
+      ],
+      "screenshot": "output/playwright/production/home-390.png",
+      "video": {
+        "time": 2.059119,
+        "width": 540,
+        "height": 676
+      },
+      "menu": {
+        "open": true,
+        "expanded": "true",
+        "screenshot": "output/playwright/production/menu-390.png",
+        "links": [
+          "index.html",
+          "index.html",
+          "about.html",
+          "services.html",
+          "contact.html",
+          "location.html",
+          "service-blog.html",
+          "service-hpblog.html",
+          "service-instagram.html",
+          "service-place.html",
+          "service-daangn.html",
+          "service-cafe.html",
+          "service-website.html",
+          "mailto:communication@kotto.kr"
+        ],
+        "focusInside": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "closedOnEscape": true,
+        "focusRestored": true,
+        "expandedAfter": "false",
+        "closeVisibleAtMenuBottom": true,
+        "menuBottomScreenshot": "output/playwright/production/menu-bottom-390.png",
+        "closeButtonWorks": true
+      }
+    },
+    {
+      "page": "location.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "다음 이야기는,만나서."
+      ]
+    },
+    {
+      "page": "service-blog.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "안경을 고르는 이유를,안경원이 쓰는 이야기로."
+      ]
+    },
+    {
+      "page": "service-cafe.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "동네의 관심사에,안경원의 이야기를."
+      ]
+    },
+    {
+      "page": "service-daangn.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "우리 동네에,우리 안경원의 소식."
+      ]
+    },
+    {
+      "page": "service-hpblog.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "첫 화면에 담는,우리 안경원의 인상."
+      ]
+    },
+    {
+      "page": "service-instagram.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "한 장의 사진에도,안경원의 성격이."
+      ]
+    },
+    {
+      "page": "service-place.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "찾아오기 전,정보부터 정확하게."
+      ]
+    },
+    {
+      "page": "service-website.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "안경원을 설명하는,하나의 분명한 공간."
+      ]
+    },
+    {
+      "page": "services.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "h1": [
+        "필요한 만큼,정확한 곳에."
+      ]
+    }
+  ],
+  "passed": true,
+  "interactionAssertionsPassed": true
+}

@@ -14,6 +14,10 @@
 
 최신 변경 내용은 [전체 페이지 미디어 업데이트](reports/media-rich-update-summary.md), 출처와 인용·수치는 [증거 자료 감사](reports/evidence-source-audit.md)에 있습니다. 이전 [시각 업데이트 보고서](reports/visual-update-summary.md)는 앞선 제작 사례·후기 복원 단계의 기록입니다.
 
+## 운영 반영
+
+승인한 디자인의 운영 파일은 저장소 루트에서 관리하며 편집 원본은 이 폴더에 있습니다. `npm run build:production`은 검색 차단을 해제하고 기존 인증·canonical·사이트맵을 복원한 별도 `production/`을 만듭니다. 검수 후 `node scripts/apply-production.mjs --apply`로 루트에 적용합니다. 배포 방식은 [루트 안내](../README.md), 검수는 [운영 반영 기록](reports/production-release.md)에 있습니다. 기존 미리보기 빌드는 검색 차단을 유지합니다.
+
 ## 직접 보기
 
 - [12페이지 웹 미리보기](https://raw.githack.com/kottomkt1-byte/kottomkt/codex/kotto-creative-rebuild/editorial-rebuild/share/site/index.html)
