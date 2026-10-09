@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "initialize": {
+    "userAgent": "skill-discovery-check/0.159.0-alpha.3 (Debian 13.0.0; x86_64) dumb (skill-discovery-check; 1.0)",
+    "codexHome": "/run/codex-environment/codex-home",
+    "platformFamily": "unix",
+    "platformOs": "linux"
+  },
+  "result": {
+    "data": [
+      {
+        "cwd": "/workspace/kottomkt",
+        "skills": [
+          {
+            "name": "astra-frontend-design",
+            "description": "Design, implement, or visually refine a web interface when the visible experience is a primary deliverable. Use for greenfield UI, redesigns, reference matching, and visual polish; skip backend-only work and behavior-only frontend changes.",
+            "shortDescription": "Astra-native frontend design and visual QA",
+            "interface": {
+              "displayName": "Astra Frontend Design",
+              "shortDescription": "Distinctive frontend design with visual verification",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $astra-frontend-design to design and implement this interface, then verify it visually."
+            },
+            "path": "/workspace/kottomkt/.agents/skills/astra-frontend-design/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "frontend-design",
+            "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.",
+            "path": "/workspace/kottomkt/.agents/skills/frontend-design/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "ui-ux-pro-max",
+            "description": "UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, color, charts, and stack-specific UI implementation. Searchable local data: 79 searchable styles (50 active), 192 product palettes and reasoning profiles, 74 font pairings, 119 UX guidelines, 105 icons, 17 GSAP presets, 25 chart types, and 22 stacks.",
+            "path": "/workspace/kottomkt/.agents/skills/ui-ux-pro-max/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          }
+        ],
+        "errors": []
+      },
+      {
+        "cwd": "/workspace",
+        "skills": [],
+        "errors": []
+      },
+      {
+        "cwd": "/workspace/design-skills",
+        "skills": [],
+        "errors": []
+      }
+    ]
+  }
+}
