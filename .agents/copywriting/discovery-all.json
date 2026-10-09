@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "initialize": {
+    "userAgent": "skill-discovery-check/0.159.0-alpha.3 (Debian 13.0.0; x86_64) dumb (skill-discovery-check; 1.0)",
+    "codexHome": "/run/codex-environment/codex-home",
+    "platformFamily": "unix",
+    "platformOs": "linux"
+  },
+  "result": {
+    "data": [
+      {
+        "cwd": "/workspace/kottomkt",
+        "skills": [
+          {
+            "name": "copy-editing",
+            "description": "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean up this text,' 'too wordy,' 'sharpen the messaging,' 'refresh this content,' 'update this page,' 'this content is outdated,' or 'content audit,' 'this sounds like AI,' 'AI slop,' 'de-slop this,' or 'make it sound human.' Use this when the user already has copy and wants it improved or refreshed rather than rewritten from scratch. Every edit removes AI tells such as 'it's not X, it's Y' reveals, 'no X, no Y, no Z' lists, and sentences that trail into extra comma clauses. For writing new copy, see copywriting.",
+            "path": "/workspace/kottomkt/.agents/skills/copy-editing/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "copywriting",
+            "description": "When the user wants to write, rewrite, or improve marketing copy for any page, including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing copy,\" \"headline help,\" \"CTA copy,\" \"value proposition,\" \"tagline,\" \"subheadline,\" \"hero section copy,\" \"above the fold,\" \"this copy is weak,\" \"make this more compelling,\" \"this sounds like AI,\" \"AI slop,\" \"make it sound human,\" or \"help me describe my product.\" Use this whenever someone is working on website text that needs to persuade or convert. Drafts never use AI tells like \"it's not X, it's Y\" reveals, \"no X, no Y, no Z\" lists, or sentences that trail into extra comma clauses. For email copy, see emails. For popup copy, see popups. For editing existing copy, see copy-editing. For the offer underneath the copy (bonuses, guarantees, value framing), see offers.",
+            "path": "/workspace/kottomkt/.agents/skills/copywriting/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "grammar-checker",
+            "description": "표준 한국어 규칙에 기반한 문법, 맞춤법, 띄어쓰기, 구두점 검사기. 맞춤법 오류(되/돼, -ㄴ지/-는지), 띄어쓰기 오류(의존명사, 보조용언), 문법 오류(조사 사용, 시제), 구두점 문제를 감지하고 교정합니다. 다음 상황에 사용하세요. (1) 한국어 문서 작성 후 검토 (2) 작성 중 실시간 교정 (3) 코드의 한국어 주석이나 문서 검사 (4) 설명과 함께 한국어 문법 학습 (5) 공식 문서 품질 보장",
+            "path": "/workspace/kottomkt/.agents/skills/grammar-checker/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "humanizer",
+            "description": "AI가 생성한 한국어 텍스트의 특징적인 패턴을 감지하고 자연스러운 인간의 글쓰기로 변환합니다. 과학적 언어학 연구(KatFishNet 논문, 94.88% AUC 정확도)에 기반합니다. 쉼표 과다, 띄어쓰기 경직성, 품사 다양성, AI 어휘 과용, 번역투(에 대해/통해/되어진다), 대명사 과다, 복수형 과다, 구조적 단조로움 등 40가지 패턴을 S1/S2/S3 심각도로 분석합니다. ChatGPT/Claude/Gemini가 생성한 한국어 텍스트를 자연스럽게 만들거나 LLM 출력에서 AI 흔적을 제거할 때 사용하세요.",
+            "path": "/workspace/kottomkt/.agents/skills/humanizer/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "kotto-korean-copywriter",
+            "description": "고또마케팅의 안경원 원장님·운영자 대상 한국어 마케팅 카피를 작성·교정한다. 서비스 설명, 상담 CTA, 브랜드 소개와 고객 사례에서 사실 근거, 담백한 문체, 안경 업종 용어를 지킨다. 홈페이지 구현이나 일반 한국어 문서 교정만 하는 작업에는 적용하지 않는다.",
+            "interface": {
+              "displayName": "고또마케팅 한국어 카피라이터",
+              "shortDescription": "안경원 원장님을 위한 담백한 한국어 카피와 고객 사례 근거 검토",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "$kotto-korean-copywriter를 사용해 확인된 사업 정보로 한국어 카피를 작성하거나 검토하세요. 파일 수정 여부는 제 요청 범위를 따르세요."
+            },
+            "path": "/workspace/kottomkt/.agents/skills/kotto-korean-copywriter/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "product-marketing",
+            "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills — it creates `.agents/product-marketing.md` that all other skills reference for product, audience, and positioning context.",
+            "path": "/workspace/kottomkt/.agents/skills/product-marketing/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          },
+          {
+            "name": "style-guide",
+            "description": "문서 내부 또는 프로젝트 전체에서 일관된 작성 스타일을 유지하도록 돕는 검사기. 어조(경어체/반말), 용어(사용자/유저), 숫자 형식, 목록 스타일, 따옴표, 날짜/시간 형식의 불일치를 감지합니다. 다중 작성자 문서 검토 시, 프로젝트 전체 용어 표준 유지 시, 공식 문서 준비 시, 브랜드 일관성을 위한 문서 작업 시 사용하세요.",
+            "path": "/workspace/kottomkt/.agents/skills/style-guide/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          }
+        ],
+        "errors": []
+      }
+    ]
+  }
+}

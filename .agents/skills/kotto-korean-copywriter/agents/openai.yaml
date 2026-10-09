@@ -1,0 +1,4 @@
+interface:
+  display_name: "고또마케팅 한국어 카피라이터"
+  short_description: "안경원 원장님을 위한 담백한 한국어 카피와 고객 사례 근거 검토"
+  default_prompt: "$kotto-korean-copywriter를 사용해 확인된 사업 정보로 한국어 카피를 작성하거나 검토하세요. 파일 수정 여부는 제 요청 범위를 따르세요."
