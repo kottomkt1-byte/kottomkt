@@ -3,11 +3,12 @@ import { evidencePortfolio, evidenceReviews } from './evidence-data.js';
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const picture = (src, alt, cls = '') => {
   const original = evidencePortfolio.find(item => item.src === src);
-  const [width, height] = original ? [original.width, original.height] : src.includes('optical-editorial') ? [1448, 1086] : [1536, 1024];
+  const [width, height] = original ? [original.width, original.height] : src.includes('portfolio/model-images/') ? [1122, 1402] : src.includes('optical-editorial') ? [1448, 1086] : [1536, 1024];
   return `<img class="${cls}" src="${src}" width="${width}" height="${height}" alt="${esc(alt)}" loading="lazy" decoding="async">`;
 };
 const material = {
   blog: ['art/content-atelier.webp', '안경 콘텐츠를 기획하고 편집하는 작업대'],
+  'model-images': ['portfolio/model-images/thumbnails/tf1289-01a-women-01.webp', '고또마케팅이 제작한 TF1289 01A 선글라스 여성 모델 포트폴리오'],
   hpblog: ['evidence/portfolio-03.png', '쓰리팩토리 안경원의 실제 홈페이지형 블로그 제작 화면'],
   instagram: ['art/social-studio.webp', '안경 콘텐츠의 사진 구성을 표현한 촬영 스틸라이프'],
   place: ['art/neighborhood-atlas.webp', '지역과 방문 안내를 표현한 가상의 동네 일러스트'],
@@ -48,7 +49,7 @@ function caption(key) {
 
 export function renderIndexPreview(key, active = false) {
   const [src, alt] = material[key];
-  return `<div class="sv-type-object sv-image-object sv-image-${key}${active ? ' is-active' : ''}" data-sv-object="${key}" aria-hidden="true">${picture(src, alt)}<div class="sv-image-object-caption"><span>안경원의 이야기를 전하는 일</span><p>${({ blog: '읽을 수 있도록.', hpblog: '한눈에 알도록.', instagram: '눈길이 머물도록.', place: '찾아올 수 있도록.', daangn: '가까이 전하도록.', cafe: '맥락에 닿도록.', website: '한곳에 모이도록.' })[key]}</p></div></div>`;
+  return `<div class="sv-type-object sv-image-object sv-image-${key}${active ? ' is-active' : ''}" data-sv-object="${key}" aria-hidden="true">${picture(src, alt)}<div class="sv-image-object-caption"><span>${key === 'model-images' ? '고또마케팅 제작 포트폴리오' : '안경원의 이야기를 전하는 일'}</span><p>${({ blog: '읽을 수 있도록.', 'model-images': '안경의 디테일을 담도록.', hpblog: '한눈에 알도록.', instagram: '눈길이 머물도록.', place: '찾아올 수 있도록.', daangn: '가까이 전하도록.', cafe: '맥락에 닿도록.', website: '한곳에 모이도록.' })[key]}</p></div></div>`;
 }
 
 export function renderIndexCover() {

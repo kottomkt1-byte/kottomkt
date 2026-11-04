@@ -46,7 +46,7 @@ for path in evidence:
 if len(evidence) != 30:
     failures.append({'evidenceCount':len(evidence)})
 pages = len(list(BUILD.glob('*.html')))
-if pages != 12:
+if pages != 13:
     failures.append({'htmlPages':pages})
 report = {'htmlPages':pages,'files':len(manifest),'originalImages':len(evidence),'failures':failures,'manifest':manifest}
 (ROOT/'reports/build-audit.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

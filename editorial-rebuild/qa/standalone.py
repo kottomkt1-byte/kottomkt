@@ -9,7 +9,7 @@ from playwright.async_api import async_playwright
 ROOT = Path(__file__).resolve().parents[1]
 NAMES = ['index', 'about', 'services', 'service-blog', 'service-hpblog',
          'service-instagram', 'service-place', 'service-daangn', 'service-cafe',
-         'service-website', 'contact', 'location']
+         'service-website', 'service-model-images', 'contact', 'location']
 VIEWER = 'http://127.0.0.1:4180/share/kotto-full-site.html'
 
 
@@ -176,7 +176,7 @@ async def run():
         await browser.close()
     report['passed'] = True
     (ROOT / 'reports/standalone-qa.json').write_text(json.dumps(report, ensure_ascii=False, indent=2))
-    print('Portable viewer passed 12 routes × 2 widths, 30 exact embedded originals, real offline video play/pause, navigation, history, query prefill and zero additional HTTP requests.')
+    print(f'Portable viewer passed {len(NAMES)} routes × 2 widths, 30 exact embedded originals, real offline video play/pause, navigation, history, query prefill and zero additional HTTP requests.')
 
 
 if __name__ == '__main__':

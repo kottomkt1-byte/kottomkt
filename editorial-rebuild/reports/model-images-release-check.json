@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-04T02:25:01.728020+00:00",
+  "reason": "Final one-space correction in gallery heading after 26-page-case production QA. Runtime CSS and JS unchanged.",
+  "manifestFiles": 132,
+  "cases": [
+    {
+      "width": 320,
+      "title": "제품마다 다른 표정.",
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "title": "제품마다 다른 표정.",
+      "overflow": 0,
+      "errors": []
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "width": 1440,
+      "errors": [],
+      "scrollWidth": 1440,
+      "inspectorButtons": "passed",
+      "faq": "passed",
+      "brokenAnchors": []
+    },
+    {
+      "width": 390,
+      "errors": [],
+      "scrollWidth": 390,
+      "inspectorButtons": "passed",
+      "faq": "passed",
+      "brokenAnchors": []
+    },
+    {
+      "width": 768,
+      "errors": [],
+      "scrollWidth": 768,
+      "inspectorButtons": "passed",
+      "faq": "passed",
+      "brokenAnchors": []
+    },
+    {
+      "width": 320,
+      "errors": [],
+      "scrollWidth": 320,
+      "inspectorButtons": "passed",
+      "faq": "passed",
+      "brokenAnchors": []
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Browser observations for the 12-page editorial rebuild. Never sends mail."""
+"""Browser observations for the editorial site. Never sends mail."""
 from __future__ import annotations
 
 import argparse
@@ -15,7 +15,7 @@ APP = Path(__file__).resolve().parents[1]
 OUT = APP / "output/playwright/full-qa"
 ROUTES = ["index", "about", "services", "service-place", "service-blog",
           "service-instagram", "service-cafe", "service-daangn", "service-hpblog",
-          "service-website", "location", "contact"]
+          "service-website", "service-model-images", "location", "contact"]
 
 INIT = """() => {
   window.__qa = { shifts:[], longTasks:[] };

@@ -10,6 +10,7 @@ const chapters = [
 ];
 const methods = [
   ['blog','브랜드 블로그','안경원의 전문성을 한 편의 글로','content-atelier'],
+  ['model-images','안경테 모델 이미지 제작','자체 개발 프로그램과 안경사 직접 검수','portfolio/model-images/thumbnails/tf1289-01a-women-01.webp'],
   ['instagram','인스타그램','사진과 영상에 담는 매장 소식','social-studio'],
   ['place','플레이스','방문 전에 확인하는 매장 정보','neighborhood-atlas'],
   ['daangn','당근마켓','가까이 사는 고객에게 전하는 소식','neighborhood-atlas'],
@@ -41,7 +42,7 @@ export function renderHome() {
 
   <section class="home-services wrap" aria-labelledby="home-services-title"><div class="home-services-heading"><div><p>고또마케팅이 하는 일</p><h2 id="home-services-title" data-split>읽고, 보고,<br>찾아올 수 있도록.</h2></div><p>안경원에 필요한 콘텐츠와 채널을<br>하나씩 살펴보세요.</p></div>
     <div class="home-channel-covers"><a href="service-blog.html" class="channel-cover cover-writing"><img src="art/content-atelier.webp" width="1536" height="1024" loading="lazy" alt="콘텐츠 편집을 표현한 브랜드 이미지"><span><small>글과 이미지로</small><strong>전문성을 읽다.</strong>${arrow}</span></a><a href="service-instagram.html" class="channel-cover cover-social"><img src="art/social-studio.webp" width="1536" height="1024" loading="lazy" alt="사진과 영상 편집을 표현한 브랜드 이미지"><span><small>사진과 영상으로</small><strong>매장을 기억하다.</strong>${arrow}</span></a><a href="service-place.html" class="channel-cover cover-local"><img src="art/neighborhood-atlas.webp" width="1536" height="1024" loading="lazy" alt="지역과 매장의 연결을 표현한 브랜드 일러스트"><span><small>방문에 필요한 정보로</small><strong>동네에서 만나다.</strong>${arrow}</span></a></div>
-    <nav class="home-service-list" aria-label="서비스 상세 보기">${methods.map(([key,name,copy,asset])=>`<a href="service-${key}.html"><img src="art/${asset}.webp" width="160" height="120" alt="" loading="lazy"><span><strong>${name}</strong><small>${copy}</small></span>${arrow}</a>`).join('')}</nav>
+    <nav class="home-service-list" aria-label="서비스 상세 보기">${methods.map(([key,name,copy,asset])=>`<a href="service-${key}.html"><img src="${key === 'model-images' ? asset : `art/${asset}.webp`}" width="160" height="120" alt="" loading="lazy"><span><strong>${name}</strong><small>${copy}</small></span>${arrow}</a>`).join('')}</nav>
   </section>
 
   ${renderVoices()}

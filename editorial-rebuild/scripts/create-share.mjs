@@ -27,7 +27,7 @@ const result = await build({ entryPoints: ['src/main.js'], bundle: true, write: 
 const js = result.outputFiles.find(file=>file.path.endsWith('.js')).text;
 const css = result.outputFiles.find(file=>file.path.endsWith('.css')).text;
 const pages = {};
-for (const name of ['index','about','services','contact','location','service-blog','service-hpblog','service-instagram','service-place','service-daangn','service-cafe','service-website']) {
+for (const name of ['index','about','services','contact','location','service-blog','service-model-images','service-hpblog','service-instagram','service-place','service-daangn','service-cafe','service-website']) {
   pages[`${name}.html`] = (await readFile(`${name}.html`,'utf8'))
     .replace(/<script\b[^>]*type="module"[^>]*>[\s\S]*?<\/script>/g,'');
 }
@@ -48,4 +48,4 @@ function render(){
 window.addEventListener('message',e=>{if(e.source!==frame.contentWindow||e.data?.type!=='kotto-page')return;const route=e.data.route;if(typeof route!=='string'||!data.pages[route.split('?')[0]])return;if(e.data.newTab){const url=new URL(location.href);url.hash=route;window.open(url.href,'_blank','noopener');}else if(location.hash.slice(1)===route){render();}else{location.hash=route;}});
 window.addEventListener('hashchange',render);render();</script></body></html>`;
 await writeFile(resolve(output,'kotto-full-site.html'),shell);
-console.log(`Standalone 12-page viewer: ${Buffer.byteLength(shell).toLocaleString()} bytes`);
+console.log(`Standalone ${Object.keys(pages).length}-page viewer: ${Buffer.byteLength(shell).toLocaleString()} bytes`);

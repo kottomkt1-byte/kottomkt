@@ -1,10 +1,10 @@
 # 고또마케팅 — B 에디토리얼 전체 홈페이지
 
-선택된 B 방향으로 기존 12페이지를 다시 설계한 검토용 사이트입니다. 운영 사이트와 분리된 `codex/kotto-creative-rebuild` 브랜치의 `editorial-rebuild/`에서 작업했습니다. 이번 구현의 소스와 배포 산출물은 이 폴더에서 관리합니다.
+선택된 B 방향으로 기존 13페이지를 다시 설계한 검토용 사이트입니다. 운영 사이트와 분리된 `codex/kotto-creative-rebuild` 브랜치의 `editorial-rebuild/`에서 작업했습니다. 이번 구현의 소스와 배포 산출물은 이 폴더에서 관리합니다.
 
 ## 최신 구성
 
-이번 업데이트는 메인뿐 아니라 **12페이지 전체에서 사진·영상·일러스트와 본문이 교차하도록** 보완한 버전입니다. 메인은 재생을 제어할 수 있는 브랜드 영상, 콘텐츠 제작을 설명하는 3개 장면, 이미지 중심의 서비스 소개, 강점 기록, 실제 고객 반응으로 이어집니다.
+이번 업데이트는 메인뿐 아니라 **13페이지 전체에서 사진·영상·일러스트와 본문이 교차하도록** 보완한 버전입니다. 메인은 재생을 제어할 수 있는 브랜드 영상, 콘텐츠 제작을 설명하는 3개 장면, 이미지 중심의 서비스 소개, 강점 기록, 실제 고객 반응으로 이어집니다.
 
 사용자 요청에 따라 메인의 홈페이지형 블로그 제작 사례 갤러리는 제외했습니다. 실제 제작 사례 7개는 `service-hpblog.html`에서 계속 볼 수 있습니다. 고객 후기 15개와 상담 문의 8개, 원본 전체 보기와 확대 기능도 유지합니다. 기존 공개 PNG 30개는 가림 처리를 포함해 원본과 바이트가 동일합니다.
 
@@ -20,11 +20,11 @@
 
 ## 직접 보기
 
-- [12페이지 웹 미리보기](https://raw.githack.com/kottomkt1-byte/kottomkt/codex/kotto-creative-rebuild/editorial-rebuild/share/site/index.html)
+- [13페이지 웹 미리보기](https://raw.githack.com/kottomkt1-byte/kottomkt/codex/kotto-creative-rebuild/editorial-rebuild/share/site/index.html)
 - [전체 사이트 간편 보기 ZIP](https://github.com/kottomkt1-byte/kottomkt/raw/refs/heads/codex/kotto-creative-rebuild/editorial-rebuild/share/kotto-full-site.zip)
 - 실제 화면 녹화: [PC · 45초](share/recordings/kotto-media-rich-desktop.mp4) / [모바일 · 43초](share/recordings/kotto-media-rich-mobile.mp4). Chromium에서 페이지를 열고 스크롤·메뉴로 이동한 장면이며 [녹화 기록](reports/media-rich-update-recordings.json)에 사양을 보존했습니다.
 
-ZIP은 PC에서 압축을 풀고 `kotto-full-site.html`을 Chrome/Edge로 열면 됩니다. 설치·서버 실행 없이 메뉴로 12페이지를 이동할 수 있습니다. 일부 휴대폰 파일 미리보기 앱은 스크립트를 실행하지 않으므로 모바일에서는 웹 주소를 사용하세요. 간편 보기의 콘텐츠·폰트·이미지·브랜드 영상·모션은 파일에 포함하도록 구성합니다. 영상 포함 뷰어는 12페이지×PC·모바일의 오프라인 검수를 통과했습니다. 원본 30개 확대, 포함 MP4 재생·정지·재개, 링크·뒤로가기·상담 항목 전달을 확인했고 추가 HTTP 요청과 페이지 오류는 없었습니다. 실제 문의 전송과 외부 지도·카카오톡 등은 인터넷 연결이 필요합니다.
+ZIP은 PC에서 압축을 풀고 `kotto-full-site.html`을 Chrome/Edge로 열면 됩니다. 설치·서버 실행 없이 메뉴로 13페이지를 이동할 수 있습니다. 일부 휴대폰 파일 미리보기 앱은 스크립트를 실행하지 않으므로 모바일에서는 웹 주소를 사용하세요. 간편 보기의 콘텐츠·폰트·이미지·브랜드 영상·모션은 파일에 포함하도록 구성합니다. 영상 포함 뷰어는 13페이지×PC·모바일의 오프라인 검수를 통과했습니다. 원본 30개 확대, 포함 MP4 재생·정지·재개, 링크·뒤로가기·상담 항목 전달을 확인했고 추가 HTTP 요청과 페이지 오류는 없었습니다. 실제 문의 전송과 외부 지도·카카오톡 등은 인터넷 연결이 필요합니다.
 
 웹 주소는 공개 GitHub 파일을 제공하는 GitHack 중계입니다. Vercel 운영 배포가 아닙니다. 이 클라우드의 네트워크 정책은 GitHack 요청을 차단하므로 이 환경에서 중계의 최종 응답을 검증했다고 주장하지 않습니다. GitHub에 게시한 원본과 다운로드 파일을 별도로 확인합니다. 내부 localhost 주소를 외부 미리보기로 안내하지 않습니다.
 
@@ -69,9 +69,9 @@ node scripts/create-share.mjs
 
 ## 검수
 
-**1440px·390px의 12페이지, 총 24개 기본 화면 조합을 검수했습니다.** 페이지·콘솔 오류와 가로 넘침은 없었습니다. 영상 6개 조건(PC·모바일 × 일반·축소 모션·데이터 절약), 원본 확대, 메뉴·선택 버튼·문의 폼도 실제 조작했습니다. 홈 왕복 스크롤 CLS는 0, 전체 페이지 초기 CLS 최댓값은 0.00859였습니다. 프레임 간격 p95는 약 16.7ms이며 데스크톱에서 83.3ms 한 번과 영상 216프레임 중 2개 드롭도 기록했습니다. 영상 제어 버튼 잘림과 모바일 제작 사례의 불필요한 중복 제목을 수정하고 해당 화면을 재검수했습니다.
+**1440px·390px의 13페이지, 총 24개 기본 화면 조합을 검수했습니다.** 페이지·콘솔 오류와 가로 넘침은 없었습니다. 영상 6개 조건(PC·모바일 × 일반·축소 모션·데이터 절약), 원본 확대, 메뉴·선택 버튼·문의 폼도 실제 조작했습니다. 홈 왕복 스크롤 CLS는 0, 전체 페이지 초기 CLS 최댓값은 0.00859였습니다. 프레임 간격 p95는 약 16.7ms이며 데스크톱에서 83.3ms 한 번과 영상 216프레임 중 2개 드롭도 기록했습니다. 영상 제어 버튼 잘림과 모바일 제작 사례의 불필요한 중복 제목을 수정하고 해당 화면을 재검수했습니다.
 
-- `python qa/media-audit.py --help` — 이번 12페이지 미디어 업데이트 검수. 범위는 [QA 계획](reports/media-rich-update-plan.md), 최종 결과는 `reports/media-rich-update-results.json`과 `reports/media-rich-update-qa.md`에 기록합니다.
+- `python qa/media-audit.py --help` — 이번 13페이지 미디어 업데이트 검수. 범위는 [QA 계획](reports/media-rich-update-plan.md), 최종 결과는 `reports/media-rich-update-results.json`과 `reports/media-rich-update-qa.md`에 기록합니다.
 - `python qa/audit.py --base http://127.0.0.1:4181` — 페이지·레이아웃·기능 회귀 검사. SDK 모킹과 EmailJS API 차단으로 실제 메시지를 보내지 않습니다.
 - `python qa/standalone.py` — 단일 HTML을 불러온 뒤 오프라인으로 전환해 페이지 연결과 기능을 확인합니다.
 - `python scripts/verify-build.py` — 배포본 연결과 원본 이미지 보존을 검사합니다.
@@ -105,3 +105,9 @@ node scripts/create-share.mjs
 ## 클라우드 환경 설정
 
 현재 환경에서 npm 설치·개발 서버·production 빌드·브라우저 검사는 실제 실행했습니다. 자동 시작 지침을 환경 초안에 저장하려 했으나 `stale_base` 충돌로 저장되지 않았습니다. 제안 전체는 `reports/cloud-setup-proposal.json`에 보존했습니다. 환경 설정에서 새 setup 대화를 시작한 뒤 최신 초안과 이 파일을 대조해 저장해야 자동 시작 구성이 반영됩니다. 이 설정 충돌은 Git에 보존한 소스·정적 빌드·미리보기 파일을 변경하지 않습니다.
+
+## 안경테·선글라스 모델 이미지 제작
+
+전용 페이지 `service-model-images.html`은 자체 개발 프로그램과 안경사 검수 방식을 소개합니다. `src/model-images.js/css`가 페이지와 모션을, `src/model-gallery.js/css`가 필터·확대 갤러리를 관리합니다.
+
+사용자 제공 포트폴리오 32장(선글라스 23장·안경테 9장)은 `public/portfolio/model-images/`의 전체 해상도 lossless WebP와 `thumbnails/`의 900px 표시용 WebP로 제공합니다. 확대 보기와 원본 보기에는 lossless 자산을 사용합니다. PNG 원본과 RGB 픽셀이 동일함을 전수 대조했으며, 자세한 기록은 `reports/model-images-asset-provenance.json`에 있습니다. 이미지 목록과 설명은 `src/model-portfolio-data.js`에서 편집하세요.

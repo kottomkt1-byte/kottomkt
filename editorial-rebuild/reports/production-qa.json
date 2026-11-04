@@ -1,6 +1,8 @@
 {
+  "checkedAt": "2026-11-04T02:22:04.654163+00:00",
   "base": "http://127.0.0.1:4190",
   "origin": "https://www.kotto.kr",
+  "note": "Local production build QA. EmailJS SDK mocked and mail API blocked; no live messages sent.",
   "files": [
     "CNAME",
     "_config.yml",
@@ -12,8 +14,8 @@
     "art/neighborhood-atlas.webp",
     "art/optical-editorial.webp",
     "art/social-studio.webp",
-    "assets/main-FDtTForv.css",
-    "assets/main-eJp9jETE.js",
+    "assets/main-BSAChlAw.css",
+    "assets/main-DD2dENaA.js",
     "assets/vendor/EMAILJS-LICENSE",
     "assets/vendor/email.min.js",
     "contact.html",
@@ -59,12 +61,77 @@
     "images/og-share.png",
     "index.html",
     "location.html",
+    "portfolio/model-images/tf1289-01a-women-01.webp",
+    "portfolio/model-images/tf1289-01a-women-02.webp",
+    "portfolio/model-images/tf1289-01a-women-03.webp",
+    "portfolio/model-images/tf1290-08a-women-01.webp",
+    "portfolio/model-images/tf1290-08a-women-02.webp",
+    "portfolio/model-images/tf1290-28a-women-01.webp",
+    "portfolio/model-images/tf1290-28a-women-03.webp",
+    "portfolio/model-images/tf1291-28a-women-01.webp",
+    "portfolio/model-images/tf1291-28a-women-02.webp",
+    "portfolio/model-images/tf1291-28a-women-03.webp",
+    "portfolio/model-images/tf1380-01a-men-01.webp",
+    "portfolio/model-images/tf1380-01a-men-03.webp",
+    "portfolio/model-images/tf1380-01a-women-02.webp",
+    "portfolio/model-images/tf1380-01a-women-03.webp",
+    "portfolio/model-images/tf1381-01a-men-02.webp",
+    "portfolio/model-images/tf1381-01a-men-03.webp",
+    "portfolio/model-images/tf1387-01a-women-02.webp",
+    "portfolio/model-images/tf1387-01a-women-03.webp",
+    "portfolio/model-images/tf1387-52f-men-02.webp",
+    "portfolio/model-images/tf1387-52f-men-03.webp",
+    "portfolio/model-images/tf1387-52f-women-01.webp",
+    "portfolio/model-images/tf1387-52f-women-02.webp",
+    "portfolio/model-images/tf1387-52f-women-03.webp",
+    "portfolio/model-images/tf5784-020-women-02.webp",
+    "portfolio/model-images/tf5922-020-men-01.webp",
+    "portfolio/model-images/tf5922-020-men-02.webp",
+    "portfolio/model-images/tf5922-020-men-03.webp",
+    "portfolio/model-images/tf5922-020-women-01.webp",
+    "portfolio/model-images/tf5922-020-women-02.webp",
+    "portfolio/model-images/tf5922-020-women-03.webp",
+    "portfolio/model-images/tf6032-001-women-01.webp",
+    "portfolio/model-images/tf6032-001-women-02.webp",
+    "portfolio/model-images/thumbnails/tf1289-01a-women-01.webp",
+    "portfolio/model-images/thumbnails/tf1289-01a-women-02.webp",
+    "portfolio/model-images/thumbnails/tf1289-01a-women-03.webp",
+    "portfolio/model-images/thumbnails/tf1290-08a-women-01.webp",
+    "portfolio/model-images/thumbnails/tf1290-08a-women-02.webp",
+    "portfolio/model-images/thumbnails/tf1290-28a-women-01.webp",
+    "portfolio/model-images/thumbnails/tf1290-28a-women-03.webp",
+    "portfolio/model-images/thumbnails/tf1291-28a-women-01.webp",
+    "portfolio/model-images/thumbnails/tf1291-28a-women-02.webp",
+    "portfolio/model-images/thumbnails/tf1291-28a-women-03.webp",
+    "portfolio/model-images/thumbnails/tf1380-01a-men-01.webp",
+    "portfolio/model-images/thumbnails/tf1380-01a-men-03.webp",
+    "portfolio/model-images/thumbnails/tf1380-01a-women-02.webp",
+    "portfolio/model-images/thumbnails/tf1380-01a-women-03.webp",
+    "portfolio/model-images/thumbnails/tf1381-01a-men-02.webp",
+    "portfolio/model-images/thumbnails/tf1381-01a-men-03.webp",
+    "portfolio/model-images/thumbnails/tf1387-01a-women-02.webp",
+    "portfolio/model-images/thumbnails/tf1387-01a-women-03.webp",
+    "portfolio/model-images/thumbnails/tf1387-52f-men-02.webp",
+    "portfolio/model-images/thumbnails/tf1387-52f-men-03.webp",
+    "portfolio/model-images/thumbnails/tf1387-52f-women-01.webp",
+    "portfolio/model-images/thumbnails/tf1387-52f-women-02.webp",
+    "portfolio/model-images/thumbnails/tf1387-52f-women-03.webp",
+    "portfolio/model-images/thumbnails/tf5784-020-women-02.webp",
+    "portfolio/model-images/thumbnails/tf5922-020-men-01.webp",
+    "portfolio/model-images/thumbnails/tf5922-020-men-02.webp",
+    "portfolio/model-images/thumbnails/tf5922-020-men-03.webp",
+    "portfolio/model-images/thumbnails/tf5922-020-women-01.webp",
+    "portfolio/model-images/thumbnails/tf5922-020-women-02.webp",
+    "portfolio/model-images/thumbnails/tf5922-020-women-03.webp",
+    "portfolio/model-images/thumbnails/tf6032-001-women-01.webp",
+    "portfolio/model-images/thumbnails/tf6032-001-women-02.webp",
     "robots.txt",
     "service-blog.html",
     "service-cafe.html",
     "service-daangn.html",
     "service-hpblog.html",
     "service-instagram.html",
+    "service-model-images.html",
     "service-place.html",
     "service-website.html",
     "services.html",
@@ -77,9 +144,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "안경원을이해하고,고객의 언어로."
-      ]
+      ],
+      "screenshot": "output/playwright/production/about-1440.png"
     },
     {
       "page": "contact.html",
@@ -87,9 +156,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "안경원이야기를들려주세요."
       ],
+      "screenshot": "output/playwright/production/contact-1440.png",
       "contact": {
         "emptyBlocked": true,
         "emptySendCalls": 0,
@@ -135,12 +206,13 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "좋은 안경원을제대로 알리는 일."
       ],
-      "screenshot": "output/playwright/production/home-1440.png",
+      "screenshot": "output/playwright/production/index-1440.png",
       "video": {
-        "time": 2.66382,
+        "time": 2.474775,
         "width": 1280,
         "height": 720
       },
@@ -156,6 +228,7 @@
           "contact.html",
           "location.html",
           "service-blog.html",
+          "service-model-images.html",
           "service-hpblog.html",
           "service-instagram.html",
           "service-place.html",
@@ -165,6 +238,7 @@
           "mailto:communication@kotto.kr"
         ],
         "focusInside": [
+          true,
           true,
           true,
           true,
@@ -199,9 +273,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "다음 이야기는,만나서."
-      ]
+      ],
+      "screenshot": "output/playwright/production/location-1440.png"
     },
     {
       "page": "service-blog.html",
@@ -209,9 +285,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "안경을 고르는 이유를,안경원이 쓰는 이야기로."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-blog-1440.png"
     },
     {
       "page": "service-cafe.html",
@@ -219,9 +297,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "동네의 관심사에,안경원의 이야기를."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-cafe-1440.png"
     },
     {
       "page": "service-daangn.html",
@@ -229,9 +309,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "우리 동네에,우리 안경원의 소식."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-daangn-1440.png"
     },
     {
       "page": "service-hpblog.html",
@@ -239,9 +321,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "첫 화면에 담는,우리 안경원의 인상."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-hpblog-1440.png"
     },
     {
       "page": "service-instagram.html",
@@ -249,9 +333,23 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "한 장의 사진에도,안경원의 성격이."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-instagram-1440.png"
+    },
+    {
+      "page": "service-model-images.html",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "mailApiRequests": [],
+      "h1": [
+        "좋은 안경은,디테일로기억됩니다."
+      ],
+      "screenshot": "output/playwright/production/service-model-images-1440.png"
     },
     {
       "page": "service-place.html",
@@ -259,9 +357,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "찾아오기 전,정보부터 정확하게."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-place-1440.png"
     },
     {
       "page": "service-website.html",
@@ -269,9 +369,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "안경원을 설명하는,하나의 분명한 공간."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-website-1440.png"
     },
     {
       "page": "services.html",
@@ -279,9 +381,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "필요한 만큼,정확한 곳에."
-      ]
+      ],
+      "screenshot": "output/playwright/production/services-1440.png"
     },
     {
       "page": "about.html",
@@ -289,9 +393,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "안경원을이해하고,고객의 언어로."
-      ]
+      ],
+      "screenshot": "output/playwright/production/about-390.png"
     },
     {
       "page": "contact.html",
@@ -299,9 +405,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "안경원이야기를들려주세요."
       ],
+      "screenshot": "output/playwright/production/contact-390.png",
       "contact": {
         "emptyBlocked": true,
         "emptySendCalls": 0,
@@ -347,12 +455,13 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "좋은 안경원을제대로 알리는 일."
       ],
-      "screenshot": "output/playwright/production/home-390.png",
+      "screenshot": "output/playwright/production/index-390.png",
       "video": {
-        "time": 2.059119,
+        "time": 2.07382,
         "width": 540,
         "height": 676
       },
@@ -368,6 +477,7 @@
           "contact.html",
           "location.html",
           "service-blog.html",
+          "service-model-images.html",
           "service-hpblog.html",
           "service-instagram.html",
           "service-place.html",
@@ -377,6 +487,7 @@
           "mailto:communication@kotto.kr"
         ],
         "focusInside": [
+          true,
           true,
           true,
           true,
@@ -412,9 +523,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "다음 이야기는,만나서."
-      ]
+      ],
+      "screenshot": "output/playwright/production/location-390.png"
     },
     {
       "page": "service-blog.html",
@@ -422,9 +535,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "안경을 고르는 이유를,안경원이 쓰는 이야기로."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-blog-390.png"
     },
     {
       "page": "service-cafe.html",
@@ -432,9 +547,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "동네의 관심사에,안경원의 이야기를."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-cafe-390.png"
     },
     {
       "page": "service-daangn.html",
@@ -442,9 +559,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "우리 동네에,우리 안경원의 소식."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-daangn-390.png"
     },
     {
       "page": "service-hpblog.html",
@@ -452,9 +571,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "첫 화면에 담는,우리 안경원의 인상."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-hpblog-390.png"
     },
     {
       "page": "service-instagram.html",
@@ -462,9 +583,23 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "한 장의 사진에도,안경원의 성격이."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-instagram-390.png"
+    },
+    {
+      "page": "service-model-images.html",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "httpErrors": [],
+      "mailApiRequests": [],
+      "h1": [
+        "좋은 안경은,디테일로기억됩니다."
+      ],
+      "screenshot": "output/playwright/production/service-model-images-390.png"
     },
     {
       "page": "service-place.html",
@@ -472,9 +607,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "찾아오기 전,정보부터 정확하게."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-place-390.png"
     },
     {
       "page": "service-website.html",
@@ -482,9 +619,11 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "안경원을 설명하는,하나의 분명한 공간."
-      ]
+      ],
+      "screenshot": "output/playwright/production/service-website-390.png"
     },
     {
       "page": "services.html",
@@ -492,11 +631,44 @@
       "overflow": 0,
       "errors": [],
       "httpErrors": [],
+      "mailApiRequests": [],
       "h1": [
         "필요한 만큼,정확한 곳에."
-      ]
+      ],
+      "screenshot": "output/playwright/production/services-390.png"
     }
   ],
-  "passed": true,
-  "interactionAssertionsPassed": true
+  "serviceFlows": [
+    {
+      "width": 1440,
+      "errors": [],
+      "httpErrors": [],
+      "mailApiRequests": [],
+      "homeListing": true,
+      "homeToServices": true,
+      "keyboardPreview": "model-images",
+      "directoryScreenshot": "output/playwright/production/model-service-directory-1440.png",
+      "servicesToModelImages": true,
+      "detailScreenshot": "output/playwright/production/model-service-detail-1440.png",
+      "contactPrefill": "안경테·선글라스 모델 이미지 제작에 대해 상담받고 싶습니다.",
+      "mockSendCalls": 0,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "errors": [],
+      "httpErrors": [],
+      "mailApiRequests": [],
+      "homeListing": true,
+      "homeToServices": true,
+      "keyboardPreview": "model-images",
+      "directoryScreenshot": "output/playwright/production/model-service-directory-390.png",
+      "servicesToModelImages": true,
+      "detailScreenshot": "output/playwright/production/model-service-detail-390.png",
+      "contactPrefill": "안경테·선글라스 모델 이미지 제작에 대해 상담받고 싶습니다.",
+      "mockSendCalls": 0,
+      "passed": true
+    }
+  ],
+  "passed": true
 }

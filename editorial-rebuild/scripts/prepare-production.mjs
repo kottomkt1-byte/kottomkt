@@ -2,6 +2,7 @@ import { readFile, writeFile, mkdir, cp, readdir } from 'node:fs/promises';
 import { resolve, relative, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { services } from '../src/content.js';
 
 // Prepare a separate, reviewable release. Never overwrite the checkout here.
 const project = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -12,7 +13,8 @@ const origin = new URL(config.origin);
 if (origin.protocol !== 'https:' || origin.pathname !== '/') throw new Error('Expected an HTTPS site origin');
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
 const pages = (await readdir(resolve(project, 'dist'))).filter(name => name.endsWith('.html')).sort();
-if (pages.length !== 12) throw new Error('Build all 12 approved pages before preparing production');
+const expectedPages = ['index.html', 'about.html', 'services.html', 'contact.html', 'location.html', ...services.map(service => service.slug)].sort();
+if (JSON.stringify(pages) !== JSON.stringify(expectedPages)) throw new Error(`Build all ${expectedPages.length} site pages before preparing production`);
 
 await mkdir(output, { recursive: true });
 // Copy only the current build manifest; unrelated source and review material stay out.

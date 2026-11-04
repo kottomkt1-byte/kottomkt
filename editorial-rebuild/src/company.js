@@ -127,7 +127,7 @@ function initForm() {
   form.dataset.initialized = 'true';
   form.noValidate = true;
   form.querySelector('[data-co-interactive]').disabled = false;
-  const serviceNames = { blog: '브랜드 블로그 대행', hpblog: '홈페이지형 블로그', instagram: '인스타그램 마케팅', place: '플레이스 관리', daangn: '당근마켓 마케팅', cafe: '카페 바이럴', website: '홈페이지 제작' };
+  const serviceNames = { blog: '브랜드 블로그 대행', 'model-images': '안경테·선글라스 모델 이미지 제작', hpblog: '홈페이지형 블로그', instagram: '인스타그램 마케팅', place: '플레이스 관리', daangn: '당근마켓 마케팅', cafe: '카페 바이럴', website: '홈페이지 제작' };
   const service = serviceNames[new URLSearchParams(window.__KOTTO_ROUTE_QUERY__ || location.search).get('service')];
   if (service && !form.elements.message.value) form.elements.message.value = `${service}에 대해 상담받고 싶습니다.`;
   const status = form.querySelector('#form-status');

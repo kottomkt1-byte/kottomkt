@@ -1,5 +1,5 @@
 const nav = [ ['about.html','고또마케팅'], ['services.html','하는 일'], ['location.html','오시는 길'] ];
-const serviceNav = [['blog','브랜드 블로그'],['hpblog','홈페이지형 블로그'],['instagram','인스타그램'],['place','플레이스'],['daangn','당근마켓'],['cafe','카페 바이럴'],['website','홈페이지 제작']];
+const serviceNav = [['blog','브랜드 블로그'],['model-images','안경테 모델 이미지 제작'],['hpblog','홈페이지형 블로그'],['instagram','인스타그램'],['place','플레이스'],['daangn','당근마켓'],['cafe','카페 바이럴'],['website','홈페이지 제작']];
 export const arrow = '<svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 26 26 6M6 6h20v20" stroke="currentColor" stroke-width="1.4"/></svg>';
 export function renderHeader(page) {
   return `<a class="skip-link" href="#main">본문 바로가기</a>
