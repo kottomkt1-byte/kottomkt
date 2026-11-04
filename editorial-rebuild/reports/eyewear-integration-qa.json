@@ -1,0 +1,263 @@
+{
+  "checkedAt": "2026-11-04T03:21:05.694173+00:00",
+  "base": "http://127.0.0.1:4183",
+  "scope": "Shared-main regression on four routes, desktop and mobile; detailed 3D interaction covered separately.",
+  "mailSafety": "EmailJS SDK mocked using audit.block_mail; API sends aborted.",
+  "cases": [
+    {
+      "route": "index.html",
+      "width": 1440,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "scriptRequests": [
+        "http://127.0.0.1:4183/assets/main-LJWHM-MM.js"
+      ],
+      "mailApiRequests": [],
+      "passed": true,
+      "httpStatus": 200,
+      "initialOverflow": 0,
+      "h1": [
+        "좋은 안경원을제대로 알리는 일."
+      ],
+      "screenshot": "output/playwright/eyewear-integration/index-1440.png",
+      "homeServiceImage": {
+        "src": "portfolio/model-images/thumbnails/tf1289-01a-women-01.webp",
+        "loaded": true
+      },
+      "servicesCta": "services.html",
+      "finalOverflow": 0,
+      "threeChunkRequests": []
+    },
+    {
+      "route": "services.html",
+      "width": 1440,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "scriptRequests": [
+        "http://127.0.0.1:4183/assets/main-LJWHM-MM.js"
+      ],
+      "mailApiRequests": [],
+      "passed": true,
+      "httpStatus": 200,
+      "initialOverflow": 0,
+      "h1": [
+        "필요한 만큼,정확한 곳에."
+      ],
+      "screenshot": "output/playwright/eyewear-integration/services-1440.png",
+      "directoryKeyboardPreview": "model-images",
+      "directoryPreviewImage": {
+        "src": "portfolio/model-images/thumbnails/tf1289-01a-women-01.webp",
+        "loaded": true
+      },
+      "finalOverflow": 0,
+      "threeChunkRequests": []
+    },
+    {
+      "route": "contact.html?service=model-images",
+      "width": 1440,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "scriptRequests": [
+        "http://127.0.0.1:4183/assets/main-LJWHM-MM.js"
+      ],
+      "mailApiRequests": [],
+      "passed": true,
+      "httpStatus": 200,
+      "initialOverflow": 0,
+      "h1": [
+        "안경원이야기를들려주세요."
+      ],
+      "screenshot": "output/playwright/eyewear-integration/contact-1440.png",
+      "servicePrefill": "안경테·선글라스 모델 이미지 제작에 대해 상담받고 싶습니다.",
+      "emptySubmissionBlocked": true,
+      "mockMailCalls": 0,
+      "finalOverflow": 0,
+      "threeChunkRequests": []
+    },
+    {
+      "route": "service-model-images.html",
+      "width": 1440,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "scriptRequests": [
+        "http://127.0.0.1:4183/assets/main-LJWHM-MM.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CIr-NwqC.js"
+      ],
+      "mailApiRequests": [],
+      "passed": true,
+      "httpStatus": 200,
+      "initialOverflow": 0,
+      "h1": [
+        "좋은 안경은,디테일로기억됩니다."
+      ],
+      "screenshot": "output/playwright/eyewear-integration/service-model-images-1440.png",
+      "threeChunkLoadedBeforeScroll": false,
+      "portfolioCta": {
+        "hash": "#model-portfolio",
+        "focusedId": "model-portfolio"
+      },
+      "galleryCards": 32,
+      "filters": [
+        {
+          "category": "sunglasses",
+          "visible": 8,
+          "total": 23,
+          "pressed": "true",
+          "counter": "08 / 23"
+        },
+        {
+          "category": "optical",
+          "visible": 8,
+          "total": 9,
+          "pressed": "true",
+          "counter": "08 / 09"
+        },
+        {
+          "category": "all",
+          "visible": 8,
+          "total": 32,
+          "pressed": "true",
+          "counter": "08 / 32"
+        }
+      ],
+      "galleryScreenshot": "output/playwright/eyewear-integration/gallery-1440.png",
+      "expandedGalleryCount": 32,
+      "threeStageState": "ready",
+      "finalOverflow": 0,
+      "threeChunkRequests": [
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CIr-NwqC.js"
+      ]
+    },
+    {
+      "route": "index.html",
+      "width": 390,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "scriptRequests": [
+        "http://127.0.0.1:4183/assets/main-LJWHM-MM.js"
+      ],
+      "mailApiRequests": [],
+      "passed": true,
+      "httpStatus": 200,
+      "initialOverflow": 0,
+      "h1": [
+        "좋은 안경원을제대로 알리는 일."
+      ],
+      "screenshot": "output/playwright/eyewear-integration/index-390.png",
+      "homeServiceImage": {
+        "src": "portfolio/model-images/thumbnails/tf1289-01a-women-01.webp",
+        "loaded": true
+      },
+      "servicesCta": "services.html",
+      "finalOverflow": 0,
+      "threeChunkRequests": []
+    },
+    {
+      "route": "services.html",
+      "width": 390,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "scriptRequests": [
+        "http://127.0.0.1:4183/assets/main-LJWHM-MM.js"
+      ],
+      "mailApiRequests": [],
+      "passed": true,
+      "httpStatus": 200,
+      "initialOverflow": 0,
+      "h1": [
+        "필요한 만큼,정확한 곳에."
+      ],
+      "screenshot": "output/playwright/eyewear-integration/services-390.png",
+      "directoryKeyboardPreview": "model-images",
+      "directoryPreviewImage": {
+        "src": "portfolio/model-images/thumbnails/tf1289-01a-women-01.webp",
+        "loaded": true
+      },
+      "finalOverflow": 0,
+      "threeChunkRequests": []
+    },
+    {
+      "route": "contact.html?service=model-images",
+      "width": 390,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "scriptRequests": [
+        "http://127.0.0.1:4183/assets/main-LJWHM-MM.js"
+      ],
+      "mailApiRequests": [],
+      "passed": true,
+      "httpStatus": 200,
+      "initialOverflow": 0,
+      "h1": [
+        "안경원이야기를들려주세요."
+      ],
+      "screenshot": "output/playwright/eyewear-integration/contact-390.png",
+      "servicePrefill": "안경테·선글라스 모델 이미지 제작에 대해 상담받고 싶습니다.",
+      "emptySubmissionBlocked": true,
+      "mockMailCalls": 0,
+      "finalOverflow": 0,
+      "threeChunkRequests": []
+    },
+    {
+      "route": "service-model-images.html",
+      "width": 390,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpErrors": [],
+      "scriptRequests": [
+        "http://127.0.0.1:4183/assets/main-LJWHM-MM.js"
+      ],
+      "mailApiRequests": [],
+      "passed": true,
+      "httpStatus": 200,
+      "initialOverflow": 0,
+      "h1": [
+        "좋은 안경은,디테일로기억됩니다."
+      ],
+      "screenshot": "output/playwright/eyewear-integration/service-model-images-390.png",
+      "threeChunkLoadedBeforeScroll": false,
+      "portfolioCta": {
+        "hash": "#model-portfolio",
+        "focusedId": "model-portfolio"
+      },
+      "galleryCards": 32,
+      "filters": [
+        {
+          "category": "sunglasses",
+          "visible": 8,
+          "total": 23,
+          "pressed": "true",
+          "counter": "08 / 23"
+        },
+        {
+          "category": "optical",
+          "visible": 8,
+          "total": 9,
+          "pressed": "true",
+          "counter": "08 / 09"
+        },
+        {
+          "category": "all",
+          "visible": 8,
+          "total": 32,
+          "pressed": "true",
+          "counter": "08 / 32"
+        }
+      ],
+      "galleryScreenshot": "output/playwright/eyewear-integration/gallery-390.png",
+      "expandedGalleryCount": 32,
+      "threeStageState": "idle",
+      "finalOverflow": 0,
+      "threeChunkRequests": []
+    }
+  ],
+  "failures": [],
+  "passed": true
+}
