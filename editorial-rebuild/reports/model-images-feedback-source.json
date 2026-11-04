@@ -1,0 +1,17 @@
+{
+  "source": "User-supplied KakaoTalk conversation screenshot in this task",
+  "sourceImageSize": [
+    842,
+    425
+  ],
+  "incomingMessages": [
+    "감탄입니다",
+    "수정할데가 없이 완벽하세요!"
+  ],
+  "presentation": "Two messages quoted together as one feedback entry after the portfolio gallery",
+  "formatting": "Original wording retained; visual line break added before 완벽하세요!",
+  "attribution": "모델 이미지 전달 후 받은 카카오톡 피드백",
+  "identityDisplayed": false,
+  "originalScreenshotEmbedded": false,
+  "note": "The inline screenshot was visible in the conversation but was not supplied as a downloadable workspace file. Only the transcribed quotation is displayed."
+}

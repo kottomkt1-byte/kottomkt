@@ -1,0 +1,107 @@
+{
+  "scope": "One supplied KakaoTalk feedback quotation, responsive visual smoke checks",
+  "cases": [
+    {
+      "width": 1440,
+      "passed": true,
+      "quote": "감탄입니다\n\n수정할데가 없이\n완벽하세요!",
+      "geometry": {
+        "section": {
+          "x": 48,
+          "y": 110.640625,
+          "width": 1344,
+          "height": 509.140625,
+          "top": 110.640625,
+          "right": 1392,
+          "bottom": 619.78125,
+          "left": 48
+        },
+        "quote": {
+          "x": 654.703125,
+          "y": 205.640625,
+          "width": 737.296875,
+          "height": 324.140625,
+          "top": 205.640625,
+          "right": 1392,
+          "bottom": 529.78125,
+          "left": 654.703125
+        },
+        "overflow": false,
+        "opacity": "1",
+        "order": [
+          "model-portfolio",
+          "mi-process wrap"
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "passed": true,
+      "quote": "감탄입니다\n\n수정할데가 없이\n완벽하세요!",
+      "geometry": {
+        "section": {
+          "x": 24,
+          "y": 110.015625,
+          "width": 342,
+          "height": 479.765625,
+          "top": 110.015625,
+          "right": 366,
+          "bottom": 589.78125,
+          "left": 24
+        },
+        "quote": {
+          "x": 24,
+          "y": 299.796875,
+          "width": 342,
+          "height": 234.984375,
+          "top": 299.796875,
+          "right": 366,
+          "bottom": 534.78125,
+          "left": 24
+        },
+        "overflow": false,
+        "opacity": "1",
+        "order": [
+          "model-portfolio",
+          "mi-process wrap"
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "passed": true,
+      "quote": "감탄입니다\n\n수정할데가 없이\n완벽하세요!",
+      "geometry": {
+        "section": {
+          "x": 24,
+          "y": 110.484375,
+          "width": 272,
+          "height": 478.953125,
+          "top": 110.484375,
+          "right": 296,
+          "bottom": 589.4375,
+          "left": 24
+        },
+        "quote": {
+          "x": 24,
+          "y": 300.265625,
+          "width": 272,
+          "height": 234.171875,
+          "top": 300.265625,
+          "right": 296,
+          "bottom": 534.4375,
+          "left": 24
+        },
+        "overflow": false,
+        "opacity": "1",
+        "order": [
+          "model-portfolio",
+          "mi-process wrap"
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "noJavaScriptVisible": true,
+  "passed": true
+}

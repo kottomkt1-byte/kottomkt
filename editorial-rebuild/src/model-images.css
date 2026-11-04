@@ -91,3 +91,17 @@ html.no-js .mi-check-controls{display:none}
 .mi-product-viewer[data-mode=studio] .mi-product-stage{aspect-ratio:6/5;min-height:0}
 
 .mi-product-model-name{display:flex;flex-direction:column;gap:5px;font-size:11px;letter-spacing:.08em}.mi-product-model-name>span{font-size:8px;letter-spacing:.05em;color:#6a6b60}
+
+/* One supplied conversation, quoted without identifying its sender. */
+.mi-feedback{padding-bottom:90px}
+.mi-feedback-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw;align-items:start;padding-top:32px}
+.mi-page .mi-feedback h2{font-size:clamp(29px,3vw,46px);line-height:1.6}
+.mi-feedback-quote{position:relative;min-width:0;margin:0;padding:14px 0 12px 44px;border-left:1px solid #b59d8d}
+.mi-feedback-mark{display:block;height:44px;font-family:Georgia,serif;font-size:84px;line-height:1;color:var(--mi-clay)}
+.mi-feedback blockquote{margin:0;font-family:var(--serif);font-size:clamp(31px,3.25vw,50px);line-height:1.6;letter-spacing:-.05em;word-break:keep-all}
+.mi-feedback blockquote p{margin:0}
+.mi-feedback blockquote .mi-feedback-lead{font-family:var(--sans);font-size:16px;letter-spacing:-.02em;margin:14px 0 16px;color:#625b50}
+.mi-feedback blockquote em{font-style:normal;color:var(--mi-clay)}
+.mi-feedback figcaption{display:flex;align-items:center;gap:12px;font-size:11px;line-height:1.8;color:#71685a;margin-top:29px;word-break:keep-all}
+.mi-feedback figcaption>span{width:22px;height:1px;background:#a18a78;flex-shrink:0}
+@media(max-width:760px){.mi-feedback{padding-bottom:55px}.mi-feedback-layout{grid-template-columns:minmax(0,1fr);gap:28px;padding-top:16px}.mi-page .mi-feedback h2{font-size:29px}.mi-feedback-quote{padding:10px 0 6px 24px}.mi-feedback-mark{font-size:70px;height:36px}.mi-feedback blockquote{font-size:clamp(29px,7.5vw,43px)}.mi-feedback blockquote .mi-feedback-lead{font-size:14px;margin-top:10px}.mi-feedback figcaption{font-size:10px;margin-top:23px;gap:10px}}
