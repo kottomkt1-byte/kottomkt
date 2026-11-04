@@ -1,11 +1,10 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-// Source geometry: Khronos Sunglasses, Eric Chadwick / DGG, CC BY 4.0.
-// Only the material treatment, uniform metre-to-millimetre scale and centering
-// change here. No replacement curves, procedural frame parts or logo textures.
+// Photo-reconstructed ZIN 01 geometry, authored against the official product
+// references and dimensions. This viewer preserves that mesh and its +Z front.
 export async function createEyewearModel({ signal } = {}) {
-  const url = new URL('models/eyewear-studio.glb', document.baseURI);
+  const url = new URL('models/zin-01.glb', document.baseURI);
   const response = await fetch(url, { signal, credentials: 'same-origin' });
   if (!response.ok) throw new Error(`Eyewear model request failed (${response.status})`);
   const buffer = await response.arrayBuffer();
@@ -32,24 +31,30 @@ export async function createEyewearModel({ signal } = {}) {
     throw new DOMException('Eyewear loading aborted', 'AbortError');
   }
 
-  const metal = new THREE.MeshPhysicalMaterial({ name: 'Champagne gold metal', color: new THREE.Color(.68, .52, .30), metalness: 1, roughness: .13, envMapIntensity: 1.0 });
-  const earhook = new THREE.MeshPhysicalMaterial({ name: 'Plain black ear tips', color: new THREE.Color(.006, .007, .006), metalness: 0, roughness: .22, clearcoat: .45, clearcoatRoughness: .16 });
-  // The source has opposite-facing inner/outer surfaces. WebGL transmission
-  // samples opaque geometry, so each visible face needs the same neutral tint.
-  // Zero synthetic volume also avoids multiplying thickness by the mm scale.
-  const lens = new THREE.MeshPhysicalMaterial({ name: 'Smoke G15 inner glass', color: new THREE.Color(.13, .17, .145), metalness: 0, roughness: .05, transmission: .96, thickness: 0, ior: 1.47, envMapIntensity: .85, iridescence: 0, shadowSide: THREE.DoubleSide });
-  const lensExterior = new THREE.MeshPhysicalMaterial({ name: 'Smoke G15 outer glass', color: new THREE.Color(.13, .17, .145), metalness: 0, roughness: .08, transmission: .96, thickness: 0, ior: 1.47, envMapIntensity: .85, iridescence: 0 });
-  const nosepad = new THREE.MeshPhysicalMaterial({ name: 'Light translucent silicone nose pads', color: new THREE.Color(.77, .81, .77), metalness: 0, roughness: .13, transmission: .58, thickness: .001, ior: 1.41, iridescence: 0 });
-  const materials = { metal, earhook, lens, lensExterior, nosepad };
+  const frame = new THREE.MeshPhysicalMaterial({ name: 'ZIN 01 polished black acetate', color: new THREE.Color(.002, .0024, .003), metalness: 0, roughness: .13, clearcoat: .3, clearcoatRoughness: .09, ior: 1.5 });
+  const temple = new THREE.MeshPhysicalMaterial({ name: 'ZIN 01 silver titanium', color: new THREE.Color(.63, .66, .69), metalness: 1, roughness: .2, envMapIntensity: 1 });
+  // Thickness is expressed in the source's metres, before the mm conversion.
+  // Keep the clear optical surfaces neutral, without tint or iridescent coating.
+  const lenses = new THREE.MeshPhysicalMaterial({ name: 'ZIN 01 clear optical lenses', color: new THREE.Color(.985, .993, .995), metalness: 0, roughness: .008, transmission: 1, thickness: .00085, ior: 1.49, envMapIntensity: .65, iridescence: 0 });
+  const nosepads = new THREE.MeshPhysicalMaterial({ name: 'ZIN 01 clear nose pads', color: new THREE.Color(.82, .86, .85), metalness: 0, roughness: .12, transmission: .83, thickness: .0015, ior: 1.41, iridescence: 0 });
+  const rivets = new THREE.MeshPhysicalMaterial({ name: 'ZIN 01 polished silver details', color: new THREE.Color(.8, .82, .84), metalness: 1, roughness: .12, envMapIntensity: 1 });
+  const recess = new THREE.MeshPhysicalMaterial({ name: 'ZIN 01 dark hinge recess', color: new THREE.Color(.06, .065, .07), metalness: 1, roughness: .3 });
+  const materials = { frame, temple, lenses, nosepads, rivets, recess };
+  function materialFor(materialName, meshName) {
+    const key = `${materialName} ${meshName}`.toLowerCase();
+    if (/hinge.?recess|dark.?metal/.test(key)) return recess;
+    if (/rivet|hinge|screw|mount|detail|nosepad.?adjustment|nose.?arm|pad.?arm|support/.test(key)) return rivets;
+    if (/nose.?pads?|silicone/.test(key)) return nosepads;
+    if (/lens|glass/.test(key)) return lenses;
+    if (/temple|titanium|silver|metal/.test(key)) return temple;
+    return frame;
+  }
   source.traverse(object => {
     if (!object.isMesh) return;
-    const name = object.name.toLowerCase();
-    if (name.includes('earhook')) object.material = earhook;
-    else if (name.includes('nosepad')) object.material = nosepad;
-    else if (name.includes('lensesexterior')) object.material = lensExterior;
-    else if (name.includes('lens')) object.material = lens;
-    else object.material = metal;
-    object.castShadow = object.material !== nosepad && object.material !== lensExterior;
+    const replacements = (Array.isArray(object.material) ? object.material : [object.material])
+      .map(material => materialFor(material.name, object.name));
+    object.material = Array.isArray(object.material) ? replacements : replacements[0];
+    object.castShadow = replacements.some(material => material !== nosepads && material !== lenses);
     // The small polished parts receive their illumination from the studio,
     // not from a low-resolution self-shadow that would stripe the metal.
     object.receiveShadow = false;
@@ -58,11 +63,13 @@ export async function createEyewearModel({ signal } = {}) {
   source.updateMatrixWorld(true);
   const sourceBounds = new THREE.Box3().setFromObject(source);
   const center = sourceBounds.getCenter(new THREE.Vector3());
-  source.scale.setScalar(1000);
-  source.position.copy(center).multiplyScalar(-1000);
+  const millimetres = new THREE.Group();
+  millimetres.scale.setScalar(1000);
+  millimetres.position.copy(center).multiplyScalar(-1000);
+  millimetres.add(source);
   const group = new THREE.Group();
-  group.name = 'Khronos eyewear studio model';
-  group.add(source);
+  group.name = 'Photo-reconstructed ZIN 01';
+  group.add(millimetres);
   group.updateMatrixWorld(true);
   const bounds = new THREE.Box3().setFromObject(group);
   const contactPoints = [];
@@ -76,12 +83,10 @@ export async function createEyewearModel({ signal } = {}) {
     }
   });
   let disposed = false;
-  function setFinish(name = 'gold') {
+  function setFinish() {
     if (disposed) return;
-    const silver = name === 'silver';
-    metal.color.setRGB(...(silver ? [.70, .74, .75] : [.68, .52, .30]));
-    metal.roughness = silver ? .12 : .13;
-    group.userData.finish = silver ? 'silver' : 'gold';
+    // ZIN 01 has a single black-front / silver-temple finish.
+    group.userData.finish = 'black';
   }
   function dispose() {
     if (disposed) return;
@@ -90,6 +95,6 @@ export async function createEyewearModel({ signal } = {}) {
     Object.values(materials).forEach(material => material.dispose());
     group.clear();
   }
-  setFinish('gold');
+  setFinish();
   return { group, materials, bounds, contactPoints: new Float32Array(contactPoints), setFinish, dispose };
 }

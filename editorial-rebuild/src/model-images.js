@@ -13,12 +13,12 @@ function eyewearStudio() {
   return `<div class="mi-product-viewer" data-eyewear-viewer data-mode="studio">
     <div class="mi-product-heading"><span>FRAME, IN DETAIL.</span><button type="button" data-eyewear-enter aria-pressed="false" aria-controls="mi-product-stage" hidden>직접 돌려보기 <span aria-hidden="true">↗</span></button></div>
     <div class="mi-product-stage" id="mi-product-stage" data-eyewear-stage data-state="idle" data-view="0">
-      <img class="mi-product-poster" src="art/eyewear-studio.webp?v=9137a2e8173b" width="1200" height="1000" loading="lazy" alt="메탈 선글라스의 곡면 렌즈와 금속 프레임, 코받침과 템플을 보여주는 스튜디오 렌더">
-      <span class="mi-product-view-label" aria-hidden="true"><span data-eyewear-view-label>STUDIO / GOLD</span><i></i></span>
+      <img class="mi-product-poster" src="art/zin-01-studio.webp?v=e3fe2aa194682" width="1200" height="1000" loading="lazy" alt="젠틀몬스터 진 ZIN 01의 블랙 스퀘어 앞판과 실버 템플, 투명 렌즈를 재현한 스튜디오 렌더">
+      <span class="mi-product-view-label" aria-hidden="true"><span data-eyewear-view-label>ZIN 01 / BLACK</span><i></i></span>
     </div>
     <div class="mi-product-tools" data-eyewear-tools hidden>
       <p id="mi-product-instruction">드래그 또는 방향키로 돌려보세요.</p>
-      <div class="mi-product-toolbar"><div class="mi-product-finishes" role="group" aria-label="프레임 색상"><button type="button" data-eyewear-finish="gold" aria-pressed="true" aria-label="골드 메탈 프레임"><i></i><span>골드</span></button><button type="button" data-eyewear-finish="silver" aria-pressed="false" aria-label="실버 메탈 프레임"><i></i><span>실버</span></button></div><div class="mi-product-playback"><button type="button" data-eyewear-play aria-pressed="true" aria-label="안경 자동 모션 멈추기"><i aria-hidden="true"></i><span>모션 멈춤</span></button><button type="button" data-eyewear-reset aria-label="현재 디테일의 처음 각도로 돌아가기"><b aria-hidden="true">↺</b><span>처음 각도</span></button></div></div>
+      <div class="mi-product-toolbar"><span class="mi-product-model-name">ZIN 01 <span>BLACK / SILVER</span></span><div class="mi-product-playback"><button type="button" data-eyewear-play aria-pressed="true" aria-label="안경 자동 모션 멈추기"><i aria-hidden="true"></i><span>모션 멈춤</span></button><button type="button" data-eyewear-reset aria-label="현재 디테일의 처음 각도로 돌아가기"><b aria-hidden="true">↺</b><span>처음 각도</span></button></div></div>
     </div>
   </div>`;
 }
@@ -53,7 +53,7 @@ export function renderModelImages() {
       <div class="mi-inspection-inner wrap">
         <div class="mi-section-index"><span>02 / THE DETAILS</span><span>안경사가 살피는 디테일</span></div>
         <div class="mi-inspection-layout"><div class="mi-inspection-copy"><h2 id="mi-inspection-title" data-mi-reveal>안경을 아는 눈은,<br><em>다르게 봅니다.</em></h2><p>프레임의 곡선부터 브리지의 연결까지.<br>실제 제품과 비교하며 작은 차이를 살핍니다.</p><div class="mi-check-controls" aria-label="안경 검수 포인트">${points.map((p,i)=>`<button type="button" data-mi-point="${i}" aria-pressed="${i===0}" aria-controls="mi-check-description"><span>0${i+1}</span><strong>${p.title}</strong><span class="mi-point-arrow" aria-hidden="true">↗</span></button>`).join('')}</div></div>
-        <div class="mi-inspection-display" data-mi-active="0">${eyewearStudio()}<div class="mi-check-description" id="mi-check-description" aria-live="polite" aria-atomic="true"><span data-mi-check-label>${points[0].label}</span><p data-mi-check-copy>${points[0].body}</p></div><noscript><div class="mi-noscript-details">${points.slice(1).map(p=>`<p><strong>${p.label}</strong> ${p.body}</p>`).join('')}</div></noscript><p class="mi-drawing-caption">프레임의 구조와 소재를 설명하는 3D 연출 이미지입니다.<br><span class="mi-model-credit">3D 모델: Eric Chadwick / DGG · <a href="https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/SunglassesKhronos" target="_blank" rel="noopener noreferrer">Sunglasses Khronos</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · 재질·조명 변경</span></p></div></div>
+        <div class="mi-inspection-display" data-mi-active="0">${eyewearStudio()}<div class="mi-check-description" id="mi-check-description" aria-live="polite" aria-atomic="true"><span data-mi-check-label>${points[0].label}</span><p data-mi-check-copy>${points[0].body}</p></div><noscript><div class="mi-noscript-details">${points.slice(1).map(p=>`<p><strong>${p.label}</strong> ${p.body}</p>`).join('')}</div></noscript><p class="mi-drawing-caption">젠틀몬스터 진 ZIN 01<br><span class="mi-model-credit"><a href="https://www.gentlemonster.com/int/ko/item/ZYYE799SURVC/zin01" target="_blank" rel="noopener noreferrer">공식 제품 사진과 공개 치수</a>를 바탕으로 재현한 3D 모델입니다.</span></p></div></div>
       </div>
     </section>
 
@@ -92,7 +92,7 @@ export function initModelImages({ gsap, ScrollTrigger }) {
     viewerHost.dataset.mode = interactive ? 'interactive' : 'studio';
     enter.setAttribute('aria-pressed', String(interactive));
     enter.innerHTML = interactive ? '스튜디오 컷 보기 <span aria-hidden="true">↙</span>' : '직접 돌려보기 <span aria-hidden="true">↗</span>';
-    viewLabel.textContent = interactive ? viewLabels[Number(display.dataset.miActive)] : 'STUDIO / GOLD';
+    viewLabel.textContent = interactive ? viewLabels[Number(display.dataset.miActive)] : 'ZIN 01 / BLACK';
     viewer?.setActive(interactive);
     if (interactive) loadViewer();
     ScrollTrigger.refresh();
@@ -126,7 +126,7 @@ export function initModelImages({ gsap, ScrollTrigger }) {
     if (stage.dataset.state !== 'fallback') setMode(true);
     if (!changed) return;
     viewer?.selectView(index);
-    viewLabel.textContent = viewerHost.dataset.mode === 'interactive' ? viewLabels[index] : 'STUDIO / GOLD';
+    viewLabel.textContent = viewerHost.dataset.mode === 'interactive' ? viewLabels[index] : 'ZIN 01 / BLACK';
     buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
     label.textContent = points[index].label;
     copy.textContent = points[index].body;

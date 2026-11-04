@@ -1,5 +1,9 @@
 Sunglasses Khronos — 3D model attribution
 
+Archived model: eyewear-studio.glb. The active detail presentation now uses
+zin-01.glb; its separate source notes are in zin-01-source.md. The attribution
+below applies only to the archived Khronos asset and its original poster.
+
 Created by Eric Chadwick, Darmstadt Graphics Group GmbH (DGG), 2024.
 Source: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/SunglassesKhronos
 License: Creative Commons Attribution 4.0 International (CC BY 4.0)

@@ -1,0 +1,1276 @@
+{
+  "checkedAt": "2026-11-04T07:14:45.645635+00:00",
+  "base": "http://127.0.0.1:4183",
+  "scope": "ZIN 01 studio poster first; explicit async GLB activation with a fixed black acetate / silver temple finish.",
+  "expectedAssets": {
+    "model": "/models/zin-01.glb",
+    "poster": "/art/zin-01-studio.webp",
+    "source": "Photo-reconstructed ZIN 01",
+    "finish": "black"
+  },
+  "assetStage": "Final ZIN 01 assets unchanged; subsequent framing correction build with stage width constrained to its host and all-vertex projection diagnostics. DOM and NDC checks cover every preset at 1440/390/320px before and after screenshots.",
+  "buildAssetSnapshot": {
+    "models/zin-01.glb": {
+      "bytes": 3005428,
+      "sha256": "869cbb2a2d0e8391ab3acdf3a26ee9e77bec8a60b8a677626106e4c2f52d75af"
+    },
+    "art/zin-01-studio.webp": {
+      "bytes": 590736,
+      "sha256": "e3fe2aa194682c5ca463d5df7ef7bb97730f6f13c2de09634f8cdaed867216d9"
+    }
+  },
+  "browser": "Chromium with ANGLE SwiftShader software WebGL; hardware GPU performance not measured.",
+  "endpointWaitTargets": [
+    {
+      "x": 0.18,
+      "y": -0.52,
+      "z": -0.015,
+      "distance": 365,
+      "targetX": 0,
+      "targetY": -4,
+      "targetZ": 0
+    },
+    {
+      "x": 0.22,
+      "y": -1.05,
+      "z": -0.025,
+      "distance": 330,
+      "targetX": 0,
+      "targetY": -3,
+      "targetZ": 0
+    },
+    {
+      "x": 0.08,
+      "y": -0.08,
+      "z": 0.018,
+      "distance": 285,
+      "targetX": 0,
+      "targetY": -3,
+      "targetZ": 45
+    }
+  ],
+  "cases": [
+    {
+      "width": 1440,
+      "mode": "framing",
+      "passed": true,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "httpErrors": [],
+      "javascriptRequests": [
+        "http://127.0.0.1:4183/assets/main-B20kP9nr.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+      ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/zin-01.glb"
+      ],
+      "modelRequestFailures": [],
+      "lazyLoad": {
+        "beforeViewport": {
+          "contextAttempts": 0,
+          "contexts": 0,
+          "totalDraws": 0,
+          "events": [],
+          "canvases": []
+        },
+        "afterViewport": {
+          "contextAttempts": 1,
+          "contexts": 1,
+          "totalDraws": 406,
+          "events": [],
+          "canvases": [
+            {
+              "className": "mi-product-canvas",
+              "width": 750,
+              "height": 636,
+              "draws": 406
+            }
+          ]
+        },
+        "lazyJavaScriptRequests": [
+          "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+        ],
+        "loadedModelUrls": [
+          "http://127.0.0.1:4183/models/zin-01.glb"
+        ],
+        "primaryStudioPoster": {
+          "poster": {
+            "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
+            "width": 1200,
+            "height": 1000
+          },
+          "toolsHidden": true,
+          "loadedCanvasInactive": false
+        },
+        "activation": "explicit enter button",
+        "noModelRequestBeforeInteraction": true
+      },
+      "views": [
+        {
+          "view": 0,
+          "endpoint": {
+            "view": 0,
+            "playing": false,
+            "active": true,
+            "visible": true,
+            "renderCount": 32,
+            "rotation": {
+              "x": 0.180012,
+              "y": -0.51984
+            },
+            "finish": "black",
+            "reduced": false,
+            "cameraDistance": 365,
+            "actualCameraDistance": 388.23121817072644,
+            "source": "Photo-reconstructed ZIN 01"
+          },
+          "beforeScreenshot": {
+            "host": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 864.96875,
+              "width": 750.484375,
+              "height": 733
+            },
+            "hostClientWidth": 750,
+            "stage": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 767.96875,
+              "width": 750.484375,
+              "height": 636
+            },
+            "canvas": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 767.96875,
+              "width": 750.484375,
+              "height": 636
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8600000144108284,
+                "maxX": 0.6850255592537161,
+                "minY": -0.55252750950898,
+                "maxY": 0.2458397950008993,
+                "minZ": 0.997177774930386,
+                "maxZ": 0.998562732881076
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 52.53390084244923,
+              "right": 118.1916981522247,
+              "top": 239.82294518971403,
+              "bottom": 142.29625197614436
+            }
+          },
+          "afterScreenshot": {
+            "host": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 864.96875,
+              "width": 750.484375,
+              "height": 733
+            },
+            "hostClientWidth": 750,
+            "stage": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 767.96875,
+              "width": 750.484375,
+              "height": 636
+            },
+            "canvas": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 767.96875,
+              "width": 750.484375,
+              "height": 636
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8600000144136274,
+                "maxX": 0.6850866031467377,
+                "minY": -0.5525356010487931,
+                "maxY": 0.24584488294542198,
+                "minZ": 0.9971777082909601,
+                "maxZ": 0.9985627417809921
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 52.53390084139893,
+              "right": 118.16879190827375,
+              "top": 239.8213272233558,
+              "bottom": 142.29367886648382
+            }
+          },
+          "screenshot": "output/playwright/eyewear-viewer/zin01-view-0-1440.png"
+        },
+        {
+          "view": 1,
+          "endpoint": {
+            "view": 1,
+            "playing": false,
+            "active": true,
+            "visible": true,
+            "renderCount": 62,
+            "rotation": {
+              "x": 0.22,
+              "y": -1.05
+            },
+            "finish": "black",
+            "reduced": false,
+            "cameraDistance": 330.000027,
+            "actualCameraDistance": 359.9124358492767,
+            "source": "Photo-reconstructed ZIN 01"
+          },
+          "beforeScreenshot": {
+            "host": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 864.96875,
+              "width": 750.484375,
+              "height": 733
+            },
+            "hostClientWidth": 750,
+            "stage": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 767.96875,
+              "width": 750.484375,
+              "height": 636
+            },
+            "canvas": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 767.96875,
+              "width": 750.484375,
+              "height": 636
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8019590808137537,
+                "maxX": 0.8599999762675321,
+                "minY": -0.5988851426721765,
+                "maxY": 0.34062360560661403,
+                "minZ": 0.9967900762101083,
+                "maxZ": 0.9984201090118366
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 74.3133077299578,
+              "right": 52.533915155423166,
+              "top": 209.6816934170967,
+              "bottom": 127.55452463024787
+            }
+          },
+          "afterScreenshot": {
+            "host": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 864.96875,
+              "width": 750.484375,
+              "height": 733
+            },
+            "hostClientWidth": 750,
+            "stage": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 767.96875,
+              "width": 750.484375,
+              "height": 636
+            },
+            "canvas": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 767.96875,
+              "width": 750.484375,
+              "height": 636
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8019590808137539,
+                "maxX": 0.8599999762675321,
+                "minY": -0.598885155493736,
+                "maxY": 0.340623596740977,
+                "minZ": 0.9967900762101081,
+                "maxZ": 0.9984201090118366
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 74.31330772995771,
+              "right": 52.533915155423166,
+              "top": 209.68169623636933,
+              "bottom": 127.55452055299195
+            }
+          },
+          "screenshot": "output/playwright/eyewear-viewer/zin01-view-1-1440.png"
+        },
+        {
+          "view": 2,
+          "endpoint": {
+            "view": 2,
+            "playing": false,
+            "active": true,
+            "visible": true,
+            "renderCount": 92,
+            "rotation": {
+              "x": 0.080002,
+              "y": -0.080014
+            },
+            "finish": "black",
+            "reduced": false,
+            "cameraDistance": 285.00066,
+            "actualCameraDistance": 310.2391918807619,
+            "source": "Photo-reconstructed ZIN 01"
+          },
+          "beforeScreenshot": {
+            "host": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 864.96875,
+              "width": 750.484375,
+              "height": 733
+            },
+            "hostClientWidth": 750,
+            "stage": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 767.96875,
+              "width": 750.484375,
+              "height": 636
+            },
+            "canvas": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 767.96875,
+              "width": 750.484375,
+              "height": 636
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8600000095582188,
+                "maxX": 0.7645270488114074,
+                "minY": -0.5389250633407079,
+                "maxY": 0.1178613246121513,
+                "minZ": 0.9970285531152626,
+                "maxZ": 0.9983307616655769
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 52.53390266335308,
+              "right": 88.3593853010882,
+              "top": 280.5200987733359,
+              "bottom": 146.6218298576549
+            }
+          },
+          "afterScreenshot": {
+            "host": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 864.96875,
+              "width": 750.484375,
+              "height": 733
+            },
+            "hostClientWidth": 750,
+            "stage": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 767.96875,
+              "width": 750.484375,
+              "height": 636
+            },
+            "canvas": {
+              "left": 641.515625,
+              "right": 1392,
+              "top": 131.96875,
+              "bottom": 767.96875,
+              "width": 750.484375,
+              "height": 636
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8600000095580314,
+                "maxX": 0.7645418944246926,
+                "minY": -0.5389249546258977,
+                "maxY": 0.11786451516228012,
+                "minZ": 0.9970285355331757,
+                "maxZ": 0.9983307463032726
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 52.533902663423405,
+              "right": 88.35381460068432,
+              "top": 280.5190841783949,
+              "bottom": 146.62186442896453
+            }
+          },
+          "screenshot": "output/playwright/eyewear-viewer/zin01-view-2-1440.png"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "mode": "framing",
+      "passed": true,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "httpErrors": [],
+      "javascriptRequests": [
+        "http://127.0.0.1:4183/assets/main-B20kP9nr.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+      ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/zin-01.glb"
+      ],
+      "modelRequestFailures": [],
+      "lazyLoad": {
+        "beforeViewport": {
+          "contextAttempts": 0,
+          "contexts": 0,
+          "totalDraws": 0,
+          "events": [],
+          "canvases": []
+        },
+        "afterViewport": {
+          "contextAttempts": 1,
+          "contexts": 1,
+          "totalDraws": 406,
+          "events": [],
+          "canvases": [
+            {
+              "className": "mi-product-canvas",
+              "width": 342,
+              "height": 335,
+              "draws": 406
+            }
+          ]
+        },
+        "lazyJavaScriptRequests": [
+          "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+        ],
+        "loadedModelUrls": [
+          "http://127.0.0.1:4183/models/zin-01.glb"
+        ],
+        "primaryStudioPoster": {
+          "poster": {
+            "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
+            "width": 1200,
+            "height": 1000
+          },
+          "toolsHidden": true,
+          "loadedCanvasInactive": false
+        },
+        "activation": "explicit enter button",
+        "noModelRequestBeforeInteraction": true
+      },
+      "views": [
+        {
+          "view": 0,
+          "endpoint": {
+            "view": 0,
+            "playing": false,
+            "active": true,
+            "visible": true,
+            "renderCount": 12,
+            "rotation": {
+              "x": 0.18,
+              "y": -0.52
+            },
+            "finish": "black",
+            "reduced": false,
+            "cameraDistance": 365,
+            "actualCameraDistance": 388.23002390298615,
+            "source": "Photo-reconstructed ZIN 01"
+          },
+          "beforeScreenshot": {
+            "host": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 677.9375,
+              "width": 342,
+              "height": 423.28125
+            },
+            "hostClientWidth": 342,
+            "stage": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 589.9375,
+              "width": 342,
+              "height": 335.28125
+            },
+            "canvas": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 589.9375,
+              "width": 342,
+              "height": 335.28125
+            },
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8600000144136449,
+                "maxX": 0.6850869839658075,
+                "minY": -0.47834082652509147,
+                "maxY": 0.21283278224923657,
+                "minZ": 0.9971777078910077,
+                "maxZ": 0.9985627418387304
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 23.939997535266716,
+              "right": 53.850125741846924,
+              "top": 131.96120436324907,
+              "bottom": 87.45126987831709
+            }
+          },
+          "afterScreenshot": {
+            "host": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 677.9375,
+              "width": 342,
+              "height": 423.28125
+            },
+            "hostClientWidth": 342,
+            "stage": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 589.9375,
+              "width": 342,
+              "height": 335.28125
+            },
+            "canvas": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 589.9375,
+              "width": 342,
+              "height": 335.28125
+            },
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8600000144136449,
+                "maxX": 0.6850869839658075,
+                "minY": -0.47834082652509147,
+                "maxY": 0.21283278224923657,
+                "minZ": 0.9971777078910077,
+                "maxZ": 0.9985627418387304
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 23.939997535266716,
+              "right": 53.850125741846924,
+              "top": 131.96120436324907,
+              "bottom": 87.45126987831709
+            }
+          },
+          "screenshot": "output/playwright/eyewear-viewer/zin01-view-0-390.png"
+        },
+        {
+          "view": 1,
+          "endpoint": {
+            "view": 1,
+            "playing": false,
+            "active": true,
+            "visible": true,
+            "renderCount": 17,
+            "rotation": {
+              "x": 0.22,
+              "y": -1.05
+            },
+            "finish": "black",
+            "reduced": false,
+            "cameraDistance": 330,
+            "actualCameraDistance": 359.91243574977295,
+            "source": "Photo-reconstructed ZIN 01"
+          },
+          "beforeScreenshot": {
+            "host": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 677.9375,
+              "width": 342,
+              "height": 423.28125
+            },
+            "hostClientWidth": 342,
+            "stage": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 589.9375,
+              "width": 342,
+              "height": 335.28125
+            },
+            "canvas": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 589.9375,
+              "width": 342,
+              "height": 335.28125
+            },
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8019590808137539,
+                "maxX": 0.8599999762675321,
+                "minY": -0.5184664992706607,
+                "maxY": 0.29488445681322745,
+                "minZ": 0.9967900762101081,
+                "maxZ": 0.9984201090118366
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 33.864997180848086,
+              "right": 23.94000405825201,
+              "top": 118.20601035704505,
+              "bottom": 80.7245770207044
+            }
+          },
+          "afterScreenshot": {
+            "host": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 677.9375,
+              "width": 342,
+              "height": 423.28125
+            },
+            "hostClientWidth": 342,
+            "stage": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 589.9375,
+              "width": 342,
+              "height": 335.28125
+            },
+            "canvas": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 589.9375,
+              "width": 342,
+              "height": 335.28125
+            },
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8019590808137539,
+                "maxX": 0.8599999762675321,
+                "minY": -0.5184664992706607,
+                "maxY": 0.29488445681322745,
+                "minZ": 0.9967900762101081,
+                "maxZ": 0.9984201090118366
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 33.864997180848086,
+              "right": 23.94000405825201,
+              "top": 118.20601035704505,
+              "bottom": 80.7245770207044
+            }
+          },
+          "screenshot": "output/playwright/eyewear-viewer/zin01-view-1-390.png"
+        },
+        {
+          "view": 2,
+          "endpoint": {
+            "view": 2,
+            "playing": false,
+            "active": true,
+            "visible": true,
+            "renderCount": 22,
+            "rotation": {
+              "x": 0.08,
+              "y": -0.08
+            },
+            "finish": "black",
+            "reduced": false,
+            "cameraDistance": 285,
+            "actualCameraDistance": 310.236417517552,
+            "source": "Photo-reconstructed ZIN 01"
+          },
+          "beforeScreenshot": {
+            "host": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 677.9375,
+              "width": 342,
+              "height": 423.28125
+            },
+            "hostClientWidth": 342,
+            "stage": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 589.9375,
+              "width": 342,
+              "height": 335.28125
+            },
+            "canvas": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 589.9375,
+              "width": 342,
+              "height": 335.28125
+            },
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8600000095580314,
+                "maxX": 0.7645418944246926,
+                "minY": -0.46655778997249064,
+                "maxY": 0.10203759769941455,
+                "minZ": 0.9970285355331757,
+                "maxZ": 0.9983307463032726
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 23.93999836557664,
+              "right": 40.26333605337757,
+              "top": 150.5349783481716,
+              "bottom": 89.42658549039294
+            }
+          },
+          "afterScreenshot": {
+            "host": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 677.9375,
+              "width": 342,
+              "height": 423.28125
+            },
+            "hostClientWidth": 342,
+            "stage": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 589.9375,
+              "width": 342,
+              "height": 335.28125
+            },
+            "canvas": {
+              "left": 24,
+              "right": 366,
+              "top": 254.65625,
+              "bottom": 589.9375,
+              "width": 342,
+              "height": 335.28125
+            },
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8600000095580314,
+                "maxX": 0.7645418944246926,
+                "minY": -0.46655778997249064,
+                "maxY": 0.10203759769941455,
+                "minZ": 0.9970285355331757,
+                "maxZ": 0.9983307463032726
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 23.93999836557664,
+              "right": 40.26333605337757,
+              "top": 150.5349783481716,
+              "bottom": 89.42658549039294
+            }
+          },
+          "screenshot": "output/playwright/eyewear-viewer/zin01-view-2-390.png"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "mode": "framing",
+      "passed": true,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "httpErrors": [],
+      "javascriptRequests": [
+        "http://127.0.0.1:4183/assets/main-B20kP9nr.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+      ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/zin-01.glb"
+      ],
+      "modelRequestFailures": [],
+      "lazyLoad": {
+        "beforeViewport": {
+          "contextAttempts": 0,
+          "contexts": 0,
+          "totalDraws": 0,
+          "events": [],
+          "canvases": []
+        },
+        "afterViewport": {
+          "contextAttempts": 1,
+          "contexts": 1,
+          "totalDraws": 526,
+          "events": [],
+          "canvases": [
+            {
+              "className": "mi-product-canvas",
+              "width": 272,
+              "height": 290,
+              "draws": 526
+            }
+          ]
+        },
+        "lazyJavaScriptRequests": [
+          "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+        ],
+        "loadedModelUrls": [
+          "http://127.0.0.1:4183/models/zin-01.glb"
+        ],
+        "primaryStudioPoster": {
+          "poster": {
+            "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
+            "width": 1200,
+            "height": 1000
+          },
+          "toolsHidden": true,
+          "loadedCanvasInactive": false
+        },
+        "activation": "explicit enter button",
+        "noModelRequestBeforeInteraction": true
+      },
+      "views": [
+        {
+          "view": 0,
+          "endpoint": {
+            "view": 0,
+            "playing": false,
+            "active": true,
+            "visible": true,
+            "renderCount": 13,
+            "rotation": {
+              "x": 0.18,
+              "y": -0.52
+            },
+            "finish": "black",
+            "reduced": false,
+            "cameraDistance": 365,
+            "actualCameraDistance": 388.23002390298615,
+            "source": "Photo-reconstructed ZIN 01"
+          },
+          "beforeScreenshot": {
+            "host": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 654.65625,
+              "width": 272,
+              "height": 378
+            },
+            "hostClientWidth": 272,
+            "stage": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 566.65625,
+              "width": 272,
+              "height": 290
+            },
+            "canvas": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 566.65625,
+              "width": 272,
+              "height": 290
+            },
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8600000144136449,
+                "maxX": 0.6850869839658075,
+                "minY": -0.4394677970656011,
+                "maxY": 0.1955366315643319,
+                "minZ": 0.9971777078910077,
+                "maxZ": 0.9985627418387304
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 19.03999803974429,
+              "right": 42.82817018065018,
+              "top": 116.64718842317188,
+              "bottom": 81.27716942548784
+            }
+          },
+          "afterScreenshot": {
+            "host": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 654.65625,
+              "width": 272,
+              "height": 378
+            },
+            "hostClientWidth": 272,
+            "stage": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 566.65625,
+              "width": 272,
+              "height": 290
+            },
+            "canvas": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 566.65625,
+              "width": 272,
+              "height": 290
+            },
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8600000144136449,
+                "maxX": 0.6850869839658075,
+                "minY": -0.4394677970656011,
+                "maxY": 0.1955366315643319,
+                "minZ": 0.9971777078910077,
+                "maxZ": 0.9985627418387304
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 19.03999803974429,
+              "right": 42.82817018065018,
+              "top": 116.64718842317188,
+              "bottom": 81.27716942548784
+            }
+          },
+          "screenshot": "output/playwright/eyewear-viewer/zin01-view-0-320.png"
+        },
+        {
+          "view": 1,
+          "endpoint": {
+            "view": 1,
+            "playing": false,
+            "active": true,
+            "visible": true,
+            "renderCount": 18,
+            "rotation": {
+              "x": 0.22,
+              "y": -1.05
+            },
+            "finish": "black",
+            "reduced": false,
+            "cameraDistance": 330,
+            "actualCameraDistance": 359.91243574977295,
+            "source": "Photo-reconstructed ZIN 01"
+          },
+          "beforeScreenshot": {
+            "host": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 654.65625,
+              "width": 272,
+              "height": 378
+            },
+            "hostClientWidth": 272,
+            "stage": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 566.65625,
+              "width": 272,
+              "height": 290
+            },
+            "canvas": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 566.65625,
+              "width": 272,
+              "height": 290
+            },
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8019590808137539,
+                "maxX": 0.8599999762675321,
+                "minY": -0.47633260146745904,
+                "maxY": 0.27092026320650614,
+                "minZ": 0.9967900762101081,
+                "maxZ": 0.9984201090118366
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 26.93356500932947,
+              "right": 19.040003227615635,
+              "top": 105.7165618350566,
+              "bottom": 75.93177278721843
+            }
+          },
+          "afterScreenshot": {
+            "host": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 654.65625,
+              "width": 272,
+              "height": 378
+            },
+            "hostClientWidth": 272,
+            "stage": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 566.65625,
+              "width": 272,
+              "height": 290
+            },
+            "canvas": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 566.65625,
+              "width": 272,
+              "height": 290
+            },
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8019590808137539,
+                "maxX": 0.8599999762675321,
+                "minY": -0.47633260146745904,
+                "maxY": 0.27092026320650614,
+                "minZ": 0.9967900762101081,
+                "maxZ": 0.9984201090118366
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 26.93356500932947,
+              "right": 19.040003227615635,
+              "top": 105.7165618350566,
+              "bottom": 75.93177278721843
+            }
+          },
+          "screenshot": "output/playwright/eyewear-viewer/zin01-view-1-320.png"
+        },
+        {
+          "view": 2,
+          "endpoint": {
+            "view": 2,
+            "playing": false,
+            "active": true,
+            "visible": true,
+            "renderCount": 22,
+            "rotation": {
+              "x": 0.08,
+              "y": -0.08
+            },
+            "finish": "black",
+            "reduced": false,
+            "cameraDistance": 285,
+            "actualCameraDistance": 310.236417517552,
+            "source": "Photo-reconstructed ZIN 01"
+          },
+          "beforeScreenshot": {
+            "host": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 654.65625,
+              "width": 272,
+              "height": 378
+            },
+            "hostClientWidth": 272,
+            "stage": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 566.65625,
+              "width": 272,
+              "height": 290
+            },
+            "canvas": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 566.65625,
+              "width": 272,
+              "height": 290
+            },
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8600000095580314,
+                "maxX": 0.7645418944246926,
+                "minY": -0.4286423252903139,
+                "maxY": 0.09374537106645135,
+                "minZ": 0.9970285355331757,
+                "maxZ": 0.9983307463032726
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 19.039998700107738,
+              "right": 32.02230235824181,
+              "top": 131.40692119536456,
+              "bottom": 82.84686283290449
+            }
+          },
+          "afterScreenshot": {
+            "host": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 654.65625,
+              "width": 272,
+              "height": 378
+            },
+            "hostClientWidth": 272,
+            "stage": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 566.65625,
+              "width": 272,
+              "height": 290
+            },
+            "canvas": {
+              "left": 24,
+              "right": 296,
+              "top": 276.65625,
+              "bottom": 566.65625,
+              "width": 272,
+              "height": 290
+            },
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "projection": {
+              "vertexCount": 73469,
+              "bounds": {
+                "minX": -0.8600000095580314,
+                "maxX": 0.7645418944246926,
+                "minY": -0.4286423252903139,
+                "maxY": 0.09374537106645135,
+                "minZ": 0.9970285355331757,
+                "maxZ": 0.9983307463032726
+              }
+            },
+            "geometryMarginCssPixels": {
+              "left": 19.039998700107738,
+              "right": 32.02230235824181,
+              "top": 131.40692119536456,
+              "bottom": 82.84686283290449
+            }
+          },
+          "screenshot": "output/playwright/eyewear-viewer/zin01-view-2-320.png"
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

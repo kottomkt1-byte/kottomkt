@@ -1,0 +1,824 @@
+{
+  "passed": true,
+  "base": "http://127.0.0.1:4184",
+  "cases": [
+    {
+      "state": {
+        "view": 0,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 2,
+        "rotation": {
+          "x": 0.18,
+          "y": -0.52
+        },
+        "finish": "black",
+        "reduced": true,
+        "cameraDistance": 365,
+        "actualCameraDistance": 388.23002390298615,
+        "source": "Photo-reconstructed ZIN 01"
+      },
+      "framing": {
+        "vertexCount": 73469,
+        "bounds": {
+          "minX": -0.8600000144136449,
+          "maxX": 0.6850869839658075,
+          "minY": -0.4394677970656011,
+          "maxY": 0.1955366315643319,
+          "minZ": 0.9971777078910077,
+          "maxZ": 0.9985627418387304
+        }
+      },
+      "host": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 272,
+        "height": 378,
+        "right": 296,
+        "bottom": 741.65625
+      },
+      "stage": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 272,
+        "height": 290,
+        "right": 296,
+        "bottom": 653.65625
+      },
+      "canvas": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 272,
+        "height": 290,
+        "right": 296,
+        "bottom": 653.65625
+      },
+      "viewport": {
+        "width": 320,
+        "docWidth": 320,
+        "scrollWidth": 320
+      },
+      "width": 320,
+      "view": 0,
+      "modelMarginsPx": {
+        "left": 19.03999803974429,
+        "right": 42.828170180650176,
+        "top": 116.64718842317188,
+        "bottom": 81.27716942548784
+      },
+      "passed": true,
+      "screenshot": "output/playwright/zin-fit/final-320-view-0.png"
+    },
+    {
+      "state": {
+        "view": 1,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 3,
+        "rotation": {
+          "x": 0.22,
+          "y": -1.05
+        },
+        "finish": "black",
+        "reduced": true,
+        "cameraDistance": 330,
+        "actualCameraDistance": 359.91243574977295,
+        "source": "Photo-reconstructed ZIN 01"
+      },
+      "framing": {
+        "vertexCount": 73469,
+        "bounds": {
+          "minX": -0.8019590808137539,
+          "maxX": 0.8599999762675321,
+          "minY": -0.47633260146745904,
+          "maxY": 0.27092026320650614,
+          "minZ": 0.9967900762101081,
+          "maxZ": 0.9984201090118366
+        }
+      },
+      "host": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 272,
+        "height": 378,
+        "right": 296,
+        "bottom": 741.65625
+      },
+      "stage": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 272,
+        "height": 290,
+        "right": 296,
+        "bottom": 653.65625
+      },
+      "canvas": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 272,
+        "height": 290,
+        "right": 296,
+        "bottom": 653.65625
+      },
+      "viewport": {
+        "width": 320,
+        "docWidth": 320,
+        "scrollWidth": 320
+      },
+      "width": 320,
+      "view": 1,
+      "modelMarginsPx": {
+        "left": 26.93356500932947,
+        "right": 19.04000322761567,
+        "top": 105.71656183505661,
+        "bottom": 75.93177278721839
+      },
+      "passed": true,
+      "screenshot": "output/playwright/zin-fit/final-320-view-1.png"
+    },
+    {
+      "state": {
+        "view": 2,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 4,
+        "rotation": {
+          "x": 0.08,
+          "y": -0.08
+        },
+        "finish": "black",
+        "reduced": true,
+        "cameraDistance": 285,
+        "actualCameraDistance": 310.236417517552,
+        "source": "Photo-reconstructed ZIN 01"
+      },
+      "framing": {
+        "vertexCount": 73469,
+        "bounds": {
+          "minX": -0.8600000095580314,
+          "maxX": 0.7645418944246926,
+          "minY": -0.4286423252903139,
+          "maxY": 0.09374537106645135,
+          "minZ": 0.9970285355331757,
+          "maxZ": 0.9983307463032726
+        }
+      },
+      "host": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 272,
+        "height": 378,
+        "right": 296,
+        "bottom": 741.65625
+      },
+      "stage": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 272,
+        "height": 290,
+        "right": 296,
+        "bottom": 653.65625
+      },
+      "canvas": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 272,
+        "height": 290,
+        "right": 296,
+        "bottom": 653.65625
+      },
+      "viewport": {
+        "width": 320,
+        "docWidth": 320,
+        "scrollWidth": 320
+      },
+      "width": 320,
+      "view": 2,
+      "modelMarginsPx": {
+        "left": 19.039998700107738,
+        "right": 32.02230235824186,
+        "top": 131.4069211953646,
+        "bottom": 82.84686283290443
+      },
+      "passed": true,
+      "screenshot": "output/playwright/zin-fit/final-320-view-2.png"
+    },
+    {
+      "state": {
+        "view": 0,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 6,
+        "rotation": {
+          "x": 0.18,
+          "y": -0.52
+        },
+        "finish": "black",
+        "reduced": true,
+        "cameraDistance": 365,
+        "actualCameraDistance": 388.23002390298615,
+        "source": "Photo-reconstructed ZIN 01"
+      },
+      "framing": {
+        "vertexCount": 73469,
+        "bounds": {
+          "minX": -0.8600000144136449,
+          "maxX": 0.6850869839658075,
+          "minY": -0.47834082652509147,
+          "maxY": 0.21283278224923657,
+          "minZ": 0.9971777078910077,
+          "maxZ": 0.9985627418387304
+        }
+      },
+      "host": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 342,
+        "height": 423.28125,
+        "right": 366,
+        "bottom": 786.9375
+      },
+      "stage": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 342,
+        "height": 335.28125,
+        "right": 366,
+        "bottom": 698.9375
+      },
+      "canvas": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 342,
+        "height": 335.28125,
+        "right": 366,
+        "bottom": 698.9375
+      },
+      "viewport": {
+        "width": 390,
+        "docWidth": 390,
+        "scrollWidth": 390
+      },
+      "width": 390,
+      "view": 0,
+      "modelMarginsPx": {
+        "left": 23.939997535266713,
+        "right": 53.85012574184691,
+        "top": 131.96120436324907,
+        "bottom": 87.45126987831713
+      },
+      "passed": true,
+      "screenshot": "output/playwright/zin-fit/final-390-view-0.png"
+    },
+    {
+      "state": {
+        "view": 1,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 7,
+        "rotation": {
+          "x": 0.22,
+          "y": -1.05
+        },
+        "finish": "black",
+        "reduced": true,
+        "cameraDistance": 330,
+        "actualCameraDistance": 359.91243574977295,
+        "source": "Photo-reconstructed ZIN 01"
+      },
+      "framing": {
+        "vertexCount": 73469,
+        "bounds": {
+          "minX": -0.8019590808137539,
+          "maxX": 0.8599999762675321,
+          "minY": -0.5184664992706607,
+          "maxY": 0.29488445681322745,
+          "minZ": 0.9967900762101081,
+          "maxZ": 0.9984201090118366
+        }
+      },
+      "host": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 342,
+        "height": 423.28125,
+        "right": 366,
+        "bottom": 786.9375
+      },
+      "stage": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 342,
+        "height": 335.28125,
+        "right": 366,
+        "bottom": 698.9375
+      },
+      "canvas": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 342,
+        "height": 335.28125,
+        "right": 366,
+        "bottom": 698.9375
+      },
+      "viewport": {
+        "width": 390,
+        "docWidth": 390,
+        "scrollWidth": 390
+      },
+      "width": 390,
+      "view": 1,
+      "modelMarginsPx": {
+        "left": 33.864997180848086,
+        "right": 23.940004058251986,
+        "top": 118.20601035704505,
+        "bottom": 80.72457702070437
+      },
+      "passed": true,
+      "screenshot": "output/playwright/zin-fit/final-390-view-1.png"
+    },
+    {
+      "state": {
+        "view": 2,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 8,
+        "rotation": {
+          "x": 0.08,
+          "y": -0.08
+        },
+        "finish": "black",
+        "reduced": true,
+        "cameraDistance": 285,
+        "actualCameraDistance": 310.236417517552,
+        "source": "Photo-reconstructed ZIN 01"
+      },
+      "framing": {
+        "vertexCount": 73469,
+        "bounds": {
+          "minX": -0.8600000095580314,
+          "maxX": 0.7645418944246926,
+          "minY": -0.46655778997249064,
+          "maxY": 0.10203759769941455,
+          "minZ": 0.9970285355331757,
+          "maxZ": 0.9983307463032726
+        }
+      },
+      "host": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 342,
+        "height": 423.28125,
+        "right": 366,
+        "bottom": 786.9375
+      },
+      "stage": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 342,
+        "height": 335.28125,
+        "right": 366,
+        "bottom": 698.9375
+      },
+      "canvas": {
+        "x": 24,
+        "y": 363.65625,
+        "width": 342,
+        "height": 335.28125,
+        "right": 366,
+        "bottom": 698.9375
+      },
+      "viewport": {
+        "width": 390,
+        "docWidth": 390,
+        "scrollWidth": 390
+      },
+      "width": 390,
+      "view": 2,
+      "modelMarginsPx": {
+        "left": 23.939998365576642,
+        "right": 40.2633360533776,
+        "top": 150.53497834817153,
+        "bottom": 89.42658549039288
+      },
+      "passed": true,
+      "screenshot": "output/playwright/zin-fit/final-390-view-2.png"
+    },
+    {
+      "state": {
+        "view": 0,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 10,
+        "rotation": {
+          "x": 0.18,
+          "y": -0.52
+        },
+        "finish": "black",
+        "reduced": true,
+        "cameraDistance": 365,
+        "actualCameraDistance": 388.23002390298615,
+        "source": "Photo-reconstructed ZIN 01"
+      },
+      "framing": {
+        "vertexCount": 73469,
+        "bounds": {
+          "minX": -0.8600000144136449,
+          "maxX": 0.6850869839658075,
+          "minY": -0.5517507320223016,
+          "maxY": 0.24549575719353656,
+          "minZ": 0.9971777078910077,
+          "maxZ": 0.9985627418387304
+        }
+      },
+      "host": {
+        "x": 341.640625,
+        "y": 109.875,
+        "width": 378.359375,
+        "height": 417.640625,
+        "right": 720,
+        "bottom": 527.515625
+      },
+      "stage": {
+        "x": 341.640625,
+        "y": 109.875,
+        "width": 378.359375,
+        "height": 320.640625,
+        "right": 720,
+        "bottom": 430.515625
+      },
+      "canvas": {
+        "x": 341.640625,
+        "y": 109.875,
+        "width": 378.359375,
+        "height": 320.640625,
+        "right": 720,
+        "bottom": 430.515625
+      },
+      "viewport": {
+        "width": 768,
+        "docWidth": 768,
+        "scrollWidth": 768
+      },
+      "width": 768,
+      "view": 0,
+      "modelMarginsPx": {
+        "left": 26.485153523231133,
+        "right": 59.57514596303099,
+        "top": 120.9623559893081,
+        "bottom": 71.86346272008086
+      },
+      "passed": true,
+      "screenshot": "output/playwright/zin-fit/final-768-view-0.png"
+    },
+    {
+      "state": {
+        "view": 1,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 11,
+        "rotation": {
+          "x": 0.22,
+          "y": -1.05
+        },
+        "finish": "black",
+        "reduced": true,
+        "cameraDistance": 330,
+        "actualCameraDistance": 359.91243574977295,
+        "source": "Photo-reconstructed ZIN 01"
+      },
+      "framing": {
+        "vertexCount": 73469,
+        "bounds": {
+          "minX": -0.8019590808137539,
+          "maxX": 0.8599999762675321,
+          "minY": -0.5980344027494832,
+          "maxY": 0.3401397202297188,
+          "minZ": 0.9967900762101081,
+          "maxZ": 0.9984201090118366
+        }
+      },
+      "host": {
+        "x": 341.640625,
+        "y": 109.875,
+        "width": 378.359375,
+        "height": 417.640625,
+        "right": 720,
+        "bottom": 527.515625
+      },
+      "stage": {
+        "x": 341.640625,
+        "y": 109.875,
+        "width": 378.359375,
+        "height": 320.640625,
+        "right": 720,
+        "bottom": 430.515625
+      },
+      "canvas": {
+        "x": 341.640625,
+        "y": 109.875,
+        "width": 378.359375,
+        "height": 320.640625,
+        "right": 720,
+        "bottom": 430.515625
+      },
+      "viewport": {
+        "width": 768,
+        "docWidth": 768,
+        "scrollWidth": 768
+      },
+      "width": 768,
+      "view": 1,
+      "modelMarginsPx": {
+        "left": 37.465319203866784,
+        "right": 26.48516073970086,
+        "top": 105.78900625910893,
+        "bottom": 64.44325016545196
+      },
+      "passed": true,
+      "screenshot": "output/playwright/zin-fit/final-768-view-1.png"
+    },
+    {
+      "state": {
+        "view": 2,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 12,
+        "rotation": {
+          "x": 0.08,
+          "y": -0.08
+        },
+        "finish": "black",
+        "reduced": true,
+        "cameraDistance": 285,
+        "actualCameraDistance": 310.236417517552,
+        "source": "Photo-reconstructed ZIN 01"
+      },
+      "framing": {
+        "vertexCount": 73469,
+        "bounds": {
+          "minX": -0.8600000095580314,
+          "maxX": 0.7645418944246926,
+          "minY": -0.5381593789894198,
+          "maxY": 0.11769708145849822,
+          "minZ": 0.9970285355331757,
+          "maxZ": 0.9983307463032726
+        }
+      },
+      "host": {
+        "x": 341.640625,
+        "y": 109.875,
+        "width": 378.359375,
+        "height": 417.640625,
+        "right": 720,
+        "bottom": 527.515625
+      },
+      "stage": {
+        "x": 341.640625,
+        "y": 109.875,
+        "width": 378.359375,
+        "height": 320.640625,
+        "right": 720,
+        "bottom": 430.515625
+      },
+      "canvas": {
+        "x": 341.640625,
+        "y": 109.875,
+        "width": 378.359375,
+        "height": 320.640625,
+        "right": 720,
+        "bottom": 430.515625
+      },
+      "viewport": {
+        "width": 768,
+        "docWidth": 768,
+        "scrollWidth": 768
+      },
+      "width": 768,
+      "view": 2,
+      "modelMarginsPx": {
+        "left": 26.485154441814643,
+        "right": 44.54389083207866,
+        "top": 141.45107962023562,
+        "bottom": 74.04243268561027
+      },
+      "passed": true,
+      "screenshot": "output/playwright/zin-fit/final-768-view-2.png"
+    },
+    {
+      "state": {
+        "view": 0,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 14,
+        "rotation": {
+          "x": 0.18,
+          "y": -0.52
+        },
+        "finish": "black",
+        "reduced": true,
+        "cameraDistance": 365,
+        "actualCameraDistance": 388.23002390298615,
+        "source": "Photo-reconstructed ZIN 01"
+      },
+      "framing": {
+        "vertexCount": 73469,
+        "bounds": {
+          "minX": -0.8600000144136449,
+          "maxX": 0.6850869839658075,
+          "minY": -0.5525356424676764,
+          "maxY": 0.24584499494336262,
+          "minZ": 0.9971777078910077,
+          "maxZ": 0.9985627418387304
+        }
+      },
+      "host": {
+        "x": 641.515625,
+        "y": 109.96875,
+        "width": 750.484375,
+        "height": 733,
+        "right": 1392,
+        "bottom": 842.96875
+      },
+      "stage": {
+        "x": 641.515625,
+        "y": 109.96875,
+        "width": 750.484375,
+        "height": 636,
+        "right": 1392,
+        "bottom": 745.96875
+      },
+      "canvas": {
+        "x": 641.515625,
+        "y": 109.96875,
+        "width": 750.484375,
+        "height": 636,
+        "right": 1392,
+        "bottom": 745.96875
+      },
+      "viewport": {
+        "width": 1440,
+        "docWidth": 1440,
+        "scrollWidth": 1440
+      },
+      "width": 1440,
+      "view": 0,
+      "modelMarginsPx": {
+        "left": 52.533900841392324,
+        "right": 118.16864900889277,
+        "top": 239.8212916080107,
+        "bottom": 142.29366569527883
+      },
+      "passed": true,
+      "screenshot": "output/playwright/zin-fit/final-1440-view-0.png"
+    },
+    {
+      "state": {
+        "view": 1,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 15,
+        "rotation": {
+          "x": 0.22,
+          "y": -1.05
+        },
+        "finish": "black",
+        "reduced": true,
+        "cameraDistance": 330,
+        "actualCameraDistance": 359.91243574977295,
+        "source": "Photo-reconstructed ZIN 01"
+      },
+      "framing": {
+        "vertexCount": 73469,
+        "bounds": {
+          "minX": -0.8019590808137539,
+          "maxX": 0.8599999762675321,
+          "minY": -0.598885155493736,
+          "maxY": 0.340623596740977,
+          "minZ": 0.9967900762101081,
+          "maxZ": 0.9984201090118366
+        }
+      },
+      "host": {
+        "x": 641.515625,
+        "y": 109.96875,
+        "width": 750.484375,
+        "height": 733,
+        "right": 1392,
+        "bottom": 842.96875
+      },
+      "stage": {
+        "x": 641.515625,
+        "y": 109.96875,
+        "width": 750.484375,
+        "height": 636,
+        "right": 1392,
+        "bottom": 745.96875
+      },
+      "canvas": {
+        "x": 641.515625,
+        "y": 109.96875,
+        "width": 750.484375,
+        "height": 636,
+        "right": 1392,
+        "bottom": 745.96875
+      },
+      "viewport": {
+        "width": 1440,
+        "docWidth": 1440,
+        "scrollWidth": 1440
+      },
+      "width": 1440,
+      "view": 1,
+      "modelMarginsPx": {
+        "left": 74.31330772995773,
+        "right": 52.533915155423074,
+        "top": 209.68169623636936,
+        "bottom": 127.55452055299202
+      },
+      "passed": true,
+      "screenshot": "output/playwright/zin-fit/final-1440-view-1.png"
+    },
+    {
+      "state": {
+        "view": 2,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 16,
+        "rotation": {
+          "x": 0.08,
+          "y": -0.08
+        },
+        "finish": "black",
+        "reduced": true,
+        "cameraDistance": 285,
+        "actualCameraDistance": 310.236417517552,
+        "source": "Photo-reconstructed ZIN 01"
+      },
+      "framing": {
+        "vertexCount": 73469,
+        "bounds": {
+          "minX": -0.8600000095580314,
+          "maxX": 0.7645418944246926,
+          "minY": -0.5389249546258977,
+          "maxY": 0.11786451516228012,
+          "minZ": 0.9970285355331757,
+          "maxZ": 0.9983307463032726
+        }
+      },
+      "host": {
+        "x": 641.515625,
+        "y": 109.96875,
+        "width": 750.484375,
+        "height": 733,
+        "right": 1392,
+        "bottom": 842.96875
+      },
+      "stage": {
+        "x": 641.515625,
+        "y": 109.96875,
+        "width": 750.484375,
+        "height": 636,
+        "right": 1392,
+        "bottom": 745.96875
+      },
+      "canvas": {
+        "x": 641.515625,
+        "y": 109.96875,
+        "width": 750.484375,
+        "height": 636,
+        "right": 1392,
+        "bottom": 745.96875
+      },
+      "viewport": {
+        "width": 1440,
+        "docWidth": 1440,
+        "scrollWidth": 1440
+      },
+      "width": 1440,
+      "view": 2,
+      "modelMarginsPx": {
+        "left": 52.53390266342342,
+        "right": 88.35381460068447,
+        "top": 280.5190841783949,
+        "bottom": 146.6218644289645
+      },
+      "passed": true,
+      "screenshot": "output/playwright/zin-fit/final-1440-view-2.png"
+    }
+  ],
+  "errors": [],
+  "method": "All actual mesh vertices projected through mesh.matrixWorld and camera projection; NDC and projected pixel bounds checked inside both stage and viewer host."
+}

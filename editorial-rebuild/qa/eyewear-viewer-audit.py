@@ -12,10 +12,12 @@ import argparse
 import asyncio
 import hashlib
 import json
+import math
 import re
 import traceback
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 from playwright.async_api import async_playwright
 
@@ -30,6 +32,9 @@ ENTER = '[data-eyewear-enter]'
 ROUTE = '/service-model-images.html'
 VIEW_TARGETS = []
 MODEL_URL = re.compile(r'\.(?:glb|gltf)(?:\?.*)?$',re.IGNORECASE)
+EXPECTED_MODEL_PATH = '/models/zin-01.glb'
+EXPECTED_POSTER_PATH = '/art/zin-01-studio.webp'
+EXPECTED_SOURCE = 'Photo-reconstructed ZIN 01'
 
 INSTRUMENT = r'''({disableWebGL = false}) => {
   const contexts = [], events = [], draws = new WeakMap();
@@ -211,7 +216,8 @@ async def studio_state(page, loaded=False):
     await page.wait_for_function("getComputedStyle(document.querySelector('[data-eyewear-viewer] .mi-product-poster')).opacity==='1'",timeout=10000)
     assert await poster.get_attribute('aria-hidden')!='true'
     image = await poster.evaluate('async e=>{await e.decode();return {src:e.getAttribute("src"),width:e.naturalWidth,height:e.naturalHeight}}')
-    assert image['width']>0 and image['height']>0
+    assert image['width']==1200 and image['height']==1000, image
+    assert urlparse(image['src']).path.endswith(EXPECTED_POSTER_PATH.lstrip('/')), image
     assert not await page.locator('[data-eyewear-tools]').is_visible()
     canvas = page.locator(STAGE+' canvas')
     if loaded:
@@ -249,6 +255,9 @@ async def open_viewer(page, base, logs, lazy=True, detail_entry=False):
     current = await draws(page)
     assert current['contexts'] >= 1 and current['totalDraws'] > 0, current
     assert logs['modelRequests'] and not logs['modelRequestFailures'],logs
+    assert all(urlparse(url).path.endswith(EXPECTED_MODEL_PATH) for url in logs['modelRequests']), logs['modelRequests']
+    assert (await state(page))['source']==EXPECTED_SOURCE
+    assert (await state(page))['finish']=='black'
     scripts = sorted(set(logs['javascriptRequests'])-initial_scripts)
     if lazy:
         assert scripts, ('No additional JavaScript requested after stage approached viewport', logs)
@@ -256,6 +265,67 @@ async def open_viewer(page, base, logs, lazy=True, detail_entry=False):
         'loadedModelUrls':list(logs['modelRequests']),'primaryStudioPoster':initial_poster,
         'activation':'already-selected detail button' if detail_entry else 'explicit enter button',
         'noModelRequestBeforeInteraction':True}
+
+
+async def capture_framing(page):
+    """Check the visible CSS box and all actual model vertices independently.
+
+    Body scrollWidth cannot detect a canvas hidden by an ancestor overflow:clip.
+    NDC alone likewise cannot detect an oversized stage clipped by its host.
+    """
+    measurement = await page.locator(STAGE).evaluate("""stage => {
+      const host=stage.closest('[data-eyewear-viewer]'),canvas=stage.querySelector('canvas');
+      const rect=e=>{const r=e.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,width:r.width,height:r.height}};
+      return {host:rect(host),hostClientWidth:host.clientWidth,stage:rect(stage),canvas:rect(canvas),
+        viewport:{width:innerWidth,height:innerHeight},projection:stage.__eyewearFraming?.() || null};
+    }""")
+    host,viewport=measurement['host'],measurement['viewport']
+    for name in ['stage','canvas']:
+        rect=measurement[name]
+        assert rect['width']<=measurement['hostClientWidth']+1,(name,'wider than clipping host',measurement)
+        assert rect['left']>=host['left']-1 and rect['right']<=host['right']+1,(name,'outside host horizontally',measurement)
+        assert rect['top']>=host['top']-1 and rect['bottom']<=host['bottom']+1,(name,'outside host vertically',measurement)
+        assert rect['left']>=-1 and rect['right']<=viewport['width']+1,(name,'outside viewport horizontally',measurement)
+        assert rect['top']>=-1 and rect['bottom']<=viewport['height']+1,(name,'outside viewport vertically',measurement)
+    projection=measurement['projection']
+    assert projection and projection['vertexCount']>0,('All-vertex projection diagnostics unavailable',measurement)
+    bounds=projection['bounds']
+    assert all(math.isfinite(bounds[k]) for k in ['minX','maxX','minY','maxY','minZ','maxZ']),projection
+    assert -1<bounds['minZ']<=bounds['maxZ']<1,('Geometry outside near/far clip planes',projection)
+    canvas=measurement['canvas']
+    margin={'left':(bounds['minX']+1)*canvas['width']/2,'right':(1-bounds['maxX'])*canvas['width']/2,
+        'top':(1-bounds['maxY'])*canvas['height']/2,'bottom':(bounds['minY']+1)*canvas['height']/2}
+    assert min(margin.values())>=3,('Product geometry lacks a 3px visible margin',margin,measurement)
+    measurement['geometryMarginCssPixels']=margin
+    return measurement
+
+
+async def framing_case(browser,base,width):
+    context,page,logs=await new_page(browser,width)
+    case={'width':width,'mode':'framing','passed':False,**logs}
+    try:
+        case['lazyLoad']=await open_viewer(page,base,logs)
+        await pause(page)
+        case['views']=[]
+        for index in [0,1,2]:
+            await page.locator(f'[data-mi-point="{index}"]').click()
+            if index==0:
+                await page.locator(RESET).click()
+            await show_stage(page)
+            endpoint=await wait_view_endpoint(page,index)
+            before=await capture_framing(page)
+            shot=await screenshot(page,f'zin01-view-{index}-{width}',VIEWER)
+            after=await capture_framing(page)
+            case['views'].append({'view':index,'endpoint':endpoint,'beforeScreenshot':before,'afterScreenshot':after,'screenshot':shot})
+        assert not logs['pageErrors'] and not logs['consoleErrors'] and not logs['httpErrors'],logs
+        case['passed']=True
+    except Exception as exc:
+        case['failure']=f'{type(exc).__name__}: {exc}'
+        case['traceback']=traceback.format_exc()
+        await screenshot(page,f'failure-framing-{width}')
+    finally:
+        await context.close()
+    return case
 
 
 async def standard_case(browser, base, width):
@@ -268,11 +338,14 @@ async def standard_case(browser, base, width):
         assert await canvas.get_attribute('aria-label')
         assert await canvas.get_attribute('role') == 'img'
         assert (await state(page))['playing'] is True
-        assert (await state(page))['finish'] == 'gold'
-        assert await page.locator('[data-eyewear-finish="gold"]').get_attribute('aria-pressed') == 'true'
+        assert (await state(page))['finish'] == 'black'
+        assert await page.locator('[data-eyewear-finish]').count() == 0
+        case['fixedFinish'] = {'finish':'black','source':(await state(page))['source'],'noAlternateFinishControls':True}
         await pause(page)
         case['manualPause'] = await stable_draws(page,'manual pause')
         case['viewStates'] = []
+        case['viewScreenshots'] = []
+        case['framingStates'] = []
         for index in [0,1,2]:
             await page.locator(f'[data-mi-point="{index}"]').click()
             # Selecting the already active first detail intentionally does not reset
@@ -286,6 +359,9 @@ async def standard_case(browser, base, width):
             assert await page.locator('[data-mi-point][aria-pressed="true"]').count() == 1
             assert await page.locator(STAGE).get_attribute('data-view') == str(index)
             case['viewStates'].append(current)
+            framing_before=await capture_framing(page)
+            case['viewScreenshots'].append(await screenshot(page,f'zin01-view-{index}-{width}',VIEWER))
+            case['framingStates'].append({'view':index,'beforeScreenshot':framing_before,'afterScreenshot':await capture_framing(page)})
         assert any(pose_changed(case['viewStates'][0],x) for x in case['viewStates'][1:]), case['viewStates']
         zooms = [x.get('zoom',x.get('cameraDistance')) for x in case['viewStates']]
         if all(x is not None for x in zooms):
@@ -299,21 +375,8 @@ async def standard_case(browser, base, width):
             case['actualCameraZoomChanged']={'distances':actual_distances,'passed':True}
         case['screenshots'] = [await screenshot(page,f'inspection-{width}', '.mi-inspection')]
         await pause(page)
-        before_count = (await state(page))['renderCount']
-        await page.locator('[data-eyewear-finish="gold"]').click()
-        await show_stage(page)
-        await wait_render_after(page,before_count)
-        gold = hashlib.sha256(await canvas.screenshot()).hexdigest()
-        before_count = (await state(page))['renderCount']
-        await page.locator('[data-eyewear-finish="silver"]').click()
-        await show_stage(page)
-        await wait_render_after(page,before_count)
-        silver = hashlib.sha256(await canvas.screenshot()).hexdigest()
-        assert (await state(page))['finish'] == 'silver'
-        assert await page.locator('[data-eyewear-finish="silver"]').get_attribute('aria-pressed') == 'true'
-        assert gold != silver, 'Canvas pixels did not change for finish selection.'
-        case['finishChanged'] = {'from':'gold','to':'silver','canvasPixelsDiffer':True}
-        case['screenshots'].append(await screenshot(page,f'silver-{width}',VIEWER))
+        assert (await state(page))['finish'] == 'black'
+        case['screenshots'].append(await screenshot(page,f'zin01-black-{width}',VIEWER))
         before = await state(page)
         await canvas.focus()
         await page.keyboard.press('ArrowRight')
@@ -466,6 +529,7 @@ async def fallback_state(page, interactive=True):
       src:e.getAttribute('src'),width:e.naturalWidth,height:e.naturalHeight,
       opacity:getComputedStyle(e).opacity,fit:getComputedStyle(e).objectFit}}''')
     assert result['src']==expected_src and result['width']>0 and result['height']>0,result
+    assert urlparse(result['src']).path.endswith(EXPECTED_POSTER_PATH.lstrip('/')), result
     assert result['opacity']=='1',result
     assert await page.locator(STAGE+' canvas:visible').count()==0
     assert not await page.locator('[data-eyewear-tools]').is_visible()
@@ -525,6 +589,7 @@ async def async_model_case(browser,base,mode):
         await page.locator(ENTER).click()
         await asyncio.wait_for(started.wait(),timeout=30)
         case['controlledModelUrls']=controlled_urls
+        assert all(urlparse(url).path.endswith(EXPECTED_MODEL_PATH) for url in controlled_urls), controlled_urls
         if mode=='model-load-failure':
             await page.wait_for_function("document.querySelector('[data-eyewear-stage]').dataset.state==='fallback'",timeout=30000)
             case['failureInjection']='HTTP 200 containing intentionally malformed GLB bytes; validates loader/parser failure handling.'
@@ -659,7 +724,10 @@ async def run(args):
     global VIEW_TARGETS
     VIEW_TARGETS = read_view_targets()
     OUT.mkdir(parents=True,exist_ok=True)
-    report={'checkedAt':datetime.now(timezone.utc).isoformat(),'base':args.base,'scope':'Studio poster first; explicit async GLB eyewear viewer activation, gold and silver finishes.',
+    report={'checkedAt':datetime.now(timezone.utc).isoformat(),'base':args.base,'scope':'ZIN 01 studio poster first; explicit async GLB activation with a fixed black acetate / silver temple finish.',
+        'expectedAssets':{'model':EXPECTED_MODEL_PATH,'poster':EXPECTED_POSTER_PATH,'source':EXPECTED_SOURCE,'finish':'black'},
+        'assetStage':args.asset_stage,
+        'buildAssetSnapshot':{str(path.relative_to(ROOT/'dist')):{'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()} for path in [ROOT/'dist'/EXPECTED_MODEL_PATH.lstrip('/'),ROOT/'dist'/EXPECTED_POSTER_PATH.lstrip('/')] if path.is_file()},
         'browser':'Chromium with ANGLE SwiftShader software WebGL; hardware GPU performance not measured.',
         'endpointWaitTargets':VIEW_TARGETS,
         'cases':[],'passed':False}
@@ -667,10 +735,10 @@ async def run(args):
     async with async_playwright() as p:
         browser=await p.chromium.launch(executable_path='/usr/bin/chromium',args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
         for width in args.widths:
-            case=await standard_case(browser,args.base,width)
+            case=await (framing_case(browser,args.base,width) if args.framing_only else standard_case(browser,args.base,width))
             report['cases'].append(case);save(report)
-            print(f"standard {width}: {'PASS' if case['passed'] else case['failure']}",flush=True)
-        for mode in args.modes:
+            print(f"{case['mode']} {width}: {'PASS' if case['passed'] else case['failure']}",flush=True)
+        for mode in ([] if args.framing_only else args.modes):
             case=await (async_model_case(browser,args.base,mode) if mode.startswith('model-') else alternate_case(browser,args.base,mode))
             report['cases'].append(case);save(report)
             print(f"{mode}: {'PASS' if case['passed'] else case['failure']}",flush=True)
@@ -683,6 +751,8 @@ async def run(args):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--base',default='http://127.0.0.1:4181')
+    parser.add_argument('--asset-stage',default='Unspecified asset stage; see buildAssetSnapshot for exact files.')
+    parser.add_argument('--framing-only',action='store_true',help='Inspect all three model presets at each width, without repeating the full controller suite.')
     parser.add_argument('--widths',type=int,nargs='*',default=[1440,390,320])
     parser.add_argument('--modes',nargs='*',default=['reduced-motion','webgl-unavailable','context-loss','no-javascript',
         'model-load-failure','model-loading-selection','model-loading-studio','model-loading-dispose'])

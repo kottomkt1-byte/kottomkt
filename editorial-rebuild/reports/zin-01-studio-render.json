@@ -1,0 +1,18 @@
+{
+  "resolution": [
+    1200,
+    1000
+  ],
+  "samples": 512,
+  "seconds": 327.65,
+  "source": "Photo-based ZIN 01 recreation; not manufacturer CAD",
+  "model": "public/models/zin-01.glb",
+  "geometryChangedDuringFinalRender": false,
+  "output": "public/art/zin-01-studio.webp",
+  "sha256": {
+    "poster": "e3fe2aa194682c5ca463d5df7ef7bb97730f6f13c2de09634f8cdaed867216d9",
+    "model": "869cbb2a2d0e8391ab3acdf3a26ee9e77bec8a60b8a677626106e4c2f52d75af"
+  },
+  "losslessWebP": true,
+  "reproduction": "blender -b -t 8 --python scripts/zin-01/build_zin.py -- render final"
+}

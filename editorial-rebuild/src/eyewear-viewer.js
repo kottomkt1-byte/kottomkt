@@ -24,7 +24,7 @@ function createStudioEnvironment(renderer) {
   finally { resources.forEach(resource => resource.dispose()); pmrem.dispose(); }
 }
 
-/** Local CC BY studio asset; loading finishes before GPU allocation begins. */
+/** Local photo-reconstructed asset; loading finishes before GPU allocation. */
 export async function createEyewearViewer(host, { gsap, initialView = 0, signal } = {}) {
   const stage = host.querySelector('[data-eyewear-stage]');
   const poster = host.querySelector('.mi-product-poster');
@@ -57,7 +57,7 @@ export async function createEyewearViewer(host, { gsap, initialView = 0, signal 
     canvas.className = 'mi-product-canvas';
     canvas.tabIndex = 0;
     canvas.setAttribute('role', 'img');
-    canvas.setAttribute('aria-label', '입체 안경. 드래그하거나 방향키로 돌려보고, Home 키로 처음 각도로 돌아갑니다.');
+    canvas.setAttribute('aria-label', 'ZIN 01 입체 모델. 드래그하거나 방향키로 돌려보고, Home 키로 처음 각도로 돌아갑니다.');
     canvas.setAttribute('aria-describedby', 'mi-product-instruction');
     const camera = new THREE.PerspectiveCamera(30, 1, .5, 1600);
     environment = createStudioEnvironment(renderer);
@@ -91,15 +91,15 @@ export async function createEyewearViewer(host, { gsap, initialView = 0, signal 
     const pivot = new THREE.Group();
     pivot.add(model.group);
     scene.add(pivot);
-    const pose = { x: .14, y: -.48, z: -.025, distance: 365, targetX: 0, targetY: -4, targetZ: 0 };
+    const pose = { x: .18, y: -.52, z: -.015, distance: 365, targetX: 0, targetY: -4, targetZ: 0 };
     const views = [
-      { x: .14, y: -.48, z: -.025, distance: 365, targetX: 0, targetY: -4, targetZ: 0 },
+      { x: .18, y: -.52, z: -.015, distance: 365, targetX: 0, targetY: -4, targetZ: 0 },
       { x: .22, y: -1.05, z: -.025, distance: 330, targetX: 0, targetY: -3, targetZ: 0 },
       { x: .08, y: -.08, z: .018, distance: 285, targetX: 0, targetY: -3, targetZ: 45 },
     ];
     let disposed = false, visible = false, active = host.dataset.mode === 'interactive';
     let frame = 0, renderCount = 0, lastTime = 0, phase = 0;
-    let playing = !reduced.matches, view = initialView, finish = 'gold', pointer = null;
+    let playing = !reduced.matches, view = initialView, finish = 'black', pointer = null;
     let reducedPreference = reduced.matches;
     const listen = (target, name, handler, options) => {
       target.addEventListener(name, handler, options);
@@ -216,8 +216,8 @@ export async function createEyewearViewer(host, { gsap, initialView = 0, signal 
     listen(play, 'click', () => setPlaying(!playing));
     listen(reset, 'click', () => { selectView(view); });
     finishes.forEach(button => listen(button, 'click', () => {
-      finish = button.dataset.eyewearFinish;
-      model.setFinish(finish);
+      finish = 'black';
+      model.setFinish();
       updateControls(); requestRender();
     }));
     listen(canvas, 'pointerdown', event => {
@@ -277,13 +277,35 @@ export async function createEyewearViewer(host, { gsap, initialView = 0, signal 
     stage.append(canvas);
     stage.dataset.state = 'ready';
     host.querySelector('[data-eyewear-tools]').hidden = false;
-    stage.__eyewearState = () => ({ view, playing, active, visible, renderCount, rotation: { x: pivot.rotation.x, y: pivot.rotation.y }, finish, reduced: reduced.matches, cameraDistance: pose.distance, actualCameraDistance, source: 'Khronos Sunglasses GLB' });
+    stage.__eyewearState = () => ({ view, playing, active, visible, renderCount, rotation: { x: pivot.rotation.x, y: pivot.rotation.y }, finish, reduced: reduced.matches, cameraDistance: pose.distance, actualCameraDistance, source: 'Photo-reconstructed ZIN 01' });
+    // On-demand verification of the rendered meshes, independent of the points
+    // used for camera fitting. This does no work during the animation loop.
+    stage.__eyewearFraming = () => {
+      model.group.updateWorldMatrix(true, true); camera.updateMatrixWorld(true);
+      const projection = new THREE.Matrix4().multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse);
+      const transform = new THREE.Matrix4(), point = new THREE.Vector3();
+      const bounds = { minX: Infinity, maxX: -Infinity, minY: Infinity, maxY: -Infinity, minZ: Infinity, maxZ: -Infinity };
+      let vertexCount = 0;
+      model.group.traverse(object => {
+        if (!object.isMesh) return;
+        transform.multiplyMatrices(projection, object.matrixWorld);
+        const positions = object.geometry.attributes.position;
+        for (let i = 0; i < positions.count; i++) {
+          point.fromBufferAttribute(positions, i).applyMatrix4(transform);
+          bounds.minX = Math.min(bounds.minX, point.x); bounds.maxX = Math.max(bounds.maxX, point.x);
+          bounds.minY = Math.min(bounds.minY, point.y); bounds.maxY = Math.max(bounds.maxY, point.y);
+          bounds.minZ = Math.min(bounds.minZ, point.z); bounds.maxZ = Math.max(bounds.maxZ, point.z);
+          vertexCount++;
+        }
+      });
+      return { vertexCount, bounds };
+    };
     setActive(active); selectView(initialView, true); resize();
     resizeObserver.observe(stage); observer.observe(stage);
     function dispose() {
         if (disposed) return;
         disposed = true; cancelAnimationFrame(frame); tween?.kill(); observer.disconnect(); resizeObserver.disconnect();
-        handlers.forEach(remove => remove()); delete stage.__eyewearState;
+        handlers.forEach(remove => remove()); delete stage.__eyewearState; delete stage.__eyewearFraming;
         model.dispose(); floorGeometry.dispose(); floorMaterial.dispose(); environment.dispose();
         key.shadow.dispose(); renderer.dispose();
         if (!context.isContextLost()) renderer.forceContextLoss();
@@ -305,6 +327,7 @@ export async function createEyewearViewer(host, { gsap, initialView = 0, signal 
     poster.removeAttribute('aria-hidden');
     host.querySelector('[data-eyewear-tools]').hidden = true;
     delete stage.__eyewearState;
+    delete stage.__eyewearFraming;
     throw error;
   }
 }

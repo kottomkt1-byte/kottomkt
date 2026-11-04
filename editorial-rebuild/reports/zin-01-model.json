@@ -1,0 +1,36 @@
+{
+  "identity": "ZIN 01 photo-based 3D recreation",
+  "manufacturerCAD": false,
+  "sourcePhotosEmbedded": false,
+  "dimensionsReferenceMm": {
+    "front": 147.2,
+    "lensWidth": 52.7,
+    "lensHeight": 40.9,
+    "bridge": 21,
+    "temple": 149.1
+  },
+  "tracedFrontHeightMm": 47.55681570376841,
+  "bboxBlenderMm": {
+    "min": [
+      -74.46327060461044,
+      -4.6082920812651196e-07,
+      -0.003488132961138035
+    ],
+    "max": [
+      74.46327060461044,
+      144.90163326263428,
+      47.55796119570732
+    ]
+  },
+  "triangles": 130020,
+  "meshCount": 41,
+  "coordinateSystem": "glTF meters, front+Z, temples-Z",
+  "modelFile": "zin-01-recreation.glb",
+  "contoursSha256": "80c76e571499fc24878a1ea5a5d3434e783dab2e9089dc885927d161e2f8b9b0",
+  "referencePhotoSha256": {
+    "front": "9437f64cfa04f080f505ca83fd6611433bd369a5c249b68ce4612b05830e11e6",
+    "angle": "292d2159922e30225871f18c9d91c0485fc143e8d149c907c10d351c698bdc1b",
+    "side": "b18e4b0c6c886110a16db60bd287360f08ab5413743687d9a376d33e9a7eea93"
+  },
+  "limitations": "Photo-based reconstruction. Front silhouette traced; depth, optical curvature, hinge and pad construction inferred from photos. Not official CAD or manufacturing tolerances."
+}

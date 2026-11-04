@@ -1,13 +1,30 @@
 {
-  "checkedAt": "2026-11-04T05:33:39.680179+00:00",
+  "checkedAt": "2026-11-04T07:17:54.269083+00:00",
   "base": "http://127.0.0.1:4183",
-  "scope": "Studio poster first; explicit async GLB eyewear viewer activation, gold and silver finishes.",
+  "scope": "Eleven functional cases against final ZIN 01 assets, followed by nine preset-framing regressions after the CSS stage-width correction. Functional controller cases were not repeated after this layout-only correction and on-demand diagnostic addition.",
+  "expectedAssets": {
+    "model": "/models/zin-01.glb",
+    "poster": "/art/zin-01-studio.webp",
+    "source": "Photo-reconstructed ZIN 01",
+    "finish": "black"
+  },
+  "assetStage": "Final ZIN 01 GLB and 512-sample 1200x1000 lossless studio poster; unchanged hashes in the functional run and subsequent framing run.",
+  "buildAssetSnapshot": {
+    "models/zin-01.glb": {
+      "bytes": 3005428,
+      "sha256": "869cbb2a2d0e8391ab3acdf3a26ee9e77bec8a60b8a677626106e4c2f52d75af"
+    },
+    "art/zin-01-studio.webp": {
+      "bytes": 590736,
+      "sha256": "e3fe2aa194682c5ca463d5df7ef7bb97730f6f13c2de09634f8cdaed867216d9"
+    }
+  },
   "browser": "Chromium with ANGLE SwiftShader software WebGL; hardware GPU performance not measured.",
   "endpointWaitTargets": [
     {
-      "x": 0.14,
-      "y": -0.48,
-      "z": -0.025,
+      "x": 0.18,
+      "y": -0.52,
+      "z": -0.015,
       "distance": 365,
       "targetX": 0,
       "targetY": -4,
@@ -42,11 +59,11 @@
       "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+        "http://127.0.0.1:4183/assets/main-CwBKz_z1.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
       ],
       "modelRequests": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        "http://127.0.0.1:4183/models/zin-01.glb"
       ],
       "modelRequestFailures": [],
       "lazyLoad": {
@@ -60,26 +77,26 @@
         "afterViewport": {
           "contextAttempts": 1,
           "contexts": 1,
-          "totalDraws": 118,
+          "totalDraws": 406,
           "events": [],
           "canvases": [
             {
               "className": "mi-product-canvas",
               "width": 750,
               "height": 636,
-              "draws": 118
+              "draws": 406
             }
           ]
         },
         "lazyJavaScriptRequests": [
-          "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+          "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
         ],
         "loadedModelUrls": [
-          "http://127.0.0.1:4183/models/eyewear-studio.glb"
+          "http://127.0.0.1:4183/models/zin-01.glb"
         ],
         "primaryStudioPoster": {
           "poster": {
-            "src": "art/eyewear-studio.webp",
+            "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
             "width": 1200,
             "height": 1000
           },
@@ -89,9 +106,14 @@
         "activation": "explicit enter button",
         "noModelRequestBeforeInteraction": true
       },
+      "fixedFinish": {
+        "finish": "black",
+        "source": "Photo-reconstructed ZIN 01",
+        "noAlternateFinishControls": true
+      },
       "manualPause": {
-        "drawCallsBefore": 190,
-        "drawCallsAfter": 190,
+        "drawCallsBefore": 766,
+        "drawCallsAfter": 766,
         "sampleMs": 550
       },
       "viewStates": [
@@ -100,92 +122,100 @@
           "playing": false,
           "active": true,
           "visible": true,
-          "renderCount": 11,
+          "renderCount": 32,
           "rotation": {
-            "x": 0.14,
-            "y": -0.479999
+            "x": 0.180008,
+            "y": -0.519891
           },
-          "finish": "gold",
+          "finish": "black",
           "reduced": false,
           "cameraDistance": 365,
-          "actualCameraDistance": 405.063881251596,
-          "source": "Khronos Sunglasses GLB"
+          "actualCameraDistance": 388.23083485451957,
+          "source": "Photo-reconstructed ZIN 01"
         },
         {
           "view": 1,
           "playing": false,
           "active": true,
           "visible": true,
-          "renderCount": 18,
+          "renderCount": 64,
           "rotation": {
-            "x": 0.22,
-            "y": -1.05
+            "x": 0.219999,
+            "y": -1.049989
           },
-          "finish": "gold",
+          "finish": "black",
           "reduced": false,
-          "cameraDistance": 330,
-          "actualCameraDistance": 375.2006745134962,
-          "source": "Khronos Sunglasses GLB"
+          "cameraDistance": 330.000717,
+          "actualCameraDistance": 359.91227085290325,
+          "source": "Photo-reconstructed ZIN 01"
         },
         {
           "view": 2,
           "playing": false,
           "active": true,
           "visible": true,
-          "renderCount": 24,
+          "renderCount": 96,
           "rotation": {
             "x": 0.08,
-            "y": -0.08
+            "y": -0.080003
           },
-          "finish": "gold",
+          "finish": "black",
           "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 320.6294360827118,
-          "source": "Khronos Sunglasses GLB"
+          "cameraDistance": 285.000136,
+          "actualCameraDistance": 310.2370126796594,
+          "source": "Photo-reconstructed ZIN 01"
         }
       ],
+      "viewScreenshots": [
+        "output/playwright/eyewear-viewer/zin01-view-0-1440.png",
+        "output/playwright/eyewear-viewer/zin01-view-1-1440.png",
+        "output/playwright/eyewear-viewer/zin01-view-2-1440.png"
+      ],
       "zoomChanged": true,
+      "actualCameraZoomChanged": {
+        "distances": [
+          388.23083485451957,
+          359.91227085290325,
+          310.2370126796594
+        ],
+        "passed": true
+      },
       "screenshots": [
         "output/playwright/eyewear-viewer/inspection-1440.png",
-        "output/playwright/eyewear-viewer/silver-1440.png"
+        "output/playwright/eyewear-viewer/zin01-black-1440.png"
       ],
-      "finishChanged": {
-        "from": "gold",
-        "to": "silver",
-        "canvasPixelsDiffer": true
-      },
       "keyboardRotation": {
         "before": {
           "view": 2,
           "playing": false,
           "active": true,
           "visible": true,
-          "renderCount": 26,
+          "renderCount": 97,
           "rotation": {
             "x": 0.08,
             "y": -0.08
           },
-          "finish": "silver",
+          "finish": "black",
           "reduced": false,
           "cameraDistance": 285,
-          "actualCameraDistance": 320.6294360827118,
-          "source": "Khronos Sunglasses GLB"
+          "actualCameraDistance": 310.236417517552,
+          "source": "Photo-reconstructed ZIN 01"
         },
         "after": {
           "view": 2,
           "playing": false,
           "active": true,
           "visible": true,
-          "renderCount": 27,
+          "renderCount": 98,
           "rotation": {
             "x": 0.08,
             "y": 0.06000000000000001
           },
-          "finish": "silver",
+          "finish": "black",
           "reduced": false,
           "cameraDistance": 285,
-          "actualCameraDistance": 316.6957172774603,
-          "source": "Khronos Sunglasses GLB"
+          "actualCameraDistance": 305.11652698511455,
+          "source": "Photo-reconstructed ZIN 01"
         }
       },
       "dragRotation": {
@@ -195,32 +225,32 @@
           "playing": false,
           "active": true,
           "visible": true,
-          "renderCount": 27,
+          "renderCount": 98,
           "rotation": {
             "x": 0.08,
             "y": 0.06000000000000001
           },
-          "finish": "silver",
+          "finish": "black",
           "reduced": false,
           "cameraDistance": 285,
-          "actualCameraDistance": 316.6957172774603,
-          "source": "Khronos Sunglasses GLB"
+          "actualCameraDistance": 305.11652698511455,
+          "source": "Photo-reconstructed ZIN 01"
         },
         "after": {
           "view": 2,
           "playing": false,
           "active": true,
           "visible": true,
-          "renderCount": 35,
+          "renderCount": 106,
           "rotation": {
             "x": 0.20000000000000007,
             "y": 0.9600000000000002
           },
-          "finish": "silver",
+          "finish": "black",
           "reduced": false,
           "cameraDistance": 285,
-          "actualCameraDistance": 325.7529309124827,
-          "source": "Khronos Sunglasses GLB"
+          "actualCameraDistance": 312.9885127689772,
+          "source": "Photo-reconstructed ZIN 01"
         }
       },
       "resetAndHome": {
@@ -229,58 +259,58 @@
           "playing": false,
           "active": true,
           "visible": true,
-          "renderCount": 41,
+          "renderCount": 132,
           "rotation": {
-            "x": 0.08,
-            "y": -0.08
+            "x": 0.080004,
+            "y": -0.079964
           },
-          "finish": "silver",
+          "finish": "black",
           "reduced": false,
           "cameraDistance": 285,
-          "actualCameraDistance": 320.6294360827118,
-          "source": "Khronos Sunglasses GLB"
+          "actualCameraDistance": 310.2309489701198,
+          "source": "Photo-reconstructed ZIN 01"
         },
         "key": {
           "view": 2,
           "playing": false,
           "active": true,
           "visible": true,
-          "renderCount": 47,
+          "renderCount": 157,
           "rotation": {
             "x": 0.08,
-            "y": -0.08
+            "y": -0.080067
           },
-          "finish": "silver",
+          "finish": "black",
           "reduced": false,
           "cameraDistance": 285,
-          "actualCameraDistance": 320.6294360827118,
-          "source": "Khronos Sunglasses GLB"
+          "actualCameraDistance": 310.24668645386964,
+          "source": "Photo-reconstructed ZIN 01"
         }
       },
       "playResumesDraws": true,
       "studioReturn": {
         "poster": {
-          "src": "art/eyewear-studio.webp",
+          "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
           "width": 1200,
           "height": 1000
         },
         "toolsHidden": true,
         "loadedCanvasInactive": true,
         "pausedDraws": {
-          "drawCallsBefore": 1318,
-          "drawCallsAfter": 1318,
+          "drawCallsBefore": 19726,
+          "drawCallsAfter": 19726,
           "sampleMs": 550
         },
         "reentryReusesModelAndResumes": true
       },
       "offscreenPause": {
-        "drawCallsBefore": 1414,
-        "drawCallsAfter": 1414,
+        "drawCallsBefore": 20206,
+        "drawCallsAfter": 20206,
         "sampleMs": 550
       },
       "hiddenPause": {
-        "drawCallsBefore": 1462,
-        "drawCallsAfter": 1462,
+        "drawCallsBefore": 20446,
+        "drawCallsAfter": 20446,
         "sampleMs": 550
       },
       "visibilityTestMethod": "Simulated document.hidden getter plus visibilitychange event; not an OS background-tab test.",
@@ -299,16 +329,16 @@
           "playing": true,
           "active": true,
           "visible": true,
-          "renderCount": 74,
+          "renderCount": 195,
           "rotation": {
             "x": 0.22,
             "y": -1.05
           },
-          "finish": "silver",
+          "finish": "black",
           "reduced": false,
           "cameraDistance": 330,
-          "actualCameraDistance": 375.2006745134962,
-          "source": "Khronos Sunglasses GLB"
+          "actualCameraDistance": 359.91243574977295,
+          "source": "Photo-reconstructed ZIN 01"
         }
       },
       "runtimeReducedApplied": {
@@ -320,36 +350,27 @@
           "playing": false,
           "active": true,
           "visible": false,
-          "renderCount": 75,
+          "renderCount": 196,
           "rotation": {
             "x": 0.22,
             "y": -1.05
           },
-          "finish": "silver",
+          "finish": "black",
           "reduced": true,
           "cameraDistance": 330,
-          "actualCameraDistance": 375.2006745134962,
-          "source": "Khronos Sunglasses GLB"
+          "actualCameraDistance": 359.91243574977295,
+          "source": "Photo-reconstructed ZIN 01"
         }
       },
       "runtimeReducedMotion": {
-        "drawCallsBefore": 1870,
-        "drawCallsAfter": 1870,
+        "drawCallsBefore": 23806,
+        "drawCallsAfter": 23806,
         "sampleMs": 550
       },
       "pagehideCleanup": {
-        "drawCallsBefore": 1870,
-        "drawCallsAfter": 1870,
+        "drawCallsBefore": 23806,
+        "drawCallsAfter": 23806,
         "sampleMs": 550
-      },
-      "actualCameraZoomChanged": {
-        "distances": [
-          405.063881251596,
-          375.2006745134962,
-          320.6294360827118
-        ],
-        "passed": true,
-        "verification": "Post-run assertion over captured rendered camera state; also added to audit script."
       }
     },
     {
@@ -361,11 +382,557 @@
       "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+        "http://127.0.0.1:4183/assets/main-CwBKz_z1.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
       ],
       "modelRequests": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        "http://127.0.0.1:4183/models/zin-01.glb"
+      ],
+      "modelRequestFailures": [],
+      "lazyLoad": {
+        "beforeViewport": {
+          "contextAttempts": 0,
+          "contexts": 0,
+          "totalDraws": 0,
+          "events": [],
+          "canvases": []
+        },
+        "afterViewport": {
+          "contextAttempts": 1,
+          "contexts": 1,
+          "totalDraws": 646,
+          "events": [],
+          "canvases": [
+            {
+              "className": "mi-product-canvas",
+              "width": 342,
+              "height": 335,
+              "draws": 646
+            }
+          ]
+        },
+        "lazyJavaScriptRequests": [
+          "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
+        ],
+        "loadedModelUrls": [
+          "http://127.0.0.1:4183/models/zin-01.glb"
+        ],
+        "primaryStudioPoster": {
+          "poster": {
+            "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
+            "width": 1200,
+            "height": 1000
+          },
+          "toolsHidden": true,
+          "loadedCanvasInactive": false
+        },
+        "activation": "explicit enter button",
+        "noModelRequestBeforeInteraction": true
+      },
+      "fixedFinish": {
+        "finish": "black",
+        "source": "Photo-reconstructed ZIN 01",
+        "noAlternateFinishControls": true
+      },
+      "manualPause": {
+        "drawCallsBefore": 1006,
+        "drawCallsAfter": 1006,
+        "sampleMs": 550
+      },
+      "viewStates": [
+        {
+          "view": 0,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 12,
+          "rotation": {
+            "x": 0.180015,
+            "y": -0.519803
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 365,
+          "actualCameraDistance": 388.23149771564954,
+          "source": "Photo-reconstructed ZIN 01"
+        },
+        {
+          "view": 1,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 19,
+          "rotation": {
+            "x": 0.22,
+            "y": -1.05
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 330,
+          "actualCameraDistance": 359.91243574977295,
+          "source": "Photo-reconstructed ZIN 01"
+        },
+        {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 24,
+          "rotation": {
+            "x": 0.08,
+            "y": -0.08
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 310.236417517552,
+          "source": "Photo-reconstructed ZIN 01"
+        }
+      ],
+      "viewScreenshots": [
+        "output/playwright/eyewear-viewer/zin01-view-0-390.png",
+        "output/playwright/eyewear-viewer/zin01-view-1-390.png",
+        "output/playwright/eyewear-viewer/zin01-view-2-390.png"
+      ],
+      "zoomChanged": true,
+      "actualCameraZoomChanged": {
+        "distances": [
+          388.23149771564954,
+          359.91243574977295,
+          310.236417517552
+        ],
+        "passed": true
+      },
+      "screenshots": [
+        "output/playwright/eyewear-viewer/inspection-390.png",
+        "output/playwright/eyewear-viewer/zin01-black-390.png"
+      ],
+      "keyboardRotation": {
+        "before": {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 25,
+          "rotation": {
+            "x": 0.08,
+            "y": -0.08
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 310.236417517552,
+          "source": "Photo-reconstructed ZIN 01"
+        },
+        "after": {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 26,
+          "rotation": {
+            "x": 0.08,
+            "y": 0.06000000000000001
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 305.11652698511455,
+          "source": "Photo-reconstructed ZIN 01"
+        }
+      },
+      "dragRotation": {
+        "input": "touch",
+        "before": {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 26,
+          "rotation": {
+            "x": 0.08,
+            "y": 0.06000000000000001
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 305.11652698511455,
+          "source": "Photo-reconstructed ZIN 01"
+        },
+        "after": {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 33,
+          "rotation": {
+            "x": 0.11600000000000003,
+            "y": 0.7079999999999999
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 333.5866151590235,
+          "source": "Photo-reconstructed ZIN 01"
+        }
+      },
+      "resetAndHome": {
+        "button": {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 38,
+          "rotation": {
+            "x": 0.08,
+            "y": -0.08
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 310.236417517552,
+          "source": "Photo-reconstructed ZIN 01"
+        },
+        "key": {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 43,
+          "rotation": {
+            "x": 0.08,
+            "y": -0.08
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 310.236417517552,
+          "source": "Photo-reconstructed ZIN 01"
+        }
+      },
+      "verticalTouchScroll": {
+        "before": 1949,
+        "after": 2042
+      },
+      "playResumesDraws": true,
+      "studioReturn": {
+        "poster": {
+          "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
+          "width": 1200,
+          "height": 1000
+        },
+        "toolsHidden": true,
+        "loadedCanvasInactive": true,
+        "pausedDraws": {
+          "drawCallsBefore": 6166,
+          "drawCallsAfter": 6166,
+          "sampleMs": 550
+        },
+        "reentryReusesModelAndResumes": true
+      },
+      "offscreenPause": {
+        "drawCallsBefore": 6526,
+        "drawCallsAfter": 6526,
+        "sampleMs": 550
+      },
+      "hiddenPause": {
+        "drawCallsBefore": 6766,
+        "drawCallsAfter": 6766,
+        "sampleMs": 550
+      },
+      "visibilityTestMethod": "Simulated document.hidden getter plus visibilitychange event; not an OS background-tab test.",
+      "layout": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "width": 320,
+      "mode": "standard",
+      "passed": true,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "httpErrors": [],
+      "javascriptRequests": [
+        "http://127.0.0.1:4183/assets/main-CwBKz_z1.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
+      ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/zin-01.glb"
+      ],
+      "modelRequestFailures": [],
+      "lazyLoad": {
+        "beforeViewport": {
+          "contextAttempts": 0,
+          "contexts": 0,
+          "totalDraws": 0,
+          "events": [],
+          "canvases": []
+        },
+        "afterViewport": {
+          "contextAttempts": 1,
+          "contexts": 1,
+          "totalDraws": 406,
+          "events": [],
+          "canvases": [
+            {
+              "className": "mi-product-canvas",
+              "width": 296,
+              "height": 290,
+              "draws": 406
+            }
+          ]
+        },
+        "lazyJavaScriptRequests": [
+          "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
+        ],
+        "loadedModelUrls": [
+          "http://127.0.0.1:4183/models/zin-01.glb"
+        ],
+        "primaryStudioPoster": {
+          "poster": {
+            "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
+            "width": 1200,
+            "height": 1000
+          },
+          "toolsHidden": true,
+          "loadedCanvasInactive": false
+        },
+        "activation": "already-selected detail button",
+        "noModelRequestBeforeInteraction": true
+      },
+      "fixedFinish": {
+        "finish": "black",
+        "source": "Photo-reconstructed ZIN 01",
+        "noAlternateFinishControls": true
+      },
+      "manualPause": {
+        "drawCallsBefore": 766,
+        "drawCallsAfter": 766,
+        "sampleMs": 550
+      },
+      "viewStates": [
+        {
+          "view": 0,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 13,
+          "rotation": {
+            "x": 0.18,
+            "y": -0.52
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 365,
+          "actualCameraDistance": 388.23002390298626,
+          "source": "Photo-reconstructed ZIN 01"
+        },
+        {
+          "view": 1,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 18,
+          "rotation": {
+            "x": 0.22,
+            "y": -1.05
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 330,
+          "actualCameraDistance": 359.91243574977307,
+          "source": "Photo-reconstructed ZIN 01"
+        },
+        {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 23,
+          "rotation": {
+            "x": 0.08,
+            "y": -0.08
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 310.23641751755207,
+          "source": "Photo-reconstructed ZIN 01"
+        }
+      ],
+      "viewScreenshots": [
+        "output/playwright/eyewear-viewer/zin01-view-0-320.png",
+        "output/playwright/eyewear-viewer/zin01-view-1-320.png",
+        "output/playwright/eyewear-viewer/zin01-view-2-320.png"
+      ],
+      "zoomChanged": true,
+      "actualCameraZoomChanged": {
+        "distances": [
+          388.23002390298626,
+          359.91243574977307,
+          310.23641751755207
+        ],
+        "passed": true
+      },
+      "screenshots": [
+        "output/playwright/eyewear-viewer/inspection-320.png",
+        "output/playwright/eyewear-viewer/zin01-black-320.png"
+      ],
+      "keyboardRotation": {
+        "before": {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 24,
+          "rotation": {
+            "x": 0.08,
+            "y": -0.08
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 310.23641751755207,
+          "source": "Photo-reconstructed ZIN 01"
+        },
+        "after": {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 25,
+          "rotation": {
+            "x": 0.08,
+            "y": 0.06000000000000001
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 305.1165269851146,
+          "source": "Photo-reconstructed ZIN 01"
+        }
+      },
+      "dragRotation": {
+        "input": "touch",
+        "before": {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 25,
+          "rotation": {
+            "x": 0.08,
+            "y": 0.06000000000000001
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 305.1165269851146,
+          "source": "Photo-reconstructed ZIN 01"
+        },
+        "after": {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 32,
+          "rotation": {
+            "x": 0.11600000000000003,
+            "y": 0.7079999999999999
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 333.5866151590236,
+          "source": "Photo-reconstructed ZIN 01"
+        }
+      },
+      "resetAndHome": {
+        "button": {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 36,
+          "rotation": {
+            "x": 0.08,
+            "y": -0.08
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 310.23641751755207,
+          "source": "Photo-reconstructed ZIN 01"
+        },
+        "key": {
+          "view": 2,
+          "playing": false,
+          "active": true,
+          "visible": true,
+          "renderCount": 40,
+          "rotation": {
+            "x": 0.08,
+            "y": -0.08
+          },
+          "finish": "black",
+          "reduced": false,
+          "cameraDistance": 285,
+          "actualCameraDistance": 310.23641751755207,
+          "source": "Photo-reconstructed ZIN 01"
+        }
+      },
+      "verticalTouchScroll": {
+        "before": 1780,
+        "after": 1873
+      },
+      "playResumesDraws": true,
+      "studioReturn": {
+        "poster": {
+          "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
+          "width": 1200,
+          "height": 1000
+        },
+        "toolsHidden": true,
+        "loadedCanvasInactive": true,
+        "pausedDraws": {
+          "drawCallsBefore": 5806,
+          "drawCallsAfter": 5806,
+          "sampleMs": 550
+        },
+        "reentryReusesModelAndResumes": true
+      },
+      "offscreenPause": {
+        "drawCallsBefore": 6286,
+        "drawCallsAfter": 6286,
+        "sampleMs": 550
+      },
+      "hiddenPause": {
+        "drawCallsBefore": 6526,
+        "drawCallsAfter": 6526,
+        "sampleMs": 550
+      },
+      "visibilityTestMethod": "Simulated document.hidden getter plus visibilitychange event; not an OS background-tab test.",
+      "layout": {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "width": 390,
+      "mode": "reduced-motion",
+      "passed": true,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "httpErrors": [],
+      "javascriptRequests": [
+        "http://127.0.0.1:4183/assets/main-CwBKz_z1.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
+      ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/zin-01.glb"
       ],
       "modelRequestFailures": [],
       "lazyLoad": {
@@ -391,552 +958,14 @@
           ]
         },
         "lazyJavaScriptRequests": [
-          "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+          "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
         ],
         "loadedModelUrls": [
-          "http://127.0.0.1:4183/models/eyewear-studio.glb"
+          "http://127.0.0.1:4183/models/zin-01.glb"
         ],
         "primaryStudioPoster": {
           "poster": {
-            "src": "art/eyewear-studio.webp",
-            "width": 1200,
-            "height": 1000
-          },
-          "toolsHidden": true,
-          "loadedCanvasInactive": false
-        },
-        "activation": "explicit enter button",
-        "noModelRequestBeforeInteraction": true
-      },
-      "manualPause": {
-        "drawCallsBefore": 238,
-        "drawCallsAfter": 238,
-        "sampleMs": 550
-      },
-      "viewStates": [
-        {
-          "view": 0,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 15,
-          "rotation": {
-            "x": 0.140013,
-            "y": -0.479831
-          },
-          "finish": "gold",
-          "reduced": false,
-          "cameraDistance": 365,
-          "actualCameraDistance": 405.0605326695778,
-          "source": "Khronos Sunglasses GLB"
-        },
-        {
-          "view": 1,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 23,
-          "rotation": {
-            "x": 0.22,
-            "y": -1.049998
-          },
-          "finish": "gold",
-          "reduced": false,
-          "cameraDistance": 330.000153,
-          "actualCameraDistance": 375.20058434733795,
-          "source": "Khronos Sunglasses GLB"
-        },
-        {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 31,
-          "rotation": {
-            "x": 0.080001,
-            "y": -0.080004
-          },
-          "finish": "gold",
-          "reduced": false,
-          "cameraDistance": 285.000197,
-          "actualCameraDistance": 320.6303178054525,
-          "source": "Khronos Sunglasses GLB"
-        }
-      ],
-      "zoomChanged": true,
-      "screenshots": [
-        "output/playwright/eyewear-viewer/inspection-390.png",
-        "output/playwright/eyewear-viewer/silver-390.png"
-      ],
-      "finishChanged": {
-        "from": "gold",
-        "to": "silver",
-        "canvasPixelsDiffer": true
-      },
-      "keyboardRotation": {
-        "before": {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 35,
-          "rotation": {
-            "x": 0.08,
-            "y": -0.08
-          },
-          "finish": "silver",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 320.6294360827118,
-          "source": "Khronos Sunglasses GLB"
-        },
-        "after": {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 36,
-          "rotation": {
-            "x": 0.08,
-            "y": 0.06000000000000001
-          },
-          "finish": "silver",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 316.6957172774603,
-          "source": "Khronos Sunglasses GLB"
-        }
-      },
-      "dragRotation": {
-        "input": "touch",
-        "before": {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 36,
-          "rotation": {
-            "x": 0.08,
-            "y": 0.06000000000000001
-          },
-          "finish": "silver",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 316.6957172774603,
-          "source": "Khronos Sunglasses GLB"
-        },
-        "after": {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 43,
-          "rotation": {
-            "x": 0.11600000000000003,
-            "y": 0.7079999999999999
-          },
-          "finish": "silver",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 354.129249946939,
-          "source": "Khronos Sunglasses GLB"
-        }
-      },
-      "resetAndHome": {
-        "button": {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 51,
-          "rotation": {
-            "x": 0.08,
-            "y": -0.08
-          },
-          "finish": "silver",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 320.6294360827118,
-          "source": "Khronos Sunglasses GLB"
-        },
-        "key": {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 59,
-          "rotation": {
-            "x": 0.08,
-            "y": -0.080095
-          },
-          "finish": "silver",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 320.64561965957046,
-          "source": "Khronos Sunglasses GLB"
-        }
-      },
-      "verticalTouchScroll": {
-        "before": 1949,
-        "after": 2101
-      },
-      "playResumesDraws": true,
-      "studioReturn": {
-        "poster": {
-          "src": "art/eyewear-studio.webp",
-          "width": 1200,
-          "height": 1000
-        },
-        "toolsHidden": true,
-        "loadedCanvasInactive": true,
-        "pausedDraws": {
-          "drawCallsBefore": 1702,
-          "drawCallsAfter": 1702,
-          "sampleMs": 550
-        },
-        "reentryReusesModelAndResumes": true
-      },
-      "offscreenPause": {
-        "drawCallsBefore": 1774,
-        "drawCallsAfter": 1774,
-        "sampleMs": 550
-      },
-      "hiddenPause": {
-        "drawCallsBefore": 1822,
-        "drawCallsAfter": 1822,
-        "sampleMs": 550
-      },
-      "visibilityTestMethod": "Simulated document.hidden getter plus visibilitychange event; not an OS background-tab test.",
-      "layout": {
-        "width": 390,
-        "scrollWidth": 390
-      },
-      "actualCameraZoomChanged": {
-        "distances": [
-          405.0605326695778,
-          375.20058434733795,
-          320.6303178054525
-        ],
-        "passed": true,
-        "verification": "Post-run assertion over captured rendered camera state; also added to audit script."
-      }
-    },
-    {
-      "width": 320,
-      "mode": "standard",
-      "passed": true,
-      "pageErrors": [],
-      "consoleErrors": [],
-      "consoleWarnings": [],
-      "httpErrors": [],
-      "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
-      ],
-      "modelRequests": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
-      ],
-      "modelRequestFailures": [],
-      "lazyLoad": {
-        "beforeViewport": {
-          "contextAttempts": 0,
-          "contexts": 0,
-          "totalDraws": 0,
-          "events": [],
-          "canvases": []
-        },
-        "afterViewport": {
-          "contextAttempts": 1,
-          "contexts": 1,
-          "totalDraws": 118,
-          "events": [],
-          "canvases": [
-            {
-              "className": "mi-product-canvas",
-              "width": 296,
-              "height": 290,
-              "draws": 118
-            }
-          ]
-        },
-        "lazyJavaScriptRequests": [
-          "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
-        ],
-        "loadedModelUrls": [
-          "http://127.0.0.1:4183/models/eyewear-studio.glb"
-        ],
-        "primaryStudioPoster": {
-          "poster": {
-            "src": "art/eyewear-studio.webp",
-            "width": 1200,
-            "height": 1000
-          },
-          "toolsHidden": true,
-          "loadedCanvasInactive": false
-        },
-        "activation": "already-selected detail button",
-        "noModelRequestBeforeInteraction": true
-      },
-      "manualPause": {
-        "drawCallsBefore": 190,
-        "drawCallsAfter": 190,
-        "sampleMs": 550
-      },
-      "viewStates": [
-        {
-          "view": 0,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 15,
-          "rotation": {
-            "x": 0.140004,
-            "y": -0.479951
-          },
-          "finish": "gold",
-          "reduced": false,
-          "cameraDistance": 365,
-          "actualCameraDistance": 405.0629277584296,
-          "source": "Khronos Sunglasses GLB"
-        },
-        {
-          "view": 1,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 23,
-          "rotation": {
-            "x": 0.22,
-            "y": -1.05
-          },
-          "finish": "gold",
-          "reduced": false,
-          "cameraDistance": 330.000015,
-          "actualCameraDistance": 375.2006745134963,
-          "source": "Khronos Sunglasses GLB"
-        },
-        {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 31,
-          "rotation": {
-            "x": 0.08,
-            "y": -0.08
-          },
-          "finish": "gold",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 320.6294360827118,
-          "source": "Khronos Sunglasses GLB"
-        }
-      ],
-      "zoomChanged": true,
-      "screenshots": [
-        "output/playwright/eyewear-viewer/inspection-320.png",
-        "output/playwright/eyewear-viewer/silver-320.png"
-      ],
-      "finishChanged": {
-        "from": "gold",
-        "to": "silver",
-        "canvasPixelsDiffer": true
-      },
-      "keyboardRotation": {
-        "before": {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 34,
-          "rotation": {
-            "x": 0.08,
-            "y": -0.08
-          },
-          "finish": "silver",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 320.6294360827118,
-          "source": "Khronos Sunglasses GLB"
-        },
-        "after": {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 35,
-          "rotation": {
-            "x": 0.08,
-            "y": 0.06000000000000001
-          },
-          "finish": "silver",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 316.69571727746035,
-          "source": "Khronos Sunglasses GLB"
-        }
-      },
-      "dragRotation": {
-        "input": "touch",
-        "before": {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 35,
-          "rotation": {
-            "x": 0.08,
-            "y": 0.06000000000000001
-          },
-          "finish": "silver",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 316.69571727746035,
-          "source": "Khronos Sunglasses GLB"
-        },
-        "after": {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 42,
-          "rotation": {
-            "x": 0.11600000000000003,
-            "y": 0.7079999999999999
-          },
-          "finish": "silver",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 354.129249946939,
-          "source": "Khronos Sunglasses GLB"
-        }
-      },
-      "resetAndHome": {
-        "button": {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 50,
-          "rotation": {
-            "x": 0.080005,
-            "y": -0.079883
-          },
-          "finish": "silver",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 320.60952130147047,
-          "source": "Khronos Sunglasses GLB"
-        },
-        "key": {
-          "view": 2,
-          "playing": false,
-          "active": true,
-          "visible": true,
-          "renderCount": 58,
-          "rotation": {
-            "x": 0.08,
-            "y": -0.080003
-          },
-          "finish": "silver",
-          "reduced": false,
-          "cameraDistance": 285,
-          "actualCameraDistance": 320.62994719336945,
-          "source": "Khronos Sunglasses GLB"
-        }
-      },
-      "verticalTouchScroll": {
-        "before": 1780,
-        "after": 1926
-      },
-      "playResumesDraws": true,
-      "studioReturn": {
-        "poster": {
-          "src": "art/eyewear-studio.webp",
-          "width": 1200,
-          "height": 1000
-        },
-        "toolsHidden": true,
-        "loadedCanvasInactive": true,
-        "pausedDraws": {
-          "drawCallsBefore": 1678,
-          "drawCallsAfter": 1678,
-          "sampleMs": 550
-        },
-        "reentryReusesModelAndResumes": true
-      },
-      "offscreenPause": {
-        "drawCallsBefore": 1750,
-        "drawCallsAfter": 1750,
-        "sampleMs": 550
-      },
-      "hiddenPause": {
-        "drawCallsBefore": 1798,
-        "drawCallsAfter": 1798,
-        "sampleMs": 550
-      },
-      "visibilityTestMethod": "Simulated document.hidden getter plus visibilitychange event; not an OS background-tab test.",
-      "layout": {
-        "width": 320,
-        "scrollWidth": 320
-      },
-      "actualCameraZoomChanged": {
-        "distances": [
-          405.0629277584296,
-          375.2006745134963,
-          320.6294360827118
-        ],
-        "passed": true,
-        "verification": "Post-run assertion over captured rendered camera state; also added to audit script."
-      }
-    },
-    {
-      "width": 390,
-      "mode": "reduced-motion",
-      "passed": true,
-      "pageErrors": [],
-      "consoleErrors": [],
-      "consoleWarnings": [],
-      "httpErrors": [],
-      "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
-      ],
-      "modelRequests": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
-      ],
-      "modelRequestFailures": [],
-      "lazyLoad": {
-        "beforeViewport": {
-          "contextAttempts": 0,
-          "contexts": 0,
-          "totalDraws": 0,
-          "events": [],
-          "canvases": []
-        },
-        "afterViewport": {
-          "contextAttempts": 1,
-          "contexts": 1,
-          "totalDraws": 70,
-          "events": [],
-          "canvases": [
-            {
-              "className": "mi-product-canvas",
-              "width": 342,
-              "height": 335,
-              "draws": 70
-            }
-          ]
-        },
-        "lazyJavaScriptRequests": [
-          "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
-        ],
-        "loadedModelUrls": [
-          "http://127.0.0.1:4183/models/eyewear-studio.glb"
-        ],
-        "primaryStudioPoster": {
-          "poster": {
-            "src": "art/eyewear-studio.webp",
+            "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
             "width": 1200,
             "height": 1000
           },
@@ -947,8 +976,8 @@
         "noModelRequestBeforeInteraction": true
       },
       "staticRender": {
-        "drawCallsBefore": 70,
-        "drawCallsAfter": 70,
+        "drawCallsBefore": 166,
+        "drawCallsAfter": 166,
         "sampleMs": 550
       },
       "manualViewSelection": {
@@ -961,15 +990,15 @@
           "x": 0.08,
           "y": -0.08
         },
-        "finish": "gold",
+        "finish": "black",
         "reduced": true,
         "cameraDistance": 285,
-        "actualCameraDistance": 320.6294360827118,
-        "source": "Khronos Sunglasses GLB"
+        "actualCameraDistance": 310.236417517552,
+        "source": "Photo-reconstructed ZIN 01"
       },
       "staticAfterSelection": {
-        "drawCallsBefore": 94,
-        "drawCallsAfter": 94,
+        "drawCallsBefore": 286,
+        "drawCallsAfter": 286,
         "sampleMs": 550
       },
       "screenshot": "output/playwright/eyewear-viewer/reduced-motion.png"
@@ -983,16 +1012,16 @@
       "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+        "http://127.0.0.1:4183/assets/main-CwBKz_z1.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
       ],
       "modelRequests": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        "http://127.0.0.1:4183/models/zin-01.glb"
       ],
       "modelRequestFailures": [],
       "contextAttempts": 1,
       "fallback": {
-        "src": "art/eyewear-studio.webp",
+        "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
         "width": 1200,
         "height": 1000,
         "opacity": "1",
@@ -1011,11 +1040,11 @@
       "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+        "http://127.0.0.1:4183/assets/main-CwBKz_z1.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
       ],
       "modelRequests": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        "http://127.0.0.1:4183/models/zin-01.glb"
       ],
       "modelRequestFailures": [],
       "lazyLoad": {
@@ -1029,26 +1058,26 @@
         "afterViewport": {
           "contextAttempts": 1,
           "contexts": 1,
-          "totalDraws": 94,
+          "totalDraws": 526,
           "events": [],
           "canvases": [
             {
               "className": "mi-product-canvas",
               "width": 342,
               "height": 335,
-              "draws": 94
+              "draws": 526
             }
           ]
         },
         "lazyJavaScriptRequests": [
-          "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+          "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
         ],
         "loadedModelUrls": [
-          "http://127.0.0.1:4183/models/eyewear-studio.glb"
+          "http://127.0.0.1:4183/models/zin-01.glb"
         ],
         "primaryStudioPoster": {
           "poster": {
-            "src": "art/eyewear-studio.webp",
+            "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
             "width": 1200,
             "height": 1000
           },
@@ -1062,7 +1091,7 @@
         "lost"
       ],
       "fallback": {
-        "src": "art/eyewear-studio.webp",
+        "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
         "width": 1200,
         "height": 1000,
         "opacity": "1",
@@ -1084,7 +1113,7 @@
       "modelRequests": [],
       "modelRequestFailures": [],
       "fallback": {
-        "src": "art/eyewear-studio.webp",
+        "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
         "width": 1200,
         "height": 1000,
         "opacity": "1",
@@ -1101,19 +1130,19 @@
       "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+        "http://127.0.0.1:4183/assets/main-CwBKz_z1.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
       ],
       "modelRequests": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        "http://127.0.0.1:4183/models/zin-01.glb"
       ],
       "modelRequestFailures": [],
       "controlledModelUrls": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        "http://127.0.0.1:4183/models/zin-01.glb"
       ],
       "failureInjection": "HTTP 200 containing intentionally malformed GLB bytes; validates loader/parser failure handling.",
       "fallback": {
-        "src": "art/eyewear-studio.webp",
+        "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
         "width": 1200,
         "height": 1000,
         "opacity": "1",
@@ -1131,15 +1160,15 @@
       "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+        "http://127.0.0.1:4183/assets/main-CwBKz_z1.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
       ],
       "modelRequests": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        "http://127.0.0.1:4183/models/zin-01.glb"
       ],
       "modelRequestFailures": [],
       "controlledModelUrls": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        "http://127.0.0.1:4183/models/zin-01.glb"
       ],
       "loadingState": {
         "webglContextAttempts": 0,
@@ -1150,32 +1179,32 @@
         "playing": true,
         "active": true,
         "visible": true,
-        "renderCount": 5,
+        "renderCount": 4,
         "rotation": {
-          "x": 0.08077687491339283,
-          "y": -0.06979135492401478
+          "x": 0.08075940066794692,
+          "y": -0.07002090353733592
         },
-        "finish": "gold",
+        "finish": "black",
         "reduced": false,
         "cameraDistance": 285,
-        "actualCameraDistance": 318.8743871764915,
-        "source": "Khronos Sunglasses GLB"
+        "actualCameraDistance": 308.69860351770313,
+        "source": "Photo-reconstructed ZIN 01"
       },
       "latestSelectedViewAfterLoad": {
         "view": 2,
         "playing": false,
         "active": true,
         "visible": true,
-        "renderCount": 14,
+        "renderCount": 11,
         "rotation": {
-          "x": 0.080013,
-          "y": -0.079829
+          "x": 0.08,
+          "y": -0.08
         },
-        "finish": "gold",
+        "finish": "black",
         "reduced": false,
         "cameraDistance": 285,
-        "actualCameraDistance": 320.60035218533034,
-        "source": "Khronos Sunglasses GLB"
+        "actualCameraDistance": 310.236417517552,
+        "source": "Photo-reconstructed ZIN 01"
       },
       "screenshot": "output/playwright/eyewear-viewer/model-loading-selection.png"
     },
@@ -1188,15 +1217,15 @@
       "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+        "http://127.0.0.1:4183/assets/main-CwBKz_z1.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
       ],
       "modelRequests": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        "http://127.0.0.1:4183/models/zin-01.glb"
       ],
       "modelRequestFailures": [],
       "controlledModelUrls": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        "http://127.0.0.1:4183/models/zin-01.glb"
       ],
       "loadingState": {
         "webglContextAttempts": 0,
@@ -1204,7 +1233,7 @@
       },
       "studioDuringLoading": {
         "poster": {
-          "src": "art/eyewear-studio.webp",
+          "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
           "width": 1200,
           "height": 1000
         },
@@ -1228,20 +1257,20 @@
       "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+        "http://127.0.0.1:4183/assets/main-CwBKz_z1.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CLMLKX6S.js"
       ],
       "modelRequests": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        "http://127.0.0.1:4183/models/zin-01.glb"
       ],
       "modelRequestFailures": [
         {
-          "url": "http://127.0.0.1:4183/models/eyewear-studio.glb",
+          "url": "http://127.0.0.1:4183/models/zin-01.glb",
           "failure": "net::ERR_ABORTED"
         }
       ],
       "controlledModelUrls": [
-        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        "http://127.0.0.1:4183/models/zin-01.glb"
       ],
       "loadingState": {
         "webglContextAttempts": 0,
@@ -1249,7 +1278,7 @@
       },
       "abortedRequests": [
         {
-          "url": "http://127.0.0.1:4183/models/eyewear-studio.glb",
+          "url": "http://127.0.0.1:4183/models/zin-01.glb",
           "failure": "net::ERR_ABORTED"
         }
       ],
@@ -1263,45 +1292,1310 @@
     }
   ],
   "passed": true,
-  "posterAtValidation": {
-    "path": "production/art/eyewear-studio.webp",
-    "sha256": "9137a2e8173b43a141cf5aa05d9a1f6526c88d8b7a323da41a6a4651d193411e",
-    "bytes": 633088,
-    "dimensions": [
-      1200,
-      1000
-    ],
-    "samples": 512
+  "allCasesUseFinalAssets": true,
+  "servedAssetVerification": {
+    "models/zin-01.glb": {
+      "status": 200,
+      "bytes": 3005428,
+      "sha256": "869cbb2a2d0e8391ab3acdf3a26ee9e77bec8a60b8a677626106e4c2f52d75af"
+    },
+    "art/zin-01-studio.webp": {
+      "status": 200,
+      "bytes": 590736,
+      "sha256": "e3fe2aa194682c5ca463d5df7ef7bb97730f6f13c2de09634f8cdaed867216d9"
+    }
   },
-  "functionalBuild": {
-    "viewerChunk": "eyewear-viewer-CV5DVh8O.js",
-    "mainChunk": "main-CwZYGaKG.js",
-    "css": "cBjsHJgc",
-    "note": "Controller checks complete before subsequent presentation-only studio aspect ratio and poster cache-query adjustment; root will verify those final visual changes."
-  },
+  "runSegments": [
+    {
+      "type": "standard",
+      "startedAt": "2026-11-04T06:54:56.994509+00:00",
+      "widths": [
+        1440,
+        390,
+        320
+      ],
+      "passed": true
+    },
+    {
+      "type": "alternate-and-races",
+      "startedAt": "2026-11-04T07:00:27.341751+00:00",
+      "caseCount": 8,
+      "passed": true
+    }
+  ],
   "visualReview": {
-    "reviewed": [
-      "output/playwright/eyewear-viewer/silver-1440.png",
-      "output/playwright/eyewear-viewer/model-load-failure.png"
+    "reviewedScreenshots": [
+      "zin01-view-1-320.png",
+      "zin01-view-0-1440.png",
+      "zin01-view-1-390.png",
+      "zin01-view-2-320.png"
     ],
-    "result": "Interactive silver finish rendered within the stage; fallback uses the final 512-sample studio poster. Root performs final primary studio layout review at 1440/390/320."
+    "findings": "The corrected 320px construction screenshot shows the full right temple. All nine updated preset screenshots pass both CSS clipping-boundary and actual-vertex NDC checks. Root conducts the final art-direction review.",
+    "viewScreenshotCount": 9
   },
-  "completedAt": "2026-11-04T05:36:31.543330+00:00",
-  "presentationRecheck": {
-    "checkedAt": "2026-11-04T05:37:15.539781+00:00",
-    "widths": [
+  "notes": [
+    "Chromium uses SwiftShader; this verifies functional rendering, not hardware GPU frame-rate performance.",
+    "document.hidden/visibilitychange is simulated by instrumentation, not a real operating-system tab-background test.",
+    "The model-loading-dispose case intentionally cancels its request and expects net::ERR_ABORTED.",
+    "Earlier concurrent-rendering timeouts are archived under output/playwright/eyewear-viewer/qa-preliminary.json; all original endpoint assertions passed in the isolated final run.",
+    "Subsequent framing regression is reported separately from the eleven earlier functional cases; no claim is made that the full controller suite was rerun after the CSS correction."
+  ],
+  "functionalCasesPassed": true,
+  "framingReview": {
+    "passed": true,
+    "pendingFix": false,
+    "originalIssue": "The 320px construction preset had a 296px stage clipped by a 272px host.",
+    "correction": "Constrain the stage width to its host.",
+    "verifiedCriticalCase": {
+      "hostWidth": 272,
+      "stageWidth": 272,
+      "canvasWidth": 272,
+      "vertexCount": 73469,
+      "rightMarginCssPx": 19.040003227615635,
+      "screenshot": "output/playwright/eyewear-viewer/zin01-view-1-320.png"
+    }
+  },
+  "framingVerification": {
+    "passed": true,
+    "checkedAt": "2026-11-04T07:14:45.645635+00:00",
+    "viewportWidths": [
       1440,
       390,
       320
     ],
-    "studioAspectRatio": "6/5",
-    "posterVersionQuery": "9137a2e8173b",
-    "pageErrors": [],
-    "entryButtonMinHeight": 44,
-    "viewerChunkUnchanged": "eyewear-viewer-CV5DVh8O.js",
-    "css": "main-DMEojZ6H.css",
-    "main": "main-eDf-aJdM.js",
-    "result": "passed",
-    "scope": "Primary studio poster decoded and screenshots visually reviewed after aspect-ratio/cache-version changes; all 140 release file hashes match checkout."
+    "presetCount": 9,
+    "modelVertexCount": 73469,
+    "assertions": [
+      "stage and canvas within host/clientWidth and visible viewport, tolerance 1 CSS px",
+      "all actual model geometry vertices projected through matrixWorld and the camera",
+      "near/far clip bounds and at least 3 CSS px of product margin",
+      "checks before and after each screenshot"
+    ],
+    "viewerBundles": [
+      "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+    ],
+    "cases": [
+      {
+        "width": 1440,
+        "mode": "framing",
+        "passed": true,
+        "pageErrors": [],
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "httpErrors": [],
+        "javascriptRequests": [
+          "http://127.0.0.1:4183/assets/main-B20kP9nr.js",
+          "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+        ],
+        "modelRequests": [
+          "http://127.0.0.1:4183/models/zin-01.glb"
+        ],
+        "modelRequestFailures": [],
+        "lazyLoad": {
+          "beforeViewport": {
+            "contextAttempts": 0,
+            "contexts": 0,
+            "totalDraws": 0,
+            "events": [],
+            "canvases": []
+          },
+          "afterViewport": {
+            "contextAttempts": 1,
+            "contexts": 1,
+            "totalDraws": 406,
+            "events": [],
+            "canvases": [
+              {
+                "className": "mi-product-canvas",
+                "width": 750,
+                "height": 636,
+                "draws": 406
+              }
+            ]
+          },
+          "lazyJavaScriptRequests": [
+            "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+          ],
+          "loadedModelUrls": [
+            "http://127.0.0.1:4183/models/zin-01.glb"
+          ],
+          "primaryStudioPoster": {
+            "poster": {
+              "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
+              "width": 1200,
+              "height": 1000
+            },
+            "toolsHidden": true,
+            "loadedCanvasInactive": false
+          },
+          "activation": "explicit enter button",
+          "noModelRequestBeforeInteraction": true
+        },
+        "views": [
+          {
+            "view": 0,
+            "endpoint": {
+              "view": 0,
+              "playing": false,
+              "active": true,
+              "visible": true,
+              "renderCount": 32,
+              "rotation": {
+                "x": 0.180012,
+                "y": -0.51984
+              },
+              "finish": "black",
+              "reduced": false,
+              "cameraDistance": 365,
+              "actualCameraDistance": 388.23121817072644,
+              "source": "Photo-reconstructed ZIN 01"
+            },
+            "beforeScreenshot": {
+              "host": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 864.96875,
+                "width": 750.484375,
+                "height": 733
+              },
+              "hostClientWidth": 750,
+              "stage": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 767.96875,
+                "width": 750.484375,
+                "height": 636
+              },
+              "canvas": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 767.96875,
+                "width": 750.484375,
+                "height": 636
+              },
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8600000144108284,
+                  "maxX": 0.6850255592537161,
+                  "minY": -0.55252750950898,
+                  "maxY": 0.2458397950008993,
+                  "minZ": 0.997177774930386,
+                  "maxZ": 0.998562732881076
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 52.53390084244923,
+                "right": 118.1916981522247,
+                "top": 239.82294518971403,
+                "bottom": 142.29625197614436
+              }
+            },
+            "afterScreenshot": {
+              "host": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 864.96875,
+                "width": 750.484375,
+                "height": 733
+              },
+              "hostClientWidth": 750,
+              "stage": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 767.96875,
+                "width": 750.484375,
+                "height": 636
+              },
+              "canvas": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 767.96875,
+                "width": 750.484375,
+                "height": 636
+              },
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8600000144136274,
+                  "maxX": 0.6850866031467377,
+                  "minY": -0.5525356010487931,
+                  "maxY": 0.24584488294542198,
+                  "minZ": 0.9971777082909601,
+                  "maxZ": 0.9985627417809921
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 52.53390084139893,
+                "right": 118.16879190827375,
+                "top": 239.8213272233558,
+                "bottom": 142.29367886648382
+              }
+            },
+            "screenshot": "output/playwright/eyewear-viewer/zin01-view-0-1440.png"
+          },
+          {
+            "view": 1,
+            "endpoint": {
+              "view": 1,
+              "playing": false,
+              "active": true,
+              "visible": true,
+              "renderCount": 62,
+              "rotation": {
+                "x": 0.22,
+                "y": -1.05
+              },
+              "finish": "black",
+              "reduced": false,
+              "cameraDistance": 330.000027,
+              "actualCameraDistance": 359.9124358492767,
+              "source": "Photo-reconstructed ZIN 01"
+            },
+            "beforeScreenshot": {
+              "host": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 864.96875,
+                "width": 750.484375,
+                "height": 733
+              },
+              "hostClientWidth": 750,
+              "stage": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 767.96875,
+                "width": 750.484375,
+                "height": 636
+              },
+              "canvas": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 767.96875,
+                "width": 750.484375,
+                "height": 636
+              },
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8019590808137537,
+                  "maxX": 0.8599999762675321,
+                  "minY": -0.5988851426721765,
+                  "maxY": 0.34062360560661403,
+                  "minZ": 0.9967900762101083,
+                  "maxZ": 0.9984201090118366
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 74.3133077299578,
+                "right": 52.533915155423166,
+                "top": 209.6816934170967,
+                "bottom": 127.55452463024787
+              }
+            },
+            "afterScreenshot": {
+              "host": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 864.96875,
+                "width": 750.484375,
+                "height": 733
+              },
+              "hostClientWidth": 750,
+              "stage": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 767.96875,
+                "width": 750.484375,
+                "height": 636
+              },
+              "canvas": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 767.96875,
+                "width": 750.484375,
+                "height": 636
+              },
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8019590808137539,
+                  "maxX": 0.8599999762675321,
+                  "minY": -0.598885155493736,
+                  "maxY": 0.340623596740977,
+                  "minZ": 0.9967900762101081,
+                  "maxZ": 0.9984201090118366
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 74.31330772995771,
+                "right": 52.533915155423166,
+                "top": 209.68169623636933,
+                "bottom": 127.55452055299195
+              }
+            },
+            "screenshot": "output/playwright/eyewear-viewer/zin01-view-1-1440.png"
+          },
+          {
+            "view": 2,
+            "endpoint": {
+              "view": 2,
+              "playing": false,
+              "active": true,
+              "visible": true,
+              "renderCount": 92,
+              "rotation": {
+                "x": 0.080002,
+                "y": -0.080014
+              },
+              "finish": "black",
+              "reduced": false,
+              "cameraDistance": 285.00066,
+              "actualCameraDistance": 310.2391918807619,
+              "source": "Photo-reconstructed ZIN 01"
+            },
+            "beforeScreenshot": {
+              "host": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 864.96875,
+                "width": 750.484375,
+                "height": 733
+              },
+              "hostClientWidth": 750,
+              "stage": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 767.96875,
+                "width": 750.484375,
+                "height": 636
+              },
+              "canvas": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 767.96875,
+                "width": 750.484375,
+                "height": 636
+              },
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8600000095582188,
+                  "maxX": 0.7645270488114074,
+                  "minY": -0.5389250633407079,
+                  "maxY": 0.1178613246121513,
+                  "minZ": 0.9970285531152626,
+                  "maxZ": 0.9983307616655769
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 52.53390266335308,
+                "right": 88.3593853010882,
+                "top": 280.5200987733359,
+                "bottom": 146.6218298576549
+              }
+            },
+            "afterScreenshot": {
+              "host": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 864.96875,
+                "width": 750.484375,
+                "height": 733
+              },
+              "hostClientWidth": 750,
+              "stage": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 767.96875,
+                "width": 750.484375,
+                "height": 636
+              },
+              "canvas": {
+                "left": 641.515625,
+                "right": 1392,
+                "top": 131.96875,
+                "bottom": 767.96875,
+                "width": 750.484375,
+                "height": 636
+              },
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8600000095580314,
+                  "maxX": 0.7645418944246926,
+                  "minY": -0.5389249546258977,
+                  "maxY": 0.11786451516228012,
+                  "minZ": 0.9970285355331757,
+                  "maxZ": 0.9983307463032726
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 52.533902663423405,
+                "right": 88.35381460068432,
+                "top": 280.5190841783949,
+                "bottom": 146.62186442896453
+              }
+            },
+            "screenshot": "output/playwright/eyewear-viewer/zin01-view-2-1440.png"
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "mode": "framing",
+        "passed": true,
+        "pageErrors": [],
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "httpErrors": [],
+        "javascriptRequests": [
+          "http://127.0.0.1:4183/assets/main-B20kP9nr.js",
+          "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+        ],
+        "modelRequests": [
+          "http://127.0.0.1:4183/models/zin-01.glb"
+        ],
+        "modelRequestFailures": [],
+        "lazyLoad": {
+          "beforeViewport": {
+            "contextAttempts": 0,
+            "contexts": 0,
+            "totalDraws": 0,
+            "events": [],
+            "canvases": []
+          },
+          "afterViewport": {
+            "contextAttempts": 1,
+            "contexts": 1,
+            "totalDraws": 406,
+            "events": [],
+            "canvases": [
+              {
+                "className": "mi-product-canvas",
+                "width": 342,
+                "height": 335,
+                "draws": 406
+              }
+            ]
+          },
+          "lazyJavaScriptRequests": [
+            "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+          ],
+          "loadedModelUrls": [
+            "http://127.0.0.1:4183/models/zin-01.glb"
+          ],
+          "primaryStudioPoster": {
+            "poster": {
+              "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
+              "width": 1200,
+              "height": 1000
+            },
+            "toolsHidden": true,
+            "loadedCanvasInactive": false
+          },
+          "activation": "explicit enter button",
+          "noModelRequestBeforeInteraction": true
+        },
+        "views": [
+          {
+            "view": 0,
+            "endpoint": {
+              "view": 0,
+              "playing": false,
+              "active": true,
+              "visible": true,
+              "renderCount": 12,
+              "rotation": {
+                "x": 0.18,
+                "y": -0.52
+              },
+              "finish": "black",
+              "reduced": false,
+              "cameraDistance": 365,
+              "actualCameraDistance": 388.23002390298615,
+              "source": "Photo-reconstructed ZIN 01"
+            },
+            "beforeScreenshot": {
+              "host": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 677.9375,
+                "width": 342,
+                "height": 423.28125
+              },
+              "hostClientWidth": 342,
+              "stage": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 589.9375,
+                "width": 342,
+                "height": 335.28125
+              },
+              "canvas": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 589.9375,
+                "width": 342,
+                "height": 335.28125
+              },
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8600000144136449,
+                  "maxX": 0.6850869839658075,
+                  "minY": -0.47834082652509147,
+                  "maxY": 0.21283278224923657,
+                  "minZ": 0.9971777078910077,
+                  "maxZ": 0.9985627418387304
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 23.939997535266716,
+                "right": 53.850125741846924,
+                "top": 131.96120436324907,
+                "bottom": 87.45126987831709
+              }
+            },
+            "afterScreenshot": {
+              "host": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 677.9375,
+                "width": 342,
+                "height": 423.28125
+              },
+              "hostClientWidth": 342,
+              "stage": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 589.9375,
+                "width": 342,
+                "height": 335.28125
+              },
+              "canvas": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 589.9375,
+                "width": 342,
+                "height": 335.28125
+              },
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8600000144136449,
+                  "maxX": 0.6850869839658075,
+                  "minY": -0.47834082652509147,
+                  "maxY": 0.21283278224923657,
+                  "minZ": 0.9971777078910077,
+                  "maxZ": 0.9985627418387304
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 23.939997535266716,
+                "right": 53.850125741846924,
+                "top": 131.96120436324907,
+                "bottom": 87.45126987831709
+              }
+            },
+            "screenshot": "output/playwright/eyewear-viewer/zin01-view-0-390.png"
+          },
+          {
+            "view": 1,
+            "endpoint": {
+              "view": 1,
+              "playing": false,
+              "active": true,
+              "visible": true,
+              "renderCount": 17,
+              "rotation": {
+                "x": 0.22,
+                "y": -1.05
+              },
+              "finish": "black",
+              "reduced": false,
+              "cameraDistance": 330,
+              "actualCameraDistance": 359.91243574977295,
+              "source": "Photo-reconstructed ZIN 01"
+            },
+            "beforeScreenshot": {
+              "host": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 677.9375,
+                "width": 342,
+                "height": 423.28125
+              },
+              "hostClientWidth": 342,
+              "stage": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 589.9375,
+                "width": 342,
+                "height": 335.28125
+              },
+              "canvas": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 589.9375,
+                "width": 342,
+                "height": 335.28125
+              },
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8019590808137539,
+                  "maxX": 0.8599999762675321,
+                  "minY": -0.5184664992706607,
+                  "maxY": 0.29488445681322745,
+                  "minZ": 0.9967900762101081,
+                  "maxZ": 0.9984201090118366
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 33.864997180848086,
+                "right": 23.94000405825201,
+                "top": 118.20601035704505,
+                "bottom": 80.7245770207044
+              }
+            },
+            "afterScreenshot": {
+              "host": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 677.9375,
+                "width": 342,
+                "height": 423.28125
+              },
+              "hostClientWidth": 342,
+              "stage": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 589.9375,
+                "width": 342,
+                "height": 335.28125
+              },
+              "canvas": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 589.9375,
+                "width": 342,
+                "height": 335.28125
+              },
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8019590808137539,
+                  "maxX": 0.8599999762675321,
+                  "minY": -0.5184664992706607,
+                  "maxY": 0.29488445681322745,
+                  "minZ": 0.9967900762101081,
+                  "maxZ": 0.9984201090118366
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 33.864997180848086,
+                "right": 23.94000405825201,
+                "top": 118.20601035704505,
+                "bottom": 80.7245770207044
+              }
+            },
+            "screenshot": "output/playwright/eyewear-viewer/zin01-view-1-390.png"
+          },
+          {
+            "view": 2,
+            "endpoint": {
+              "view": 2,
+              "playing": false,
+              "active": true,
+              "visible": true,
+              "renderCount": 22,
+              "rotation": {
+                "x": 0.08,
+                "y": -0.08
+              },
+              "finish": "black",
+              "reduced": false,
+              "cameraDistance": 285,
+              "actualCameraDistance": 310.236417517552,
+              "source": "Photo-reconstructed ZIN 01"
+            },
+            "beforeScreenshot": {
+              "host": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 677.9375,
+                "width": 342,
+                "height": 423.28125
+              },
+              "hostClientWidth": 342,
+              "stage": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 589.9375,
+                "width": 342,
+                "height": 335.28125
+              },
+              "canvas": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 589.9375,
+                "width": 342,
+                "height": 335.28125
+              },
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8600000095580314,
+                  "maxX": 0.7645418944246926,
+                  "minY": -0.46655778997249064,
+                  "maxY": 0.10203759769941455,
+                  "minZ": 0.9970285355331757,
+                  "maxZ": 0.9983307463032726
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 23.93999836557664,
+                "right": 40.26333605337757,
+                "top": 150.5349783481716,
+                "bottom": 89.42658549039294
+              }
+            },
+            "afterScreenshot": {
+              "host": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 677.9375,
+                "width": 342,
+                "height": 423.28125
+              },
+              "hostClientWidth": 342,
+              "stage": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 589.9375,
+                "width": 342,
+                "height": 335.28125
+              },
+              "canvas": {
+                "left": 24,
+                "right": 366,
+                "top": 254.65625,
+                "bottom": 589.9375,
+                "width": 342,
+                "height": 335.28125
+              },
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8600000095580314,
+                  "maxX": 0.7645418944246926,
+                  "minY": -0.46655778997249064,
+                  "maxY": 0.10203759769941455,
+                  "minZ": 0.9970285355331757,
+                  "maxZ": 0.9983307463032726
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 23.93999836557664,
+                "right": 40.26333605337757,
+                "top": 150.5349783481716,
+                "bottom": 89.42658549039294
+              }
+            },
+            "screenshot": "output/playwright/eyewear-viewer/zin01-view-2-390.png"
+          }
+        ]
+      },
+      {
+        "width": 320,
+        "mode": "framing",
+        "passed": true,
+        "pageErrors": [],
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "httpErrors": [],
+        "javascriptRequests": [
+          "http://127.0.0.1:4183/assets/main-B20kP9nr.js",
+          "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+        ],
+        "modelRequests": [
+          "http://127.0.0.1:4183/models/zin-01.glb"
+        ],
+        "modelRequestFailures": [],
+        "lazyLoad": {
+          "beforeViewport": {
+            "contextAttempts": 0,
+            "contexts": 0,
+            "totalDraws": 0,
+            "events": [],
+            "canvases": []
+          },
+          "afterViewport": {
+            "contextAttempts": 1,
+            "contexts": 1,
+            "totalDraws": 526,
+            "events": [],
+            "canvases": [
+              {
+                "className": "mi-product-canvas",
+                "width": 272,
+                "height": 290,
+                "draws": 526
+              }
+            ]
+          },
+          "lazyJavaScriptRequests": [
+            "http://127.0.0.1:4183/assets/eyewear-viewer-BFlZdgwT.js"
+          ],
+          "loadedModelUrls": [
+            "http://127.0.0.1:4183/models/zin-01.glb"
+          ],
+          "primaryStudioPoster": {
+            "poster": {
+              "src": "art/zin-01-studio.webp?v=e3fe2aa194682",
+              "width": 1200,
+              "height": 1000
+            },
+            "toolsHidden": true,
+            "loadedCanvasInactive": false
+          },
+          "activation": "explicit enter button",
+          "noModelRequestBeforeInteraction": true
+        },
+        "views": [
+          {
+            "view": 0,
+            "endpoint": {
+              "view": 0,
+              "playing": false,
+              "active": true,
+              "visible": true,
+              "renderCount": 13,
+              "rotation": {
+                "x": 0.18,
+                "y": -0.52
+              },
+              "finish": "black",
+              "reduced": false,
+              "cameraDistance": 365,
+              "actualCameraDistance": 388.23002390298615,
+              "source": "Photo-reconstructed ZIN 01"
+            },
+            "beforeScreenshot": {
+              "host": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 654.65625,
+                "width": 272,
+                "height": 378
+              },
+              "hostClientWidth": 272,
+              "stage": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 566.65625,
+                "width": 272,
+                "height": 290
+              },
+              "canvas": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 566.65625,
+                "width": 272,
+                "height": 290
+              },
+              "viewport": {
+                "width": 320,
+                "height": 844
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8600000144136449,
+                  "maxX": 0.6850869839658075,
+                  "minY": -0.4394677970656011,
+                  "maxY": 0.1955366315643319,
+                  "minZ": 0.9971777078910077,
+                  "maxZ": 0.9985627418387304
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 19.03999803974429,
+                "right": 42.82817018065018,
+                "top": 116.64718842317188,
+                "bottom": 81.27716942548784
+              }
+            },
+            "afterScreenshot": {
+              "host": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 654.65625,
+                "width": 272,
+                "height": 378
+              },
+              "hostClientWidth": 272,
+              "stage": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 566.65625,
+                "width": 272,
+                "height": 290
+              },
+              "canvas": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 566.65625,
+                "width": 272,
+                "height": 290
+              },
+              "viewport": {
+                "width": 320,
+                "height": 844
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8600000144136449,
+                  "maxX": 0.6850869839658075,
+                  "minY": -0.4394677970656011,
+                  "maxY": 0.1955366315643319,
+                  "minZ": 0.9971777078910077,
+                  "maxZ": 0.9985627418387304
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 19.03999803974429,
+                "right": 42.82817018065018,
+                "top": 116.64718842317188,
+                "bottom": 81.27716942548784
+              }
+            },
+            "screenshot": "output/playwright/eyewear-viewer/zin01-view-0-320.png"
+          },
+          {
+            "view": 1,
+            "endpoint": {
+              "view": 1,
+              "playing": false,
+              "active": true,
+              "visible": true,
+              "renderCount": 18,
+              "rotation": {
+                "x": 0.22,
+                "y": -1.05
+              },
+              "finish": "black",
+              "reduced": false,
+              "cameraDistance": 330,
+              "actualCameraDistance": 359.91243574977295,
+              "source": "Photo-reconstructed ZIN 01"
+            },
+            "beforeScreenshot": {
+              "host": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 654.65625,
+                "width": 272,
+                "height": 378
+              },
+              "hostClientWidth": 272,
+              "stage": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 566.65625,
+                "width": 272,
+                "height": 290
+              },
+              "canvas": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 566.65625,
+                "width": 272,
+                "height": 290
+              },
+              "viewport": {
+                "width": 320,
+                "height": 844
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8019590808137539,
+                  "maxX": 0.8599999762675321,
+                  "minY": -0.47633260146745904,
+                  "maxY": 0.27092026320650614,
+                  "minZ": 0.9967900762101081,
+                  "maxZ": 0.9984201090118366
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 26.93356500932947,
+                "right": 19.040003227615635,
+                "top": 105.7165618350566,
+                "bottom": 75.93177278721843
+              }
+            },
+            "afterScreenshot": {
+              "host": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 654.65625,
+                "width": 272,
+                "height": 378
+              },
+              "hostClientWidth": 272,
+              "stage": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 566.65625,
+                "width": 272,
+                "height": 290
+              },
+              "canvas": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 566.65625,
+                "width": 272,
+                "height": 290
+              },
+              "viewport": {
+                "width": 320,
+                "height": 844
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8019590808137539,
+                  "maxX": 0.8599999762675321,
+                  "minY": -0.47633260146745904,
+                  "maxY": 0.27092026320650614,
+                  "minZ": 0.9967900762101081,
+                  "maxZ": 0.9984201090118366
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 26.93356500932947,
+                "right": 19.040003227615635,
+                "top": 105.7165618350566,
+                "bottom": 75.93177278721843
+              }
+            },
+            "screenshot": "output/playwright/eyewear-viewer/zin01-view-1-320.png"
+          },
+          {
+            "view": 2,
+            "endpoint": {
+              "view": 2,
+              "playing": false,
+              "active": true,
+              "visible": true,
+              "renderCount": 22,
+              "rotation": {
+                "x": 0.08,
+                "y": -0.08
+              },
+              "finish": "black",
+              "reduced": false,
+              "cameraDistance": 285,
+              "actualCameraDistance": 310.236417517552,
+              "source": "Photo-reconstructed ZIN 01"
+            },
+            "beforeScreenshot": {
+              "host": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 654.65625,
+                "width": 272,
+                "height": 378
+              },
+              "hostClientWidth": 272,
+              "stage": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 566.65625,
+                "width": 272,
+                "height": 290
+              },
+              "canvas": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 566.65625,
+                "width": 272,
+                "height": 290
+              },
+              "viewport": {
+                "width": 320,
+                "height": 844
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8600000095580314,
+                  "maxX": 0.7645418944246926,
+                  "minY": -0.4286423252903139,
+                  "maxY": 0.09374537106645135,
+                  "minZ": 0.9970285355331757,
+                  "maxZ": 0.9983307463032726
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 19.039998700107738,
+                "right": 32.02230235824181,
+                "top": 131.40692119536456,
+                "bottom": 82.84686283290449
+              }
+            },
+            "afterScreenshot": {
+              "host": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 654.65625,
+                "width": 272,
+                "height": 378
+              },
+              "hostClientWidth": 272,
+              "stage": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 566.65625,
+                "width": 272,
+                "height": 290
+              },
+              "canvas": {
+                "left": 24,
+                "right": 296,
+                "top": 276.65625,
+                "bottom": 566.65625,
+                "width": 272,
+                "height": 290
+              },
+              "viewport": {
+                "width": 320,
+                "height": 844
+              },
+              "projection": {
+                "vertexCount": 73469,
+                "bounds": {
+                  "minX": -0.8600000095580314,
+                  "maxX": 0.7645418944246926,
+                  "minY": -0.4286423252903139,
+                  "maxY": 0.09374537106645135,
+                  "minZ": 0.9970285355331757,
+                  "maxZ": 0.9983307463032726
+                }
+              },
+              "geometryMarginCssPixels": {
+                "left": 19.039998700107738,
+                "right": 32.02230235824181,
+                "top": 131.40692119536456,
+                "bottom": 82.84686283290449
+              }
+            },
+            "screenshot": "output/playwright/eyewear-viewer/zin01-view-2-320.png"
+          }
+        ]
+      }
+    ]
   }
 }
