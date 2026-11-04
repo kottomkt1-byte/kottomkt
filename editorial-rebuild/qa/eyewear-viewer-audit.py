@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit the real eyewear viewer in a local build; never changes production content.
+"""Audit the async GLB eyewear viewer in a local build; never changes production content.
 
 Run after the viewer build is ready:
   python qa/eyewear-viewer-audit.py --base http://127.0.0.1:4181
@@ -26,8 +26,10 @@ STAGE = '[data-eyewear-stage]'
 VIEWER = '[data-eyewear-viewer]'
 PLAY = '[data-eyewear-play]'
 RESET = '[data-eyewear-reset]'
+ENTER = '[data-eyewear-enter]'
 ROUTE = '/service-model-images.html'
 VIEW_TARGETS = []
+MODEL_URL = re.compile(r'\.(?:glb|gltf)(?:\?.*)?$',re.IGNORECASE)
 
 INSTRUMENT = r'''({disableWebGL = false}) => {
   const contexts = [], events = [], draws = new WeakMap();
@@ -191,15 +193,38 @@ async def new_page(browser, width, reduced=False, no_js=False, no_webgl=False):
     if not no_js:
         await context.add_init_script(f'({INSTRUMENT})({json.dumps({"disableWebGL":no_webgl})})')
     page = await context.new_page()
-    logs = {'pageErrors':[], 'consoleErrors':[], 'consoleWarnings':[], 'httpErrors':[], 'javascriptRequests':[]}
+    logs = {'pageErrors':[], 'consoleErrors':[], 'consoleWarnings':[], 'httpErrors':[], 'javascriptRequests':[],
+        'modelRequests':[], 'modelRequestFailures':[]}
     page.on('pageerror', lambda error: logs['pageErrors'].append(str(error)))
     page.on('console', lambda msg: logs['consoleErrors' if msg.type=='error' else 'consoleWarnings'].append(msg.text) if msg.type in ['error','warning'] else None)
     page.on('response', lambda res: logs['httpErrors'].append({'url':res.url,'status':res.status}) if res.status>=400 else None)
     page.on('request', lambda req: logs['javascriptRequests'].append(req.url) if req.resource_type=='script' else None)
+    page.on('request', lambda req: logs['modelRequests'].append(req.url) if MODEL_URL.search(req.url) else None)
+    page.on('requestfailed', lambda req: logs['modelRequestFailures'].append({'url':req.url,'failure':req.failure}) if MODEL_URL.search(req.url) else None)
     return context, page, logs
 
 
-async def open_viewer(page, base, logs, lazy=True):
+async def studio_state(page, loaded=False):
+    assert await page.locator(VIEWER).get_attribute('data-mode')=='studio'
+    assert await page.locator(ENTER).get_attribute('aria-pressed')=='false'
+    poster = page.locator(VIEWER+' .mi-product-poster')
+    await page.wait_for_function("getComputedStyle(document.querySelector('[data-eyewear-viewer] .mi-product-poster')).opacity==='1'",timeout=10000)
+    assert await poster.get_attribute('aria-hidden')!='true'
+    image = await poster.evaluate('async e=>{await e.decode();return {src:e.getAttribute("src"),width:e.naturalWidth,height:e.naturalHeight}}')
+    assert image['width']>0 and image['height']>0
+    assert not await page.locator('[data-eyewear-tools]').is_visible()
+    canvas = page.locator(STAGE+' canvas')
+    if loaded:
+        assert (await state(page))['active'] is False
+        assert await canvas.get_attribute('tabindex')=='-1'
+        assert await canvas.get_attribute('aria-hidden')=='true'
+        assert not await canvas.is_visible()
+    else:
+        assert await canvas.count()==0
+    return {'poster':image,'toolsHidden':True,'loadedCanvasInactive':loaded}
+
+
+async def open_viewer(page, base, logs, lazy=True, detail_entry=False):
     response = await page.goto(base+ROUTE, wait_until='networkidle')
     assert response.status == 200
     await page.evaluate('document.fonts.ready')
@@ -208,27 +233,43 @@ async def open_viewer(page, base, logs, lazy=True):
     initial_scripts = set(logs['javascriptRequests'])
     if lazy:
         assert initial['contexts'] == 0, ('WebGL created before near viewport', initial)
+        assert not logs['modelRequests'], ('GLB requested before near viewport',logs['modelRequests'])
+    await show_stage(page)
+    await page.wait_for_timeout(400)
+    initial_poster = await studio_state(page)
+    assert not logs['modelRequests'],'GLB was requested by scrolling alone.'
+    assert (await draws(page))['contextAttempts']==0
+    assert await page.locator(ENTER).is_visible()
+    await page.locator('[data-mi-point="0"]' if detail_entry else ENTER).click()
     await show_stage(page)
     await page.wait_for_function("document.querySelector('[data-eyewear-stage]')?.dataset.state === 'ready'", timeout=30000)
     await wait_render_after(page,0)
+    assert (await state(page))['active'] is True
+    assert await page.locator(ENTER).get_attribute('aria-pressed')=='true'
     current = await draws(page)
     assert current['contexts'] >= 1 and current['totalDraws'] > 0, current
+    assert logs['modelRequests'] and not logs['modelRequestFailures'],logs
     scripts = sorted(set(logs['javascriptRequests'])-initial_scripts)
     if lazy:
         assert scripts, ('No additional JavaScript requested after stage approached viewport', logs)
-    return {'beforeViewport':initial,'afterViewport':current,'lazyJavaScriptRequests':scripts}
+    return {'beforeViewport':initial,'afterViewport':current,'lazyJavaScriptRequests':scripts,
+        'loadedModelUrls':list(logs['modelRequests']),'primaryStudioPoster':initial_poster,
+        'activation':'already-selected detail button' if detail_entry else 'explicit enter button',
+        'noModelRequestBeforeInteraction':True}
 
 
 async def standard_case(browser, base, width):
     context, page, logs = await new_page(browser,width)
     case = {'width':width,'mode':'standard','passed':False,**logs}
     try:
-        case['lazyLoad'] = await open_viewer(page,base,logs)
+        case['lazyLoad'] = await open_viewer(page,base,logs,detail_entry=width==320)
         canvas = page.locator(STAGE+' canvas')
         assert await canvas.get_attribute('tabindex') == '0'
         assert await canvas.get_attribute('aria-label')
         assert await canvas.get_attribute('role') == 'img'
         assert (await state(page))['playing'] is True
+        assert (await state(page))['finish'] == 'gold'
+        assert await page.locator('[data-eyewear-finish="gold"]').get_attribute('aria-pressed') == 'true'
         await pause(page)
         case['manualPause'] = await stable_draws(page,'manual pause')
         case['viewStates'] = []
@@ -252,23 +293,27 @@ async def standard_case(browser, base, width):
             case['zoomChanged'] = True
         else:
             case['zoomChanged'] = 'Not exposed; inspect view screenshots.'
+        actual_distances = [x.get('actualCameraDistance') for x in case['viewStates']]
+        if all(isinstance(x,(int,float)) for x in actual_distances):
+            assert len({round(x,4) for x in actual_distances})>1,('Actual camera did not zoom',actual_distances)
+            case['actualCameraZoomChanged']={'distances':actual_distances,'passed':True}
         case['screenshots'] = [await screenshot(page,f'inspection-{width}', '.mi-inspection')]
         await pause(page)
         before_count = (await state(page))['renderCount']
-        await page.locator('[data-eyewear-finish="black"]').click()
+        await page.locator('[data-eyewear-finish="gold"]').click()
         await show_stage(page)
         await wait_render_after(page,before_count)
-        black = hashlib.sha256(await canvas.screenshot()).hexdigest()
+        gold = hashlib.sha256(await canvas.screenshot()).hexdigest()
         before_count = (await state(page))['renderCount']
-        await page.locator('[data-eyewear-finish="havana"]').click()
+        await page.locator('[data-eyewear-finish="silver"]').click()
         await show_stage(page)
         await wait_render_after(page,before_count)
-        havana = hashlib.sha256(await canvas.screenshot()).hexdigest()
-        assert (await state(page))['finish'] == 'havana'
-        assert await page.locator('[data-eyewear-finish="havana"]').get_attribute('aria-pressed') == 'true'
-        assert black != havana, 'Canvas pixels did not change for finish selection.'
-        case['finishChanged'] = {'state':'havana','canvasPixelsDiffer':True}
-        case['screenshots'].append(await screenshot(page,f'havana-{width}',VIEWER))
+        silver = hashlib.sha256(await canvas.screenshot()).hexdigest()
+        assert (await state(page))['finish'] == 'silver'
+        assert await page.locator('[data-eyewear-finish="silver"]').get_attribute('aria-pressed') == 'true'
+        assert gold != silver, 'Canvas pixels did not change for finish selection.'
+        case['finishChanged'] = {'from':'gold','to':'silver','canvasPixelsDiffer':True}
+        case['screenshots'].append(await screenshot(page,f'silver-{width}',VIEWER))
         before = await state(page)
         await canvas.focus()
         await page.keyboard.press('ArrowRight')
@@ -330,6 +375,21 @@ async def standard_case(browser, base, width):
         after = await draws(page)
         assert after['totalDraws'] > before['totalDraws']
         case['playResumesDraws'] = True
+        requests_before_studio = len(logs['modelRequests'])
+        await page.locator(ENTER).click()
+        await show_stage(page)
+        case['studioReturn'] = await studio_state(page,loaded=True)
+        assert (await state(page))['playing'] is True,'Studio mode should retain the user playback preference.'
+        case['studioReturn']['pausedDraws'] = await stable_draws(page,'studio mode rendering pause')
+        before = await draws(page)
+        await page.locator(ENTER).click()
+        await show_stage(page)
+        await wait_draws_after(page,before['totalDraws'])
+        assert (await state(page))['active'] is True
+        assert await canvas.get_attribute('tabindex')=='0'
+        assert await canvas.get_attribute('aria-hidden')!='true'
+        assert len(logs['modelRequests'])==requests_before_studio,'Reentry redownloaded the GLB.'
+        case['studioReturn']['reentryReusesModelAndResumes']=True
         await page.evaluate("window.scrollTo({top:0,behavior:'instant'})")
         await page.wait_for_function("document.querySelector('[data-eyewear-stage]').__eyewearState().visible === false",timeout=30000)
         assert (await state(page))['visible'] is False
@@ -395,6 +455,146 @@ async def standard_case(browser, base, width):
     return case
 
 
+async def fallback_state(page, interactive=True):
+    """The existing poster remains the sole visible model surface on failure."""
+    poster = page.locator(VIEWER+' .mi-product-poster')
+    expected_src = await poster.get_attribute('src')
+    assert await poster.is_visible()
+    assert await poster.get_attribute('aria-hidden') != 'true'
+    await page.wait_for_function("getComputedStyle(document.querySelector('[data-eyewear-viewer] .mi-product-poster')).opacity==='1'",timeout=10000)
+    result = await poster.evaluate('''async e=>{await e.decode();return {
+      src:e.getAttribute('src'),width:e.naturalWidth,height:e.naturalHeight,
+      opacity:getComputedStyle(e).opacity,fit:getComputedStyle(e).objectFit}}''')
+    assert result['src']==expected_src and result['width']>0 and result['height']>0,result
+    assert result['opacity']=='1',result
+    assert await page.locator(STAGE+' canvas:visible').count()==0
+    assert not await page.locator('[data-eyewear-tools]').is_visible()
+    assert not await page.locator(ENTER).is_visible()
+    if interactive:
+        await page.locator('[data-mi-point="1"]').click()
+        assert await page.locator('[data-mi-point="1"]').get_attribute('aria-pressed')=='true'
+        assert await page.locator('[data-mi-check-label]').inner_text()=='구조와 연결'
+        assert await page.locator(STAGE).get_attribute('data-state')=='fallback'
+        await show_stage(page)
+        result['detailButtonsStillWork']=True
+    return result
+
+
+async def async_model_case(browser,base,mode):
+    """Control only the GLB response, preserving the page's real async caller.
+
+    The failure case returns HTTP 200 with an invalid GLB body so parser failure
+    is handled without manufacturing an unrelated HTTP/browser console error.
+    The two race cases hold the response until selection or disposal occurs.
+    """
+    context,page,logs = await new_page(browser,390)
+    case = {'width':390,'mode':mode,'passed':False,**logs}
+    started,release,aborted = asyncio.Event(),asyncio.Event(),asyncio.Event()
+    controlled_urls = []
+
+    def model_failed(request):
+        if MODEL_URL.search(request.url):
+            aborted.set()
+
+    async def control_model(route):
+        controlled_urls.append(route.request.url)
+        started.set()
+        if mode=='model-load-failure':
+            await route.fulfill(status=200,content_type='model/gltf-binary',body=b'QA deliberately invalid GLB payload')
+            return
+        await release.wait()
+        try:
+            await route.continue_()
+        except Exception as exc:
+            if mode!='model-loading-dispose':
+                raise
+            # An already-aborted browser request may reject interception release.
+            # The requestfailed assertion below must still confirm the abort.
+            case['routeReleaseAfterAbort']=str(exc)
+
+    page.on('requestfailed',model_failed)
+    await context.route(MODEL_URL,control_model)
+    try:
+        await page.goto(base+ROUTE,wait_until='domcontentloaded')
+        await page.evaluate('document.fonts.ready')
+        poster_src = await page.locator(VIEWER+' .mi-product-poster').get_attribute('src')
+        assert not logs['modelRequests'],'GLB must remain lazy before the stage approaches the viewport.'
+        await show_stage(page)
+        await studio_state(page)
+        assert not logs['modelRequests'],'GLB must not load without a user action.'
+        await page.locator(ENTER).click()
+        await asyncio.wait_for(started.wait(),timeout=30)
+        case['controlledModelUrls']=controlled_urls
+        if mode=='model-load-failure':
+            await page.wait_for_function("document.querySelector('[data-eyewear-stage]').dataset.state==='fallback'",timeout=30000)
+            case['failureInjection']='HTTP 200 containing intentionally malformed GLB bytes; validates loader/parser failure handling.'
+            case['fallback']=await fallback_state(page)
+            assert case['fallback']['src']==poster_src
+            assert not logs['modelRequestFailures'],logs
+        else:
+            assert await page.locator(STAGE).get_attribute('data-state')=='loading'
+            held = await draws(page)
+            assert held['contextAttempts']==0,('GPU allocated while GLB is still pending',held)
+            assert not await page.locator('[data-eyewear-tools]').is_visible()
+            case['loadingState']={'webglContextAttempts':held['contextAttempts'],'controlsHidden':True}
+            if mode=='model-loading-selection':
+                await page.locator('[data-mi-point="2"]').click()
+                assert await page.locator('[data-mi-point="2"]').get_attribute('aria-pressed')=='true'
+                assert await page.locator('[data-mi-check-label]').inner_text()=='색과 질감'
+                release.set()
+                await show_stage(page)
+                await page.wait_for_function("document.querySelector('[data-eyewear-stage]').dataset.state==='ready'",timeout=30000)
+                await wait_render_after(page,0)
+                loaded = await state(page)
+                assert str(loaded['view'])=='2'
+                assert abs(loaded['cameraDistance']-VIEW_TARGETS[2]['distance'])<.001,loaded
+                case['latestSelectedViewOnFirstRender']=loaded
+                await pause(page)
+                await page.locator(RESET).click()
+                await show_stage(page)
+                case['latestSelectedViewAfterLoad']=await wait_view_endpoint(page,2)
+                assert not logs['modelRequestFailures'],logs
+            elif mode=='model-loading-studio':
+                await page.locator(ENTER).click()
+                assert await page.locator(VIEWER).get_attribute('data-mode')=='studio'
+                release.set()
+                await page.wait_for_function("document.querySelector('[data-eyewear-stage]').dataset.state==='ready'",timeout=30000)
+                case['studioDuringLoading']=await studio_state(page,loaded=True)
+                assert (await state(page))['renderCount']==0,'Viewer rendered after returning to studio during loading.'
+                before_requests=len(logs['modelRequests'])
+                case['inactiveAfterLoad']=await stable_draws(page,'loaded while studio mode active')
+                assert (await state(page))['renderCount']==0
+                await page.locator(ENTER).click()
+                await show_stage(page)
+                await wait_render_after(page,0)
+                assert (await state(page))['active'] is True
+                assert len(logs['modelRequests'])==before_requests
+                case['firstActivationAfterInactiveLoad']=True
+            else:
+                await page.evaluate("window.dispatchEvent(new PageTransitionEvent('pagehide',{persisted:false}))")
+                release.set()
+                await asyncio.wait_for(aborted.wait(),timeout=30)
+                case['abortedRequests']=list(logs['modelRequestFailures'])
+                assert case['abortedRequests'] and all('ABORT' in (x['failure'] or '').upper() for x in case['abortedRequests']),case
+                case['afterAbort']=await stable_draws(page,'GLB cancelled during disposal')
+                final = await draws(page)
+                assert final['contextAttempts']==0 and final['totalDraws']==0,final
+                assert await page.locator(STAGE+' canvas').count()==0
+                assert await page.locator(STAGE).evaluate("e=>typeof e.__eyewearState==='undefined'")
+                case['noLateViewerOrGpuAllocation']=True
+        assert not logs['pageErrors'] and not logs['consoleErrors'] and not logs['httpErrors'],logs
+        case['screenshot']=await screenshot(page,mode,VIEWER)
+        case['passed']=True
+    except Exception as exc:
+        case['failure']=f'{type(exc).__name__}: {exc}'
+        case['traceback']=traceback.format_exc()
+        await screenshot(page,f'failure-{mode}')
+    finally:
+        release.set()
+        await context.close()
+    return case
+
+
 async def alternate_case(browser,base,mode):
     width = 1440 if mode=='lifecycle-cleanup' else 390
     context,page,logs = await new_page(browser,width,reduced=mode=='reduced-motion',no_js=mode=='no-javascript',no_webgl=mode=='webgl-unavailable')
@@ -429,16 +629,14 @@ async def alternate_case(browser,base,mode):
             await page.goto(base+ROUTE,wait_until='networkidle')
             await show_stage(page)
             if mode=='webgl-unavailable':
+                await studio_state(page)
+                assert not logs['modelRequests']
+                await page.locator(ENTER).click()
                 await page.wait_for_function("document.querySelector('[data-eyewear-stage]')?.dataset.state === 'fallback'",timeout=20000)
                 case['contextAttempts'] = (await draws(page))['contextAttempts']
                 assert case['contextAttempts'] > 0
         if mode in ['no-javascript','webgl-unavailable','context-loss']:
-            images = page.locator(VIEWER+' img:visible')
-            assert await images.count()>0,'Visible fallback poster missing'
-            case['fallbackImages'] = await images.evaluate_all('els=>Promise.all(els.map(async e=>{await e.decode();return {src:e.getAttribute("src"),width:e.naturalWidth,height:e.naturalHeight}}))')
-            assert all(x['width']>0 and x['height']>0 for x in case['fallbackImages'])
-            case['visibleCanvases'] = await page.locator(STAGE+' canvas:visible').count()
-            assert case['visibleCanvases']==0
+            case['fallback']=await fallback_state(page,interactive=mode!='no-javascript')
         assert await page.evaluate('document.documentElement.scrollWidth===innerWidth')
         if 'screenshot' not in case:
             case['screenshot'] = await screenshot(page,mode,VIEWER)
@@ -461,7 +659,7 @@ async def run(args):
     global VIEW_TARGETS
     VIEW_TARGETS = read_view_targets()
     OUT.mkdir(parents=True,exist_ok=True)
-    report={'checkedAt':datetime.now(timezone.utc).isoformat(),'base':args.base,'scope':'Actual WebGL eyewear viewer, local built page.',
+    report={'checkedAt':datetime.now(timezone.utc).isoformat(),'base':args.base,'scope':'Studio poster first; explicit async GLB eyewear viewer activation, gold and silver finishes.',
         'browser':'Chromium with ANGLE SwiftShader software WebGL; hardware GPU performance not measured.',
         'endpointWaitTargets':VIEW_TARGETS,
         'cases':[],'passed':False}
@@ -473,7 +671,7 @@ async def run(args):
             report['cases'].append(case);save(report)
             print(f"standard {width}: {'PASS' if case['passed'] else case['failure']}",flush=True)
         for mode in args.modes:
-            case=await alternate_case(browser,args.base,mode)
+            case=await (async_model_case(browser,args.base,mode) if mode.startswith('model-') else alternate_case(browser,args.base,mode))
             report['cases'].append(case);save(report)
             print(f"{mode}: {'PASS' if case['passed'] else case['failure']}",flush=True)
         await browser.close()
@@ -486,6 +684,7 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--base',default='http://127.0.0.1:4181')
     parser.add_argument('--widths',type=int,nargs='*',default=[1440,390,320])
-    parser.add_argument('--modes',nargs='*',default=['reduced-motion','webgl-unavailable','context-loss','no-javascript'])
+    parser.add_argument('--modes',nargs='*',default=['reduced-motion','webgl-unavailable','context-loss','no-javascript',
+        'model-load-failure','model-loading-selection','model-loading-studio','model-loading-dispose'])
     args=parser.parse_args();args.base=args.base.rstrip('/')
     raise SystemExit(0 if asyncio.run(run(args)) else 1)

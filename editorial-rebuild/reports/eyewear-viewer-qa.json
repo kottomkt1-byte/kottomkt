@@ -1,35 +1,35 @@
 {
-  "checkedAt": "2026-11-04T03:29:46.795035+00:00",
+  "checkedAt": "2026-11-04T05:33:39.680179+00:00",
   "base": "http://127.0.0.1:4183",
-  "scope": "Actual WebGL eyewear viewer, local built page.",
+  "scope": "Studio poster first; explicit async GLB eyewear viewer activation, gold and silver finishes.",
   "browser": "Chromium with ANGLE SwiftShader software WebGL; hardware GPU performance not measured.",
   "endpointWaitTargets": [
     {
-      "x": 0.13,
-      "y": -0.38,
-      "z": -0.035,
-      "distance": 305,
+      "x": 0.14,
+      "y": -0.48,
+      "z": -0.025,
+      "distance": 365,
+      "targetX": 0,
+      "targetY": -4,
+      "targetZ": 0
+    },
+    {
+      "x": 0.22,
+      "y": -1.05,
+      "z": -0.025,
+      "distance": 330,
       "targetX": 0,
       "targetY": -3,
       "targetZ": 0
     },
     {
-      "x": 0.2,
-      "y": -1.0,
-      "z": -0.035,
-      "distance": 275,
-      "targetX": -3,
-      "targetY": -2,
-      "targetZ": -3
-    },
-    {
-      "x": 0.07,
-      "y": -0.22,
-      "z": 0.025,
-      "distance": 195,
-      "targetX": 22,
-      "targetY": 2,
-      "targetZ": 33
+      "x": 0.08,
+      "y": -0.08,
+      "z": 0.018,
+      "distance": 285,
+      "targetX": 0,
+      "targetY": -3,
+      "targetZ": 45
     }
   ],
   "cases": [
@@ -39,14 +39,16 @@
       "passed": true,
       "pageErrors": [],
       "consoleErrors": [],
-      "consoleWarnings": [
-        "WebGL: INVALID_OPERATION: loseContext: context already lost"
-      ],
+      "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CtzTqL5z.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-B2SAxeE4.js"
+        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
       ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "modelRequestFailures": [],
       "lazyLoad": {
         "beforeViewport": {
           "contextAttempts": 0,
@@ -58,102 +60,132 @@
         "afterViewport": {
           "contextAttempts": 1,
           "contexts": 1,
-          "totalDraws": 233,
+          "totalDraws": 118,
           "events": [],
           "canvases": [
             {
               "className": "mi-product-canvas",
               "width": 750,
               "height": 636,
-              "draws": 233
+              "draws": 118
             }
           ]
         },
         "lazyJavaScriptRequests": [
-          "http://127.0.0.1:4183/assets/eyewear-viewer-B2SAxeE4.js"
-        ]
+          "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+        ],
+        "loadedModelUrls": [
+          "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        ],
+        "primaryStudioPoster": {
+          "poster": {
+            "src": "art/eyewear-studio.webp",
+            "width": 1200,
+            "height": 1000
+          },
+          "toolsHidden": true,
+          "loadedCanvasInactive": false
+        },
+        "activation": "explicit enter button",
+        "noModelRequestBeforeInteraction": true
       },
       "manualPause": {
-        "drawCallsBefore": 597,
-        "drawCallsAfter": 597,
+        "drawCallsBefore": 190,
+        "drawCallsAfter": 190,
         "sampleMs": 550
       },
       "viewStates": [
         {
           "view": 0,
           "playing": false,
+          "active": true,
           "visible": true,
           "renderCount": 11,
           "rotation": {
-            "x": 0.13,
-            "y": -0.379999
+            "x": 0.14,
+            "y": -0.479999
           },
-          "finish": "black",
+          "finish": "gold",
           "reduced": false,
-          "cameraDistance": 305
+          "cameraDistance": 365,
+          "actualCameraDistance": 405.063881251596,
+          "source": "Khronos Sunglasses GLB"
         },
         {
           "view": 1,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 17,
+          "renderCount": 18,
           "rotation": {
-            "x": 0.2,
-            "y": -1
+            "x": 0.22,
+            "y": -1.05
           },
-          "finish": "black",
+          "finish": "gold",
           "reduced": false,
-          "cameraDistance": 275
+          "cameraDistance": 330,
+          "actualCameraDistance": 375.2006745134962,
+          "source": "Khronos Sunglasses GLB"
         },
         {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 22,
+          "renderCount": 24,
           "rotation": {
-            "x": 0.07,
-            "y": -0.220002
+            "x": 0.08,
+            "y": -0.08
           },
-          "finish": "black",
+          "finish": "gold",
           "reduced": false,
-          "cameraDistance": 195.000212
+          "cameraDistance": 285,
+          "actualCameraDistance": 320.6294360827118,
+          "source": "Khronos Sunglasses GLB"
         }
       ],
       "zoomChanged": true,
       "screenshots": [
         "output/playwright/eyewear-viewer/inspection-1440.png",
-        "output/playwright/eyewear-viewer/havana-1440.png"
+        "output/playwright/eyewear-viewer/silver-1440.png"
       ],
       "finishChanged": {
-        "state": "havana",
+        "from": "gold",
+        "to": "silver",
         "canvasPixelsDiffer": true
       },
       "keyboardRotation": {
         "before": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 25,
+          "renderCount": 26,
           "rotation": {
-            "x": 0.07,
-            "y": -0.22
+            "x": 0.08,
+            "y": -0.08
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 320.6294360827118,
+          "source": "Khronos Sunglasses GLB"
         },
         "after": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 26,
+          "renderCount": 27,
           "rotation": {
-            "x": 0.07,
-            "y": -0.07999999999999999
+            "x": 0.08,
+            "y": 0.06000000000000001
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 316.6957172774603,
+          "source": "Khronos Sunglasses GLB"
         }
       },
       "dragRotation": {
@@ -161,67 +193,94 @@
         "before": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 26,
+          "renderCount": 27,
           "rotation": {
-            "x": 0.07,
-            "y": -0.07999999999999999
+            "x": 0.08,
+            "y": 0.06000000000000001
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 316.6957172774603,
+          "source": "Khronos Sunglasses GLB"
         },
         "after": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
           "renderCount": 35,
           "rotation": {
-            "x": 0.19000000000000006,
-            "y": 0.8200000000000001
+            "x": 0.20000000000000007,
+            "y": 0.9600000000000002
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 325.7529309124827,
+          "source": "Khronos Sunglasses GLB"
         }
       },
       "resetAndHome": {
         "button": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 40,
+          "renderCount": 41,
           "rotation": {
-            "x": 0.07,
-            "y": -0.219999
+            "x": 0.08,
+            "y": -0.08
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 320.6294360827118,
+          "source": "Khronos Sunglasses GLB"
         },
         "key": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 45,
+          "renderCount": 47,
           "rotation": {
-            "x": 0.07,
-            "y": -0.22
+            "x": 0.08,
+            "y": -0.08
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 320.6294360827118,
+          "source": "Khronos Sunglasses GLB"
         }
       },
       "playResumesDraws": true,
+      "studioReturn": {
+        "poster": {
+          "src": "art/eyewear-studio.webp",
+          "width": 1200,
+          "height": 1000
+        },
+        "toolsHidden": true,
+        "loadedCanvasInactive": true,
+        "pausedDraws": {
+          "drawCallsBefore": 1318,
+          "drawCallsAfter": 1318,
+          "sampleMs": 550
+        },
+        "reentryReusesModelAndResumes": true
+      },
       "offscreenPause": {
-        "drawCallsBefore": 4055,
-        "drawCallsAfter": 4055,
+        "drawCallsBefore": 1414,
+        "drawCallsAfter": 1414,
         "sampleMs": 550
       },
       "hiddenPause": {
-        "drawCallsBefore": 4197,
-        "drawCallsAfter": 4197,
+        "drawCallsBefore": 1462,
+        "drawCallsAfter": 1462,
         "sampleMs": 550
       },
       "visibilityTestMethod": "Simulated document.hidden getter plus visibilitychange event; not an OS background-tab test.",
@@ -238,15 +297,18 @@
         "state": {
           "view": 1,
           "playing": true,
+          "active": true,
           "visible": true,
-          "renderCount": 66,
+          "renderCount": 74,
           "rotation": {
-            "x": 0.2,
-            "y": -1
+            "x": 0.22,
+            "y": -1.05
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 275
+          "cameraDistance": 330,
+          "actualCameraDistance": 375.2006745134962,
+          "source": "Khronos Sunglasses GLB"
         }
       },
       "runtimeReducedApplied": {
@@ -256,29 +318,39 @@
         "state": {
           "view": 1,
           "playing": false,
+          "active": true,
           "visible": false,
-          "renderCount": 67,
+          "renderCount": 75,
           "rotation": {
-            "x": 0.2,
-            "y": -1
+            "x": 0.22,
+            "y": -1.05
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": true,
-          "cameraDistance": 275
+          "cameraDistance": 330,
+          "actualCameraDistance": 375.2006745134962,
+          "source": "Khronos Sunglasses GLB"
         }
       },
       "runtimeReducedMotion": {
-        "drawCallsBefore": 5533,
-        "drawCallsAfter": 5533,
+        "drawCallsBefore": 1870,
+        "drawCallsAfter": 1870,
         "sampleMs": 550
       },
       "pagehideCleanup": {
-        "drawCallsBefore": 5533,
-        "drawCallsAfter": 5533,
+        "drawCallsBefore": 1870,
+        "drawCallsAfter": 1870,
         "sampleMs": 550
       },
-      "buildValidation": "Latest production build; preference synchronization, PMREM sigma 0.035, and contained fallback poster.",
-      "consoleWarningContext": "Produced during deliberate context-loss/duplicate pagehide cleanup testing; no page, console-error or HTTP failure. PMREM sampling warning absent in latest build."
+      "actualCameraZoomChanged": {
+        "distances": [
+          405.063881251596,
+          375.2006745134962,
+          320.6294360827118
+        ],
+        "passed": true,
+        "verification": "Post-run assertion over captured rendered camera state; also added to audit script."
+      }
     },
     {
       "width": 390,
@@ -286,15 +358,16 @@
       "passed": true,
       "pageErrors": [],
       "consoleErrors": [],
-      "consoleWarnings": [
-        "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20",
-        "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
-      ],
+      "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-LJWHM-MM.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-CIr-NwqC.js"
+        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
       ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "modelRequestFailures": [],
       "lazyLoad": {
         "beforeViewport": {
           "contextAttempts": 0,
@@ -306,102 +379,132 @@
         "afterViewport": {
           "contextAttempts": 1,
           "contexts": 1,
-          "totalDraws": 233,
+          "totalDraws": 166,
           "events": [],
           "canvases": [
             {
               "className": "mi-product-canvas",
               "width": 342,
               "height": 335,
-              "draws": 233
+              "draws": 166
             }
           ]
         },
         "lazyJavaScriptRequests": [
-          "http://127.0.0.1:4183/assets/eyewear-viewer-CIr-NwqC.js"
-        ]
+          "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+        ],
+        "loadedModelUrls": [
+          "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        ],
+        "primaryStudioPoster": {
+          "poster": {
+            "src": "art/eyewear-studio.webp",
+            "width": 1200,
+            "height": 1000
+          },
+          "toolsHidden": true,
+          "loadedCanvasInactive": false
+        },
+        "activation": "explicit enter button",
+        "noModelRequestBeforeInteraction": true
       },
       "manualPause": {
-        "drawCallsBefore": 597,
-        "drawCallsAfter": 597,
+        "drawCallsBefore": 238,
+        "drawCallsAfter": 238,
         "sampleMs": 550
       },
       "viewStates": [
         {
           "view": 0,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 16,
+          "renderCount": 15,
           "rotation": {
-            "x": 0.130004,
-            "y": -0.379945
+            "x": 0.140013,
+            "y": -0.479831
           },
-          "finish": "black",
+          "finish": "gold",
           "reduced": false,
-          "cameraDistance": 305
+          "cameraDistance": 365,
+          "actualCameraDistance": 405.0605326695778,
+          "source": "Khronos Sunglasses GLB"
         },
         {
           "view": 1,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 27,
+          "renderCount": 23,
           "rotation": {
-            "x": 0.2,
-            "y": -1
+            "x": 0.22,
+            "y": -1.049998
           },
-          "finish": "black",
+          "finish": "gold",
           "reduced": false,
-          "cameraDistance": 275
+          "cameraDistance": 330.000153,
+          "actualCameraDistance": 375.20058434733795,
+          "source": "Khronos Sunglasses GLB"
         },
         {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 34,
+          "renderCount": 31,
           "rotation": {
-            "x": 0.07,
-            "y": -0.22
+            "x": 0.080001,
+            "y": -0.080004
           },
-          "finish": "black",
+          "finish": "gold",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285.000197,
+          "actualCameraDistance": 320.6303178054525,
+          "source": "Khronos Sunglasses GLB"
         }
       ],
       "zoomChanged": true,
       "screenshots": [
         "output/playwright/eyewear-viewer/inspection-390.png",
-        "output/playwright/eyewear-viewer/havana-390.png"
+        "output/playwright/eyewear-viewer/silver-390.png"
       ],
       "finishChanged": {
-        "state": "havana",
+        "from": "gold",
+        "to": "silver",
         "canvasPixelsDiffer": true
       },
       "keyboardRotation": {
         "before": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 37,
+          "renderCount": 35,
           "rotation": {
-            "x": 0.07,
-            "y": -0.22
+            "x": 0.08,
+            "y": -0.08
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 320.6294360827118,
+          "source": "Khronos Sunglasses GLB"
         },
         "after": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 38,
+          "renderCount": 36,
           "rotation": {
-            "x": 0.07,
-            "y": -0.07999999999999999
+            "x": 0.08,
+            "y": 0.06000000000000001
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 316.6957172774603,
+          "source": "Khronos Sunglasses GLB"
         }
       },
       "dragRotation": {
@@ -409,71 +512,98 @@
         "before": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 38,
+          "renderCount": 36,
           "rotation": {
-            "x": 0.07,
-            "y": -0.07999999999999999
+            "x": 0.08,
+            "y": 0.06000000000000001
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 316.6957172774603,
+          "source": "Khronos Sunglasses GLB"
         },
         "after": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 45,
+          "renderCount": 43,
           "rotation": {
-            "x": 0.10600000000000004,
-            "y": 0.568
+            "x": 0.11600000000000003,
+            "y": 0.7079999999999999
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 354.129249946939,
+          "source": "Khronos Sunglasses GLB"
         }
       },
       "resetAndHome": {
         "button": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 53,
+          "renderCount": 51,
           "rotation": {
-            "x": 0.07,
-            "y": -0.22
+            "x": 0.08,
+            "y": -0.08
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 320.6294360827118,
+          "source": "Khronos Sunglasses GLB"
         },
         "key": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 62,
+          "renderCount": 59,
           "rotation": {
-            "x": 0.07,
-            "y": -0.22
+            "x": 0.08,
+            "y": -0.080095
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 320.64561965957046,
+          "source": "Khronos Sunglasses GLB"
         }
       },
       "verticalTouchScroll": {
         "before": 1949,
-        "after": 2042
+        "after": 2101
       },
       "playResumesDraws": true,
+      "studioReturn": {
+        "poster": {
+          "src": "art/eyewear-studio.webp",
+          "width": 1200,
+          "height": 1000
+        },
+        "toolsHidden": true,
+        "loadedCanvasInactive": true,
+        "pausedDraws": {
+          "drawCallsBefore": 1702,
+          "drawCallsAfter": 1702,
+          "sampleMs": 550
+        },
+        "reentryReusesModelAndResumes": true
+      },
       "offscreenPause": {
-        "drawCallsBefore": 5621,
-        "drawCallsAfter": 5621,
+        "drawCallsBefore": 1774,
+        "drawCallsAfter": 1774,
         "sampleMs": 550
       },
       "hiddenPause": {
-        "drawCallsBefore": 5763,
-        "drawCallsAfter": 5763,
+        "drawCallsBefore": 1822,
+        "drawCallsAfter": 1822,
         "sampleMs": 550
       },
       "visibilityTestMethod": "Simulated document.hidden getter plus visibilitychange event; not an OS background-tab test.",
@@ -481,11 +611,15 @@
         "width": 390,
         "scrollWidth": 390
       },
-      "buildValidation": "Carried forward from prior production build: unchanged layout, preset poses, geometry, input controls and color finishes. Changed preference/fallback paths rechecked in latest-build cases.",
-      "priorBuildWarningsResolvedInLatestBuild": [
-        "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20",
-        "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
-      ]
+      "actualCameraZoomChanged": {
+        "distances": [
+          405.0605326695778,
+          375.20058434733795,
+          320.6303178054525
+        ],
+        "passed": true,
+        "verification": "Post-run assertion over captured rendered camera state; also added to audit script."
+      }
     },
     {
       "width": 320,
@@ -493,15 +627,16 @@
       "passed": true,
       "pageErrors": [],
       "consoleErrors": [],
-      "consoleWarnings": [
-        "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20",
-        "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
-      ],
+      "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-LJWHM-MM.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-CIr-NwqC.js"
+        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
       ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "modelRequestFailures": [],
       "lazyLoad": {
         "beforeViewport": {
           "contextAttempts": 0,
@@ -513,102 +648,132 @@
         "afterViewport": {
           "contextAttempts": 1,
           "contexts": 1,
-          "totalDraws": 233,
+          "totalDraws": 118,
           "events": [],
           "canvases": [
             {
               "className": "mi-product-canvas",
               "width": 296,
               "height": 290,
-              "draws": 233
+              "draws": 118
             }
           ]
         },
         "lazyJavaScriptRequests": [
-          "http://127.0.0.1:4183/assets/eyewear-viewer-CIr-NwqC.js"
-        ]
+          "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+        ],
+        "loadedModelUrls": [
+          "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        ],
+        "primaryStudioPoster": {
+          "poster": {
+            "src": "art/eyewear-studio.webp",
+            "width": 1200,
+            "height": 1000
+          },
+          "toolsHidden": true,
+          "loadedCanvasInactive": false
+        },
+        "activation": "already-selected detail button",
+        "noModelRequestBeforeInteraction": true
       },
       "manualPause": {
-        "drawCallsBefore": 597,
-        "drawCallsAfter": 597,
+        "drawCallsBefore": 190,
+        "drawCallsAfter": 190,
         "sampleMs": 550
       },
       "viewStates": [
         {
           "view": 0,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 13,
+          "renderCount": 15,
           "rotation": {
-            "x": 0.130005,
-            "y": -0.379938
+            "x": 0.140004,
+            "y": -0.479951
           },
-          "finish": "black",
+          "finish": "gold",
           "reduced": false,
-          "cameraDistance": 305
+          "cameraDistance": 365,
+          "actualCameraDistance": 405.0629277584296,
+          "source": "Khronos Sunglasses GLB"
         },
         {
           "view": 1,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 21,
+          "renderCount": 23,
           "rotation": {
-            "x": 0.2,
-            "y": -1
+            "x": 0.22,
+            "y": -1.05
           },
-          "finish": "black",
+          "finish": "gold",
           "reduced": false,
-          "cameraDistance": 275
+          "cameraDistance": 330.000015,
+          "actualCameraDistance": 375.2006745134963,
+          "source": "Khronos Sunglasses GLB"
         },
         {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 26,
+          "renderCount": 31,
           "rotation": {
-            "x": 0.07,
-            "y": -0.22
+            "x": 0.08,
+            "y": -0.08
           },
-          "finish": "black",
+          "finish": "gold",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 320.6294360827118,
+          "source": "Khronos Sunglasses GLB"
         }
       ],
       "zoomChanged": true,
       "screenshots": [
         "output/playwright/eyewear-viewer/inspection-320.png",
-        "output/playwright/eyewear-viewer/havana-320.png"
+        "output/playwright/eyewear-viewer/silver-320.png"
       ],
       "finishChanged": {
-        "state": "havana",
+        "from": "gold",
+        "to": "silver",
         "canvasPixelsDiffer": true
       },
       "keyboardRotation": {
         "before": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 29,
+          "renderCount": 34,
           "rotation": {
-            "x": 0.07,
-            "y": -0.22
+            "x": 0.08,
+            "y": -0.08
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 320.6294360827118,
+          "source": "Khronos Sunglasses GLB"
         },
         "after": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 30,
+          "renderCount": 35,
           "rotation": {
-            "x": 0.07,
-            "y": -0.07999999999999999
+            "x": 0.08,
+            "y": 0.06000000000000001
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 316.69571727746035,
+          "source": "Khronos Sunglasses GLB"
         }
       },
       "dragRotation": {
@@ -616,71 +781,98 @@
         "before": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 30,
+          "renderCount": 35,
           "rotation": {
-            "x": 0.07,
-            "y": -0.07999999999999999
+            "x": 0.08,
+            "y": 0.06000000000000001
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 316.69571727746035,
+          "source": "Khronos Sunglasses GLB"
         },
         "after": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 37,
+          "renderCount": 42,
           "rotation": {
-            "x": 0.10600000000000004,
-            "y": 0.568
+            "x": 0.11600000000000003,
+            "y": 0.7079999999999999
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 354.129249946939,
+          "source": "Khronos Sunglasses GLB"
         }
       },
       "resetAndHome": {
         "button": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 47,
+          "renderCount": 50,
           "rotation": {
-            "x": 0.07,
-            "y": -0.219989
+            "x": 0.080005,
+            "y": -0.079883
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 320.60952130147047,
+          "source": "Khronos Sunglasses GLB"
         },
         "key": {
           "view": 2,
           "playing": false,
+          "active": true,
           "visible": true,
-          "renderCount": 55,
+          "renderCount": 58,
           "rotation": {
-            "x": 0.07,
-            "y": -0.220005
+            "x": 0.08,
+            "y": -0.080003
           },
-          "finish": "havana",
+          "finish": "silver",
           "reduced": false,
-          "cameraDistance": 195
+          "cameraDistance": 285,
+          "actualCameraDistance": 320.62994719336945,
+          "source": "Khronos Sunglasses GLB"
         }
       },
       "verticalTouchScroll": {
         "before": 1780,
-        "after": 1873
+        "after": 1926
       },
       "playResumesDraws": true,
+      "studioReturn": {
+        "poster": {
+          "src": "art/eyewear-studio.webp",
+          "width": 1200,
+          "height": 1000
+        },
+        "toolsHidden": true,
+        "loadedCanvasInactive": true,
+        "pausedDraws": {
+          "drawCallsBefore": 1678,
+          "drawCallsAfter": 1678,
+          "sampleMs": 550
+        },
+        "reentryReusesModelAndResumes": true
+      },
       "offscreenPause": {
-        "drawCallsBefore": 4895,
-        "drawCallsAfter": 4895,
+        "drawCallsBefore": 1750,
+        "drawCallsAfter": 1750,
         "sampleMs": 550
       },
       "hiddenPause": {
-        "drawCallsBefore": 5037,
-        "drawCallsAfter": 5037,
+        "drawCallsBefore": 1798,
+        "drawCallsAfter": 1798,
         "sampleMs": 550
       },
       "visibilityTestMethod": "Simulated document.hidden getter plus visibilitychange event; not an OS background-tab test.",
@@ -688,87 +880,15 @@
         "width": 320,
         "scrollWidth": 320
       },
-      "buildValidation": "Carried forward from prior production build: unchanged layout, preset poses, geometry, input controls and color finishes. Changed preference/fallback paths rechecked in latest-build cases.",
-      "priorBuildWarningsResolvedInLatestBuild": [
-        "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20",
-        "sigmaRadians, 0.045, is too large and will clip, as it requested 22 samples when the maximum is set to 20"
-      ]
-    },
-    {
-      "width": 390,
-      "mode": "context-loss",
-      "passed": true,
-      "pageErrors": [],
-      "consoleErrors": [],
-      "consoleWarnings": [
-        "THREE.WebGLRenderer: WEBGL_lose_context extension not supported."
-      ],
-      "httpErrors": [],
-      "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CtzTqL5z.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-B2SAxeE4.js"
-      ],
-      "lazyLoad": {
-        "beforeViewport": {
-          "contextAttempts": 0,
-          "contexts": 0,
-          "totalDraws": 0,
-          "events": [],
-          "canvases": []
-        },
-        "afterViewport": {
-          "contextAttempts": 1,
-          "contexts": 1,
-          "totalDraws": 233,
-          "events": [],
-          "canvases": [
-            {
-              "className": "mi-product-canvas",
-              "width": 342,
-              "height": 335,
-              "draws": 233
-            }
-          ]
-        },
-        "lazyJavaScriptRequests": [
-          "http://127.0.0.1:4183/assets/eyewear-viewer-B2SAxeE4.js"
-        ]
-      },
-      "contextLossEvents": [
-        "lost"
-      ],
-      "fallbackImages": [
-        {
-          "src": "art/eyewear-studio.webp",
-          "width": 1200,
-          "height": 1000
-        }
-      ],
-      "visibleCanvases": 0,
-      "screenshot": "output/playwright/eyewear-viewer/context-loss.png",
-      "expectedWebGLConsoleDiagnostics": [],
-      "buildValidation": "Latest production build; preference synchronization, PMREM sigma 0.035, and contained fallback poster.",
-      "consoleWarningContext": "Produced during deliberate context-loss/duplicate pagehide cleanup testing; no page, console-error or HTTP failure. PMREM sampling warning absent in latest build."
-    },
-    {
-      "width": 390,
-      "mode": "no-javascript",
-      "passed": true,
-      "pageErrors": [],
-      "consoleErrors": [],
-      "consoleWarnings": [],
-      "httpErrors": [],
-      "javascriptRequests": [],
-      "fallbackImages": [
-        {
-          "src": "art/eyewear-studio.webp",
-          "width": 1200,
-          "height": 1000
-        }
-      ],
-      "visibleCanvases": 0,
-      "screenshot": "output/playwright/eyewear-viewer/no-javascript.png",
-      "buildValidation": "Latest production build; preference synchronization, PMREM sigma 0.035, and contained fallback poster."
+      "actualCameraZoomChanged": {
+        "distances": [
+          405.0629277584296,
+          375.2006745134963,
+          320.6294360827118
+        ],
+        "passed": true,
+        "verification": "Post-run assertion over captured rendered camera state; also added to audit script."
+      }
     },
     {
       "width": 390,
@@ -779,9 +899,13 @@
       "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CtzTqL5z.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-B2SAxeE4.js"
+        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
       ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "modelRequestFailures": [],
       "lazyLoad": {
         "beforeViewport": {
           "contextAttempts": 0,
@@ -793,46 +917,62 @@
         "afterViewport": {
           "contextAttempts": 1,
           "contexts": 1,
-          "totalDraws": 142,
+          "totalDraws": 70,
           "events": [],
           "canvases": [
             {
               "className": "mi-product-canvas",
               "width": 342,
               "height": 335,
-              "draws": 142
+              "draws": 70
             }
           ]
         },
         "lazyJavaScriptRequests": [
-          "http://127.0.0.1:4183/assets/eyewear-viewer-B2SAxeE4.js"
-        ]
+          "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+        ],
+        "loadedModelUrls": [
+          "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        ],
+        "primaryStudioPoster": {
+          "poster": {
+            "src": "art/eyewear-studio.webp",
+            "width": 1200,
+            "height": 1000
+          },
+          "toolsHidden": true,
+          "loadedCanvasInactive": false
+        },
+        "activation": "explicit enter button",
+        "noModelRequestBeforeInteraction": true
       },
       "staticRender": {
-        "drawCallsBefore": 142,
-        "drawCallsAfter": 142,
+        "drawCallsBefore": 70,
+        "drawCallsAfter": 70,
         "sampleMs": 550
       },
       "manualViewSelection": {
         "view": 2,
         "playing": false,
+        "active": true,
         "visible": true,
         "renderCount": 2,
         "rotation": {
-          "x": 0.07,
-          "y": -0.22
+          "x": 0.08,
+          "y": -0.08
         },
-        "finish": "black",
+        "finish": "gold",
         "reduced": true,
-        "cameraDistance": 195
+        "cameraDistance": 285,
+        "actualCameraDistance": 320.6294360827118,
+        "source": "Khronos Sunglasses GLB"
       },
       "staticAfterSelection": {
-        "drawCallsBefore": 213,
-        "drawCallsAfter": 213,
+        "drawCallsBefore": 94,
+        "drawCallsAfter": 94,
         "sampleMs": 550
       },
-      "screenshot": "output/playwright/eyewear-viewer/reduced-motion.png",
-      "buildValidation": "Latest production build; preference synchronization, PMREM sigma 0.035, and contained fallback poster."
+      "screenshot": "output/playwright/eyewear-viewer/reduced-motion.png"
     },
     {
       "width": 390,
@@ -843,144 +983,325 @@
       "consoleWarnings": [],
       "httpErrors": [],
       "javascriptRequests": [
-        "http://127.0.0.1:4183/assets/main-CtzTqL5z.js",
-        "http://127.0.0.1:4183/assets/eyewear-viewer-B2SAxeE4.js"
+        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
       ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "modelRequestFailures": [],
       "contextAttempts": 1,
-      "fallbackImages": [
-        {
-          "src": "art/eyewear-studio.webp",
-          "width": 1200,
-          "height": 1000
-        }
-      ],
-      "visibleCanvases": 0,
-      "screenshot": "output/playwright/eyewear-viewer/webgl-unavailable.png",
-      "expectedWebGLConsoleDiagnostics": [],
-      "buildValidation": "Latest production build; preference synchronization, PMREM sigma 0.035, and contained fallback poster."
-    }
-  ],
-  "passed": true,
-  "recheckNotes": {
-    "initialFailure": "Runtime reduced-motion test found native viewer MediaQueryList callback was not invoked after the full desktop interaction sequence; its listener remained attached. Separately, GSAP media reversion restored scrollY to 0.",
-    "implementationResolution": "Preference state is synchronized on native/GSAP media events and render/visibility entry. Latest desktop test confirms disabled play control, playing=false and stopped WebGL draw calls.",
-    "qaResolution": "Wait for the public play control to disable before inspecting state; re-enter the stage after media-driven scroll restoration; condition-based waits verify rendered preset endpoints.",
-    "reusedCoverage": "390px and 320px normal interaction coverage reused as requested from unchanged geometry/layout/control build; all changed paths have latest-build checks.",
-    "browserLimit": "Chromium ANGLE SwiftShader software WebGL. document.hidden coverage is explicitly simulated; hardware GPU performance and real OS background-tab lifecycle were not measured.",
-    "cleanupResolution": "Latest cleanup-only build adds idempotent disposal and checks for an already-lost context before forceContextLoss. Focused repeated-pagehide and context-loss teardown cases pass with zero console warnings/errors."
-  },
-  "visualReview": {
-    "reviewed": [
-      "output/playwright/eyewear-viewer/inspection-1440.png",
-      "output/playwright/eyewear-viewer/havana-1440.png",
-      "output/playwright/eyewear-viewer/havana-320.png",
-      "output/playwright/eyewear-viewer/no-javascript.png"
-    ],
-    "result": "Black and havana finishes visibly differ, material closeup is intentional, 320px controls wrap inside the viewport, and the latest contained fallback poster shows both temple tips."
-  },
-  "cleanupGuardRecheck": {
-    "checkedAt": "2026-11-04T03:33:09.132877+00:00",
-    "build": "main-UhdcldZm / eyewear-viewer-1d3eZltY",
-    "checks": [
-      {
-        "width": 1440,
-        "mode": "lifecycle-cleanup",
-        "passed": true,
-        "pageErrors": [],
-        "consoleErrors": [],
-        "consoleWarnings": [],
-        "httpErrors": [],
-        "javascriptRequests": [
-          "http://127.0.0.1:4183/assets/main-UhdcldZm.js",
-          "http://127.0.0.1:4183/assets/eyewear-viewer-1d3eZltY.js"
-        ],
-        "lazyLoad": {
-          "beforeViewport": {
-            "contextAttempts": 0,
-            "contexts": 0,
-            "totalDraws": 0,
-            "events": [],
-            "canvases": []
-          },
-          "afterViewport": {
-            "contextAttempts": 1,
-            "contexts": 1,
-            "totalDraws": 324,
-            "events": [],
-            "canvases": [
-              {
-                "className": "mi-product-canvas",
-                "width": 750,
-                "height": 636,
-                "draws": 324
-              }
-            ]
-          },
-          "lazyJavaScriptRequests": [
-            "http://127.0.0.1:4183/assets/eyewear-viewer-1d3eZltY.js"
-          ]
-        },
-        "screenshot": "output/playwright/eyewear-viewer/before-lifecycle-cleanup.png",
-        "repeatedPagehide": {
-          "drawCallsBefore": 1052,
-          "drawCallsAfter": 1052,
-          "sampleMs": 550
-        },
-        "canvasAndStateRemoved": true
+      "fallback": {
+        "src": "art/eyewear-studio.webp",
+        "width": 1200,
+        "height": 1000,
+        "opacity": "1",
+        "fit": "contain",
+        "detailButtonsStillWork": true
       },
-      {
-        "width": 390,
-        "mode": "context-loss",
-        "passed": true,
-        "pageErrors": [],
-        "consoleErrors": [],
-        "consoleWarnings": [],
-        "httpErrors": [],
-        "javascriptRequests": [
-          "http://127.0.0.1:4183/assets/main-UhdcldZm.js",
-          "http://127.0.0.1:4183/assets/eyewear-viewer-1d3eZltY.js"
-        ],
-        "lazyLoad": {
-          "beforeViewport": {
-            "contextAttempts": 0,
-            "contexts": 0,
-            "totalDraws": 0,
-            "events": [],
-            "canvases": []
-          },
-          "afterViewport": {
-            "contextAttempts": 1,
-            "contexts": 1,
-            "totalDraws": 233,
-            "events": [],
-            "canvases": [
-              {
-                "className": "mi-product-canvas",
-                "width": 342,
-                "height": 335,
-                "draws": 233
-              }
-            ]
-          },
-          "lazyJavaScriptRequests": [
-            "http://127.0.0.1:4183/assets/eyewear-viewer-1d3eZltY.js"
+      "screenshot": "output/playwright/eyewear-viewer/webgl-unavailable.png",
+      "expectedWebGLConsoleDiagnostics": []
+    },
+    {
+      "width": 390,
+      "mode": "context-loss",
+      "passed": true,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "httpErrors": [],
+      "javascriptRequests": [
+        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+      ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "modelRequestFailures": [],
+      "lazyLoad": {
+        "beforeViewport": {
+          "contextAttempts": 0,
+          "contexts": 0,
+          "totalDraws": 0,
+          "events": [],
+          "canvases": []
+        },
+        "afterViewport": {
+          "contextAttempts": 1,
+          "contexts": 1,
+          "totalDraws": 94,
+          "events": [],
+          "canvases": [
+            {
+              "className": "mi-product-canvas",
+              "width": 342,
+              "height": 335,
+              "draws": 94
+            }
           ]
         },
-        "contextLossEvents": [
-          "lost"
+        "lazyJavaScriptRequests": [
+          "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
         ],
-        "fallbackImages": [
-          {
+        "loadedModelUrls": [
+          "http://127.0.0.1:4183/models/eyewear-studio.glb"
+        ],
+        "primaryStudioPoster": {
+          "poster": {
             "src": "art/eyewear-studio.webp",
             "width": 1200,
             "height": 1000
-          }
-        ],
-        "visibleCanvases": 0,
-        "screenshot": "output/playwright/eyewear-viewer/context-loss.png",
-        "expectedWebGLConsoleDiagnostics": []
-      }
+          },
+          "toolsHidden": true,
+          "loadedCanvasInactive": false
+        },
+        "activation": "explicit enter button",
+        "noModelRequestBeforeInteraction": true
+      },
+      "contextLossEvents": [
+        "lost"
+      ],
+      "fallback": {
+        "src": "art/eyewear-studio.webp",
+        "width": 1200,
+        "height": 1000,
+        "opacity": "1",
+        "fit": "contain",
+        "detailButtonsStillWork": true
+      },
+      "screenshot": "output/playwright/eyewear-viewer/context-loss.png",
+      "expectedWebGLConsoleDiagnostics": []
+    },
+    {
+      "width": 390,
+      "mode": "no-javascript",
+      "passed": true,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "httpErrors": [],
+      "javascriptRequests": [],
+      "modelRequests": [],
+      "modelRequestFailures": [],
+      "fallback": {
+        "src": "art/eyewear-studio.webp",
+        "width": 1200,
+        "height": 1000,
+        "opacity": "1",
+        "fit": "contain"
+      },
+      "screenshot": "output/playwright/eyewear-viewer/no-javascript.png"
+    },
+    {
+      "width": 390,
+      "mode": "model-load-failure",
+      "passed": true,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "httpErrors": [],
+      "javascriptRequests": [
+        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+      ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "modelRequestFailures": [],
+      "controlledModelUrls": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "failureInjection": "HTTP 200 containing intentionally malformed GLB bytes; validates loader/parser failure handling.",
+      "fallback": {
+        "src": "art/eyewear-studio.webp",
+        "width": 1200,
+        "height": 1000,
+        "opacity": "1",
+        "fit": "contain",
+        "detailButtonsStillWork": true
+      },
+      "screenshot": "output/playwright/eyewear-viewer/model-load-failure.png"
+    },
+    {
+      "width": 390,
+      "mode": "model-loading-selection",
+      "passed": true,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "httpErrors": [],
+      "javascriptRequests": [
+        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+      ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "modelRequestFailures": [],
+      "controlledModelUrls": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "loadingState": {
+        "webglContextAttempts": 0,
+        "controlsHidden": true
+      },
+      "latestSelectedViewOnFirstRender": {
+        "view": 2,
+        "playing": true,
+        "active": true,
+        "visible": true,
+        "renderCount": 5,
+        "rotation": {
+          "x": 0.08077687491339283,
+          "y": -0.06979135492401478
+        },
+        "finish": "gold",
+        "reduced": false,
+        "cameraDistance": 285,
+        "actualCameraDistance": 318.8743871764915,
+        "source": "Khronos Sunglasses GLB"
+      },
+      "latestSelectedViewAfterLoad": {
+        "view": 2,
+        "playing": false,
+        "active": true,
+        "visible": true,
+        "renderCount": 14,
+        "rotation": {
+          "x": 0.080013,
+          "y": -0.079829
+        },
+        "finish": "gold",
+        "reduced": false,
+        "cameraDistance": 285,
+        "actualCameraDistance": 320.60035218533034,
+        "source": "Khronos Sunglasses GLB"
+      },
+      "screenshot": "output/playwright/eyewear-viewer/model-loading-selection.png"
+    },
+    {
+      "width": 390,
+      "mode": "model-loading-studio",
+      "passed": true,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "httpErrors": [],
+      "javascriptRequests": [
+        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+      ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "modelRequestFailures": [],
+      "controlledModelUrls": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "loadingState": {
+        "webglContextAttempts": 0,
+        "controlsHidden": true
+      },
+      "studioDuringLoading": {
+        "poster": {
+          "src": "art/eyewear-studio.webp",
+          "width": 1200,
+          "height": 1000
+        },
+        "toolsHidden": true,
+        "loadedCanvasInactive": true
+      },
+      "inactiveAfterLoad": {
+        "drawCallsBefore": 46,
+        "drawCallsAfter": 46,
+        "sampleMs": 550
+      },
+      "firstActivationAfterInactiveLoad": true,
+      "screenshot": "output/playwright/eyewear-viewer/model-loading-studio.png"
+    },
+    {
+      "width": 390,
+      "mode": "model-loading-dispose",
+      "passed": true,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "httpErrors": [],
+      "javascriptRequests": [
+        "http://127.0.0.1:4183/assets/main-CwZYGaKG.js",
+        "http://127.0.0.1:4183/assets/eyewear-viewer-CV5DVh8O.js"
+      ],
+      "modelRequests": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "modelRequestFailures": [
+        {
+          "url": "http://127.0.0.1:4183/models/eyewear-studio.glb",
+          "failure": "net::ERR_ABORTED"
+        }
+      ],
+      "controlledModelUrls": [
+        "http://127.0.0.1:4183/models/eyewear-studio.glb"
+      ],
+      "loadingState": {
+        "webglContextAttempts": 0,
+        "controlsHidden": true
+      },
+      "abortedRequests": [
+        {
+          "url": "http://127.0.0.1:4183/models/eyewear-studio.glb",
+          "failure": "net::ERR_ABORTED"
+        }
+      ],
+      "afterAbort": {
+        "drawCallsBefore": 0,
+        "drawCallsAfter": 0,
+        "sampleMs": 550
+      },
+      "noLateViewerOrGpuAllocation": true,
+      "screenshot": "output/playwright/eyewear-viewer/model-loading-dispose.png"
+    }
+  ],
+  "passed": true,
+  "posterAtValidation": {
+    "path": "production/art/eyewear-studio.webp",
+    "sha256": "9137a2e8173b43a141cf5aa05d9a1f6526c88d8b7a323da41a6a4651d193411e",
+    "bytes": 633088,
+    "dimensions": [
+      1200,
+      1000
     ],
-    "passed": true
+    "samples": 512
+  },
+  "functionalBuild": {
+    "viewerChunk": "eyewear-viewer-CV5DVh8O.js",
+    "mainChunk": "main-CwZYGaKG.js",
+    "css": "cBjsHJgc",
+    "note": "Controller checks complete before subsequent presentation-only studio aspect ratio and poster cache-query adjustment; root will verify those final visual changes."
+  },
+  "visualReview": {
+    "reviewed": [
+      "output/playwright/eyewear-viewer/silver-1440.png",
+      "output/playwright/eyewear-viewer/model-load-failure.png"
+    ],
+    "result": "Interactive silver finish rendered within the stage; fallback uses the final 512-sample studio poster. Root performs final primary studio layout review at 1440/390/320."
+  },
+  "completedAt": "2026-11-04T05:36:31.543330+00:00",
+  "presentationRecheck": {
+    "checkedAt": "2026-11-04T05:37:15.539781+00:00",
+    "widths": [
+      1440,
+      390,
+      320
+    ],
+    "studioAspectRatio": "6/5",
+    "posterVersionQuery": "9137a2e8173b",
+    "pageErrors": [],
+    "entryButtonMinHeight": 44,
+    "viewerChunkUnchanged": "eyewear-viewer-CV5DVh8O.js",
+    "css": "main-DMEojZ6H.css",
+    "main": "main-eDf-aJdM.js",
+    "result": "passed",
+    "scope": "Primary studio poster decoded and screenshots visually reviewed after aspect-ratio/cache-version changes; all 140 release file hashes match checkout."
   }
 }

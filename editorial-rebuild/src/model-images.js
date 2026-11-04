@@ -6,19 +6,19 @@ const inquiry = 'contact.html?service=model-images';
 const points = [
   { title: '프레임의 형태', label: '형태와 비율', body: '렌즈를 감싸는 곡선, 프레임의 두께, 얼굴 위에 놓이는 비율. 제품의 인상을 만드는 형태를 살핍니다.' },
   { title: '브리지와 템플', label: '구조와 연결', body: '두 렌즈를 잇는 브리지부터 옆면으로 이어지는 템플까지. 안경의 구조가 자연스럽게 이어지는지 확인합니다.' },
-  { title: '색상과 소재', label: '색과 질감', body: '프레임의 색감, 금속의 반사, 아세테이트의 결. 실제 제품 사진과 비교하며 재질의 표현을 살핍니다.' },
+  { title: '색상과 소재', label: '색과 질감', body: '프레임의 색감, 금속의 반사, 렌즈의 투명도. 실제 제품 사진과 비교하며 재질의 표현을 살핍니다.' },
 ];
 
 function eyewearStudio() {
-  return `<div class="mi-product-viewer" data-eyewear-viewer>
-    <div class="mi-product-heading"><span>FRAME, IN MOTION.</span><span>프레임 디테일</span></div>
-    <div class="mi-product-stage" data-eyewear-stage data-state="idle" data-view="0">
-      <img class="mi-product-poster" src="art/eyewear-studio.webp" width="1200" height="1000" loading="lazy" alt="입체적인 블랙 안경 프레임과 렌즈, 금속 힌지와 템플을 보여주는 3D 제품 연출">
-      <span class="mi-product-view-label" aria-hidden="true"><span data-eyewear-view-label>01 / FORM</span><i></i></span>
+  return `<div class="mi-product-viewer" data-eyewear-viewer data-mode="studio">
+    <div class="mi-product-heading"><span>FRAME, IN DETAIL.</span><button type="button" data-eyewear-enter aria-pressed="false" aria-controls="mi-product-stage" hidden>직접 돌려보기 <span aria-hidden="true">↗</span></button></div>
+    <div class="mi-product-stage" id="mi-product-stage" data-eyewear-stage data-state="idle" data-view="0">
+      <img class="mi-product-poster" src="art/eyewear-studio.webp?v=9137a2e8173b" width="1200" height="1000" loading="lazy" alt="메탈 선글라스의 곡면 렌즈와 금속 프레임, 코받침과 템플을 보여주는 스튜디오 렌더">
+      <span class="mi-product-view-label" aria-hidden="true"><span data-eyewear-view-label>STUDIO / GOLD</span><i></i></span>
     </div>
     <div class="mi-product-tools" data-eyewear-tools hidden>
       <p id="mi-product-instruction">드래그 또는 방향키로 돌려보세요.</p>
-      <div class="mi-product-toolbar"><div class="mi-product-finishes" role="group" aria-label="프레임 색상"><button type="button" data-eyewear-finish="black" aria-pressed="true" aria-label="블랙 프레임"><i></i><span>블랙</span></button><button type="button" data-eyewear-finish="havana" aria-pressed="false" aria-label="하바나 프레임"><i></i><span>하바나</span></button></div><div class="mi-product-playback"><button type="button" data-eyewear-play aria-pressed="true" aria-label="안경 자동 모션 멈추기"><i aria-hidden="true"></i><span>모션 멈춤</span></button><button type="button" data-eyewear-reset aria-label="현재 디테일의 처음 각도로 돌아가기"><b aria-hidden="true">↺</b><span>처음 각도</span></button></div></div>
+      <div class="mi-product-toolbar"><div class="mi-product-finishes" role="group" aria-label="프레임 색상"><button type="button" data-eyewear-finish="gold" aria-pressed="true" aria-label="골드 메탈 프레임"><i></i><span>골드</span></button><button type="button" data-eyewear-finish="silver" aria-pressed="false" aria-label="실버 메탈 프레임"><i></i><span>실버</span></button></div><div class="mi-product-playback"><button type="button" data-eyewear-play aria-pressed="true" aria-label="안경 자동 모션 멈추기"><i aria-hidden="true"></i><span>모션 멈춤</span></button><button type="button" data-eyewear-reset aria-label="현재 디테일의 처음 각도로 돌아가기"><b aria-hidden="true">↺</b><span>처음 각도</span></button></div></div>
     </div>
   </div>`;
 }
@@ -53,7 +53,7 @@ export function renderModelImages() {
       <div class="mi-inspection-inner wrap">
         <div class="mi-section-index"><span>02 / THE DETAILS</span><span>안경사가 살피는 디테일</span></div>
         <div class="mi-inspection-layout"><div class="mi-inspection-copy"><h2 id="mi-inspection-title" data-mi-reveal>안경을 아는 눈은,<br><em>다르게 봅니다.</em></h2><p>프레임의 곡선부터 브리지의 연결까지.<br>실제 제품과 비교하며 작은 차이를 살핍니다.</p><div class="mi-check-controls" aria-label="안경 검수 포인트">${points.map((p,i)=>`<button type="button" data-mi-point="${i}" aria-pressed="${i===0}" aria-controls="mi-check-description"><span>0${i+1}</span><strong>${p.title}</strong><span class="mi-point-arrow" aria-hidden="true">↗</span></button>`).join('')}</div></div>
-        <div class="mi-inspection-display" data-mi-active="0">${eyewearStudio()}<div class="mi-check-description" id="mi-check-description" aria-live="polite" aria-atomic="true"><span data-mi-check-label>${points[0].label}</span><p data-mi-check-copy>${points[0].body}</p></div><noscript><div class="mi-noscript-details">${points.slice(1).map(p=>`<p><strong>${p.label}</strong> ${p.body}</p>`).join('')}</div></noscript><p class="mi-drawing-caption">프레임의 구조와 소재를 설명하는 3D 연출 이미지입니다.</p></div></div>
+        <div class="mi-inspection-display" data-mi-active="0">${eyewearStudio()}<div class="mi-check-description" id="mi-check-description" aria-live="polite" aria-atomic="true"><span data-mi-check-label>${points[0].label}</span><p data-mi-check-copy>${points[0].body}</p></div><noscript><div class="mi-noscript-details">${points.slice(1).map(p=>`<p><strong>${p.label}</strong> ${p.body}</p>`).join('')}</div></noscript><p class="mi-drawing-caption">프레임의 구조와 소재를 설명하는 3D 연출 이미지입니다.<br><span class="mi-model-credit">3D 모델: Eric Chadwick / DGG · <a href="https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/SunglassesKhronos" target="_blank" rel="noopener noreferrer">Sunglasses Khronos</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · 재질·조명 변경</span></p></div></div>
       </div>
     </section>
 
@@ -81,27 +81,52 @@ export function initModelImages({ gsap, ScrollTrigger }) {
   const label = root.querySelector('[data-mi-check-label]');
   const copy = root.querySelector('[data-mi-check-copy]');
   let detailTween, viewer, disposed = false, loadingViewer = false;
+  const viewerAbort = new AbortController();
   const viewerHost = root.querySelector('[data-eyewear-viewer]');
   const stage = root.querySelector('[data-eyewear-stage]');
   const viewLabel = root.querySelector('[data-eyewear-view-label]');
   const viewLabels = ['01 / FORM', '02 / CONSTRUCTION', '03 / MATERIAL'];
-  const viewerObserver = new IntersectionObserver(entries => {
-    if (!entries.some(entry => entry.isIntersecting) || loadingViewer || disposed) return;
+  const enter = root.querySelector('[data-eyewear-enter]');
+  enter.hidden = false;
+  function setMode(interactive) {
+    viewerHost.dataset.mode = interactive ? 'interactive' : 'studio';
+    enter.setAttribute('aria-pressed', String(interactive));
+    enter.innerHTML = interactive ? '스튜디오 컷 보기 <span aria-hidden="true">↙</span>' : '직접 돌려보기 <span aria-hidden="true">↗</span>';
+    viewLabel.textContent = interactive ? viewLabels[Number(display.dataset.miActive)] : 'STUDIO / GOLD';
+    viewer?.setActive(interactive);
+    if (interactive) loadViewer();
+    ScrollTrigger.refresh();
+  }
+  function loadViewer() {
+    if (loadingViewer || disposed || viewer) return;
     loadingViewer = true;
-    viewerObserver.disconnect();
     stage.dataset.state = 'loading';
-    import('./eyewear-viewer.js').then(({ createEyewearViewer }) => {
+    import('./eyewear-viewer.js').then(async ({ createEyewearViewer }) => {
       if (disposed) return;
-      viewer = createEyewearViewer(viewerHost, { gsap, initialView: Number(display.dataset.miActive) });
+      const loadedViewer = await createEyewearViewer(viewerHost, { gsap, initialView: Number(display.dataset.miActive), signal: viewerAbort.signal });
+      if (disposed) { loadedViewer.dispose(); return; }
+      viewer = loadedViewer;
+      viewer.selectView(Number(display.dataset.miActive), true);
+      viewer.setActive(viewerHost.dataset.mode === 'interactive');
       ScrollTrigger.refresh();
-    }).catch(() => { if (!disposed) stage.dataset.state = 'fallback'; });
-  }, { rootMargin: '300px' });
-  viewerObserver.observe(stage);
+    }).catch(showStudioFallback);
+  }
+  function showStudioFallback() {
+    if (disposed) return;
+    stage.dataset.state = 'fallback';
+    setMode(false);
+    enter.hidden = true;
+  }
+  const toggleMode = () => setMode(viewerHost.dataset.mode !== 'interactive');
+  enter.addEventListener('click', toggleMode);
+  viewerHost.addEventListener('eyewearunavailable', showStudioFallback);
   function selectPoint(index) {
-    if (display.dataset.miActive === String(index)) return;
+    const changed = display.dataset.miActive !== String(index);
     display.dataset.miActive = String(index);
+    if (stage.dataset.state !== 'fallback') setMode(true);
+    if (!changed) return;
     viewer?.selectView(index);
-    viewLabel.textContent = viewLabels[index];
+    viewLabel.textContent = viewerHost.dataset.mode === 'interactive' ? viewLabels[index] : 'STUDIO / GOLD';
     buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
     label.textContent = points[index].label;
     copy.textContent = points[index].body;
@@ -141,5 +166,5 @@ export function initModelImages({ gsap, ScrollTrigger }) {
     });
     ScrollTrigger.refresh();
   });
-  return () => { disposed = true; viewerObserver.disconnect(); viewer?.dispose(); detailTween?.kill(); handlers.forEach(fn => fn()); mm.revert(); };
+  return () => { disposed = true; viewerAbort.abort(); enter.removeEventListener('click', toggleMode); viewerHost.removeEventListener('eyewearunavailable', showStudioFallback); viewer?.dispose(); detailTween?.kill(); handlers.forEach(fn => fn()); mm.revert(); };
 }

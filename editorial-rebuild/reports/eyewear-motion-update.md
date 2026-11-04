@@ -1,22 +1,26 @@
-# 프레임 디테일 — 3D 모션 업데이트
+# 프레임 디테일 — 실물 기반 3D 모델 교체
 
 2026-11-04
 
-`service-model-images.html#frame-details`의 평면 SVG를 실제 메시와 조명으로 렌더링하는 3D 안경으로 교체했다. 유광 아세테이트 앞판, 곡면 렌즈, 금속 힌지와 리벳, 귀 뒤로 휘는 템플, 코받침을 구성했다. 형태·구조·소재를 선택하면 각각의 시점과 거리로 이동한다. 자동 모션 재생/정지, 마우스·터치 드래그, 방향키 회전, Home/초기 각도 복원, 블랙·하바나 소재 전환을 제공한다.
+`service-model-images.html#frame-details`의 임의로 구성한 안경 메시를 전문 아티스트가 실물을 참고해 제작한 Sunglasses Khronos 모델로 교체했다. 원본의 곡면 렌즈, 금속 앞판·브리지·힌지·템플, 이어팁, 코받침 형상을 사용한다. 형태·구조·소재의 세 시점, 직접 회전, 재생·정지, 골드·실버 금속 전환을 제공한다.
 
-## 자산과 표현
+## 자산과 출처
 
-- `src/eyewear-model.js`: 직접 구성한 무상표 안경. 33개 메시, 25,428개 삼각형. 사용자 포트폴리오 제품의 실측 스캔이 아니며 페이지에 구조·소재 설명용 3D 연출임을 표시했다.
-- `public/art/eyewear-studio.webp`: 동일 모델을 브라우저에서 렌더링해 캡처한 1200×1000 포스터. WebP 인코딩 외 이미지 수정 없음. 생성형 이미지나 다른 인물 사진을 대체 자산으로 사용하지 않는다.
-- 기존 사용자 제공 포트폴리오 32장과 고객 사례 원본 이미지는 변경하지 않았다.
-- Three.js 0.180.0을 버전 고정했다. MIT 라이선스는 `public/assets/vendor/THREE-LICENSE`에 포함한다.
+- 제작자: Eric Chadwick / Darmstadt Graphics Group GmbH (2024).
+- 출처: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/SunglassesKhronos
+- 라이선스: CC BY 4.0. 페이지에 제작자·출처·라이선스·변경 사항을 표시하고 `public/models/`에 원문 라이선스와 원본 README, Khronos 상표 고지를 포함했다.
+- `public/models/eyewear-studio.glb`: 원본 GLB 371,188 bytes. SHA-256 `25d72dd0869c99f94a3c0d6dfe0707714eca056e531f6ff77e7545719c86ab8c`.
+- `src/eyewear-model.js`: GLB 형상을 보존하고 단위·중심을 조정한다. 금속·렌즈·코받침 재질과 조명을 변경하며 원본 이어팁 로고 텍스처는 표시하지 않는다.
+- `public/art/eyewear-studio.webp`: 같은 원본 모델을 Blender Cycles로 렌더링한 1200×1000 정적 포스터. 생성형 이미지가 아니다. 재현: `blender -b --python scripts/render-eyewear-poster.py -- final hero`.
+- 특정 포트폴리오 제품의 복제 또는 실측 스캔이 아니라 구조·소재 설명용 모델이다. 사용자 요청에 따라 브랜드와 무관한 실물 기반 모델을 사용했다.
+- 사용자 제공 포트폴리오 32장과 기존 고객 사례 원본 이미지는 변경하지 않았다.
 
-## 동작과 비용
+## 동작과 접근성
 
-3D 코드는 해당 섹션이 뷰포트에 가까워질 때 동적으로 가져온다. 다른 서비스 페이지나 첫 화면에서 WebGL을 만들지 않는다. 3D 청크는 minified 533.74kB, gzip 138.50kB다. Vite의 500kB 경고는 이 지연 로딩 청크에 해당한다.
+기본 화면은 Blender Cycles의 512샘플 스튜디오 렌더다. ‘직접 돌려보기’ 또는 검수 항목을 선택할 때만 Three.js 코드와 로컬 GLB를 가져온다. ‘스튜디오 컷 보기’로 복귀하면 3D 렌더링과 타임라인을 멈추고 포스터를 복원하며, 다시 들어갈 때 같은 모델과 재생 선택을 유지한다. 모델 fetch/parse 후 WebGL을 만들며, 페이지 종료 시 로딩 요청과 GPU 자원을 정리한다. 로딩 중 검수 항목을 변경하면 마지막 선택을 유지한다.
 
-화면 밖·백그라운드에서는 렌더링과 시점 애니메이션을 멈춘다. 픽셀 비율은 최대 1.5, 투과 렌더링 해상도는 0.5로 제한했다. 모션 감소 설정에서는 정지한 3D를 표시하며 수동 조작은 유지한다. 설정 변경은 native media 이벤트와 GSAP의 미디어 전환 완료 시점, 화면 재진입·렌더링 경로에서 동기화한다. 세로 스와이프와 핀치 확대를 허용한다. WebGL 미지원·컨텍스트 손실·JavaScript 비활성화에서는 같은 프레임의 정적 포스터를 표시한다. 종료 시 타임라인·리스너·옵저버와 GPU 자원을 정리한다.
+화면 밖·백그라운드에서는 렌더링과 시점 애니메이션을 멈춘다. 모션 감소 설정에서는 자동 회전 없이 수동 조작을 제공한다. 드래그·방향키 회전, Home·초기 각도 복원, 터치 화면의 세로 스크롤·확대를 지원한다. 모델 로드 실패, WebGL 미지원·컨텍스트 손실, JavaScript 비활성화에서는 스튜디오 렌더와 검수 설명을 유지한다. 작동하지 않는 3D 진입 버튼은 숨긴다.
 
-## 검수
+## 검수 기록
 
-빌드와 정적 링크 검사를 통과했고 기존 고객 원본 이미지 30개 보존을 확인했다. PC·모바일 화면을 실제 렌더 이미지로 검수했다. 동작 검수는 `eyewear-viewer-qa.json`, 서비스 연동 회귀 검수는 `eyewear-integration-qa.json`에 기록한다. 브라우저 검수는 Chromium/SwiftShader 기반이며 실제 휴대폰 GPU의 프레임 성능은 측정하지 않았다. 숨김 상태 검수는 `document.hidden`과 `visibilitychange` 모의 방식으로 수행한다. 실제 문의 메일은 발송하지 않는다.
+브라우저 동작 결과는 `eyewear-viewer-qa.json`, 빌드·링크 검수는 `build-audit.json`, 배포 파일 해시는 `production-manifest.json`에 기록한다. 브라우저 검수는 Chromium/SwiftShader 기반이며 실제 휴대폰 GPU의 성능 측정은 포함하지 않는다. 기존 서비스·갤러리 연동 기록은 `eyewear-integration-qa.json`에 보존한다.

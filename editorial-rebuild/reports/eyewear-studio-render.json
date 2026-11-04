@@ -1,0 +1,32 @@
+{
+  "sourceAsset": "public/models/eyewear-studio.glb",
+  "sourceAttribution": "Sunglasses Khronos by Eric Chadwick, Darmstadt Graphics Group GmbH (DGG), 2024. CC BY 4.0 International.",
+  "modifications": "Unmodified product geometry. Rebuilt materials; removed logo texture from earhooks; champagne gold metal; neutral smoky green-gray lenses; studio lighting/camera.",
+  "view": "hero",
+  "quality": "final",
+  "camera": {
+    "position": [
+      0.245,
+      -0.365,
+      0.15
+    ],
+    "target": [
+      0,
+      0.056,
+      0.014
+    ],
+    "lens": 81
+  },
+  "resolution": [
+    1200,
+    1000
+  ],
+  "samples": 512,
+  "engine": "Cycles CPU",
+  "seconds": 318.04,
+  "output": "public/art/eyewear-studio.webp",
+  "encoder": "WebP lossless",
+  "outputSha256": "9137a2e8173b43a141cf5aa05d9a1f6526c88d8b7a323da41a6a4651d193411e",
+  "sourceGeometryChanged": false,
+  "renderScript": "scripts/render-eyewear-poster.py"
+}
