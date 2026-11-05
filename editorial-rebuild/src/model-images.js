@@ -69,10 +69,12 @@ export function renderModelImages() {
       <div class="mi-section-index"><span>CLIENT FEEDBACK</span><span>이미지를 전달한 뒤</span></div>
       <div class="mi-feedback-layout">
         <h2 id="mi-feedback-title" data-mi-reveal>이미지를 전한 뒤,<br><em>돌아온 답장.</em></h2>
-        <figure class="mi-feedback-quote" data-mi-reveal>
-          <span class="mi-feedback-mark" aria-hidden="true">“</span>
-          <blockquote><p class="mi-feedback-lead">감탄입니다</p><p>수정할데가 없이<br><em>완벽하세요!</em></p></blockquote>
-          <figcaption><span aria-hidden="true"></span>모델 이미지 전달 후 받은 카카오톡 피드백</figcaption>
+        <figure class="mi-feedback-capture" data-mi-reveal>
+          <a class="mi-feedback-original" href="portfolio/model-images/client-feedback-kakao.png" target="_blank" rel="noopener noreferrer" aria-label="카카오톡 대화 캡처 원본 크게 보기 (새 탭)">
+            <img src="portfolio/model-images/client-feedback-kakao.png" width="842" height="425" loading="lazy" decoding="async" alt="안경 디테일 검수에 대한 설명과 제작 이미지 전달 후, 고객이 ‘감탄입니다’, ‘수정할데가 없이 완벽하세요!’라고 답한 실제 카카오톡 대화. 이름과 프로필은 가려져 있습니다.">
+            <span class="mi-feedback-enlarge">대화 캡처 크게 보기 <span aria-hidden="true">↗</span></span>
+          </a>
+          <figcaption>모델 이미지 전달 후 받은 카카오톡 피드백</figcaption>
         </figure>
       </div>
     </section>

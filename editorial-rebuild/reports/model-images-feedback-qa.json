@@ -1,107 +1,64 @@
 {
-  "scope": "One supplied KakaoTalk feedback quotation, responsive visual smoke checks",
+  "scope": "Original feedback screenshot, responsive display and original-image links",
   "cases": [
     {
       "width": 1440,
-      "passed": true,
-      "quote": "감탄입니다\n\n수정할데가 없이\n완벽하세요!",
+      "javascript": true,
       "geometry": {
-        "section": {
-          "x": 48,
-          "y": 110.640625,
-          "width": 1344,
-          "height": 509.140625,
-          "top": 110.640625,
-          "right": 1392,
-          "bottom": 619.78125,
-          "left": 48
-        },
-        "quote": {
-          "x": 654.703125,
-          "y": 205.640625,
-          "width": 737.296875,
-          "height": 324.140625,
-          "top": 205.640625,
-          "right": 1392,
-          "bottom": 529.78125,
-          "left": 654.703125
-        },
+        "naturalWidth": 842,
+        "naturalHeight": 425,
+        "width": 840,
+        "height": 423.984375,
         "overflow": false,
-        "opacity": "1",
-        "order": [
-          "model-portfolio",
-          "mi-process wrap"
-        ]
-      }
+        "opacity": "1"
+      },
+      "originalLinkValid": true,
+      "passed": true
     },
     {
       "width": 390,
-      "passed": true,
-      "quote": "감탄입니다\n\n수정할데가 없이\n완벽하세요!",
+      "javascript": true,
       "geometry": {
-        "section": {
-          "x": 24,
-          "y": 110.015625,
-          "width": 342,
-          "height": 479.765625,
-          "top": 110.015625,
-          "right": 366,
-          "bottom": 589.78125,
-          "left": 24
-        },
-        "quote": {
-          "x": 24,
-          "y": 299.796875,
-          "width": 342,
-          "height": 234.984375,
-          "top": 299.796875,
-          "right": 366,
-          "bottom": 534.78125,
-          "left": 24
-        },
+        "naturalWidth": 842,
+        "naturalHeight": 425,
+        "width": 340,
+        "height": 171.609375,
         "overflow": false,
-        "opacity": "1",
-        "order": [
-          "model-portfolio",
-          "mi-process wrap"
-        ]
-      }
+        "opacity": "1"
+      },
+      "originalLinkValid": true,
+      "passed": true
     },
     {
       "width": 320,
-      "passed": true,
-      "quote": "감탄입니다\n\n수정할데가 없이\n완벽하세요!",
+      "javascript": true,
       "geometry": {
-        "section": {
-          "x": 24,
-          "y": 110.484375,
-          "width": 272,
-          "height": 478.953125,
-          "top": 110.484375,
-          "right": 296,
-          "bottom": 589.4375,
-          "left": 24
-        },
-        "quote": {
-          "x": 24,
-          "y": 300.265625,
-          "width": 272,
-          "height": 234.171875,
-          "top": 300.265625,
-          "right": 296,
-          "bottom": 534.4375,
-          "left": 24
-        },
+        "naturalWidth": 842,
+        "naturalHeight": 425,
+        "width": 270,
+        "height": 136.28125,
         "overflow": false,
-        "opacity": "1",
-        "order": [
-          "model-portfolio",
-          "mi-process wrap"
-        ]
-      }
+        "opacity": "1"
+      },
+      "originalLinkValid": true,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "javascript": false,
+      "geometry": {
+        "naturalWidth": 842,
+        "naturalHeight": 425,
+        "width": 340,
+        "height": 171.609375,
+        "overflow": false,
+        "opacity": "1"
+      },
+      "originalLinkValid": true,
+      "passed": true
     }
   ],
   "errors": [],
-  "noJavaScriptVisible": true,
+  "originalUnchanged": true,
   "passed": true
 }
