@@ -8,7 +8,7 @@
         900
       ],
       "mode": "normal",
-      "fullRequestsBeforeClick": 0,
+      "overlaysHidden": true,
       "hero": {
         "source": "kotto-seen-hero-desktop.mp4",
         "width": 1280,
@@ -18,20 +18,10 @@
         "loop": true
       },
       "heroTimeAdvanced": [
-        0.581168,
-        1.044018
+        0.695575,
+        1.158212
       ],
-      "fullFilm": {
-        "width": 1920,
-        "height": 1080,
-        "duration": 26,
-        "muted": false,
-        "controls": true,
-        "currentTime": 0.011099
-      },
-      "fullPlaybackReached": 2.823577,
-      "escapeRestoresFocusAndPlayback": true,
-      "manualPausePreserved": true,
+      "fullFilmRequests": 0,
       "javascriptErrors": []
     },
     {
@@ -40,7 +30,7 @@
         844
       ],
       "mode": "normal",
-      "fullRequestsBeforeClick": 0,
+      "overlaysHidden": true,
       "hero": {
         "source": "kotto-seen-hero-mobile.mp4",
         "width": 720,
@@ -50,20 +40,10 @@
         "loop": true
       },
       "heroTimeAdvanced": [
-        0.636876,
-        1.097638
+        0.590194,
+        1.055684
       ],
-      "fullFilm": {
-        "width": 1920,
-        "height": 1080,
-        "duration": 26,
-        "muted": false,
-        "controls": true,
-        "currentTime": 0.015689
-      },
-      "fullPlaybackReached": 2.810076,
-      "escapeRestoresFocusAndPlayback": true,
-      "manualPausePreserved": true,
+      "fullFilmRequests": 0,
       "javascriptErrors": []
     },
     {
@@ -72,7 +52,7 @@
         844
       ],
       "mode": "normal",
-      "fullRequestsBeforeClick": 0,
+      "overlaysHidden": true,
       "hero": {
         "source": "kotto-seen-hero-mobile.mp4",
         "width": 720,
@@ -82,20 +62,10 @@
         "loop": true
       },
       "heroTimeAdvanced": [
-        0.561516,
-        1.020276
+        0.579761,
+        1.042223
       ],
-      "fullFilm": {
-        "width": 1920,
-        "height": 1080,
-        "duration": 26,
-        "muted": false,
-        "controls": true,
-        "currentTime": 0.019593
-      },
-      "fullPlaybackReached": 2.816864,
-      "escapeRestoresFocusAndPlayback": true,
-      "manualPausePreserved": true,
+      "fullFilmRequests": 0,
       "javascriptErrors": []
     },
     {
@@ -104,31 +74,9 @@
         844
       ],
       "mode": "reduced",
-      "fullRequestsBeforeClick": 0,
-      "posterUntilExplicitPlay": true,
-      "hero": {
-        "source": "kotto-seen-hero-mobile.mp4",
-        "width": 720,
-        "height": 1280,
-        "duration": 22,
-        "muted": true,
-        "loop": true
-      },
-      "heroTimeAdvanced": [
-        0.028995,
-        0.488053
-      ],
-      "fullFilm": {
-        "width": 1920,
-        "height": 1080,
-        "duration": 26,
-        "muted": false,
-        "controls": true,
-        "currentTime": 0.010935
-      },
-      "fullPlaybackReached": 2.819979,
-      "escapeRestoresFocusAndPlayback": true,
-      "manualPausePreserved": true,
+      "overlaysHidden": true,
+      "heroPosterOnly": true,
+      "fullFilmRequests": 0,
       "javascriptErrors": []
     },
     {
@@ -137,31 +85,9 @@
         900
       ],
       "mode": "save-data",
-      "fullRequestsBeforeClick": 0,
-      "posterUntilExplicitPlay": true,
-      "hero": {
-        "source": "kotto-seen-hero-desktop.mp4",
-        "width": 1280,
-        "height": 720,
-        "duration": 22,
-        "muted": true,
-        "loop": true
-      },
-      "heroTimeAdvanced": [
-        0.033856,
-        0.491946
-      ],
-      "fullFilm": {
-        "width": 1920,
-        "height": 1080,
-        "duration": 26,
-        "muted": false,
-        "controls": true,
-        "currentTime": 0.003246
-      },
-      "fullPlaybackReached": 2.810819,
-      "escapeRestoresFocusAndPlayback": true,
-      "manualPausePreserved": true,
+      "overlaysHidden": true,
+      "heroPosterOnly": true,
+      "fullFilmRequests": 0,
       "javascriptErrors": []
     },
     {
@@ -170,9 +96,9 @@
         844
       ],
       "mode": "no-js",
-      "fullRequestsBeforeClick": 0,
-      "directFilmLink": true,
+      "overlaysHidden": true,
       "heroPosterOnly": true,
+      "fullFilmRequests": 0,
       "javascriptErrors": []
     }
   ],

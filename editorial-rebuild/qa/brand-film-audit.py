@@ -1,4 +1,4 @@
-"""Check the actual production films, loading policy and accessible viewer."""
+"""Check the homepage background film and its loading policy without overlays."""
 import asyncio
 import json
 from pathlib import Path
@@ -28,25 +28,18 @@ async def main():
             page.on('request', lambda req: full_requests.append(req.url) if 'kotto-seen-brand-film.mp4' in req.url else None)
             await page.goto(BASE, wait_until='networkidle')
             hero = page.locator('#home-brand-video')
-            opener = page.locator('[data-brand-video-open]')
-            control = page.locator('.brand-video-control')
-            dialog = page.locator('.brand-video-dialog')
             film = page.locator('.brand-video-full-player')
+            for selector in ['.brand-video-actions', '.brand-video-control', '[data-brand-video-open]', '.brand-video-caption']:
+                assert await page.locator('.home-hero-media ' + selector).is_hidden(), selector
             assert len(full_requests) == 0
             assert await film.get_attribute('src') is None
             assert await page.evaluate('document.documentElement.scrollWidth <= innerWidth'), 'horizontal overflow'
-            item = {'viewport': [width, height], 'mode': mode, 'fullRequestsBeforeClick': len(full_requests)}
-            if mode == 'no-js':
+            item = {'viewport': [width, height], 'mode': mode, 'overlaysHidden': True}
+            if mode != 'normal':
                 assert await hero.get_attribute('src') is None
-                assert 'kotto-seen-brand-film.mp4' in await opener.get_attribute('href')
-                assert await opener.get_attribute('target') == '_blank'
-                item['directFilmLink'] = True
+                assert await hero.evaluate('v=>v.paused && v.currentTime === 0')
                 item['heroPosterOnly'] = True
             else:
-                if mode != 'normal':
-                    assert await hero.get_attribute('src') is None
-                    item['posterUntilExplicitPlay'] = True
-                    await control.click()
                 await page.wait_for_function("document.querySelector('#home-brand-video').readyState >= 2 && !document.querySelector('#home-brand-video').paused")
                 item['hero'] = await hero.evaluate('(v)=>({source:v.currentSrc.split("/").pop(),width:v.videoWidth,height:v.videoHeight,duration:v.duration,muted:v.muted,loop:v.loop})')
                 assert item['hero']['source'] == ('kotto-seen-hero-mobile.mp4' if width <= 700 else 'kotto-seen-hero-desktop.mp4')
@@ -56,31 +49,9 @@ async def main():
                 after = await hero.evaluate('v=>v.currentTime')
                 assert after > before
                 item['heroTimeAdvanced'] = [before, after]
-                await page.screenshot(path=str(OUT / f'{width}-{mode}-home.png'))
-                await opener.click()
-                await page.wait_for_function('document.querySelector(".brand-video-full-player").readyState >= 2 && !document.querySelector(".brand-video-full-player").paused')
-                assert await dialog.evaluate('d=>d.open')
-                assert await hero.evaluate('v=>v.paused')
-                item['fullFilm'] = await film.evaluate('(v)=>({width:v.videoWidth,height:v.videoHeight,duration:v.duration,muted:v.muted,controls:v.controls,currentTime:v.currentTime})')
-                assert item['fullFilm']['duration'] == 26 and item['fullFilm']['width'] == 1920
-                assert not item['fullFilm']['muted'] and item['fullFilm']['controls']
-                await page.wait_for_function('document.querySelector(".brand-video-full-player").currentTime >= 2.8')
-                await film.evaluate('v=>v.pause()')
-                item['fullPlaybackReached'] = await film.evaluate('v=>v.currentTime')
-                await page.screenshot(path=str(OUT / f'{width}-{mode}-dialog.png'))
-                await page.keyboard.press('Escape')
-                await page.wait_for_function('!document.querySelector(".brand-video-dialog").open && !document.querySelector(".brand-video-full-player").hasAttribute("src")')
-                assert await opener.evaluate('e=>document.activeElement===e')
-                await page.wait_for_function('!document.querySelector("#home-brand-video").paused')
-                item['escapeRestoresFocusAndPlayback'] = True
-                await control.click()
-                paused_time = await hero.evaluate('v=>v.currentTime')
-                await opener.click()
-                await page.locator('[data-brand-video-close]').click()
-                await page.wait_for_timeout(300)
-                assert await hero.evaluate('v=>v.paused')
-                assert abs(await hero.evaluate('v=>v.currentTime') - paused_time) < 0.1
-                item['manualPausePreserved'] = True
+            await page.screenshot(path=str(OUT / f'{width}-{mode}-home.png'))
+            assert len(full_requests) == 0
+            item['fullFilmRequests'] = len(full_requests)
             item['javascriptErrors'] = errors
             assert not errors, errors
             results.append(item)

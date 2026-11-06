@@ -49,13 +49,11 @@ async def check_originals(frame, prefix, total):
 
 
 async def check_video(frame, width):
-    """Use the real playback control and decoded frames; no mocked media API."""
+    """Check hidden overlays and actual decoded background playback."""
     await frame.evaluate('scrollTo(0, 0)')
     video = frame.locator('#home-brand-video')
-    button = frame.locator('[data-brand-video] .brand-video-control')
-    await button.wait_for(state='visible')
-    if await video.evaluate('video => video.paused'):
-        await button.click()
+    for selector in ['.brand-video-actions', '.brand-video-control', '[data-brand-video-open]', '.brand-video-caption']:
+        assert await frame.locator('.home-hero-media ' + selector).is_hidden(), selector
     await frame.wait_for_function('''() => {
       const video = document.querySelector('#home-brand-video');
       return video.readyState >= 2 && !video.paused && video.videoWidth > 0;
@@ -64,28 +62,17 @@ async def check_video(frame, width):
       const key = width === 390 ? 'films/kotto-seen-hero-mobile.mp4' : 'films/kotto-seen-hero-desktop.mp4';
       return { embedded: video.currentSrc.startsWith('data:video/mp4;base64,'),
         exactSource: video.currentSrc === window.__KOTTO_ASSETS__[key],
-        muted: video.muted, videoWidth: video.videoWidth, videoHeight: video.videoHeight,
+        muted: video.muted, loop: video.loop, videoWidth: video.videoWidth, videoHeight: video.videoHeight,
         duration: video.duration, source: key };
     }''', width)
-    assert source['embedded'] and source['exactSource'] and source['muted'], source
+    assert source['embedded'] and source['exactSource'] and source['muted'] and source['loop'], source
     before = await video.evaluate('video => video.currentTime')
     await frame.wait_for_timeout(500)
     after = await video.evaluate('video => video.currentTime')
     advanced = (after - before + source['duration']) % source['duration']
     assert advanced > .1, ('embedded video did not advance', before, after)
-    await button.click()
-    await frame.wait_for_function('document.querySelector("#home-brand-video").paused')
-    paused_at = await video.evaluate('video => video.currentTime')
-    await frame.wait_for_timeout(350)
-    assert abs(await video.evaluate('video => video.currentTime') - paused_at) < .05
-    assert await button.get_attribute('aria-pressed') == 'false'
-    await button.click()
-    await frame.wait_for_function('!document.querySelector("#home-brand-video").paused')
-    await frame.wait_for_timeout(250)
-    assert await button.get_attribute('aria-pressed') == 'true'
-    await button.click()
     return {**source, 'playbackAdvancedSeconds': round(advanced, 3),
-            'pauseHeldTime': True, 'resumedByControl': True}
+            'overlaysHidden': True}
 
 
 async def run():
@@ -127,7 +114,7 @@ async def run():
             frame = await navigate(page, 'index.html')
             assert await frame.locator('[data-ev-portfolio]').count() == 0
             video = await check_video(frame, width)
-            print(f'{width}: embedded video play/pause/resume passed', flush=True)
+            print(f'{width}: embedded background video playback passed', flush=True)
             report['results'].append({'width': width, 'homeHasNoPortfolioGallery': True, 'offlineBrandVideo': video})
 
             # The seven actual projects live on their relevant service page.
