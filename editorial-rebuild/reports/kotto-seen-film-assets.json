@@ -1,0 +1,91 @@
+{
+  "title": "고또마케팅 브랜드 필름",
+  "created": "2026-11-06",
+  "direction": "차분하고 고급스러운 시네마틱",
+  "method": "Authored photo-based film: original model portraits, virtual camera framing, gentle dissolves and brand typography. No generated facial movement.",
+  "sources": [
+    {
+      "path": "portfolio/model-images/tf6032-001-women-02.webp",
+      "sha256": "20e05d57f85ffa0624789cb15d736dd43128992b83e9c26c095a4782a18f9ae7",
+      "origin": "User-supplied portfolio image"
+    },
+    {
+      "path": "portfolio/model-images/tf5922-020-men-03.webp",
+      "sha256": "cb5dd8fdfa45f049186ad32c5c7bc5d34428f06a792d5126151aef2ea6aa69c6",
+      "origin": "User-supplied portfolio image"
+    },
+    {
+      "path": "portfolio/model-images/tf1381-01a-men-03.webp",
+      "sha256": "424a423156c1ea3f6d3f9b3b45872c5bf984c577f11e790a4bcc167726118c64",
+      "origin": "User-supplied portfolio image"
+    },
+    {
+      "path": "portfolio/model-images/tf1291-28a-women-03.webp",
+      "sha256": "7886fe824676009c0e737e05dbbbd17a1c4a30e3f1d6be1d509f83072a184693",
+      "origin": "User-supplied portfolio image"
+    },
+    {
+      "path": "portfolio/model-images/tf1289-01a-women-03.webp",
+      "sha256": "b2d188ddee0473f61dee9eaec02ef18f97c8787029ea3f712edad180f5a110ff",
+      "origin": "User-supplied portfolio image"
+    }
+  ],
+  "audio": {
+    "source": "Original procedural composition, no third-party samples",
+    "script": "scripts/create-kotto-score.py",
+    "duration": 26,
+    "channels": 2,
+    "sampleRate": 48000
+  },
+  "files": [
+    {
+      "path": "films/kotto-seen-brand-film.mp4",
+      "bytes": 6663438,
+      "sha256": "df72d22ab9a749bbc6163a08a38290e7b9260abf55c6f81e9825074cf3707d00",
+      "seconds": 26.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": "24/1",
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "audio": true,
+      "faststart": true
+    },
+    {
+      "path": "films/kotto-seen-hero-desktop.mp4",
+      "bytes": 1859934,
+      "sha256": "afbe80ac004536d22501e46d189618311e2c50e87fc7abf6957207c777311375",
+      "seconds": 22.0,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "audio": false,
+      "faststart": true
+    },
+    {
+      "path": "films/kotto-seen-hero-mobile.mp4",
+      "bytes": 1817949,
+      "sha256": "e58935def72458b492553746de4e3744c235fc85f327904d48d63d08106b304e",
+      "seconds": 22.0,
+      "width": 720,
+      "height": 1280,
+      "fps": "24/1",
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "audio": false,
+      "faststart": true
+    },
+    {
+      "path": "films/kotto-seen-poster-mobile.webp",
+      "bytes": 88502,
+      "sha256": "c3e92254ac2624bdc9852d2aa7fa4c9b8af7982e2b3d244355be46e772b09a4a"
+    },
+    {
+      "path": "films/kotto-seen-poster.webp",
+      "bytes": 71564,
+      "sha256": "b8b1cf2fd31fb49501b1eb91f5fa497fdbba9c59e30be465be06634c349e435e"
+    }
+  ]
+}

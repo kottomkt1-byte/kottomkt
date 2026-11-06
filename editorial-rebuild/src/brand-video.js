@@ -1,4 +1,4 @@
-/** A silent, authored brand film. Sources load only when motion is permitted. */
+/** Silent ambient film, plus an explicitly opened brand film with native controls. */
 const asset = value => typeof window === 'undefined' ? value : (window.__KOTTO_ASSETS__?.[value] || value);
 const safe = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -7,20 +7,38 @@ export function renderBrandVideo({ id = 'kotto-brand-video', variant = 'feature'
   const mode = variant === 'hero' ? 'hero' : 'feature';
   return `<figure class="brand-video brand-video--${mode}" data-brand-video>
     <video id="${name}" class="brand-video-player" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"
-      poster="${asset('films/kotto-studio-poster.webp')}"
-      data-video-desktop="films/kotto-studio-desktop.mp4" data-video-mobile="films/kotto-studio-mobile.mp4" data-video-poster-mobile="films/kotto-studio-poster-mobile.webp"></video>
-    <button class="brand-video-control" type="button" aria-controls="${name}" aria-label="브랜드 영상 재생" aria-pressed="false" hidden>
-      <span class="brand-video-control-icon" aria-hidden="true"><i></i><i></i></span><span data-video-label>영상 재생</span>
-    </button>
+      poster="${asset('films/kotto-seen-poster.webp')}"
+      data-video-desktop="films/kotto-seen-hero-desktop.mp4" data-video-mobile="films/kotto-seen-hero-mobile.mp4" data-video-poster-mobile="films/kotto-seen-poster-mobile.webp"></video>
+    <div class="brand-video-actions">
+      <button class="brand-video-control" type="button" aria-controls="${name}" aria-label="브랜드 영상 재생" aria-pressed="false" hidden>
+        <span class="brand-video-control-icon" aria-hidden="true"><i></i><i></i></span><span data-video-label>영상 재생</span>
+      </button>
+      <a class="brand-video-open" data-brand-video-open href="${asset('films/kotto-seen-brand-film.mp4')}" target="_blank" rel="noopener" aria-controls="${name}-dialog">
+        <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor"/><path d="m8 6 6 4-6 4Z" fill="currentColor"/></svg>브랜드 필름 보기
+      </a>
+    </div>
     <figcaption class="brand-video-caption">고또마케팅 브랜드 필름</figcaption>
+    <dialog class="brand-video-dialog" id="${name}-dialog" aria-labelledby="${name}-film-title">
+      <div class="brand-video-dialog-panel">
+        <header class="brand-video-dialog-header"><h2 id="${name}-film-title">고또마케팅 브랜드 필름</h2><button class="brand-video-dialog-close" data-brand-video-close type="button" aria-label="브랜드 필름 닫기">닫기 <span aria-hidden="true">×</span></button></header>
+        <video class="brand-video-full-player" controls playsinline preload="none" poster="${asset('films/kotto-seen-poster.webp')}" data-video-full="films/kotto-seen-brand-film.mp4" aria-label="고또마케팅 브랜드 필름, 음악 포함"></video>
+        <footer class="brand-video-dialog-footer"><p data-brand-video-error role="status" hidden>영상을 불러오지 못했습니다. 새 창에서 다시 열어 주세요.</p><a data-brand-video-fallback href="${asset('films/kotto-seen-brand-film.mp4')}" target="_blank" rel="noopener">새 창에서 영상 보기 <span aria-hidden="true">↗</span></a></footer>
+      </div>
+    </dialog>
   </figure>`;
 }
 
 export function initBrandVideo() {
   const cleanups = [...document.querySelectorAll('[data-brand-video]')].map(figure => {
-    const video = figure.querySelector('video');
-    const button = figure.querySelector('button');
+    const video = figure.querySelector('.brand-video-player');
+    const button = figure.querySelector('.brand-video-control');
     const label = figure.querySelector('[data-video-label]');
+    const openButton = figure.querySelector('[data-brand-video-open]');
+    const dialog = figure.querySelector('.brand-video-dialog');
+    const closeButton = figure.querySelector('[data-brand-video-close]');
+    const film = figure.querySelector('.brand-video-full-player');
+    const filmError = figure.querySelector('[data-brand-video-error]');
+    const fallback = figure.querySelector('[data-brand-video-fallback]');
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
     const narrow = matchMedia('(max-width: 700px)');
     const connection = navigator.connection;
@@ -31,10 +49,16 @@ export function initBrandVideo() {
     let disposed = false;
     let pending = false;
     let failed = false;
+    let resumeAfterFilm = false;
+    let resumeWhenSettled = false;
+    let backdropPointerDown = false;
+    let opener;
     const allowed = () => !reduced.matches && !connection?.saveData;
-    const state = { source: 'poster', mode: allowed() ? 'ambient' : 'poster', playing: false };
+    const state = { source: 'poster', mode: allowed() ? 'ambient' : 'poster', playing: false, filmOpen: false };
     figure.brandVideo = state;
     button.hidden = false;
+    openButton.href = fallback.href = asset(film.dataset.videoFull);
+    if (typeof dialog.showModal === 'function') openButton.setAttribute('aria-haspopup', 'dialog');
 
     function update() {
       const playing = !video.paused && !video.ended;
@@ -54,7 +78,7 @@ export function initBrandVideo() {
       video.load();
     }
     function play() {
-      if (pending || disposed || document.hidden || !visible || userPaused) return;
+      if (pending || disposed || state.filmOpen || document.hidden || !visible || userPaused) return;
       if (!manual && !allowed()) return;
       ensureSource();
       pending = true;
@@ -63,12 +87,16 @@ export function initBrandVideo() {
         update();
       }).finally(() => {
         pending = false;
-        if (disposed || !visible || document.hidden || userPaused || (!manual && !allowed())) video.pause();
+        if (disposed || state.filmOpen || !visible || document.hidden || userPaused || (!manual && !allowed())) video.pause();
         update();
+        if (resumeWhenSettled) {
+          resumeWhenSettled = false;
+          sync();
+        }
       });
     }
     function sync() {
-      if (visible && !document.hidden && !userPaused && (manual || allowed())) play();
+      if (!state.filmOpen && visible && !document.hidden && !userPaused && (manual || allowed())) play();
       else video.pause();
       update();
     }
@@ -100,12 +128,77 @@ export function initBrandVideo() {
       state.source = 'poster';
       update();
     }
+    function stopFilm() {
+      film.pause();
+      film.removeAttribute('src');
+      film.load();
+      if (document.fullscreenElement && dialog.contains(document.fullscreenElement)) {
+        document.exitFullscreen?.().catch(() => {});
+      }
+      if (film.webkitDisplayingFullscreen) film.webkitExitFullscreen?.();
+    }
+    function openFilm(event) {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || typeof dialog.showModal !== 'function') return;
+      if (dialog.open) { event.preventDefault(); return; }
+      dialog.showModal();
+      event.preventDefault();
+      opener = event.currentTarget;
+      if (!state.filmOpen) resumeAfterFilm = !video.paused || pending;
+      state.filmOpen = true;
+      sync();
+      filmError.hidden = true;
+      film.src = asset(film.dataset.videoFull);
+      film.load();
+      // Audible playback starts only from this explicit user gesture.
+      film.play()?.catch(() => {});
+      closeButton.focus({ preventScroll: true });
+    }
+    function closeFilm() {
+      film.pause();
+      if (dialog.open) dialog.close();
+    }
+    function filmClosed() {
+      // A queued close event must not tear down a film opened again meanwhile.
+      if (dialog.open) return;
+      const shouldResume = resumeAfterFilm;
+      resumeAfterFilm = false;
+      state.filmOpen = false;
+      stopFilm();
+      if (disposed) return;
+      if (opener?.isConnected) opener.focus({ preventScroll: true });
+      if (shouldResume) {
+        // A pending autoplay promise can settle after a quick open/close.
+        resumeWhenSettled = pending;
+        sync();
+      } else update();
+    }
+    function cancelFilm(event) {
+      event.preventDefault();
+      closeFilm();
+    }
+    function outsideDialog(event) {
+      const rect = dialog.getBoundingClientRect();
+      return event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom);
+    }
+    function backdropDown(event) { backdropPointerDown = outsideDialog(event); }
+    function backdropClick(event) {
+      if (backdropPointerDown && outsideDialog(event)) closeFilm();
+      backdropPointerDown = false;
+    }
+    function filmFailed() { filmError.hidden = false; }
     const observer = new IntersectionObserver(entries => {
       visible = entries[0].isIntersecting && entries[0].intersectionRatio > 0.15;
       sync();
     }, { threshold: [0, 0.15, 0.4] });
     observer.observe(figure);
     button.addEventListener('click', toggle);
+    openButton.addEventListener('click', openFilm);
+    closeButton.addEventListener('click', closeFilm);
+    dialog.addEventListener('cancel', cancelFilm);
+    dialog.addEventListener('close', filmClosed);
+    dialog.addEventListener('pointerdown', backdropDown);
+    dialog.addEventListener('click', backdropClick);
+    film.addEventListener('error', filmFailed);
     video.addEventListener('playing', update);
     video.addEventListener('pause', update);
     video.addEventListener('error', error);
@@ -116,7 +209,18 @@ export function initBrandVideo() {
       disposed = true;
       observer.disconnect();
       video.pause();
+      stopFilm();
+      if (dialog.open) dialog.close();
+      state.filmOpen = false;
+      state.playing = false;
       button.removeEventListener('click', toggle);
+      openButton.removeEventListener('click', openFilm);
+      closeButton.removeEventListener('click', closeFilm);
+      dialog.removeEventListener('cancel', cancelFilm);
+      dialog.removeEventListener('close', filmClosed);
+      dialog.removeEventListener('pointerdown', backdropDown);
+      dialog.removeEventListener('click', backdropClick);
+      film.removeEventListener('error', filmFailed);
       video.removeEventListener('playing', update);
       video.removeEventListener('pause', update);
       video.removeEventListener('error', error);

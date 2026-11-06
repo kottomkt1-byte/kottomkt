@@ -61,7 +61,7 @@ async def check_video(frame, width):
       return video.readyState >= 2 && !video.paused && video.videoWidth > 0;
     }''')
     source = await video.evaluate('''(video, width) => {
-      const key = width === 390 ? 'films/kotto-studio-mobile.mp4' : 'films/kotto-studio-desktop.mp4';
+      const key = width === 390 ? 'films/kotto-seen-hero-mobile.mp4' : 'films/kotto-seen-hero-desktop.mp4';
       return { embedded: video.currentSrc.startsWith('data:video/mp4;base64,'),
         exactSource: video.currentSrc === window.__KOTTO_ASSETS__[key],
         muted: video.muted, videoWidth: video.videoWidth, videoHeight: video.videoHeight,
