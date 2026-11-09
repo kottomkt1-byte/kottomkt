@@ -1,0 +1,34 @@
+{
+  "scope": "Final CSS-only mobile inquiry heading refinement",
+  "date": "2026-11-09",
+  "results": [
+    {
+      "width": 320,
+      "lines": [
+        "브랜드의 다음 일을",
+        "들려주세요."
+      ],
+      "overflow": false,
+      "fontSize": "32.64px"
+    },
+    {
+      "width": 390,
+      "lines": [
+        "브랜드의 다음 일을",
+        "들려주세요."
+      ],
+      "overflow": false,
+      "fontSize": "39.78px"
+    },
+    {
+      "width": 700,
+      "lines": [
+        "브랜드의 다음 일을",
+        "들려주세요."
+      ],
+      "overflow": false,
+      "fontSize": "71.4px"
+    }
+  ],
+  "failures": []
+}

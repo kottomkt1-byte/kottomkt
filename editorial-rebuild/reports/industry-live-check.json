@@ -1,0 +1,75 @@
+{
+  "checkedRelease": "cb2d280b5207868cf154f15ee93442f25bc13de4",
+  "date": "2026-11-09",
+  "url": "https://www.kotto.kr/",
+  "method": "Firecrawl isolated browser on production; no form submission",
+  "home": {
+    "title": "안경을 아는 시선으로, 브랜드의 가치를 전합니다. — 고또마케팅",
+    "h1": "안경을 아는 시선.\n브랜드를 위한 콘텐츠.",
+    "sector": "안경 산업 전문 광고·콘텐츠 마케팅",
+    "audiences": [
+      {
+        "name": "안경원",
+        "href": "services.html?audience=store"
+      },
+      {
+        "name": "아이웨어 브랜드",
+        "href": "services.html?audience=eyewear"
+      },
+      {
+        "name": "안경렌즈·콘택트렌즈",
+        "href": "services.html?audience=lenses"
+      },
+      {
+        "name": "제조·유통 및 관련 기업",
+        "href": "services.html?audience=distribution"
+      }
+    ],
+    "overlaysHidden": true,
+    "overflow": false,
+    "hero": {
+      "source": "https://www.kotto.kr/films/kotto-seen-hero-desktop.mp4",
+      "paused": false
+    },
+    "og": "https://www.kotto.kr/images/kotto-industry-share.png"
+  },
+  "mobile": {
+    "overflow": false,
+    "h1": "안경을 아는 시선.\n브랜드를 위한 콘텐츠.",
+    "heroSource": "https://www.kotto.kr/films/kotto-seen-hero-mobile.mp4"
+  },
+  "lenses": {
+    "selected": "true",
+    "count": 5,
+    "overflow": false
+  },
+  "contact": {
+    "h1": "브랜드의 다음\n일을\n들려주세요.",
+    "industries": [
+      "해당 분야를 선택해 주세요",
+      "안경원",
+      "아이웨어 브랜드·제조·수입·유통사",
+      "안경렌즈 기업",
+      "콘택트렌즈 기업",
+      "기타"
+    ],
+    "storeOptional": true,
+    "regionOptional": true,
+    "prefill": "안경테·선글라스 모델 이미지 제작에 대해 상담받고 싶습니다.",
+    "overflow": false
+  },
+  "assets": [
+    {
+      "path": "/films/kotto-industry-brand-film.mp4",
+      "status": 200,
+      "bytes": 6664067,
+      "sha256": "73b21140920b4de54bd6482f7c7582154f2d3ea2f087beed076dad82dd7d2808"
+    },
+    {
+      "path": "/images/kotto-industry-share.png",
+      "status": 200,
+      "bytes": 375978,
+      "sha256": "97d9f650223e29379a4a4f71af40107c4cbd92513844f9130143230f59a82656"
+    }
+  ]
+}

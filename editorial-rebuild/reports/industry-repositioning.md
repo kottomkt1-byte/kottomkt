@@ -29,3 +29,5 @@
 ## 운영 산출물
 
 최종 150개 파일의 SHA-256을 매니페스트와 대조한 뒤 루트 운영 파일에 적용했다. 기존 파일은 저장소 밖 `kotto-production-backups/2026-11-09T06-11-58-860Z`에 보존했다. 공유 이미지는 1200×630의 새로운 HTML/CSS 카드이며 기존 민트 배경 모델 원본을 사용한다. `scripts/render-kotto-industry-share.py`로 재현한다. 전체 페이지의 새 OG 이미지 경로·크기와 기존 안경원 전용 공통 문구 제거를 확인했다. 상세 결과는 `industry-release-check.json`에 있다.
+
+운영 1차 반영 커밋 `cb2d280`의 GitHub Pages 배포 성공과 실제 www.kotto.kr의 PC/모바일 헤드라인·업종 필터·문의 항목·영상 재생·새 필름/공유 이미지 해시를 확인했다(`industry-live-check.json`). 이후 모바일 문의 제목의 한 단어만 다음 줄에 남는 현상을 글자 크기 조정으로 보완하고 320/390/700px에서 두 줄 표시와 넘침 없음을 확인했다(`industry-contact-type-qa.json`).
