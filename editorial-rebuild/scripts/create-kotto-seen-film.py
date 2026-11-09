@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Author KOTTO's 26-second photo-based brand film and 22-second silent hero loops.
+"""Author KOTTO's optical-industry brand film and 22-second silent hero loops.
 
 Uses the user's existing unaltered model portraits. Only camera framing, dissolves,
 layout and typography change over time; this does not synthesize facial movement.
@@ -116,12 +116,12 @@ def scene(index,p,w,h,mode):
         frame=Image.new('RGB',(w,h),COLORS[index]);left=int(w*.43);pw=w-left
         frame.paste(camera(index,(pw,h),p,focus=(.53,.43)),(left,0),horizontal_mask(pw,h))
         a=smooth((p*5.1-.6)/1.1)
-        text(frame,'안경원을\n이해하고,',(112*s,(415+(1-a)*22)*s),78*s,PAPER,alpha=a)
+        text(frame,'안경을 아는\n시선으로,',(112*s,(415+(1-a)*22)*s),78*s,PAPER,alpha=a)
     elif index==1:
         frame=Image.new('RGB',(w,h),PAPER);pw=int(w*.57)
         frame.paste(camera(index,(pw,h),p,focus=(.5,.38)),(0,0),horizontal_mask(pw,h,'right'))
         a=smooth((p*5.1-.45)/1.0)
-        text(frame,'고객의\n언어로.',(1220*s,(415+(1-a)*22)*s),78*s,INK,alpha=a)
+        text(frame,'브랜드의\n가치를 전합니다.',(1210*s,(415+(1-a)*22)*s),78*s,INK,alpha=a)
     elif index in (2,3):
         frame=camera(index,(w,h),p)
         # A restrained lower exposure veil leaves the supplied photograph intact.
@@ -143,15 +143,15 @@ def scene(index,p,w,h,mode):
 def endcard(t,w,h):
     frame=Image.new('RGB',(w,h),PAPER);s=w/1920
     a=smooth((t-.05)/.8)
-    title='좋은 안경원을\n제대로 알리는 일.'
+    title='안경을 아는 시선.\n브랜드를 위한 콘텐츠.'
     text(frame,title,(190*s,(180+(1-a)*18)*s),65*s,INK,alpha=a)
     b=smooth((t-.5)/.9)
     text(frame,'kotto',(177*s,(445+(1-b)*16)*s),265*s,CLAY,alpha=b)
     text(frame,'고또마케팅',(197*s,795*s),29*s,INK,kind='sans',alpha=b)
-    text(frame,'안경원 전문 광고·콘텐츠 마케팅',(197*s,870*s),23*s,(112,107,96),kind='sans',alpha=b)
+    text(frame,'안경 산업 전문 광고·콘텐츠 마케팅',(197*s,870*s),23*s,(112,107,96),kind='sans',alpha=b)
     # Fine editorial rules and a quiet counterweight keep the closing frame deliberate.
     d=ImageDraw.Draw(frame);d.line((1260*s,185*s,1260*s,900*s),fill=(197,188,173),width=max(1,round(s)))
-    text(frame,'안경원의 일에서,\n고객의 일상까지.',(1365*s,735*s),29*s,(112,107,96),kind='sans',alpha=b)
+    text(frame,'제품의 디테일에서,\n브랜드의 이야기까지.',(1365*s,735*s),29*s,(112,107,96),kind='sans',alpha=b)
     text(frame,'KOTTO.KR',(1365*s,873*s),18*s,CLAY,kind='sans',spacing=2*s,alpha=b)
     return frame
 
@@ -197,17 +197,31 @@ def render(mode,w,h,name,duration,crf,maxrate):
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--preview',action='store_true');parser.add_argument('--only',choices=['full','hero','mobile']);args=parser.parse_args()
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--preview',action='store_true')
+    parser.add_argument('--only',choices=['full','hero','mobile'])
+    parser.add_argument('--preview-dir',type=Path,default=ROOT/'output/industry-film')
+    args=parser.parse_args()
     WORK.mkdir(parents=True,exist_ok=True);prepare_fonts()
     if args.preview:
-        for i,t in enumerate([2.8,7.2,11.4,15.8,20.2,25.0]):
-            frame_at(t,1920,1080,'full').save(WORK/f'frame-{i}.jpg',quality=92)
-        frame_at(0,1280,720,'hero').save(WORK/'hero-preview.jpg',quality=92)
-        frame_at(0,720,1280,'mobile').save(WORK/'mobile-preview.jpg',quality=92)
-        print(str(WORK));return
+        preview=args.preview_dir;preview.mkdir(parents=True,exist_ok=True)
+        if args.only in (None,'full'):
+            sheet=Image.new('RGB',(1920,800),PAPER)
+            for i,t in enumerate([2.8,7.2,11.4,15.8,20.2,25.0]):
+                frame=frame_at(t,1920,1080,'full')
+                frame.save(preview/f'frame-{i}.jpg',quality=92)
+                x=(i%3)*640;y=(i//3)*400
+                sheet.paste(frame.resize((640,360),Image.Resampling.LANCZOS),(x,y))
+                text(sheet,f'{t:04.1f}s',(x+16,y+371),16,INK,kind='sans')
+            sheet.save(preview/'contact-sheet.jpg',quality=93)
+        if args.only in (None,'hero'):
+            frame_at(0,1280,720,'hero').save(preview/'hero-preview.jpg',quality=92)
+        if args.only in (None,'mobile'):
+            frame_at(0,720,1280,'mobile').save(preview/'mobile-preview.jpg',quality=92)
+        print(str(preview));return
     score=WORK/'kotto-seen-score.wav'
     if not score.exists(): raise RuntimeError('Create original soundtrack with scripts/create-kotto-score.py before rendering')
-    exports=[('full',1920,1080,'kotto-seen-brand-film.mp4',26,20,'8000k'),('hero',1280,720,'kotto-seen-hero-desktop.mp4',22,24,'1900k'),('mobile',720,1280,'kotto-seen-hero-mobile.mp4',22,25,'1300k')]
+    exports=[('full',1920,1080,'kotto-industry-brand-film.mp4',26,20,'8000k'),('hero',1280,720,'kotto-seen-hero-desktop.mp4',22,24,'1900k'),('mobile',720,1280,'kotto-seen-hero-mobile.mp4',22,25,'1300k')]
     results=[]
     for spec in exports:
         if args.only and args.only!=spec[0]: continue

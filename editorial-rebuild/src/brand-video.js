@@ -13,7 +13,7 @@ export function renderBrandVideo({ id = 'kotto-brand-video', variant = 'feature'
       <button class="brand-video-control" type="button" aria-controls="${name}" aria-label="브랜드 영상 재생" aria-pressed="false" hidden>
         <span class="brand-video-control-icon" aria-hidden="true"><i></i><i></i></span><span data-video-label>영상 재생</span>
       </button>
-      <a class="brand-video-open" data-brand-video-open href="${asset('films/kotto-seen-brand-film.mp4')}" target="_blank" rel="noopener" aria-controls="${name}-dialog">
+      <a class="brand-video-open" data-brand-video-open href="${asset('films/kotto-industry-brand-film.mp4')}" target="_blank" rel="noopener" aria-controls="${name}-dialog">
         <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor"/><path d="m8 6 6 4-6 4Z" fill="currentColor"/></svg>브랜드 필름 보기
       </a>
     </div>
@@ -21,8 +21,8 @@ export function renderBrandVideo({ id = 'kotto-brand-video', variant = 'feature'
     <dialog class="brand-video-dialog" id="${name}-dialog" aria-labelledby="${name}-film-title">
       <div class="brand-video-dialog-panel">
         <header class="brand-video-dialog-header"><h2 id="${name}-film-title">고또마케팅 브랜드 필름</h2><button class="brand-video-dialog-close" data-brand-video-close type="button" aria-label="브랜드 필름 닫기">닫기 <span aria-hidden="true">×</span></button></header>
-        <video class="brand-video-full-player" controls playsinline preload="none" poster="${asset('films/kotto-seen-poster.webp')}" data-video-full="films/kotto-seen-brand-film.mp4" aria-label="고또마케팅 브랜드 필름, 음악 포함"></video>
-        <footer class="brand-video-dialog-footer"><p data-brand-video-error role="status" hidden>영상을 불러오지 못했습니다. 새 창에서 다시 열어 주세요.</p><a data-brand-video-fallback href="${asset('films/kotto-seen-brand-film.mp4')}" target="_blank" rel="noopener">새 창에서 영상 보기 <span aria-hidden="true">↗</span></a></footer>
+        <video class="brand-video-full-player" controls playsinline preload="none" poster="${asset('films/kotto-seen-poster.webp')}" data-video-full="films/kotto-industry-brand-film.mp4" aria-label="고또마케팅 브랜드 필름, 음악 포함"></video>
+        <footer class="brand-video-dialog-footer"><p data-brand-video-error role="status" hidden>영상을 불러오지 못했습니다. 새 창에서 다시 열어 주세요.</p><a data-brand-video-fallback href="${asset('films/kotto-industry-brand-film.mp4')}" target="_blank" rel="noopener">새 창에서 영상 보기 <span aria-hidden="true">↗</span></a></footer>
       </div>
     </dialog>
   </figure>`;

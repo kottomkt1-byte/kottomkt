@@ -1,0 +1,244 @@
+{
+  "date": "2026-11-09",
+  "note": "Local production build; browser viewport emulation; no live emails",
+  "routes": [
+    {
+      "width": 1440,
+      "page": "about.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "page": "contact.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "page": "index.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "page": "location.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "page": "service-blog.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "page": "service-cafe.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "page": "service-daangn.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "page": "service-hpblog.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "page": "service-instagram.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "page": "service-model-images.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "page": "service-place.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "page": "service-website.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "page": "services.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "about.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "contact.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "index.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "location.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "service-blog.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "service-cafe.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "service-daangn.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "service-hpblog.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "service-instagram.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "service-model-images.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "service-place.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "service-website.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "page": "services.html",
+      "overflow": false,
+      "errors": [],
+      "httpErrors": [],
+      "brokenImages": []
+    }
+  ],
+  "journeys": [
+    {
+      "width": 1440,
+      "homeIndustryLink": true,
+      "filterCounts": [
+        8,
+        6,
+        5,
+        6
+      ],
+      "keyboardFilters": true,
+      "modelServiceInquiry": true,
+      "menuEscapeFocus": true
+    },
+    {
+      "width": 390,
+      "homeIndustryLink": true,
+      "filterCounts": [
+        8,
+        6,
+        5,
+        6
+      ],
+      "keyboardFilters": true,
+      "modelServiceInquiry": true,
+      "menuEscapeFocus": true
+    }
+  ],
+  "failures": [],
+  "noJsAllServices": true
+}

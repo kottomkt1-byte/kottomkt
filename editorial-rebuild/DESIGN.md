@@ -1,26 +1,49 @@
-# KOTTO / Editorial rebuild
+# KOTTO design direction — November 2026
 
-선택한 B를 12페이지로 확장한다. 안경원 안의 전문적인 설명을 고객이 읽는 이야기로 편집한다는 업무를, 활자와 종이의 물성으로 시각화한다. 브랜드 그래픽은 고객 포트폴리오로 제시하지 않는다.
+## Brand and audience
 
-## 디자인
+KOTTO provides advertising and content marketing for the optical industry: optical stores, eyewear brands, spectacle lens/contact lens companies, manufacturers and distributors. The user authorized this expansion on 2026-11-09. The central statement is **안경을 아는 시선. 브랜드를 위한 콘텐츠.**
 
-- 종이 #f3f0e8 / 활자 #292720 / 인쇄 잉크 #77362e / 선 #ccc7bc / 보조 글 #716c62.
-- Noto Serif KR: 큰 한국어 제목과 중요한 문장. Pretendard: 설명, 안내, 메뉴와 양식. 실제 한국어 어절 단위로 줄바꿈한다.
-- 한 개의 일률적인 카드 레이아웃을 쓰지 않는다. 메인은 대형 활자→전면 이미지→읽는 문장→서비스 목차. 상세는 인쇄물의 판면과 주석처럼 업무를 나누어 설명한다. 문의는 안정된 입력 폼이다.
-- ui-ux-pro-max 검색의 일반적인 파랑 팔레트·Brutalism·Latin 폰트 추천은 선택된 B 및 한국어 브랜드와 맞지 않아 적용하지 않았다. 접근성·대비·동작 제어 기준만 사용한다.
+## Visual direction
 
-## 모션 스토리보드
+A photographic editorial website, with generous margins, restrained serif headlines and concise sans-serif explanations. Original model portraits carry the visual identity. Large images alternate with clear service information and documented customer evidence. The dark selected-work section adds a deliberate change of pace between the light industry introduction and service index.
 
-| 장면 | 시작·종료 | 연출·시간 | 사용자 행동·대체 |
-| --- | --- | --- | --- |
-| 첫 문장 | 폰트 준비→약 1.4초 | SplitText 한국어 줄 마스크, 0.12초 시간차, power3.out | 링크는 즉시 사용 가능. reduced-motion은 원문 표시 |
-| 인쇄물이 화면으로 | 메인 sticky 진입→약 85vh 스크롤 | 종이 이미지의 잘린 판면이 전체 화면으로 열리며 문장이 교체. ScrollTrigger scrub 0.65 | 역스크롤로 되돌림. 모바일은 일반 문서 흐름, 축소/확대 제거 |
-| 종이 물성 | 포인터 이동·스크롤 | 이미지 좌표에 얕은 굴곡·빛 변화, 움직일 때만 그리기 | 모바일·reduced·WebGL 오류는 원본 사진 |
-| 업무 목차 | 호버·키보드 포커스 | 대응하는 실제 업무 설명과 조형 판면 전환, 0.35초 | 모든 항목은 상세페이지 링크. 터치는 첫 탭으로 이동 |
-| 페이지 이동 | 내부 링크 활성화 | 지원 브라우저 native View Transition으로 0.45초 판면 전환 | 일반 링크 이동이 기본; 뒤로가기·새탭·JS 비활성 작동 |
-| 전체 메뉴 | 메뉴 버튼→닫기/Escape | dialog 안의 장 제목과 서비스 목차 개방 0.5초 | native focus trap, focus restore. reduced 즉시 표시 |
-| 서비스 본문 | 본문 진입→범위 설명 끝 | 핵심 업무 단어가 인쇄 판면에서 교체 | 모바일·reduced는 모든 설명 순서대로 표시 |
+- Paper `#f3f0e8`; ink `#292720`; muted `#716c62`; rule `#ccc7bc`.
+- Brick `#77362e` for the existing footer and brand accent; charcoal `#23282c` for selected work.
+- Display: Kotto Display (Noto Serif KR subset); text: Kotto Text (Pretendard subset), with system fallbacks.
+- Desktop gutter 48px, mobile 24px; full-width atmospheric hero, then asymmetric two-column editorial sections; mobile becomes a deliberate single-column sequence.
+- Images use the supplied portfolio's actual color, face, glasses and clothing. Preview thumbnails are used at display sizes; full-resolution originals remain in the portfolio viewer.
 
-## 유지 범위
+## Composition and references
 
-기존 root 12페이지 및 수정 중인 파일은 덮어쓰지 않는다. 새 사이트는 editorial-rebuild 아래 생성한다. 메뉴, 7서비스, 문의 6개 필드, EmailJS 기존 payload/서비스/템플릿, 동의·실패·전송 중 처리, 카카오톡·블로그·메일·지도·회사정보를 보존한다. 검증되지 않은 실적·수상·후기만 근거 없이 재게시하지 않는다.
+Reference galleries supplied by the user were reviewed as research, not copied as templates:
+
+- [Cuuut](https://www.cuuut.com/) via [Landing.love](https://www.landing.love/sites/cuuut/): large work images with compact medium/case captions, generous space, work leading into the studio's point of view.
+- [Treize grammes](https://www.13g.fr/) via [Supahero](https://supahero.io/hero/treize-grammes): short sequential brand statements and a clear progression to expertise/services/contact.
+- [Red Antler](https://www.redantler.com/) via [Supahero](https://supahero.io/hero/red-antler): concise positioning followed by actual work and explicit service classification.
+- [35mm](https://35mm-one.vercel.app/) via [Supahero](https://supahero.io/hero/35mm): optical details explained in relation to the object; relevant to the existing glasses detail section.
+
+Reference content was retrieved; reference browser transitions/timings could not be independently verified. KOTTO motion is our implementation, not a claim about their code.
+
+## Homepage and shared navigation
+
+1. Silent 22-second photographic film; headline, industry category and one industry-introduction CTA. Homepage playback controls, film-viewing link and film caption remain hidden at the user's request.
+2. Mint original model portrait with four linked audience rows.
+3. Selected original eyewear images with asymmetric sizing, short captions and links to actual portfolio/cases.
+4. Three service groups: images, explanatory content, customer contact channels.
+5. Existing scoped achievement records and actual optical-store customer reactions.
+6. Shared brand invitation, public contact channels and unchanged legal information.
+
+## Service and inquiry behavior
+
+`services.html?audience=store|eyewear|lenses|distribution` selects a native-button audience filter; without JS all services are readable. Place and Daangn remain store-specific. Model imagery is only for frames/sunglasses. Contact captures company/brand, industry and project type; optional store/location fields do not block a brand or lens company.
+
+EmailJS's existing six-key payload is preserved; new inquiry context is assembled into the message. No invented clients, case outcomes or medical claims are introduced.
+
+## Motion and accessibility
+
+Use existing GSAP timelines/ScrollTrigger only. Desktop images get slow restrained scale/position movement; selected images reveal with a short scroll-linked crop. No long pinned homepage sequence. Mobile is readable in normal document flow. Reduced-motion and data-saving users receive the hero poster; no-JS content remains available. Clear focus styles, semantic headings, responsive images and keyboard-operable menus/filters are required.
+
+## Review contract
+
+Review rendered desktop and mobile screenshots, 320px overflow, all 13 routes and cross-page anchors; inspect service filters and mock form success/failure without sending mail. Preserve the 32 original portfolio images, portfolio #23 Optical image, actual Kakao feedback image, ZIN 01 viewer, legal/contact details and the scope of existing evidence.

@@ -1,0 +1,120 @@
+{
+  "created_at_utc": "2026-11-09T05:53:33.401415+00:00",
+  "purpose": "Expand the full brand film positioning from optical shops to the optical industry.",
+  "output": {
+    "path": "public/films/kotto-industry-brand-film.mp4",
+    "bytes": 6664067,
+    "sha256": "73b21140920b4de54bd6482f7c7582154f2d3ea2f087beed076dad82dd7d2808",
+    "seconds": 26.0,
+    "width": 1920,
+    "height": 1080,
+    "frame_rate": "24/1",
+    "frames": 624,
+    "video_codec": "h264",
+    "pixel_format": "yuv420p",
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "copy": {
+    "opening": "안경을 아는\n시선으로,",
+    "second": "브랜드의\n가치를 전합니다.",
+    "closing": "안경을 아는 시선.\n브랜드를 위한 콘텐츠.",
+    "category": "안경 산업 전문 광고·콘텐츠 마케팅",
+    "supporting": "제품의 디테일에서,\n브랜드의 이야기까지."
+  },
+  "sources": {
+    "portraits": [
+      {
+        "path": "public/portfolio/model-images/tf6032-001-women-02.webp",
+        "bytes": 1470384,
+        "sha256": "20e05d57f85ffa0624789cb15d736dd43128992b83e9c26c095a4782a18f9ae7"
+      },
+      {
+        "path": "public/portfolio/model-images/tf5922-020-men-03.webp",
+        "bytes": 1313094,
+        "sha256": "cb5dd8fdfa45f049186ad32c5c7bc5d34428f06a792d5126151aef2ea6aa69c6"
+      },
+      {
+        "path": "public/portfolio/model-images/tf1381-01a-men-03.webp",
+        "bytes": 1596492,
+        "sha256": "424a423156c1ea3f6d3f9b3b45872c5bf984c577f11e790a4bcc167726118c64"
+      },
+      {
+        "path": "public/portfolio/model-images/tf1291-28a-women-03.webp",
+        "bytes": 1390658,
+        "sha256": "7886fe824676009c0e737e05dbbbd17a1c4a30e3f1d6be1d509f83072a184693"
+      },
+      {
+        "path": "public/portfolio/model-images/tf1289-01a-women-03.webp",
+        "bytes": 1607846,
+        "sha256": "b2d188ddee0473f61dee9eaec02ef18f97c8787029ea3f712edad180f5a110ff"
+      }
+    ],
+    "music": {
+      "path": "output/brand-film/kotto-seen-score.wav",
+      "bytes": 4992044,
+      "sha256": "ddf53ef28ed3da1146d3eeab77a24bb3c001bda1fdf02d8ac26d4206c2352574",
+      "reused_existing_original": true
+    },
+    "render_script": {
+      "path": "scripts/create-kotto-seen-film.py",
+      "sha256": "dec1b19d9ca5f8e55eb0fa52bdcb76f76bc4297e86e2783e4321c45959eb63b5"
+    }
+  },
+  "validation": {
+    "complete_video_and_audio_decode": "passed",
+    "missing_korean_font_glyphs": [],
+    "text_within_frame": "passed",
+    "contact_sheet_and_endcard_visual_review": "passed",
+    "unchanged_hero_assets": [
+      {
+        "path": "public/films/kotto-seen-hero-desktop.mp4",
+        "sha256": "afbe80ac004536d22501e46d189618311e2c50e87fc7abf6957207c777311375",
+        "unchanged": true
+      },
+      {
+        "path": "public/films/kotto-seen-hero-mobile.mp4",
+        "sha256": "e58935def72458b492553746de4e3744c235fc85f327904d48d63d08106b304e",
+        "unchanged": true
+      },
+      {
+        "path": "public/films/kotto-seen-poster-mobile.webp",
+        "sha256": "c3e92254ac2624bdc9852d2aa7fa4c9b8af7982e2b3d244355be46e772b09a4a",
+        "unchanged": true
+      },
+      {
+        "path": "public/films/kotto-seen-poster.webp",
+        "sha256": "b8b1cf2fd31fb49501b1eb91f5fa497fdbba9c59e30be465be06634c349e435e",
+        "unchanged": true
+      }
+    ],
+    "decoded_audio_matches_previous_full_film": true,
+    "decoded_audio_sha256": "ae9962c3c6e9b9bde6d860e76bf0e4dbc278600ae3ba7a93e0b2ac0cb3146708"
+  },
+  "preview": {
+    "directory": "output/industry-film",
+    "contact_sheet": "output/industry-film/contact-sheet.jpg",
+    "frames": [
+      "output/industry-film/frame-0.jpg",
+      "output/industry-film/frame-1.jpg",
+      "output/industry-film/frame-2.jpg",
+      "output/industry-film/frame-3.jpg",
+      "output/industry-film/frame-4.jpg",
+      "output/industry-film/frame-5.jpg"
+    ],
+    "timestamps_seconds": [
+      2.8,
+      7.2,
+      11.4,
+      15.8,
+      20.2,
+      25.0
+    ]
+  },
+  "reproduce": {
+    "preview": "python scripts/create-kotto-seen-film.py --preview --only full",
+    "render": "python scripts/create-kotto-seen-film.py --only full"
+  },
+  "scope": "Only the full film was rendered. Silent 22-second hero loops and their posters retain their original bytes. No generated imagery, external assets or purchases were used."
+}

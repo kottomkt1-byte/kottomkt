@@ -1,0 +1,162 @@
+{
+  "checkedAt": "2026-11-09T06:05:42.759461+00:00",
+  "base": "http://127.0.0.1:4186",
+  "scope": "Integrated About/Contact pages.",
+  "mailSafety": "EmailJS mocked in memory; API requests blocked. No live email sent.",
+  "cases": [
+    {
+      "width": 1440,
+      "passed": true,
+      "aboutLayout": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "headings": [
+          "안경을 아는 시선으로,\n브랜드의 가치를\n전합니다."
+        ],
+        "overflow": []
+      },
+      "aboutScreenshot": "output/playwright/company-industry/about-1440.png",
+      "contactLayout": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "headings": [
+          "브랜드의 다음 일을\n들려주세요."
+        ],
+        "overflow": []
+      },
+      "form": {
+        "contractKeys": [
+          "budget",
+          "company",
+          "message",
+          "phone",
+          "region",
+          "store_name"
+        ],
+        "enterpriseWithoutStoreOrRegion": true,
+        "internationalAndLandlinePreserved": true,
+        "optionalEmailValidated": true,
+        "consentAndInvalidPhoneBlocked": true,
+        "pendingDuplicatePrevented": true,
+        "queryServicePreservedAfterEditingAndReset": true,
+        "allSelectedInfoInMessage": true,
+        "failurePreservesFields": true,
+        "mockCalls": 2
+      },
+      "afterValidationLayout": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "headings": [
+          "브랜드의 다음 일을\n들려주세요."
+        ],
+        "overflow": []
+      },
+      "pageErrors": [],
+      "httpErrors": [],
+      "mailApiRequests": []
+    },
+    {
+      "width": 390,
+      "passed": true,
+      "aboutLayout": {
+        "width": 390,
+        "scrollWidth": 390,
+        "headings": [
+          "안경을 아는 시선으로,\n브랜드의 가치를\n전합니다."
+        ],
+        "overflow": []
+      },
+      "aboutScreenshot": "output/playwright/company-industry/about-390.png",
+      "contactLayout": {
+        "width": 390,
+        "scrollWidth": 390,
+        "headings": [
+          "브랜드의 다음 일을\n들려주세요."
+        ],
+        "overflow": []
+      },
+      "form": {
+        "contractKeys": [
+          "budget",
+          "company",
+          "message",
+          "phone",
+          "region",
+          "store_name"
+        ],
+        "enterpriseWithoutStoreOrRegion": true,
+        "internationalAndLandlinePreserved": true,
+        "optionalEmailValidated": true,
+        "consentAndInvalidPhoneBlocked": true,
+        "pendingDuplicatePrevented": true,
+        "queryServicePreservedAfterEditingAndReset": true,
+        "allSelectedInfoInMessage": true,
+        "failurePreservesFields": true,
+        "mockCalls": 2
+      },
+      "afterValidationLayout": {
+        "width": 390,
+        "scrollWidth": 390,
+        "headings": [
+          "브랜드의 다음 일을\n들려주세요."
+        ],
+        "overflow": []
+      },
+      "pageErrors": [],
+      "httpErrors": [],
+      "mailApiRequests": []
+    },
+    {
+      "width": 320,
+      "passed": true,
+      "aboutLayout": {
+        "width": 320,
+        "scrollWidth": 320,
+        "headings": [
+          "안경을 아는 시선으로,\n브랜드의 가치를\n전합니다."
+        ],
+        "overflow": []
+      },
+      "aboutScreenshot": "output/playwright/company-industry/about-320.png",
+      "contactLayout": {
+        "width": 320,
+        "scrollWidth": 320,
+        "headings": [
+          "브랜드의 다음 일을\n들려주세요."
+        ],
+        "overflow": []
+      },
+      "form": {
+        "contractKeys": [
+          "budget",
+          "company",
+          "message",
+          "phone",
+          "region",
+          "store_name"
+        ],
+        "enterpriseWithoutStoreOrRegion": true,
+        "internationalAndLandlinePreserved": true,
+        "optionalEmailValidated": true,
+        "consentAndInvalidPhoneBlocked": true,
+        "pendingDuplicatePrevented": true,
+        "queryServicePreservedAfterEditingAndReset": true,
+        "allSelectedInfoInMessage": true,
+        "failurePreservesFields": true,
+        "mockCalls": 2
+      },
+      "afterValidationLayout": {
+        "width": 320,
+        "scrollWidth": 320,
+        "headings": [
+          "브랜드의 다음 일을\n들려주세요."
+        ],
+        "overflow": []
+      },
+      "pageErrors": [],
+      "httpErrors": [],
+      "mailApiRequests": []
+    }
+  ],
+  "passed": true
+}

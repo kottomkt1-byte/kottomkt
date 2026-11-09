@@ -25,7 +25,7 @@ async def main():
             page = await ctx.new_page()
             errors, full_requests = [], []
             page.on('pageerror', lambda e: errors.append(str(e)))
-            page.on('request', lambda req: full_requests.append(req.url) if 'kotto-seen-brand-film.mp4' in req.url else None)
+            page.on('request', lambda req: full_requests.append(req.url) if 'kotto-industry-brand-film.mp4' in req.url else None)
             await page.goto(BASE, wait_until='networkidle')
             hero = page.locator('#home-brand-video')
             film = page.locator('.brand-video-full-player')
@@ -57,7 +57,7 @@ async def main():
             results.append(item)
             await ctx.close()
         await browser.close()
-    REPORT.write_text(json.dumps({'scope': 'Integrated production homepage and actual encoded media, Chromium desktop/mobile viewport emulation', 'date': '2026-11-06', 'results': results, 'failures': []}, ensure_ascii=False, indent=2) + '\n')
+    REPORT.write_text(json.dumps({'scope': 'Integrated production homepage and actual encoded media, Chromium desktop/mobile viewport emulation', 'date': '2026-11-09', 'results': results, 'failures': []}, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({'cases': len(results), 'failures': [], 'report': str(REPORT)}))
 
 

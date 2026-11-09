@@ -19,34 +19,39 @@ function companyFacts() {
 }
 
 export function renderAbout() {
+  const industries = [
+    ['01', '안경원', '안경 제작 사례와 매장의 전문성이 방문 전부터 전해지도록.'],
+    ['02', '아이웨어 브랜드·제조·수입·유통사', '프레임의 디테일과 컬렉션의 개성을 콘텐츠에 담도록.'],
+    ['03', '안경렌즈 기업', '렌즈의 설계와 소재, 제품별 차이를 이해하기 쉽게 전하도록.'],
+    ['04', '콘택트렌즈 기업', '제품 자료를 바탕으로 특징과 착용·관리 정보를 명료하게 안내하도록.'],
+  ];
   return `<div class="co-page co-about">
     <section class="co-about-hero co-wrap" aria-labelledby="co-about-title">
-      <p class="co-label">회사 소개</p>
+      <p class="co-label">고또마케팅 소개 <span class="co-label-en" lang="en">OUR PERSPECTIVE</span></p>
       <div class="co-about-opening">
         <div class="co-about-heading">
-          <h1 id="co-about-title" data-reveal>안경원을<br>이해하고,<br><em>고객의 언어로.</em></h1>
-          <div class="co-about-note"><span class="co-rule" aria-hidden="true"></span><p>안경원 전문 광고·마케팅 대행<br>고또마케팅</p></div>
+          <h1 id="co-about-title" data-reveal>안경을 아는 시선으로,<br><em>브랜드의 가치를<br>전합니다.</em></h1>
+          <div class="co-about-note"><span class="co-rule" aria-hidden="true"></span><p>안경 산업 전문 광고·콘텐츠 마케팅<br>고또마케팅</p></div>
         </div>
         <figure class="co-about-figure">
-          <div class="co-about-image"><img src="art/optical-editorial.webp" alt="붉은 안경테 소재와 정밀 도구로 표현한 고또마케팅의 업종 전문성 브랜드 이미지" width="1448" height="1086" fetchpriority="high"></div>
-          <figcaption><span>안경원의 일을 이해하는 시선.</span><span>브랜드 이미지</span></figcaption>
+          <div class="co-about-image"><img src="portfolio/model-images/thumbnails/tf5922-020-women-02.webp" alt="민트색 드레이프 상의와 반투명 그레이 안경테를 표현한 모델 이미지 제작 포트폴리오" width="1122" height="1402" fetchpriority="high"></div>
+          <figcaption><span>제품의 선을 살피는 시선.</span><span>모델 이미지 제작 포트폴리오</span></figcaption>
         </figure>
       </div>
-      <div class="co-about-introduction"><span>우리가 하는 일</span><p>안경원에는 설명할 이야기가 많습니다. 안경을 만드는 과정, 렌즈를 고르는 이유, 고객에게 전하고 싶은 안내까지. 고또마케팅은 그 이야기를 정리하고, 각 채널에 맞는 콘텐츠로 만듭니다.</p><a class="co-text-link" href="services.html">서비스 살펴보기 ${arrow}</a></div>
+      <div class="co-about-introduction"><span>우리가 하는 일</span><p>안경을 만드는 이유, 렌즈를 고르는 기준, 브랜드가 지켜온 취향. 고또마케팅은 안경원의 제작 사례를 정리하고 제품의 디테일을 살펴온 경험으로, 안경 산업의 이야기를 글과 이미지로 전합니다.</p><a class="co-text-link" href="services.html">서비스 살펴보기 ${arrow}</a></div>
     </section>
+    <section class="co-industry" aria-labelledby="co-industry-title"><div class="co-industry-inner co-wrap"><header><p class="co-label">함께할 분야</p><h2 id="co-industry-title">같은 안경 산업,<br>서로 다른 과제.</h2><p>매장과 브랜드, 제품과 채널.<br>알리고 싶은 대상과 필요한 일부터 살핍니다.</p></header><ol class="co-industry-list">${industries.map(([number, title, copy]) => `<li><span aria-hidden="true">${number}</span><div><h3>${title}</h3><p>${copy}</p></div></li>`).join('')}</ol></div></section>
     ${renderAchievements()}
-    <section class="co-making" aria-labelledby="co-making-title">
-      <header class="co-making-heading co-wrap"><div><p class="co-label">함께 일하는 방식</p><h2 id="co-making-title">듣고, 고르고.<br>하나의 이야기로.</h2></div><p>안경원의 말에서 시작해<br>고객이 읽는 화면까지.</p></header>
-      <div class="co-making-spread co-wrap">
-        <article class="co-making-scene co-making-listen"><figure><div class="co-scene-image"><img src="art/conversation-atelier.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="말과 생각을 나누며 편집하는 과정을 그린 브랜드 일러스트"></div><figcaption>소통을 표현한 브랜드 일러스트</figcaption></figure><div class="co-scene-copy"><span>기획의 시작</span><h3>먼저, 듣습니다.</h3><p>주로 다루는 안경과 렌즈.<br>원장님이 고객에게 꼭 전하고 싶은 말.</p></div></article>
-        <article class="co-making-scene co-making-edit"><figure><div class="co-scene-image"><img src="art/content-atelier.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="문장과 사진을 펼쳐 놓은 편집 작업대를 표현한 브랜드 이미지"></div><figcaption>콘텐츠 기획을 표현한 브랜드 이미지</figcaption></figure><div class="co-scene-copy"><span>내용을 정리하는 일</span><h3>읽을 순서를 찾습니다.</h3><p>안경원의 전문성을 확인하고,<br>고객이 이해할 문장으로 정리합니다.</p></div></article>
-        <article class="co-making-scene co-making-design"><figure><div class="co-scene-image"><img src="art/social-studio.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="빛과 이미지의 구성을 살피는 콘텐츠 제작을 표현한 브랜드 이미지"></div><figcaption>이미지 제작을 표현한 브랜드 이미지</figcaption></figure><div class="co-scene-copy"><span>채널에 맞는 제작</span><h3>어울리는 화면을 만듭니다.</h3><p>블로그의 한 편, 피드의 한 장.<br>전할 내용에 맞게 글과 이미지를 엮습니다.</p></div></article>
+    <section class="co-about-work co-wrap" aria-labelledby="co-work-title">
+      <header class="co-work-heading"><div><p class="co-label">작업으로 전하는 전문성</p><h2 id="co-work-title">안경을 이해하는 일이<br>콘텐츠의 바탕이 됩니다.</h2></div><p>안경 제작 사례의 문장부터<br>프레임을 보여주는 이미지까지.</p></header>
+      <div class="co-work-spread">
+        <article class="co-work-model"><a class="co-work-image" href="service-model-images.html" aria-label="안경테·선글라스 모델 이미지 제작 포트폴리오 보기"><img src="portfolio/model-images/thumbnails/tf1381-01a-men-03.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="버건디 재킷과 블랙 선글라스를 표현한 남성 모델 이미지 제작 포트폴리오"><span aria-hidden="true">포트폴리오 보기 ↗</span></a><div class="co-work-caption"><span>01 / MODEL IMAGE</span><h3>제품을 아는 눈으로,<br>한 장을 완성합니다.</h3><p>안경사가 제품 사진과 제작 이미지를 비교합니다. 프레임의 형태와 연결부, 색상과 소재의 표현을 살핍니다.</p></div></article>
+        <article class="co-work-content"><div class="co-work-intro"><span class="co-work-rule" aria-hidden="true"></span><p>전문적인 내용도<br>읽는 사람에게 닿도록.</p></div><a class="co-work-image" href="service-hpblog.html" aria-label="유럽안경 홈페이지형 블로그 제작 사례 보기"><img src="evidence/portfolio-01.png" width="1024" height="813" loading="lazy" decoding="async" alt="실제로 제작한 유럽안경 홈페이지형 블로그 화면"><span aria-hidden="true">제작 사례 보기 ↗</span></a><div class="co-work-caption"><span>02 / BRAND CONTENT</span><h3>쌓아온 이야기를<br>읽기 좋은 화면으로.</h3><p>매장의 소개와 콘텐츠가 한 흐름으로 읽히도록 구성합니다. 실제 홈페이지형 블로그 제작 화면을 살펴보세요.</p></div></article>
       </div>
-      <div class="co-making-end co-wrap"><p>맡기는 일과 함께 준비할 일을<br>명확하게 이야기하겠습니다.</p><a class="co-text-link" href="contact.html">우리 안경원 이야기하기 ${arrow}</a></div>
+      <div class="co-work-end"><p>필요한 콘텐츠와 사용할 채널을 함께 정리하고,<br>작업 범위와 일정을 맞춥니다.</p><a class="co-text-link" href="contact.html">브랜드의 다음 일 이야기하기 ${arrow}</a></div>
     </section>
     ${renderVoices({compact:true})}
     <section class="co-company-info co-wrap" aria-labelledby="co-info-title"><div><p class="co-label">고또마케팅</p><h2 id="co-info-title">회사를<br>소개합니다.</h2><a class="co-text-link" href="location.html">오시는 길 ${arrow}</a></div>${companyFacts()}</section>
-
   </div>`;
 }
 
@@ -58,27 +63,31 @@ function field(id, label, options = {}) {
 export function renderContact() {
   return `<div class="co-page co-contact co-wrap">
     <section class="co-contact-intro" aria-labelledby="co-contact-title">
-      <div class="co-contact-opening"><div class="co-contact-heading"><p class="co-label">상담 문의</p><h1 id="co-contact-title" data-reveal>안경원<br>이야기를<br>들려주세요.</h1><p class="co-contact-copy">지금 운영 중인 채널과 맡기고 싶은 일.<br>문의 내용을 살펴보고 상담을 이어가겠습니다.</p><a class="co-text-link" href="#co-form-heading">상담 신청서 작성 ${arrow}</a></div><figure class="co-contact-illustration"><div class="co-contact-art-window"><img src="art/conversation-atelier.webp" width="1536" height="1024" fetchpriority="high" alt="글과 이미지를 사이에 두고 이야기를 나누는 과정을 그린 브랜드 일러스트"></div><figcaption>한 통의 이야기에서 시작합니다.<span>브랜드 일러스트</span></figcaption></figure></div>
+      <div class="co-contact-opening"><div class="co-contact-heading"><p class="co-label">광고·콘텐츠 제작 문의 <span class="co-label-en" lang="en">START A CONVERSATION</span></p><h1 id="co-contact-title" data-reveal>브랜드의 다음 일을<br><em>들려주세요.</em></h1><p class="co-contact-copy">안경원부터 아이웨어 브랜드·제조·수입·유통사,<br>안경렌즈·콘택트렌즈 기업까지.<br>한 번의 제작과 지속적인 채널 운영을 함께 상담합니다.</p><a class="co-text-link" href="#co-form-heading">프로젝트·운영 문의하기 ${arrow}</a></div><figure class="co-contact-illustration"><div class="co-contact-art-window"><img src="art/editing-desk.webp" width="1536" height="1024" fetchpriority="high" alt="종이와 붉은 편집물을 펼친 콘텐츠 기획 작업대 브랜드 이미지"></div><figcaption>전하고 싶은 이야기부터 시작합니다.<span>브랜드 이미지</span></figcaption></figure></div>
     </section>
-    <div class="co-contact-desk"><aside class="co-contact-aside" aria-label="문의 안내"><p class="co-desk-note">편한 방식으로<br>말을 건네주세요.</p><nav class="co-contact-channels" aria-label="다른 문의 방법">
+    <div class="co-contact-desk"><aside class="co-contact-aside" aria-label="문의 안내"><p class="co-desk-note">준비된 이야기부터<br>보내주세요.</p><p class="co-desk-copy">제품이나 브랜드 소개, 필요한 콘텐츠,<br>사용할 채널과 희망 일정을 알려주시면<br>작업 범위를 함께 정리하겠습니다.</p><nav class="co-contact-channels" aria-label="다른 문의 방법">
         <a href="${KAKAO}" ${external}><span>카카오톡 문의</span>${arrow}</a>
         <a href="mailto:${EMAIL}"><span>이메일 문의<small>${EMAIL}</small></span>${arrow}</a>
         <a href="${BLOG}" ${external}><span>고또마케팅 블로그</span>${arrow}</a>
-      </nav><figure class="co-letter-art"><div><img src="art/editing-desk.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="종이와 붉은 편집물을 펼친 브랜드 이미지"></div><figcaption>보내주신 내용은<br>상담의 첫 페이지가 됩니다.</figcaption><span class="co-art-label">브랜드 이미지</span></figure></aside>
+      </nav><div class="co-inquiry-guide"><p>문의 이후에는</p><ol><li><span>01</span> 필요한 작업과 자료 확인</li><li><span>02</span> 제작·운영 범위 협의</li><li><span>03</span> 일정과 진행 방식 안내</li></ol></div></aside>
     <section class="co-form-area" aria-labelledby="co-form-heading">
-      <div class="co-form-heading"><h2 id="co-form-heading">상담 신청서</h2><p><span aria-hidden="true">*</span> 필수 입력</p></div>
+      <div class="co-form-heading"><h2 id="co-form-heading">프로젝트·운영 문의</h2><p><span aria-hidden="true">*</span> 필수 입력</p></div>
+      <p class="co-service-selection" data-co-service-selection hidden></p>
       <form id="contactForm" class="co-form" aria-describedby="form-status">
         <div class="co-error-summary" id="co-errors" tabindex="-1" role="alert" hidden><h3>입력 내용을 확인해 주세요.</h3><ul></ul></div>
-        <fieldset class="co-form-fields" data-co-interactive disabled><legend class="co-sr-only">상담에 필요한 정보</legend>
-          <div class="co-form-section"><h3><span>01</span> 안경원 정보</h3><div class="co-field-grid">
-            ${field('company', '회사명', { autocomplete: 'organization', placeholder: '회사명' })}
-            ${field('storeName', '상호', { placeholder: '안경원 이름' })}
-            ${field('phone', '연락처', { type: 'tel', autocomplete: 'tel', placeholder: '010-0000-0000' })}
-            ${field('region', '지역', { placeholder: '예: 서울 강남구' })}
-          </div></div>
-          <div class="co-form-section"><h3><span>02</span> 문의하실 내용</h3>
-            <div class="co-field"><label for="budget">월 마케팅 예산 <span>선택</span></label><select id="budget" name="budget"><option value="">아직 정하지 않았습니다</option><option value="50~100만원">50~100만원</option><option value="100~200만원">100~200만원</option><option value="200~300만원">200~300만원</option><option value="300만원 이상">300만원 이상</option><option value="미정">미정 (상담 후 결정)</option></select><p class="co-field-hint">예산이 정해지지 않았다면 선택하지 않으셔도 됩니다.</p></div>
-            <div class="co-field co-message-field"><label for="message">문의 내용 <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="5" required aria-describedby="message-error" placeholder="현재 운영 중인 채널이나 궁금한 서비스를 알려주세요."></textarea><p class="co-field-error" id="message-error"></p></div>
+        <fieldset class="co-form-fields" data-co-interactive disabled><legend class="co-sr-only">문의에 필요한 정보</legend>
+          <div class="co-form-section"><h3><span>01</span> 회사·브랜드 정보</h3><div class="co-field-grid">
+            ${field('company', '회사·브랜드명', { autocomplete: 'organization', placeholder: '안경원은 상호를 입력해 주세요' })}
+            ${field('storeName', '브랜드·지점명', { placeholder: '회사명과 다른 경우', optional: true })}
+            ${field('contactName', '담당자', { autocomplete: 'name', placeholder: '성함 또는 부서명', optional: true })}
+            ${field('phone', '연락처', { type: 'tel', autocomplete: 'tel', placeholder: '휴대전화 또는 대표번호' })}
+            ${field('email', '이메일', { type: 'email', autocomplete: 'email', placeholder: '회신받을 이메일', optional: true })}
+            ${field('region', '지역', { placeholder: '매장·사업장 지역', optional: true })}
+          </div><div class="co-field co-industry-field"><label for="industry">업종 <span>선택</span></label><select id="industry" name="industry"><option value="">해당 분야를 선택해 주세요</option><option value="store">안경원</option><option value="brand-distributor">아이웨어 브랜드·제조·수입·유통사</option><option value="spectacle-lens">안경렌즈 기업</option><option value="contact-lens">콘택트렌즈 기업</option><option value="other">기타</option></select></div></div>
+          <div class="co-form-section"><h3><span>02</span> 필요한 작업</h3>
+            <fieldset class="co-inquiry-types"><legend>문의 유형</legend><div><label><input type="radio" name="inquiryType" value="project"><span><b>프로젝트 제작</b><small>이미지·콘텐츠·홈페이지 등</small></span></label><label><input type="radio" name="inquiryType" value="retainer"><span><b>지속적인 운영</b><small>블로그·SNS·광고 채널 등</small></span></label><label><input type="radio" name="inquiryType" value="consult" checked><span><b>상담 후 결정</b><small>필요한 범위를 함께 정하고 싶어요</small></span></label></div></fieldset>
+            <div class="co-field co-budget-field"><label for="budget"><span data-co-budget-label>예상 예산</span> <span>선택</span></label><select id="budget" name="budget" aria-describedby="budget-hint"><option value="">아직 정하지 않았습니다</option><option value="100만원 미만">100만원 미만</option><option value="100~300만원">100~300만원</option><option value="300~500만원">300~500만원</option><option value="500~1,000만원">500~1,000만원</option><option value="1,000만원 이상">1,000만원 이상</option><option value="상담 후 협의">상담 후 협의</option></select><p class="co-field-hint" id="budget-hint">제작 또는 운영에 생각하고 계신 예산을 알려주세요.</p></div>
+            <div class="co-field co-message-field"><label for="message">문의 내용 <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="6" required aria-describedby="message-error" placeholder="브랜드와 제품, 필요한 콘텐츠나 궁금한 서비스를 알려주세요."></textarea><p class="co-field-error" id="message-error"></p></div>
           </div>
           <div class="co-form-final"><label class="co-consent" for="privacy"><input id="privacy" type="checkbox" required aria-describedby="privacy-error"><span>개인정보 수집 및 이용에 동의합니다 <span aria-hidden="true">*</span></span></label><p class="co-field-error" id="privacy-error"></p><button type="submit" class="co-submit"><span>문의 보내기</span>${arrow}</button></div>
         </fieldset>
@@ -130,19 +139,37 @@ function initForm() {
   const serviceNames = { blog: '브랜드 블로그 대행', 'model-images': '안경테·선글라스 모델 이미지 제작', hpblog: '홈페이지형 블로그', instagram: '인스타그램 마케팅', place: '플레이스 관리', daangn: '당근마켓 마케팅', cafe: '카페 바이럴', website: '홈페이지 제작' };
   const service = serviceNames[new URLSearchParams(window.__KOTTO_ROUTE_QUERY__ || location.search).get('service')];
   if (service && !form.elements.message.value) form.elements.message.value = `${service}에 대해 상담받고 싶습니다.`;
+  const serviceSelection = document.querySelector('[data-co-service-selection]');
+  if (service && serviceSelection) {
+    serviceSelection.textContent = `관심 서비스 · ${service}`;
+    serviceSelection.hidden = false;
+  }
+  const industryNames = { store: '안경원', 'brand-distributor': '아이웨어 브랜드·제조·수입·유통사', 'spectacle-lens': '안경렌즈 기업', 'contact-lens': '콘택트렌즈 기업', other: '기타' };
+  const inquiryNames = { project: '프로젝트 제작', retainer: '지속적인 운영', consult: '상담 후 결정' };
+  const budgetLabels = { project: '프로젝트 총 예산', retainer: '월 운영 예산', consult: '예상 예산' };
+  const budgetHints = { project: '이번 제작 프로젝트 전체에 생각하고 계신 예산입니다.', retainer: '한 달 운영에 생각하고 계신 예산입니다.', consult: '제작 또는 운영에 생각하고 계신 예산을 알려주세요.' };
+  function updateInquiryType() {
+    const type = form.elements.inquiryType.value;
+    form.querySelector('[data-co-budget-label]').textContent = budgetLabels[type] || budgetLabels.consult;
+    form.querySelector('#budget-hint').textContent = budgetHints[type] || budgetHints.consult;
+  }
+  form.querySelectorAll('[name="inquiryType"]').forEach(input => input.addEventListener('change', updateInquiryType));
+  updateInquiryType();
   const status = form.querySelector('#form-status');
   const summary = form.querySelector('#co-errors');
   const submit = form.querySelector('.co-submit');
   let sending = false;
   let validated = false;
-  const labels = { company: '회사명을', storeName: '상호를', phone: '연락처를', region: '지역을', message: '문의 내용을' };
+  const labels = { company: '회사·브랜드명을', phone: '연락처를', email: '이메일을', message: '문의 내용을' };
 
   function validate(focusSummary = false) {
     const errors = [];
     for (const [id, label] of Object.entries(labels)) {
       const input = document.getElementById(id);
-      let message = input.value.trim() ? '' : `${label} 입력해 주세요.`;
-      if (id === 'phone' && input.value.trim() && !/^[0-9\-+() ]{8,15}$/.test(input.value.trim())) message = '올바른 연락처를 입력해 주세요.';
+      const value = input.value.trim();
+      let message = input.required && !value ? `${label} 입력해 주세요.` : '';
+      if (id === 'phone' && value && (!/^\+?[0-9\-() ]+$/.test(value) || !/^\d{8,15}$/.test(value.replace(/\D/g, '')))) message = '연락처를 숫자 8~15자리로 입력해 주세요.';
+      if (id === 'email' && value && input.validity.typeMismatch) message = '올바른 이메일 주소를 입력해 주세요.';
       document.getElementById(`${id}-error`).textContent = message;
       input.setAttribute('aria-invalid', message ? 'true' : 'false');
       if (message) errors.push({ id, message });
@@ -166,12 +193,6 @@ function initForm() {
     return !errors.length;
   }
 
-  form.querySelector('#phone').addEventListener('input', function () {
-    let value = this.value.replace(/\D/g, '').slice(0, 11);
-    if (value.length > 7) value = `${value.slice(0, 3)}-${value.slice(3, 7)}-${value.slice(7)}`;
-    else if (value.length > 3) value = `${value.slice(0, 3)}-${value.slice(3)}`;
-    this.value = value;
-  });
   form.addEventListener('input', () => { if (validated) validate(); });
   form.addEventListener('change', () => { if (validated) validate(); });
   form.addEventListener('submit', async (event) => {
@@ -181,7 +202,26 @@ function initForm() {
     status.textContent = '';
     if (!validate(true)) return;
     const fd = new FormData(form);
-    const payload = { company: fd.get('company').trim(), store_name: fd.get('storeName').trim(), phone: fd.get('phone').trim(), region: fd.get('region').trim(), budget: fd.get('budget') || '미정', message: fd.get('message').trim() };
+    const company = fd.get('company').trim();
+    const storeName = fd.get('storeName').trim() || company;
+    const region = fd.get('region').trim() || '미정';
+    const budget = fd.get('budget') || '미정';
+    const inquiryType = fd.get('inquiryType');
+    const messageDetails = [
+      '[문의 정보]',
+      `업종: ${industryNames[fd.get('industry')] || '미선택'}`,
+      `문의 유형: ${inquiryNames[inquiryType] || inquiryNames.consult}`,
+      `회사·브랜드명: ${company}`,
+      `브랜드·지점명: ${storeName}`,
+      `담당자: ${fd.get('contactName').trim() || '미입력'}`,
+      `연락처: ${fd.get('phone').trim()}`,
+      `이메일: ${fd.get('email').trim() || '미입력'}`,
+      `지역: ${region}`,
+      `${budgetLabels[inquiryType] || budgetLabels.consult}: ${budget}`,
+      ...(service ? [`관심 서비스: ${service}`] : []),
+      '', '[문의 내용]', fd.get('message').trim(),
+    ];
+    const payload = { company, store_name: storeName, phone: fd.get('phone').trim(), region, budget, message: messageDetails.join('\n') };
     sending = true;
     submit.disabled = true;
     submit.querySelector('span').textContent = '문의 보내는 중…';
@@ -193,6 +233,8 @@ function initForm() {
       emailjs.init('wRB7RcKgCZ0rb8bqx');
       await emailjs.send('service_peqoeen', 'template_v9eprz5', payload);
       form.reset();
+      updateInquiryType();
+      if (service) form.elements.message.value = `${service}에 대해 상담받고 싶습니다.`;
       validated = false;
       form.querySelectorAll('[aria-invalid]').forEach((input) => input.removeAttribute('aria-invalid'));
       status.dataset.state = 'success';

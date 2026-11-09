@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1200, initial-scale=1">
+  <title>고또마케팅 — 안경 산업 콘텐츠</title>
+  <style>
+    @font-face {
+      font-family: "Kotto Display";
+      src: url("../public/fonts/KottoDisplay.woff2") format("woff2");
+      font-weight: 100 900;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Kotto Text";
+      src: url("../public/fonts/KottoText.woff2") format("woff2");
+      font-weight: 100 900;
+      font-display: block;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; margin: 0; }
+    body { background: #f3f0e8; color: #282923; }
+    .card {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+    }
+    .copy { position: relative; padding: 52px 64px 49px 70px; }
+    .wordmark {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 100px;
+      font-weight: 400;
+      line-height: .98;
+      letter-spacing: -6px;
+      color: #854939;
+    }
+    .name {
+      margin: 19px 0 0 3px;
+      font: 450 14px/1.5 "Kotto Text", sans-serif;
+      letter-spacing: -.02em;
+    }
+    h1 {
+      margin: 74px 0 0;
+      font-family: "Kotto Display", serif;
+      font-size: 45px;
+      font-weight: 450;
+      letter-spacing: -.055em;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+    h1 span { display: block; white-space: nowrap; }
+    .category {
+      margin: 26px 0 0 2px;
+      font: 450 17px/1.6 "Kotto Text", sans-serif;
+      letter-spacing: -.025em;
+      color: #625b51;
+    }
+    .audience {
+      position: absolute;
+      left: 72px;
+      right: 64px;
+      bottom: 49px;
+      margin: 0;
+      padding-top: 18px;
+      border-top: 1px solid #cec7b9;
+      font: 400 15px/1.6 "Kotto Text", sans-serif;
+      letter-spacing: -.025em;
+      color: #71695e;
+    }
+    .portrait { margin: 0; width: 540px; height: 630px; background: #c3d1c1; }
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 30%;
+    }
+  </style>
+</head>
+<body>
+  <main class="card" aria-label="고또마케팅 안경 산업 광고·콘텐츠 마케팅">
+    <section class="copy">
+      <p class="wordmark">kotto</p>
+      <p class="name">고또마케팅</p>
+      <h1><span>안경을 아는 시선.</span><span>브랜드를 위한 콘텐츠.</span></h1>
+      <p class="category">안경 산업 전문 광고·콘텐츠 마케팅</p>
+      <p class="audience">안경원 · 아이웨어 · 렌즈 · 제조·유통</p>
+    </section>
+    <figure class="portrait">
+      <img src="../public/portfolio/model-images/thumbnails/tf5922-020-men-03.webp"
+           width="1122" height="1402"
+           alt="민트색 배경에서 투명한 회색 안경과 아이보리 셔츠를 착용한 남성 모델">
+    </figure>
+  </main>
+</body>
+</html>

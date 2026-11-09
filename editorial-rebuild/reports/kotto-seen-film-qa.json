@@ -1,6 +1,6 @@
 {
   "scope": "Integrated production homepage and actual encoded media, Chromium desktop/mobile viewport emulation",
-  "date": "2026-11-06",
+  "date": "2026-11-09",
   "results": [
     {
       "viewport": [
@@ -18,8 +18,8 @@
         "loop": true
       },
       "heroTimeAdvanced": [
-        0.695575,
-        1.158212
+        0.64817,
+        1.113299
       ],
       "fullFilmRequests": 0,
       "javascriptErrors": []
@@ -40,8 +40,8 @@
         "loop": true
       },
       "heroTimeAdvanced": [
-        0.590194,
-        1.055684
+        0.672389,
+        1.142347
       ],
       "fullFilmRequests": 0,
       "javascriptErrors": []
@@ -62,8 +62,8 @@
         "loop": true
       },
       "heroTimeAdvanced": [
-        0.579761,
-        1.042223
+        0.67018,
+        1.134
       ],
       "fullFilmRequests": 0,
       "javascriptErrors": []

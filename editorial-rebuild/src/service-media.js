@@ -33,7 +33,7 @@ const choices = {
     ['문의 응대', '관심 다음의 대화까지.', '지역 고객의 문의에 필요한 안내를 갖춥니다.'],
   ],
   cafe: [
-    ['주제', '어떤 이야기가 필요한지.', '커뮤니티의 지역과 관심 주제를 살핍니다.'],
+    ['주제', '어떤 이야기가 필요한지.', '커뮤니티의 관심 주제와 이용자를 살핍니다.'],
     ['규정', '그곳의 규칙을 먼저.', '게시 가능한 내용과 광고 표기 기준을 확인합니다.'],
     ['게시', '맥락에 맞춰 전합니다.', '실제 정보와 자료를 바탕으로 콘텐츠를 구성합니다.'],
   ],
@@ -49,16 +49,17 @@ function caption(key) {
 
 export function renderIndexPreview(key, active = false) {
   const [src, alt] = material[key];
-  return `<div class="sv-type-object sv-image-object sv-image-${key}${active ? ' is-active' : ''}" data-sv-object="${key}" aria-hidden="true">${picture(src, alt)}<div class="sv-image-object-caption"><span>${key === 'model-images' ? '고또마케팅 제작 포트폴리오' : '안경원의 이야기를 전하는 일'}</span><p>${({ blog: '읽을 수 있도록.', 'model-images': '안경의 디테일을 담도록.', hpblog: '한눈에 알도록.', instagram: '눈길이 머물도록.', place: '찾아올 수 있도록.', daangn: '가까이 전하도록.', cafe: '맥락에 닿도록.', website: '한곳에 모이도록.' })[key]}</p></div></div>`;
+  const origin = key === 'model-images' ? '고또마케팅 제작 포트폴리오' : key === 'hpblog' ? '쓰리팩토리 안경원 · 실제 제작 사례' : ['place', 'daangn'].includes(key) ? '지역 고객에게 안경원을 알리는 일' : '안경 산업의 이야기를 전하는 일';
+  return `<div class="sv-type-object sv-image-object sv-image-${key}${active ? ' is-active' : ''}" data-sv-object="${key}" aria-hidden="true">${picture(src, alt)}<div class="sv-image-object-caption"><span>${origin}</span><p>${({ blog: '읽을 수 있도록.', 'model-images': '안경의 디테일을 담도록.', hpblog: '한눈에 알도록.', instagram: '눈길이 머물도록.', place: '찾아올 수 있도록.', daangn: '가까이 전하도록.', cafe: '맥락에 닿도록.', website: '한곳에 모이도록.' })[key]}</p></div></div>`;
 }
 
 export function renderIndexCover() {
-  return `<div class="sv-index-cover"><div class="sv-index-cover-photo">${picture('art/content-atelier.webp', '콘텐츠 기획과 편집을 표현한 브랜드 작업대')}</div><div class="sv-index-cover-inset">${picture('art/social-studio.webp', '사진 콘텐츠 구성을 표현한 브랜드 이미지')}</div><p>글과 사진, 화면과 소식.<br>안경원을 전하는 여러 가지 방법.</p></div>`;
+  return `<figure class="sv-index-cover sv-index-cover-industry"><div class="sv-index-cover-photo">${picture('portfolio/model-images/thumbnails/tf6032-001-women-02.webp', '고또마케팅이 제작한 TF6032 001 안경테 여성 모델 이미지')}</div><div class="sv-index-cover-inset">${picture('portfolio/model-images/thumbnails/tf1381-01a-men-03.webp', '고또마케팅이 제작한 TF1381 01A 선글라스 남성 모델 이미지')}</div><figcaption><span>고또마케팅 제작 포트폴리오</span><strong>안경테·선글라스 모델 이미지</strong></figcaption></figure>`;
 }
 
 export function renderServiceScene(key) {
   if (key === 'blog') {
-    return `<div class="sm-scene sm-blog" data-sm-scene="blog"><div class="sm-photo">${picture(...material.blog)}</div><div class="sm-manuscript"><span>글을 만드는 기준</span><p>무엇을 다루는지.<br>왜 권하는지.<br>어떻게 살피는지.</p><i aria-hidden="true"></i></div><div class="sm-scene-caption">안경원의 설명에서, 고객이 읽는 글로.</div></div>`;
+    return `<div class="sm-scene sm-blog" data-sm-scene="blog"><div class="sm-photo">${picture(...material.blog)}</div><div class="sm-manuscript"><span>글을 만드는 기준</span><p>무엇을 다루는지.<br>어떤 특징이 있는지.<br>왜 선택하는지.</p><i aria-hidden="true"></i></div><div class="sm-scene-caption">제품과 브랜드의 설명을, 고객이 읽는 글로.</div></div>`;
   }
   if (key === 'instagram') {
     return `<div class="sm-scene sm-instagram" data-sm-scene="instagram" data-sm-state="0"><div class="sm-social-composition"><div class="sm-social-side sm-social-left">${picture('art/optical-editorial.webp', '안경 부품의 질감을 보여주는 콘텐츠 이미지')}</div><div class="sm-social-main">${picture(...material.instagram)}<span>콘텐츠 구성 예시</span></div><div class="sm-social-side sm-social-right">${picture('art/content-atelier.webp', '콘텐츠 편집 작업을 보여주는 브랜드 이미지')}</div></div>${controls(key)}${caption(key)}</div>`;
@@ -73,7 +74,7 @@ export function renderServiceScene(key) {
     return `<div class="sm-scene sm-cafe" data-sm-scene="cafe" data-sm-state="0"><div class="sm-photo">${picture(...material.cafe)}</div><div class="sm-conversation"><span class="sm-small-label">커뮤니티 콘텐츠의 순서</span>${controls(key)}${caption(key)}</div><span class="sm-cafe-rule" aria-hidden="true"></span></div>`;
   }
   if (key === 'website') {
-    return `<div class="sm-scene sm-website" data-sm-scene="website" data-sm-state="0"><div class="sm-website-worktop">${picture(...material.website)}</div><div class="sm-device-controls" hidden aria-label="화면 크기 구성 살펴보기"><button type="button" data-sm-device="desktop" aria-pressed="true">PC</button><button type="button" data-sm-device="mobile" aria-pressed="false">모바일</button><span>설계 원리 예시</span></div><div class="sm-web-layout"><div class="sm-web-nav"><strong>안경원 소개</strong><span>소개　안내　문의</span></div><div class="sm-web-body"><div class="sm-web-copy"><p>어떤 곳인지.<br>무엇을 하는지.</p><span>필요한 정보를 알맞은 순서로.</span></div>${picture('art/optical-editorial.webp', '화면 구성을 설명하기 위한 안경 부품 이미지')}</div><div class="sm-web-bottom"><span>소개를 읽고</span><span>안내를 살피고</span><span>문의로 연결</span></div></div><p class="sm-scene-caption">화면이 달라도, 읽는 순서는 자연스럽게.</p></div>`;
+    return `<div class="sm-scene sm-website" data-sm-scene="website" data-sm-state="0"><div class="sm-website-worktop">${picture(...material.website)}</div><div class="sm-device-controls" hidden aria-label="화면 크기 구성 살펴보기"><button type="button" data-sm-device="desktop" aria-pressed="true">PC</button><button type="button" data-sm-device="mobile" aria-pressed="false">모바일</button><span>설계 원리 예시</span></div><div class="sm-web-layout"><div class="sm-web-nav"><strong>브랜드 소개</strong><span>소개　제품　문의</span></div><div class="sm-web-body"><div class="sm-web-copy"><p>어떤 브랜드인지.<br>무엇을 만드는지.</p><span>필요한 정보를 알맞은 순서로.</span></div>${picture('art/optical-editorial.webp', '화면 구성을 설명하기 위한 안경 부품 이미지')}</div><div class="sm-web-bottom"><span>소개를 읽고</span><span>제품을 살피고</span><span>문의로 연결</span></div></div><p class="sm-scene-caption">화면이 달라도, 읽는 순서는 자연스럽게.</p></div>`;
   }
   return '';
 }
@@ -85,7 +86,7 @@ const features = {
   place: ['art/neighborhood-atlas.webp', '검색한 뒤에,<br>궁금할 내용을 먼저.', '주소와 영업시간만으로 설명되지 않는 매장의 모습까지. 방문 전에 필요한 정보를 빠짐없이 정리합니다.', ['기본 정보', '사진과 소식', '방문 안내']],
   daangn: ['art/conversation-atelier.webp', '지역에 맞는 소식은,<br>구체적인 정보에서.', '가까이 사는 고객에게 어떤 이야기를 전할지 살핍니다. 매장 소개와 소식, 문의 안내가 이어지도록 구성합니다.', ['매장 소개', '지역 소식', '문의와 응대']],
   cafe: ['art/content-atelier.webp', '쓰는 내용만큼,<br>놓이는 자리도 중요합니다.', '커뮤니티의 관심사와 게시 규정을 먼저 확인합니다. 실제 자료를 바탕으로 그곳에 필요한 내용을 정리합니다.', ['관심 주제', '게시 규정', '정보와 자료']],
-  website: ['art/editing-desk.webp', '여러 화면을,<br>하나의 흐름으로.', '소개와 서비스, 위치와 문의를 연결합니다. 문장과 사진을 배치한 뒤 PC와 모바일에서 읽는 흐름을 점검합니다.', ['정보의 구조', '화면의 구성', '문의의 연결']],
+  website: ['art/editing-desk.webp', '여러 화면을,<br>하나의 흐름으로.', '브랜드 소개와 제품 정보, 문의를 연결합니다. 문장과 사진을 배치한 뒤 PC와 모바일에서 읽는 흐름을 점검합니다.', ['정보의 구조', '화면의 구성', '문의의 연결']],
 };
 
 export function renderServiceFeature(key) {

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-09",
+  "pages": 13,
+  "manifestFiles": 150,
+  "sharedImage": {
+    "path": "images/kotto-industry-share.png",
+    "size": [
+      1200,
+      630
+    ],
+    "sha256": "97d9f650223e29379a4a4f71af40107c4cbd92513844f9130143230f59a82656"
+  },
+  "allFileHashesMatch": true,
+  "allPageSharingMetadataUpdated": true,
+  "failures": []
+}
