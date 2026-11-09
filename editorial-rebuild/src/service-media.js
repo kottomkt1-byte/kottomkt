@@ -40,11 +40,11 @@ const choices = {
 };
 
 function controls(key) {
-  return `<div class="sm-controls" hidden aria-label="${key === 'instagram' ? '콘텐츠 형식' : '업무 내용'} 살펴보기">${choices[key].map((item, i) => `<button type="button" data-sm-select="${i}" aria-pressed="${i === 0}">${item[0]}</button>`).join('')}</div>`;
+  return `<div class="sm-controls" hidden role="group" aria-label="${key === 'instagram' ? '콘텐츠 형식' : '업무 내용'} 살펴보기">${choices[key].map((item, i) => `<button type="button" data-sm-select="${i}" aria-pressed="${i === 0}" aria-controls="sm-${key}-description">${item[0]}</button>`).join('')}</div>`;
 }
 function caption(key) {
   const item = choices[key][0];
-  return `<div class="sm-live-copy" aria-live="polite"><h3 data-sm-title>${item[1]}</h3><p data-sm-body>${item[2]}</p></div>`;
+  return `<div class="sm-live-copy" id="sm-${key}-description" aria-live="polite" aria-atomic="true"><h3 data-sm-title>${item[1]}</h3><p data-sm-body>${item[2]}</p></div>`;
 }
 
 export function renderIndexPreview(key, active = false) {
@@ -74,7 +74,7 @@ export function renderServiceScene(key) {
     return `<div class="sm-scene sm-cafe" data-sm-scene="cafe" data-sm-state="0"><div class="sm-photo">${picture(...material.cafe)}</div><div class="sm-conversation"><span class="sm-small-label">커뮤니티 콘텐츠의 순서</span>${controls(key)}${caption(key)}</div><span class="sm-cafe-rule" aria-hidden="true"></span></div>`;
   }
   if (key === 'website') {
-    return `<div class="sm-scene sm-website" data-sm-scene="website" data-sm-state="0"><div class="sm-website-worktop">${picture(...material.website)}</div><div class="sm-device-controls" hidden aria-label="화면 크기 구성 살펴보기"><button type="button" data-sm-device="desktop" aria-pressed="true">PC</button><button type="button" data-sm-device="mobile" aria-pressed="false">모바일</button><span>설계 원리 예시</span></div><div class="sm-web-layout"><div class="sm-web-nav"><strong>브랜드 소개</strong><span>소개　제품　문의</span></div><div class="sm-web-body"><div class="sm-web-copy"><p>어떤 브랜드인지.<br>무엇을 만드는지.</p><span>필요한 정보를 알맞은 순서로.</span></div>${picture('art/optical-editorial.webp', '화면 구성을 설명하기 위한 안경 부품 이미지')}</div><div class="sm-web-bottom"><span>소개를 읽고</span><span>제품을 살피고</span><span>문의로 연결</span></div></div><p class="sm-scene-caption">화면이 달라도, 읽는 순서는 자연스럽게.</p></div>`;
+    return `<div class="sm-scene sm-website" data-sm-scene="website" data-sm-state="0"><div class="sm-website-worktop">${picture(...material.website)}</div><div class="sm-device-controls" hidden role="group" aria-label="화면 크기 구성 살펴보기"><button type="button" data-sm-device="desktop" aria-pressed="true" aria-controls="sm-website-preview">PC</button><button type="button" data-sm-device="mobile" aria-pressed="false" aria-controls="sm-website-preview">모바일</button><span>설계 원리 예시</span></div><div class="sm-web-layout" id="sm-website-preview"><div class="sm-browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="sm-web-nav"><strong>브랜드 소개</strong><span>소개　제품　문의</span></div><div class="sm-web-body"><div class="sm-web-copy"><p>어떤 브랜드인지.<br>무엇을 만드는지.</p><span>필요한 정보를 알맞은 순서로.</span></div>${picture('art/optical-editorial.webp', '화면 구성을 설명하기 위한 안경 부품 이미지')}</div><div class="sm-web-bottom"><span>소개를 읽고</span><span>제품을 살피고</span><span>문의로 연결</span></div></div><p class="sm-scene-caption">화면이 달라도, 읽는 순서는 자연스럽게.</p></div>`;
   }
   return '';
 }

@@ -7,8 +7,8 @@ export function renderBrandVideo({ id = 'kotto-brand-video', variant = 'feature'
   const mode = variant === 'hero' ? 'hero' : 'feature';
   return `<figure class="brand-video brand-video--${mode}" data-brand-video>
     <video id="${name}" class="brand-video-player" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"
-      poster="${asset('films/kotto-seen-poster.webp')}"
-      data-video-desktop="films/kotto-seen-hero-desktop.mp4" data-video-mobile="films/kotto-seen-hero-mobile.mp4" data-video-poster-mobile="films/kotto-seen-poster-mobile.webp"></video>
+      poster="${asset('films/kotto-studio-wide-poster.webp')}"
+      data-video-desktop="films/kotto-studio-wide.mp4" data-video-mobile="films/kotto-seen-hero-mobile.mp4" data-video-poster-mobile="films/kotto-seen-poster-mobile.webp"></video>
     <div class="brand-video-actions">
       <button class="brand-video-control" type="button" aria-controls="${name}" aria-label="브랜드 영상 재생" aria-pressed="false" hidden>
         <span class="brand-video-control-icon" aria-hidden="true"><i></i><i></i></span><span data-video-label>영상 재생</span>
@@ -40,7 +40,7 @@ export function initBrandVideo() {
     const filmError = figure.querySelector('[data-brand-video-error]');
     const fallback = figure.querySelector('[data-brand-video-fallback]');
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-    const narrow = matchMedia('(max-width: 700px)');
+    const narrow = matchMedia('(max-width: 760px)');
     const connection = navigator.connection;
     if (narrow.matches) video.poster = asset(video.dataset.videoPosterMobile);
     let visible = false;

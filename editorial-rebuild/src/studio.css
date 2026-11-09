@@ -1,0 +1,10 @@
+/* Shared evidence and model-service typography in the studio visual system. */
+.achievement-number{font-family:var(--sans);font-weight:550;letter-spacing:-.07em}
+.achievements>h2{font-size:13px;font-weight:500}.achievement dt{font-size:13px}
+.ev-voices{background:#e9eae7;padding-block:105px}.ev-heading h2{font-weight:580;line-height:1.2;letter-spacing:-.06em}.ev-voice{background:#f5f5f2;box-shadow:none}.ev-voice figcaption{font-size:11px}.ev-voices-bottom{font-size:13px}
+.mi-page{--mi-clay:#141618;--mi-dark:#111315;--mi-light:#f5f5f2}
+.mi-page h1,.mi-page h2{font-family:var(--sans);font-weight:600;letter-spacing:-.06em;line-height:1.24}.mi-page h1{font-size:clamp(45px,5.1vw,82px)}
+.mi-editorial-line{font-family:var(--sans);font-weight:550;font-size:clamp(75px,12vw,190px)}.mi-editorial-line>em{font-style:normal;font-weight:550}
+.mi-page h3{font-weight:550}.mi-inspection{background:#111315}.mi-inspection h2 em{color:#c7cbcc}.mi-inspection-display{background:radial-gradient(ellipse at 50% 40%,#303337 0,transparent 70%)}
+.mi-page .mi-button:hover{background:#393d41}.mi-process,.mi-feedback{background:var(--paper)}
+@media(max-width:760px){.ev-voices{padding-block:65px}.achievement dt{font-size:11px}.mi-page h1{font-size:clamp(37px,9.5vw,62px)}.mi-editorial-line{font-size:14vw}.mi-page h2{line-height:1.3}}

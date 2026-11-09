@@ -1,7 +1,7 @@
 import { renderPortfolio, renderVoices } from './evidence.js';
 import { business, services, serviceAudiences } from './content.js';
 import { evidencePortfolio, evidenceReviews } from './evidence-data.js';
-import { renderIndexPreview, renderIndexCover, renderServiceScene, renderServiceFeature, initServiceMedia } from './service-media.js';
+import { renderIndexPreview, renderServiceScene, renderServiceFeature, initServiceMedia } from './service-media.js';
 
 const escape = (value = '') => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const heading = value => escape(value).replace(/&lt;br\s*\/?&gt;/gi, '<br>');
@@ -32,7 +32,7 @@ function serviceRow(item, { directory = false } = {}) {
   const local = ['place', 'daangn'].includes(item.key);
   const audience = local ? '안경원 · 지역 채널' : item.key === 'model-images' ? '아이웨어 브랜드 · 제조·수입·유통사 · 안경원' : '안경 산업 브랜드·기업 · 안경원';
   return `<a class="sv-directory-row" href="${escape(item.slug)}" data-sv-preview="${escape(item.key)}"${directory ? ` data-sv-audiences="${escape(item.audienceKeys.join(' '))}"` : ''}>
-    ${directory ? `<span class="sv-directory-eyebrow"><span>${String(services.indexOf(item) + 1).padStart(2, '0')}</span>${audience}</span>` : ''}
+    ${directory ? `<span class="sv-directory-number" aria-hidden="true">${String(services.indexOf(item) + 1).padStart(2, '0')}</span><span class="sv-directory-eyebrow">${audience}</span>` : ''}
     <span class="sv-directory-name">${escape(item.name)}</span>
     <span class="sv-directory-short">${escape(item.short)}</span>
     <span class="sv-directory-arrow" aria-hidden="true">↗</span>
@@ -50,10 +50,10 @@ function serviceEvidenceArt(key) {
 
 export function renderServices() {
   return `<div class="sv-page sv-index">
-    <section class="sv-container sv-index-intro" aria-labelledby="sv-index-title">
-      <p class="sv-kicker">${escape(business.category)}</p>
-      <h1 id="sv-index-title" class="sv-display" data-split-title>안경 산업의 전문성을,<br><span>브랜드의 콘텐츠로.</span></h1>
-      <div class="sv-index-intro-bottom"><p>안경원부터 아이웨어 브랜드,<br>안경렌즈·콘택트렌즈 기업과 제조·수입·유통사까지.</p><p>제품을 설명하는 글부터 브랜드를 소개하는 화면까지.<br>전할 내용과 고객에 맞춰 필요한 채널을 함께 정합니다.</p><a class="sv-text-link" href="#service-audience">서비스 살펴보기 <span aria-hidden="true">↓</span></a></div>${renderIndexCover()}
+    <section class="sv-index-intro" aria-labelledby="sv-index-title"><div class="sv-container sv-index-masthead">
+      <div class="sv-index-heading"><p class="sv-kicker">${escape(business.category)}</p><h1 id="sv-index-title" class="sv-display" data-split-title>무엇을<br>전하고 싶나요.</h1><p class="sv-index-lead">제품을 설명하는 글부터<br>브랜드를 소개하는 화면까지.</p><p class="sv-index-description">안경원부터 아이웨어 브랜드, 안경렌즈·콘택트렌즈 기업과 제조·수입·유통사까지. 전할 내용과 고객에 맞춰 필요한 채널을 함께 정합니다.</p><a class="sv-text-link" href="#service-audience">서비스 살펴보기 <span aria-hidden="true">↘</span></a></div>
+      <figure class="sv-index-portrait"><img src="portfolio/model-images/thumbnails/tf1289-01a-women-03.webp" width="1122" height="1402" alt="고또마케팅이 제작한 TF1289 01A 선글라스 여성 모델 이미지" fetchpriority="high" decoding="async"><figcaption><span>모델 이미지 제작 포트폴리오</span><span>TF1289 01A</span></figcaption></figure>
+    </div>
     </section>
     <section class="sv-audience sv-container" id="service-audience" aria-labelledby="sv-audience-title">
       <header><p class="sv-kicker">함께하는 분야</p><h2 id="sv-audience-title">우리에게 맞는 <br>서비스부터.</h2></header>
