@@ -10,60 +10,16 @@
       "mode": "normal",
       "overlaysHidden": true,
       "hero": {
-        "source": "kotto-studio-wide.mp4",
-        "width": 1440,
-        "height": 600,
+        "source": "kotto-seen-hero-desktop.mp4",
+        "width": 1280,
+        "height": 720,
         "duration": 22,
         "muted": true,
         "loop": true
       },
       "heroTimeAdvanced": [
-        0.596531,
-        1.057254
-      ],
-      "fullFilmRequests": 0,
-      "javascriptErrors": []
-    },
-    {
-      "viewport": [
-        768,
-        844
-      ],
-      "mode": "normal",
-      "overlaysHidden": true,
-      "hero": {
-        "source": "kotto-studio-wide.mp4",
-        "width": 1440,
-        "height": 600,
-        "duration": 22,
-        "muted": true,
-        "loop": true
-      },
-      "heroTimeAdvanced": [
-        0.59047,
-        1.054704
-      ],
-      "fullFilmRequests": 0,
-      "javascriptErrors": []
-    },
-    {
-      "viewport": [
-        760,
-        844
-      ],
-      "mode": "normal",
-      "overlaysHidden": true,
-      "hero": {
-        "source": "kotto-seen-hero-mobile.mp4",
-        "width": 720,
-        "height": 1280,
-        "duration": 22,
-        "muted": true,
-        "loop": true
-      },
-      "heroTimeAdvanced": [
-        0.574589,
-        1.033761
+        0.64817,
+        1.113299
       ],
       "fullFilmRequests": 0,
       "javascriptErrors": []
@@ -84,8 +40,8 @@
         "loop": true
       },
       "heroTimeAdvanced": [
-        0.577689,
-        1.035601
+        0.672389,
+        1.142347
       ],
       "fullFilmRequests": 0,
       "javascriptErrors": []
@@ -106,8 +62,8 @@
         "loop": true
       },
       "heroTimeAdvanced": [
-        0.573029,
-        1.031909
+        0.67018,
+        1.134
       ],
       "fullFilmRequests": 0,
       "javascriptErrors": []

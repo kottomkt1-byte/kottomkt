@@ -13,7 +13,6 @@ import './company.css';
 import './model-images.css';
 import { initModelImages } from './model-images.js';
 import './model-gallery.css';
-import './studio.css';
 import { initModelGallery } from './model-gallery.js';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

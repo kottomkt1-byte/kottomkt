@@ -26,14 +26,20 @@ export function renderAbout() {
     ['04', '콘택트렌즈 기업', '제품 자료를 바탕으로 특징과 착용·관리 정보를 명료하게 안내하도록.'],
   ];
   return `<div class="co-page co-about">
-    <section class="co-about-hero" aria-labelledby="co-about-title"><div class="co-wrap">
-      <div class="co-about-topline"><p class="co-label">ABOUT KOTTO</p><span>안경 산업 전문 광고·콘텐츠 마케팅</span></div>
-      <h1 id="co-about-title" data-reveal>안경을 아는 시선으로,<br><span>브랜드의 가치를 전합니다.</span></h1>
+    <section class="co-about-hero co-wrap" aria-labelledby="co-about-title">
+      <p class="co-label">고또마케팅 소개 <span class="co-label-en" lang="en">OUR PERSPECTIVE</span></p>
       <div class="co-about-opening">
-        <div class="co-about-introduction"><span class="co-about-index" aria-hidden="true">↗</span><p>안경을 만드는 이유.<br>렌즈를 고르는 기준.<br>브랜드가 지켜온 취향.</p><div class="co-about-summary">안경원의 제작 사례를 정리하고 제품의 디테일을 살펴온 경험으로, 안경 산업의 이야기를 글과 이미지로 전합니다.</div><a class="co-text-link" href="services.html">우리가 하는 일 ${arrow}</a></div>
-        <div class="co-about-portraits"><figure class="co-about-figure"><div class="co-about-image"><img src="portfolio/model-images/thumbnails/tf1380-01a-women-02.webp" alt="블랙 선글라스의 형태와 디테일을 표현한 여성 모델 이미지 제작 포트폴리오" width="1122" height="1402" fetchpriority="high"></div><figcaption>선글라스 · 모델 이미지 제작</figcaption></figure><figure class="co-about-countershot"><div><img src="portfolio/model-images/thumbnails/tf5922-020-women-02.webp" alt="반투명 그레이 안경테와 민트색 의상을 표현한 여성 모델 이미지 제작 포트폴리오" width="1122" height="1402" fetchpriority="high"></div><figcaption>안경테 · 모델 이미지 제작</figcaption></figure></div>
+        <div class="co-about-heading">
+          <h1 id="co-about-title" data-reveal>안경을 아는 시선으로,<br><em>브랜드의 가치를<br>전합니다.</em></h1>
+          <div class="co-about-note"><span class="co-rule" aria-hidden="true"></span><p>안경 산업 전문 광고·콘텐츠 마케팅<br>고또마케팅</p></div>
+        </div>
+        <figure class="co-about-figure">
+          <div class="co-about-image"><img src="portfolio/model-images/thumbnails/tf5922-020-women-02.webp" alt="민트색 드레이프 상의와 반투명 그레이 안경테를 표현한 모델 이미지 제작 포트폴리오" width="1122" height="1402" fetchpriority="high"></div>
+          <figcaption><span>제품의 선을 살피는 시선.</span><span>모델 이미지 제작 포트폴리오</span></figcaption>
+        </figure>
       </div>
-    </div></section>
+      <div class="co-about-introduction"><span>우리가 하는 일</span><p>안경을 만드는 이유, 렌즈를 고르는 기준, 브랜드가 지켜온 취향. 고또마케팅은 안경원의 제작 사례를 정리하고 제품의 디테일을 살펴온 경험으로, 안경 산업의 이야기를 글과 이미지로 전합니다.</p><a class="co-text-link" href="services.html">서비스 살펴보기 ${arrow}</a></div>
+    </section>
     <section class="co-industry" aria-labelledby="co-industry-title"><div class="co-industry-inner co-wrap"><header><p class="co-label">함께할 분야</p><h2 id="co-industry-title">같은 안경 산업,<br>서로 다른 과제.</h2><p>매장과 브랜드, 제품과 채널.<br>알리고 싶은 대상과 필요한 일부터 살핍니다.</p></header><ol class="co-industry-list">${industries.map(([number, title, copy]) => `<li><span aria-hidden="true">${number}</span><div><h3>${title}</h3><p>${copy}</p></div></li>`).join('')}</ol></div></section>
     ${renderAchievements()}
     <section class="co-about-work co-wrap" aria-labelledby="co-work-title">
@@ -57,9 +63,7 @@ function field(id, label, options = {}) {
 export function renderContact() {
   return `<div class="co-page co-contact co-wrap">
     <section class="co-contact-intro" aria-labelledby="co-contact-title">
-      <div class="co-contact-topline"><p class="co-label">CONTACT KOTTO</p><span>프로젝트 제작 / 채널 운영</span></div>
-      <h1 id="co-contact-title" data-reveal>다음 작업을,<br>함께 시작합니다<span aria-hidden="true">.</span></h1>
-      <div class="co-contact-brief"><p>안경원부터 아이웨어 브랜드·제조·수입·유통사,<br>안경렌즈·콘택트렌즈 기업까지.<br>필요한 콘텐츠와 맡기고 싶은 일을 알려주세요.</p><a class="co-contact-email" href="mailto:${EMAIL}">${EMAIL}<span aria-hidden="true">↗</span></a></div>
+      <div class="co-contact-opening"><div class="co-contact-heading"><p class="co-label">광고·콘텐츠 제작 문의 <span class="co-label-en" lang="en">START A CONVERSATION</span></p><h1 id="co-contact-title" data-reveal>브랜드의 다음 일을<br><em>들려주세요.</em></h1><p class="co-contact-copy">안경원부터 아이웨어 브랜드·제조·수입·유통사,<br>안경렌즈·콘택트렌즈 기업까지.<br>한 번의 제작과 지속적인 채널 운영을 함께 상담합니다.</p><a class="co-text-link" href="#co-form-heading">프로젝트·운영 문의하기 ${arrow}</a></div><figure class="co-contact-illustration"><div class="co-contact-art-window"><img src="art/editing-desk.webp" width="1536" height="1024" fetchpriority="high" alt="종이와 붉은 편집물을 펼친 콘텐츠 기획 작업대 브랜드 이미지"></div><figcaption>전하고 싶은 이야기부터 시작합니다.<span>브랜드 이미지</span></figcaption></figure></div>
     </section>
     <div class="co-contact-desk"><aside class="co-contact-aside" aria-label="문의 안내"><p class="co-desk-note">준비된 이야기부터<br>보내주세요.</p><p class="co-desk-copy">제품이나 브랜드 소개, 필요한 콘텐츠,<br>사용할 채널과 희망 일정을 알려주시면<br>작업 범위를 함께 정리하겠습니다.</p><nav class="co-contact-channels" aria-label="다른 문의 방법">
         <a href="${KAKAO}" ${external}><span>카카오톡 문의</span>${arrow}</a>
@@ -96,15 +100,15 @@ export function renderContact() {
 
 export function renderLocation() {
   return `<div class="co-page co-location">
-    <section class="co-location-hero co-wrap" aria-labelledby="co-location-title"><div class="co-location-opening"><p class="co-label">LOCATION</p><h1 id="co-location-title" data-reveal>오시는 길.</h1><p>경기도 남양주시, 고또마케팅.<br>방문 상담은 사전 예약 후 찾아주세요.</p></div></section>
-    <section class="co-address-sheet co-wrap" aria-label="방문 주소"><div class="co-address-card">
-      <div class="co-address-top"><p>KOTTO MARKETING</p><span>경기도 남양주시</span></div>
+    <section class="co-location-hero co-wrap" aria-labelledby="co-location-title"><div class="co-location-opening"><div><p class="co-label">오시는 길</p><h1 id="co-location-title" data-reveal>다음 이야기는,<br>만나서.</h1><p>경기도 남양주시, 고또마케팅.<br>방문 상담은 사전 예약 후 찾아주세요.</p><a class="co-text-link" href="#co-visit-title">방문 안내 확인 ${arrow}</a></div><figure class="co-neighborhood"><div><img src="art/neighborhood-atlas.webp" width="1536" height="1024" fetchpriority="high" alt="동네 상점과 사람들의 길을 그린 브랜드 일러스트. 실제 위치를 표시한 지도는 아닙니다."></div><figcaption><span>동네의 이야기를 가까이에서.</span><span>브랜드 일러스트 · 실제 지도 아님</span></figcaption></figure></div></section>
+    <section class="co-address-sheet co-wrap" aria-label="방문 주소">
+      <div class="co-address-top"><p>경기도 남양주시</p><span>파라곤스퀘어</span></div>
       <div class="co-street"><span>순화궁로</span><strong>249</strong></div>
-      <div class="co-address-bottom"><span>파라곤스퀘어 M동 <b>1528호</b></span><div class="co-address-actions"><a href="${NAVER_MAP}" ${external}>네이버 지도에서 보기 ${arrow}</a><button class="co-copy-address" type="button" data-copy-address>주소 복사 <span aria-hidden="true">＋</span></button></div></div>
+      <div class="co-address-bottom"><span>M동 <b>1528호</b></span><button class="co-copy-address" type="button" data-copy-address>주소 복사 <span aria-hidden="true">↗</span></button></div>
       <p id="co-copy-status" class="co-copy-status" role="status" aria-live="polite"></p>
-    </div></section>
-    <section class="co-visit co-wrap" aria-labelledby="co-visit-title"><div class="co-visit-details"><p class="co-label">VISIT US</p><h2 id="co-visit-title">오시기 전에<br>연락 주세요.</h2><p>상담 일정을 정한 뒤 방문해 주세요.<br>카카오톡이나 문의 양식으로 연락하실 수 있습니다.</p><a class="co-text-link" href="${KAKAO}" ${external}>카카오톡 문의 ${arrow}</a><a class="co-text-link" href="contact.html">상담 신청서 작성 ${arrow}</a><a class="co-visit-email" href="mailto:${EMAIL}">${EMAIL}</a></div>
-      <div class="co-map-area"><div class="co-map-header"><h3>지도에서 찾기</h3><a href="${NAVER_MAP}" ${external}>네이버 지도 ${arrow}</a></div><div class="co-map-window" id="co-map-window"><div class="co-map-placeholder"><span class="co-map-symbol" aria-hidden="true">↗</span><p>경기도 남양주시 순화궁로 249<br>파라곤스퀘어 M동 1528호</p><button class="co-map-button" type="button" data-load-map>지도 펼치기 <span aria-hidden="true">＋</span></button></div></div><p class="co-map-note">지도가 표시되지 않으면 <a href="${NAVER_MAP}" ${external}>네이버 지도에서 주소를 확인</a>해 주세요.</p></div>
+    </section>
+    <section class="co-visit co-wrap" aria-labelledby="co-visit-title"><div class="co-visit-details"><figure class="co-visit-art"><div><img src="art/conversation-atelier.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="상담과 소통을 표현한 브랜드 일러스트"></div><figcaption>이야기를 나눌 준비 · 브랜드 일러스트</figcaption></figure><p class="co-label">방문 안내</p><h2 id="co-visit-title">오시기 전에<br>연락 주세요.</h2><p>상담 일정을 정한 뒤 방문해 주세요.<br>카카오톡이나 문의 양식으로 연락하실 수 있습니다.</p><a class="co-text-link" href="${KAKAO}" ${external}>카카오톡 문의 ${arrow}</a><a class="co-text-link" href="contact.html">상담 신청서 작성 ${arrow}</a><a class="co-visit-email" href="mailto:${EMAIL}">${EMAIL}</a></div>
+      <div class="co-map-area"><div class="co-map-header"><h3>지도에서 찾기</h3><a href="${NAVER_MAP}" ${external}>네이버 지도 ${arrow}</a></div><div class="co-map-window" id="co-map-window"><div class="co-map-placeholder"><p>경기도 남양주시 순화궁로 249<br>파라곤스퀘어 M동 1528호</p><button class="co-map-button" type="button" data-load-map>지도 펼치기 <span aria-hidden="true">↗</span></button></div></div><p class="co-map-note">지도가 표시되지 않으면 <a href="${NAVER_MAP}" ${external}>네이버 지도에서 주소를 확인</a>해 주세요.</p></div>
     </section>
   </div>`;
 }
@@ -279,6 +283,22 @@ export function initCompany({ gsap, ScrollTrigger } = {}) {
   mm.add('(min-width: 761px) and (prefers-reduced-motion: no-preference)', () => {
     const aboutImage = document.querySelector('.co-about-image img');
     if (aboutImage) gsap.fromTo(aboutImage, { scale: 1.09, yPercent: 2 }, { scale: 1, yPercent: -2, ease: 'none', scrollTrigger: { trigger: '.co-about-hero', start: 'top top', end: 'bottom top', scrub: 0.6 } });
+    const spread = document.querySelector('.co-making-spread');
+    if (spread) {
+      const scenes = [...spread.querySelectorAll('.co-making-scene')];
+      const timeline = gsap.timeline({defaults: {ease:'none'}, scrollTrigger:{trigger:spread, start:'top 85%', end:'bottom 75%', scrub:0.65}});
+      scenes.forEach((scene, index) => {
+        const image = scene.querySelector('img');
+        timeline.fromTo(scene.querySelector('.co-scene-image'), {clipPath:'inset(0% 0% 14% 0%)'}, {clipPath:'inset(0% 0% 0% 0%)',duration:0.7}, index*0.14)
+          .fromTo(image, {scale:1.07, yPercent:2}, {scale:1,yPercent:0,duration:0.9}, index*0.14);
+      });
+    }
+    document.querySelectorAll('.co-contact-art-window,.co-neighborhood>div').forEach((window) => {
+      gsap.fromTo(window.querySelector('img'), {scale:1.06,yPercent:2}, {scale:1,yPercent:-2,ease:'none',scrollTrigger:{trigger:window,start:'top bottom',end:'bottom top',scrub:0.8}});
+    });
+    document.querySelectorAll('.co-letter-art>div,.co-visit-art>div').forEach((window) => {
+      gsap.fromTo(window.querySelector('img'), {scale:1.06}, {scale:1,ease:'none',scrollTrigger:{trigger:window,start:'top 90%',end:'bottom 65%',scrub:0.5}});
+    });
   });
   return () => mm.revert();
 }

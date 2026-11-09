@@ -15,7 +15,7 @@ async def main():
     results = []
     async with async_playwright() as pw:
         browser = await pw.chromium.launch(executable_path='/usr/bin/chromium', args=['--no-sandbox'])
-        for width, mode in [(1440, 'normal'), (768, 'normal'), (760, 'normal'), (390, 'normal'), (320, 'normal'), (390, 'reduced'), (1440, 'save-data'), (390, 'no-js')]:
+        for width, mode in [(1440, 'normal'), (390, 'normal'), (320, 'normal'), (390, 'reduced'), (1440, 'save-data'), (390, 'no-js')]:
             height = 900 if width == 1440 else 844
             ctx = await browser.new_context(viewport={'width': width, 'height': height},
                 reduced_motion='reduce' if mode == 'reduced' else 'no-preference',
@@ -42,7 +42,7 @@ async def main():
             else:
                 await page.wait_for_function("document.querySelector('#home-brand-video').readyState >= 2 && !document.querySelector('#home-brand-video').paused")
                 item['hero'] = await hero.evaluate('(v)=>({source:v.currentSrc.split("/").pop(),width:v.videoWidth,height:v.videoHeight,duration:v.duration,muted:v.muted,loop:v.loop})')
-                assert item['hero']['source'] == ('kotto-seen-hero-mobile.mp4' if width <= 760 else 'kotto-studio-wide.mp4')
+                assert item['hero']['source'] == ('kotto-seen-hero-mobile.mp4' if width <= 700 else 'kotto-seen-hero-desktop.mp4')
                 assert item['hero']['muted'] and item['hero']['loop'] and item['hero']['duration'] == 22
                 before = await hero.evaluate('v=>v.currentTime')
                 await page.wait_for_timeout(450)

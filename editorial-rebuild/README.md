@@ -10,7 +10,7 @@
 
 플레이스·당근은 안경원 중심 서비스, 모델 이미지는 안경테·선글라스 서비스입니다. 기존 32장 원본 포트폴리오, 실제 후기·작업 화면, ZIN 01 디테일 뷰어와 법정 정보는 유지합니다. 기존 사용자 확인 수치와 안경원 후기를 새 기업 고객 실적으로 확대하지 않습니다.
 
-디자인 방향은 [DESIGN.md](DESIGN.md), 업종 확대는 [업종 확대 기록](reports/industry-repositioning.md), 시각 재설계와 검수는 [스튜디오 디자인 개편 기록](reports/studio-redesign.md)에 정리합니다. 이전 업데이트 보고서는 당시 검수 기록으로 보존합니다.
+디자인 방향은 [DESIGN.md](DESIGN.md), 이번 변경과 검수는 [업종 확대 기록](reports/industry-repositioning.md)에 정리합니다. 이전 업데이트 보고서는 당시 검수 기록으로 보존합니다.
 
 ## 운영 반영
 
@@ -92,7 +92,7 @@ node scripts/create-share.mjs
 
 현재 홈페이지는 사용자가 제공한 모델 포트폴리오 사진 5장을 편집한 **고또마케팅 브랜드 필름**을 사용합니다. 느린 카메라 이동, 부드러운 디졸브와 브랜드 타이포그래피로 “안경을 아는 시선으로, 브랜드의 가치를 전합니다.”에서 “안경을 아는 시선. 브랜드를 위한 콘텐츠.”로 이어집니다. 사진 속 인물의 움직임을 새로 합성한 영상이 아니라, 원본 사진의 구도와 화면 배치를 시간에 따라 편집한 필름입니다.
 
-첫 화면에는 **22초 무음 반복 영상**을 사용합니다. 데스크톱은 원본 사진 3패널로 구성한 1440×600·약 2.83MB, 모바일은 별도로 구성한 720×1280·약 1.82MB이며 각각 첫 프레임 포스터가 있습니다. 홈페이지의 영상 위 버튼과 브랜드 필름 표시는 숨깁니다. **26초·1920×1080·약 6.66MB** 본편은 `films/kotto-industry-brand-film.mp4`에서 직접 열 수 있습니다. 본편에는 직접 합성·작곡한 앰비언트 음악이 있습니다. 본편은 `public/films/kotto-industry-brand-film.mp4`, 새 데스크톱 영상·포스터는 `public/films/kotto-studio-wide*`, 모바일 영상·포스터는 `public/films/kotto-seen-hero-mobile.mp4`와 `public/films/kotto-seen-poster-mobile.webp`입니다.
+첫 화면에는 **22초 무음 반복 영상**을 사용합니다. 데스크톱은 1280×720·약 1.86MB, 모바일은 별도로 구성한 720×1280·약 1.82MB이며 각각 첫 프레임 포스터가 있습니다. 홈페이지의 영상 위 버튼과 브랜드 필름 표시는 숨깁니다. **26초·1920×1080·약 6.66MB** 본편은 `films/kotto-industry-brand-film.mp4`에서 직접 열 수 있습니다. 본편에는 직접 합성·작곡한 앰비언트 음악이 있습니다. 본편은 `public/films/kotto-industry-brand-film.mp4`, 무음 배경 영상과 포스터는 `public/films/kotto-seen-*`입니다.
 
 배경 영상은 화면 밖과 숨겨진 탭에서 정지하고, 동작 감소·데이터 절약 설정에서는 포스터를 먼저 보여줍니다. 전체 영상 대화상자가 열리면 배경 영상은 정지하며, 닫으면 사용자의 기존 재생·정지 상태를 따릅니다. 닫기 버튼·Escape·바깥 영역 클릭을 지원하고 초점은 원래 링크로 돌아갑니다. JS가 없어도 전체 MP4를 새 창에서 여는 링크를 사용할 수 있습니다. 홈페이지는 GSAP ScrollTrigger·SplitText와 절제된 이미지 모션을 사용합니다. 긴 화면 고정 없이 자연스럽게 스크롤됩니다.
 
@@ -113,5 +113,3 @@ node scripts/create-share.mjs
 전용 페이지 `service-model-images.html`은 자체 개발 프로그램과 안경사 검수 방식을 소개합니다. `src/model-images.js/css`가 페이지와 모션을, `src/model-gallery.js/css`가 필터·확대 갤러리를 관리합니다.
 
 사용자 제공 포트폴리오 32장(선글라스 23장·안경테 9장)은 `public/portfolio/model-images/`의 전체 해상도 lossless WebP와 `thumbnails/`의 900px 표시용 WebP로 제공합니다. 확대 보기와 원본 보기에는 lossless 자산을 사용합니다. PNG 원본과 RGB 픽셀이 동일함을 전수 대조했으며, 자세한 기록은 `reports/model-images-asset-provenance.json`에 있습니다. 이미지 목록과 설명은 `src/model-portfolio-data.js`에서 편집하세요.
-
-현재 가로 작품 갤러리 검수: `python qa/studio-gallery-audit.py` (운영 준비본 localhost:4186). 양쪽 끝 버튼 동작, 키보드, reduced-motion, no-JS를 확인합니다.

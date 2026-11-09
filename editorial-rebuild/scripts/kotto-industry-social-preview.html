@@ -19,79 +19,81 @@
     }
     * { box-sizing: border-box; }
     html, body { width: 1200px; height: 630px; margin: 0; }
-    body { background: #111315; color: #fff; font-family: "Kotto Text", sans-serif; }
-    .card { width: 1200px; height: 630px; overflow: hidden; }
-    .masthead {
+    body { background: #f3f0e8; color: #282923; }
+    .card {
       display: grid;
-      grid-template-columns: 1.7fr 1fr;
-      gap: 42px;
-      align-items: end;
-      height: 304px;
-      padding: 42px 48px 39px;
+      grid-template-columns: 55% 45%;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
     }
-    .name { margin: 0 0 24px 4px; font-size: 14px; font-weight: 450; letter-spacing: -.02em; }
+    .copy { position: relative; padding: 52px 64px 49px 70px; }
     .wordmark {
-      margin: 0 0 0 -5px;
-      font-size: 212px;
-      font-weight: 700;
-      line-height: .8;
-      letter-spacing: -.078em;
-      white-space: nowrap;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 100px;
+      font-weight: 400;
+      line-height: .98;
+      letter-spacing: -6px;
+      color: #854939;
     }
-    .copy { border-left: 1px solid #ffffff38; padding-left: 27px; }
-    .category {
-      margin: 0 0 22px;
-      font-size: 12px;
-      font-weight: 450;
-      line-height: 1.7;
-      color: #b8bfbd;
+    .name {
+      margin: 19px 0 0 3px;
+      font: 450 14px/1.5 "Kotto Text", sans-serif;
       letter-spacing: -.02em;
     }
-    h1 { margin: 0; font-size: 29px; font-weight: 550; line-height: 1.55; letter-spacing: -.045em; }
+    h1 {
+      margin: 74px 0 0;
+      font-family: "Kotto Display", serif;
+      font-size: 45px;
+      font-weight: 450;
+      letter-spacing: -.055em;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
     h1 span { display: block; white-space: nowrap; }
-    .audience { margin: 21px 0 0; font-size: 11px; line-height: 1.6; letter-spacing: -.02em; color: #b8bfbd; }
-    .film-strip { display: grid; grid-template-columns: repeat(3, 1fr); height: 326px; }
-    .portrait { margin: 0; min-width: 0; overflow: hidden; }
-    .portrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
-    .portrait-warm img { object-position: 50% 12%; }
-    .portrait-light img { object-position: 50% 8%; }
-    .portrait-deep img { object-position: 50% 16%; }
+    .category {
+      margin: 26px 0 0 2px;
+      font: 450 17px/1.6 "Kotto Text", sans-serif;
+      letter-spacing: -.025em;
+      color: #625b51;
+    }
+    .audience {
+      position: absolute;
+      left: 72px;
+      right: 64px;
+      bottom: 49px;
+      margin: 0;
+      padding-top: 18px;
+      border-top: 1px solid #cec7b9;
+      font: 400 15px/1.6 "Kotto Text", sans-serif;
+      letter-spacing: -.025em;
+      color: #71695e;
+    }
+    .portrait { margin: 0; width: 540px; height: 630px; background: #c3d1c1; }
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 30%;
+    }
   </style>
-  <script>
-    // Preserve the shared renderer's font-readiness contract.
-    document.fonts.load('450 45px "Kotto Display"');
-  </script>
 </head>
 <body>
   <main class="card" aria-label="고또마케팅 안경 산업 광고·콘텐츠 마케팅">
-    <section class="masthead">
-      <div class="brand">
-        <p class="name">고또마케팅</p>
-        <p class="wordmark">KOTTO</p>
-      </div>
-      <div class="copy">
-        <p class="category">안경 산업 전문<br>광고·콘텐츠 마케팅</p>
-        <h1><span>안경을 아는 시선.</span><span>브랜드를 위한 콘텐츠.</span></h1>
-        <p class="audience">안경원 · 아이웨어 · 렌즈 · 제조·유통</p>
-      </div>
+    <section class="copy">
+      <p class="wordmark">kotto</p>
+      <p class="name">고또마케팅</p>
+      <h1><span>안경을 아는 시선.</span><span>브랜드를 위한 콘텐츠.</span></h1>
+      <p class="category">안경 산업 전문 광고·콘텐츠 마케팅</p>
+      <p class="audience">안경원 · 아이웨어 · 렌즈 · 제조·유통</p>
     </section>
-    <section class="film-strip" aria-label="고또마케팅 실제 포트폴리오">
-      <figure class="portrait portrait-warm">
-        <img src="../public/portfolio/model-images/tf1289-01a-women-03.webp"
-             width="1122" height="1402"
-             alt="테라코타 벽 앞에서 선글라스와 아이보리 재킷을 착용한 여성 모델">
-      </figure>
-      <figure class="portrait portrait-light">
-        <img src="../public/portfolio/model-images/tf5922-020-men-03.webp"
-             width="1122" height="1402"
-             alt="민트색 배경에서 투명한 회색 안경과 아이보리 셔츠를 착용한 남성 모델">
-      </figure>
-      <figure class="portrait portrait-deep">
-        <img src="../public/portfolio/model-images/tf1381-01a-men-03.webp"
-             width="1122" height="1402"
-             alt="딥 블루 배경에서 선글라스와 버건디 재킷을 착용한 남성 모델">
-      </figure>
-    </section>
+    <figure class="portrait">
+      <img src="../public/portfolio/model-images/thumbnails/tf5922-020-men-03.webp"
+           width="1122" height="1402"
+           alt="민트색 배경에서 투명한 회색 안경과 아이보리 셔츠를 착용한 남성 모델">
+    </figure>
   </main>
 </body>
 </html>
